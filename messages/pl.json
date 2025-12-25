@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "whatWeBuild": "Co Budujemy",
+    "verticals": "Działające Wertykały",
+    "engagement": "Współpraca",
+    "contact": "Omów Swój System"
+  },
+  "hero": {
+    "badge": "Cyfrowa Warstwa Operacyjna",
+    "title": "Infrastruktura Cyfrowa dla Firm, Które",
+    "titleHighlight": "Nie Mogą Sobie Pozwolić na Chaos",
+    "subtitle": "Projektujemy, wdrażamy i zarządzamy infrastrukturą biznesową dla przedsięwzięć, które muszą skalować się, zachować zgodność i koordynować działania między systemami, ludźmi i jurysdykcjami.",
+    "description": "Niestandardowe systemy cyfrowe dla firm, które chcą struktury, a nie narzędzi.",
+    "ctaPrimary": "Zamów Przegląd Infrastruktury",
+    "ctaSecondary": "Zobacz Co Prowadzimy",
+    "valueProps": {
+      "clarity": {
+        "title": "Przejrzystość Operacyjna",
+        "description": "Systemy respektujące prawo, skalę i finanse"
+      },
+      "decision": {
+        "title": "Usystematyzowane Podejmowanie Decyzji",
+        "description": "Automatyzacja koordynująca ludzi i dane"
+      },
+      "traceability": {
+        "title": "Identyfikowalność",
+        "description": "Pełne ścieżki audytu i zarządzanie"
+      }
+    }
+  },
+  "whatWeBuild": {
+    "title": "Co Projektujemy",
+    "subtitle": "Wszystko jest budowane specjalnie pod logikę Twojego biznesu. Żadnych ogólnych narzędzi. Żadnych wymuszonych przepływów pracy.",
+    "internal": {
+      "title": "Systemy Wewnętrzne",
+      "description": "Finanse, dokumenty, przepływy pracy — ustrukturyzowane wokół tego, jak faktycznie działa Twój biznes.",
+      "features": [
+        "Systemy krytyczne pod względem zgodności",
+        "Zautomatyzowane przepływy decyzyjne",
+        "Zarządzanie dokumentami i danymi"
+      ]
+    },
+    "external": {
+      "title": "Systemy Zewnętrzne",
+      "description": "Platformy internetowe, portale klienckie i interfejsy skierowane do klientów, które skalują się.",
+      "features": [
+        "Niestandardowe strony biznesowe jako systemy",
+        "Portale klienckie i administracyjne",
+        "Warstwy integracyjne"
+      ]
+    },
+    "automation": {
+      "title": "Automatyzacja i Orkiestracja",
+      "description": "Operacje wspomagane AI i automatyzacja przepływów pracy koordynująca ludzi, dane i decyzje.",
+      "features": [
+        "Wewnętrzne przepływy automatyzacji",
+        "Wsparcie decyzyjne wspomagane AI",
+        "Orkiestracja między systemami"
+      ]
+    },
+    "governance": {
+      "title": "Zarządzanie i Audytowalność",
+      "description": "Struktura danych, widoczność i pełne ścieżki audytu dla środowisk regulowanych.",
+      "features": [
+        "Śledzenie i raportowanie zgodności",
+        "Pełna historia operacyjna",
+        "Struktura i widoczność danych"
+      ]
+    }
+  },
+  "verticals": {
+    "title": "Działające Wertykały Operacyjne",
+    "subtitle": "Nie teoretyzujemy. Działamy. To są systemy, które sami prowadzimy pod rzeczywistą presją prawną i operacyjną.",
+    "ksiegai": {
+      "title": "Infrastruktura Finansowa",
+      "badge": "Systemy Gotowe na KSeF",
+      "description": "Przykład infrastruktury pod presją regulacyjną. Centralny rejestr biznesowy: dokumenty, decyzje, role i finanse w jednej audytowalnej strukturze.",
+      "features": [
+        "Warstwa uzgadniania dokumentów przed KSeF",
+        "Zweryfikowana sieć firm",
+        "Pełna ścieżka audytu i zgodność"
+      ],
+      "cta": "Odwiedź KsięgaI"
+    },
+    "globalPet": {
+      "title": "Licencjonowane Operacje Logistyczne",
+      "badge": "Transport Zwierząt w UE",
+      "description": "Przykład infrastruktury pod ograniczeniami fizycznymi i prawnymi. Licencjonowany transport zwierząt przez jurysdykcje UE.",
+      "features": [
+        "Śledzenie zgodności w wielu jurysdykcjach",
+        "Systemy koordynacji w czasie rzeczywistym",
+        "Licencjonowana infrastruktura operacyjna"
+      ],
+      "cta": "Wkrótce"
+    }
+  },
+  "whyCustom": {
+    "title": "Dlaczego Niestandardowa Infrastruktura?",
+    "subtitle": "Większość oprogramowania zmusza firmy do dostosowania się do narzędzi.",
+    "highlight": "My budujemy narzędzia wokół firm.",
+    "description": "Zbudowane systemy skalują się. Narzędzia nie. Gdy potrzebujesz struktury respektującej logikę Twojego biznesu, wymagania regulacyjne i trajektorię wzrostu — ogólny SaaS nie wystarczy."
+  },
+  "engagement": {
+    "title": "Jak Wygląda Współpraca",
+    "subtitle": "To nie jest jednorazowy web dev. To partnerstwo infrastrukturalne.",
+    "steps": [
+      {
+        "title": "Mapowanie",
+        "description": "Mapujemy logikę i wymagania Twojego biznesu"
+      },
+      {
+        "title": "Projektowanie",
+        "description": "Projektujemy architekturę systemu"
+      },
+      {
+        "title": "Budowanie",
+        "description": "Budujemy i integrujemy infrastrukturę"
+      },
+      {
+        "title": "Ewolucja",
+        "description": "Utrzymujemy i rozwijamy ją razem z Tobą"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Gotowy na Budowanie Struktury?",
+    "subtitle": "Niestandardowa infrastruktura cyfrowa dla firm, które wyrosły z szablonów.",
+    "cta": "Zamów Przegląd Infrastruktury"
+  },
+  "footer": {
+    "tagline": "Infrastruktura cyfrowa dla firm, które nie mogą sobie pozwolić na chaos.",
+    "verticals": "Działające Wertykały",
+    "ksiegai": "KsięgaI - Infrastruktura Finansowa",
+    "globalPet": "Global Pet - Licencjonowana Logistyka (Wkrótce)",
+    "contact": "Kontakt",
+    "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie."
+  }
+}

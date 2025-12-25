@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "whatWeBuild": "What We Build",
+    "verticals": "Operating Verticals",
+    "engagement": "Engagement",
+    "contact": "Discuss Your System"
+  },
+  "hero": {
+    "badge": "The Digital Operating Layer",
+    "title": "Digital Infrastructure for Businesses That",
+    "titleHighlight": "Cannot Afford Chaos",
+    "subtitle": "We design, deploy, and govern business infrastructure for ventures that must scale, comply, and coordinate across systems, people, and jurisdictions.",
+    "description": "Custom digital systems for businesses that want structure, not tools.",
+    "ctaPrimary": "Request Infrastructure Review",
+    "ctaSecondary": "See What We Operate",
+    "valueProps": {
+      "clarity": {
+        "title": "Operational Clarity",
+        "description": "Systems that respect law, scale, and money"
+      },
+      "decision": {
+        "title": "Systemized Decision-Making",
+        "description": "Automation that coordinates people and data"
+      },
+      "traceability": {
+        "title": "Traceability",
+        "description": "Full audit trails and governance"
+      }
+    }
+  },
+  "whatWeBuild": {
+    "title": "What We Architect",
+    "subtitle": "Everything is built specifically for your business logic. No generic tools. No forced workflows.",
+    "internal": {
+      "title": "Internal Systems",
+      "description": "Finance, documents, workflows — structured around how your business actually operates.",
+      "features": [
+        "Compliance-critical systems",
+        "Automated decision workflows",
+        "Document & data governance"
+      ]
+    },
+    "external": {
+      "title": "External Systems",
+      "description": "Web platforms, client portals, and customer-facing interfaces that scale.",
+      "features": [
+        "Custom business websites as systems",
+        "Client & admin portals",
+        "Integration layers"
+      ]
+    },
+    "automation": {
+      "title": "Automation & Orchestration",
+      "description": "AI-assisted operations and workflow automation that coordinates people, data, and decisions.",
+      "features": [
+        "Internal automation workflows",
+        "AI-assisted decision support",
+        "Cross-system orchestration"
+      ]
+    },
+    "governance": {
+      "title": "Governance & Auditability",
+      "description": "Data structure, visibility, and full audit trails for regulated environments.",
+      "features": [
+        "Compliance tracking & reporting",
+        "Full operational history",
+        "Data structure & visibility"
+      ]
+    }
+  },
+  "verticals": {
+    "title": "Live Operating Verticals",
+    "subtitle": "We don't theorize. We operate. These are systems we run ourselves under real legal and operational pressure.",
+    "ksiegai": {
+      "title": "Financial Infrastructure",
+      "badge": "KSeF-Ready Systems",
+      "description": "Example of infrastructure under regulatory pressure. Central business registry: documents, decisions, roles, and finances in one auditable structure.",
+      "features": [
+        "Document reconciliation layer before KSeF",
+        "Verified business network",
+        "Full audit trail & compliance"
+      ],
+      "cta": "Visit KsięgaI"
+    },
+    "globalPet": {
+      "title": "Licensed Logistics Operations",
+      "badge": "EU Pet Transport",
+      "description": "Example of infrastructure under physical and legal constraints. Licensed animal transportation across EU jurisdictions.",
+      "features": [
+        "Multi-jurisdiction compliance tracking",
+        "Real-time coordination systems",
+        "Licensed operational infrastructure"
+      ],
+      "cta": "Coming Soon"
+    }
+  },
+  "whyCustom": {
+    "title": "Why Custom Infrastructure?",
+    "subtitle": "Most software forces companies to adapt to tools.",
+    "highlight": "We build tools around companies.",
+    "description": "Built systems scale. Tools don't. When you need structure that respects your business logic, regulatory requirements, and growth trajectory — generic SaaS won't cut it."
+  },
+  "engagement": {
+    "title": "How Engagement Works",
+    "subtitle": "This is not one-off web dev. This is infrastructure partnership.",
+    "steps": [
+      {
+        "title": "Map",
+        "description": "We map your business logic and requirements"
+      },
+      {
+        "title": "Design",
+        "description": "We design the system architecture"
+      },
+      {
+        "title": "Build",
+        "description": "We build and integrate the infrastructure"
+      },
+      {
+        "title": "Evolve",
+        "description": "We maintain and evolve it with you"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to Build Structure?",
+    "subtitle": "Custom digital infrastructure for businesses that outgrew templates.",
+    "cta": "Request Infrastructure Review"
+  },
+  "footer": {
+    "tagline": "Digital infrastructure for businesses that cannot afford chaos.",
+    "verticals": "Operating Verticals",
+    "ksiegai": "KsięgaI - Financial Infrastructure",
+    "globalPet": "Global Pet - Licensed Logistics (Coming Soon)",
+    "contact": "Contact",
+    "copyright": "TOVERNET. Built systems scale. Tools don't."
+  }
+}
