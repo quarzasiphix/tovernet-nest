@@ -1,4 +1,16 @@
-User-agent: *
+export const runtime = 'edge';
+
+const robotsTxt = `User-agent: *
 Allow: /
 
 Sitemap: https://tovernet.online/sitemap.xml
+`;
+
+export default function Robots() {
+  return new Response(robotsTxt, {
+    headers: {
+      'Content-Type': 'text/plain',
+      'Cache-Control': 'public, max-age=86400'
+    }
+  });
+}
