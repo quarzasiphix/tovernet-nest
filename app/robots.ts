@@ -1,17 +1,11 @@
-export const runtime = 'edge';
+import type { MetadataRoute } from "next";
 
-export function GET() {
-  return new Response(
-    `User-agent: *
-Allow: /
-
-Sitemap: https://tovernet.online/sitemap.xml
-`,
-    {
-      headers: {
-        'Content-Type': 'text/plain',
-        'Cache-Control': 'public, max-age=86400'
-      }
-    }
-  );
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+    sitemap: "https://tovernet.online/sitemap.xml",
+  };
 }
