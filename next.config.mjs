@@ -6,6 +6,11 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  output: "export",
 };
+
+
+module.exports = nextConfig;
+
 
 export default withNextIntl(nextConfig);
