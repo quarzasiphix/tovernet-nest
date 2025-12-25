@@ -205,7 +205,7 @@ export default function Home() {
                 Live Operating Verticals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We don't theorize. We operate. These are systems we run ourselves under real legal and operational pressure.
+                We don&apos;t theorize. We operate. These are systems we run ourselves under real legal and operational pressure.
               </p>
             </div>
 
@@ -310,8 +310,8 @@ export default function Home() {
             </p>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <p className="text-xl text-gray-300 leading-relaxed">
-                Built systems scale. Tools don't. When you need structure that respects your business logic, 
-                regulatory requirements, and growth trajectory — generic SaaS won't cut it.
+                Built systems scale. Tools don&apos;t. When you need structure that respects your business logic, 
+                regulatory requirements, and growth trajectory — generic SaaS won&apos;t cut it.
               </p>
             </div>
           </div>
@@ -426,7 +426,7 @@ export default function Home() {
               </div>
             </div>
             <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-              <p>&copy; {new Date().getFullYear()} TOVERNET. Built systems scale. Tools don't.</p>
+              <p>&copy; {new Date().getFullYear()} TOVERNET. Built systems scale. Tools don&apos;t.</p>
             </div>
           </div>
         </div>
