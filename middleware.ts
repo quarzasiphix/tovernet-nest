@@ -5,7 +5,7 @@ import type { Locale } from './i18n';
 
 const intlMiddleware = createMiddleware({
   locales,
-  defaultLocale: 'en',
+  defaultLocale: 'pl',
   localePrefix: 'always',
   localeDetection: false
 });
@@ -13,17 +13,19 @@ const intlMiddleware = createMiddleware({
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const hasLocale = locales.some(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
-  );
-
-  if (!hasLocale) {
+  // Handle root path - redirect based on country detection
+  if (pathname === '/') {
     const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value as Locale | undefined;
     const country = request.geo?.country || request.headers.get('cf-ipcountry') || 'US';
-    const inferredLocale: Locale = country === 'PL' ? 'pl' : 'en';
+    
+    // Check if user is from an English-speaking country
+    const englishCountries = ['US', 'GB', 'CA', 'AU', 'NZ', 'IE', 'ZA', 'IN', 'PH', 'SG', 'MY', 'HK'];
+    const isEnglishCountry = englishCountries.includes(country);
+    
+    const inferredLocale: Locale = isEnglishCountry ? 'en' : 'pl';
     const locale = cookieLocale && locales.includes(cookieLocale) ? cookieLocale : inferredLocale;
 
-    request.nextUrl.pathname = `/${locale}${pathname === '/' ? '' : pathname}`;
+    request.nextUrl.pathname = `/${locale}`;
     return Response.redirect(request.nextUrl);
   }
 
