@@ -247,9 +247,15 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                       </li>
                     ))}
                   </ul>
-                  <div className="inline-flex items-center gap-2 bg-globalpet-gradient text-white px-6 py-3 rounded-lg font-semibold opacity-75">
-                    <span>{t('verticals.globalPet.cta')}</span>
-                  </div>
+                  <a
+                    href="https://globalpet.online"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-globalpet-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    {t('verticals.globalPet.cta')}
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
                 </div>
               </div>
             </div>
