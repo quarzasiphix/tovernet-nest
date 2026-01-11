@@ -1,7 +1,7 @@
 {
   "nav": {
     "whatWeBuild": "What We Build",
-    "verticals": "Operating Verticals",
+    "verticals": "Operating Domains",
     "engagement": "Engagement",
     "contact": "Discuss Your System"
   },
@@ -69,7 +69,7 @@
     }
   },
   "verticals": {
-    "title": "Live Operating Verticals",
+    "title": "Live Operating Domains",
     "subtitle": "We don't theorize. We operate. These are systems we run ourselves under real legal and operational pressure.",
     "ksiegai": {
       "title": "Financial Infrastructure",
@@ -129,9 +129,9 @@
   },
   "footer": {
     "tagline": "Digital infrastructure for businesses that cannot afford chaos.",
-    "verticals": "Operating Verticals",
+    "verticals": "Operating Domains",
     "ksiegai": "KsięgaI - Financial Infrastructure",
-    "globalPet": "Global Pet - Licensed Logistics (Coming Soon)",
+    "globalPet": "Global Pet - Licensed Logistics",
     "contact": "Contact",
     "copyright": "TOVERNET. Built systems scale. Tools don't."
   }

@@ -1,7 +1,7 @@
 {
   "nav": {
     "whatWeBuild": "Co Budujemy",
-    "verticals": "Działające Wertykały",
+    "verticals": "Obszar Operacyjny",
     "engagement": "Współpraca",
     "contact": "Omów Swój System"
   },
@@ -50,12 +50,12 @@
       ]
     },
     "automation": {
-      "title": "Automatyzacja i Orkiestracja",
+      "title": "Automatyzacja i Koordynacja Operacyjna",
       "description": "Operacje wspomagane AI i automatyzacja przepływów pracy koordynująca ludzi, dane i decyzje.",
       "features": [
         "Wewnętrzne przepływy automatyzacji",
         "Wsparcie decyzyjne wspomagane AI",
-        "Orkiestracja między systemami"
+        "Koordynacja operacyjna między systemami"
       ]
     },
     "governance": {
@@ -69,7 +69,7 @@
     }
   },
   "verticals": {
-    "title": "Działające Wertykały Operacyjne",
+    "title": "Obszar Operacyjny",
     "subtitle": "Nie teoretyzujemy. Działamy. To są systemy, które sami prowadzimy pod rzeczywistą presją prawną i operacyjną.",
     "ksiegai": {
       "title": "Infrastruktura Finansowa",
@@ -129,9 +129,9 @@
   },
   "footer": {
     "tagline": "Infrastruktura cyfrowa dla firm, które nie mogą sobie pozwolić na chaos.",
-    "verticals": "Działające Wertykały",
+    "verticals": "Obszar Operacyjny",
     "ksiegai": "KsięgaI - Infrastruktura Finansowa",
-    "globalPet": "Global Pet - Licencjonowana Logistyka (Wkrótce)",
+    "globalPet": "Global Pet - Licencjonowana Logistyka",
     "contact": "Kontakt",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie."
   }

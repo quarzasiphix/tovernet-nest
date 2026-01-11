@@ -353,7 +353,11 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                       {t('footer.ksiegai')}
                     </a>
                   </li>
-                  <li className="text-gray-500">{t('footer.globalPet')}</li>
+                  <li>
+                    <a href="https://globalpet.online" target="_blank" rel="noopener noreferrer" className="hover:text-globalpet-400 transition-colors">
+                      {t('footer.globalPet')}
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
