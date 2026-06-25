@@ -83,7 +83,7 @@ export default function PokPlanViewer() {
       const lib = pdfjs.default ?? pdfjs;
       lib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${lib.version}/build/pdf.worker.min.js`;
 
-      const pdf = await lib.getDocument('/pdf/pok_plan.pdf').promise;
+      const pdf = await lib.getDocument('/pdf/pok-plan2.pdf').promise;
       if (cancelled) return;
 
       numPagesRef.current = pdf.numPages;
