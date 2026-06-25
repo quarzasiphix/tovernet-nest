@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { Globe } from 'lucide-react';
 import { useState, useTransition } from 'react';
+import posthog from 'posthog-js';
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -13,6 +14,7 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
 
   const switchLocale = (newLocale: string) => {
+    posthog.capture('language_switched', { from_locale: locale, to_locale: newLocale });
     startTransition(() => {
       const segments = pathname.split('/');
       segments[1] = newLocale;

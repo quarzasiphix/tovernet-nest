@@ -5,7 +5,7 @@ import type { Locale } from './i18n';
 
 const intlMiddleware = createMiddleware({
   locales,
-  defaultLocale: 'pl',
+  defaultLocale: 'en',
   localePrefix: 'always',
   localeDetection: false
 });
@@ -13,19 +13,17 @@ const intlMiddleware = createMiddleware({
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Handle root path - redirect based on country detection
-  if (pathname === '/') {
+  const hasLocale = locales.some(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+  );
+
+  if (!hasLocale) {
     const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value as Locale | undefined;
     const country = request.geo?.country || request.headers.get('cf-ipcountry') || 'US';
-    
-    // Check if user is from an English-speaking country
-    const englishCountries = ['US', 'GB', 'CA', 'AU', 'NZ', 'IE', 'ZA', 'IN', 'PH', 'SG', 'MY', 'HK'];
-    const isEnglishCountry = englishCountries.includes(country);
-    
-    const inferredLocale: Locale = isEnglishCountry ? 'en' : 'pl';
+    const inferredLocale: Locale = country === 'PL' ? 'pl' : 'en';
     const locale = cookieLocale && locales.includes(cookieLocale) ? cookieLocale : inferredLocale;
 
-    request.nextUrl.pathname = `/${locale}`;
+    request.nextUrl.pathname = `/${locale}${pathname === '/' ? '' : pathname}`;
     return Response.redirect(request.nextUrl);
   }
 
@@ -33,5 +31,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ['/((?!api|_next|_vercel|pdf|.*\\..*).*)']
 };

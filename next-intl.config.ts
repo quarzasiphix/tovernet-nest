@@ -2,7 +2,7 @@ import { locales } from './i18n';
 
 export default {
   locales,
-  defaultLocale: 'pl',
+  defaultLocale: 'en',
   localePrefix: 'always',
   localeDetection: false
 };

@@ -1,16 +1,16 @@
 {
   "nav": {
     "whatWeBuild": "Co Budujemy",
-    "verticals": "Obszar Operacyjny",
+    "verticals": "Działające Wertykały",
     "engagement": "Współpraca",
     "contact": "Omów Swój System"
   },
   "hero": {
     "badge": "Cyfrowa Warstwa Operacyjna",
-    "title": "Cyfrowa Warstwa Operacyjna",
-    "titleHighlight": "Budujemy Systemy, Na Których Opierają Się Firmy",
-    "subtitle": "Infrastruktura cyfrowa dla organizacji, które muszą działać w skali, zgodności i pełnej kontroli.",
-    "description": "",
+    "title": "Infrastruktura Cyfrowa dla Firm, Które",
+    "titleHighlight": "Nie Mogą Sobie Pozwolić na Chaos",
+    "subtitle": "Projektujemy, wdrażamy i zarządzamy infrastrukturą biznesową dla przedsięwzięć, które muszą skalować się, zachować zgodność i koordynować działania między systemami, ludźmi i jurysdykcjami.",
+    "description": "Niestandardowe systemy cyfrowe dla firm, które chcą struktury, a nie narzędzi.",
     "ctaPrimary": "Zamów Przegląd Infrastruktury",
     "ctaSecondary": "Zobacz Co Prowadzimy",
     "valueProps": {
@@ -50,12 +50,12 @@
       ]
     },
     "automation": {
-      "title": "Automatyzacja i Koordynacja Operacyjna",
+      "title": "Automatyzacja i Orkiestracja",
       "description": "Operacje wspomagane AI i automatyzacja przepływów pracy koordynująca ludzi, dane i decyzje.",
       "features": [
         "Wewnętrzne przepływy automatyzacji",
         "Wsparcie decyzyjne wspomagane AI",
-        "Koordynacja operacyjna między systemami"
+        "Orkiestracja między systemami"
       ]
     },
     "governance": {
@@ -69,7 +69,7 @@
     }
   },
   "verticals": {
-    "title": "Obszar Operacyjny",
+    "title": "Działające Wertykały Operacyjne",
     "subtitle": "Nie teoretyzujemy. Działamy. To są systemy, które sami prowadzimy pod rzeczywistą presją prawną i operacyjną.",
     "ksiegai": {
       "title": "Infrastruktura Finansowa",
@@ -129,9 +129,9 @@
   },
   "footer": {
     "tagline": "Infrastruktura cyfrowa dla firm, które nie mogą sobie pozwolić na chaos.",
-    "verticals": "Obszar Operacyjny",
+    "verticals": "Działające Wertykały",
     "ksiegai": "KsięgaI - Infrastruktura Finansowa",
-    "globalPet": "Global Pet - Licencjonowana Logistyka",
+    "globalPet": "Global Pet - Licencjonowana Logistyka (Wkrótce)",
     "contact": "Kontakt",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie."
   }
