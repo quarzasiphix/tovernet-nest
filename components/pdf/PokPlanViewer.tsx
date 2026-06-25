@@ -1,42 +1,46 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { useState, useRef, useEffect } from 'react';
 import { usePostHog } from 'posthog-js/react';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function PokPlanViewer() {
-  const [numPages, setNumPages] = useState<number>(0);
+  const [pageImages, setPageImages] = useState<string[]>([]);
+  const [numPages, setNumPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [width, setWidth] = useState(800);
+  const [loading, setLoading] = useState(true);
+  const [containerWidth, setContainerWidth] = useState(1000);
   const containerRef = useRef<HTMLDivElement>(null);
   const pageRefs = useRef<(HTMLDivElement | null)[]>([]);
   const posthog = usePostHog();
 
-  // tracking state
   const sessionStart = useRef(Date.now());
   const seenPages = useRef<Set<number>>(new Set());
   const pageEntryTime = useRef<Record<number, number>>({});
   const pageDwellMs = useRef<Record<number, number>>({});
   const numPagesRef = useRef(0);
 
+  // force session recording on + heartbeat
+  useEffect(() => {
+    if (!posthog) return;
+    posthog.startSessionRecording(true);
+    const heartbeat = setInterval(() => {
+      posthog.capture('pdf_reading_heartbeat', { document: 'pok_plan', current_page: currentPage });
+    }, 60_000);
+    return () => clearInterval(heartbeat);
+  }, [posthog, currentPage]);
+
   useEffect(() => {
     posthog?.capture('pdf_opened', { document: 'pok_plan' });
-
     return () => {
-      // flush any open page dwell
-      Object.entries(pageEntryTime.current).forEach(([page, entryMs]) => {
+      const entrySnapshot = { ...pageEntryTime.current };
+      const dwellSnapshot = { ...pageDwellMs.current };
+      Object.entries(entrySnapshot).forEach(([page, t]) => {
         const p = Number(page);
-        pageDwellMs.current[p] = (pageDwellMs.current[p] ?? 0) + (Date.now() - entryMs);
+        dwellSnapshot[p] = (dwellSnapshot[p] ?? 0) + (Date.now() - t);
       });
-
       const seen = Array.from(seenPages.current).sort((a, b) => a - b);
       const furthest = seen.length ? Math.max(...seen) : 0;
       const total = numPagesRef.current;
-
       posthog?.capture('pdf_session_end', {
         document: 'pok_plan',
         total_time_sec: Math.round((Date.now() - sessionStart.current) / 1000),
@@ -46,7 +50,7 @@ export default function PokPlanViewer() {
         total_pages: total,
         completion_pct: total > 0 ? Math.round((furthest / total) * 100) : 0,
         dwell_sec_per_page: Object.fromEntries(
-          Object.entries(pageDwellMs.current).map(([k, v]) => [k, Math.round(v / 1000)])
+          Object.entries(dwellSnapshot).map(([k, v]) => [k, Math.round(v / 1000)])
         ),
       });
     };
@@ -54,16 +58,56 @@ export default function PokPlanViewer() {
   }, []);
 
   useEffect(() => {
-    const updateWidth = () => {
+    const update = () => {
       if (containerRef.current) {
-        setWidth(Math.min(containerRef.current.clientWidth - 32, 1000));
+        setContainerWidth(Math.min(containerRef.current.clientWidth - 32, 1200));
       }
     };
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
   }, []);
 
+  // render PDF pages to images so PostHog session replay captures them
+  useEffect(() => {
+    let cancelled = false;
+    const render = async () => {
+      const pdfjs = await import('pdfjs-dist/build/pdf.js' as any);
+      const lib = pdfjs.default ?? pdfjs;
+      lib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${lib.version}/build/pdf.worker.min.js`;
+
+      const pdf = await lib.getDocument('/pdf/pok_plan.pdf').promise;
+      if (cancelled) return;
+
+      numPagesRef.current = pdf.numPages;
+      setNumPages(pdf.numPages);
+      pageRefs.current = new Array(pdf.numPages).fill(null);
+
+      for (let i = 1; i <= pdf.numPages; i++) {
+        if (cancelled) return;
+        const page = await pdf.getPage(i);
+        const baseViewport = page.getViewport({ scale: 1 });
+        const scale = containerWidth / baseViewport.width;
+        const viewport = page.getViewport({ scale });
+
+        const canvas = document.createElement('canvas');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        const ctx = canvas.getContext('2d')!;
+        await page.render({ canvasContext: ctx, viewport }).promise;
+
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+        if (!cancelled) setPageImages((prev) => [...prev, dataUrl]);
+      }
+
+      if (!cancelled) setLoading(false);
+    };
+
+    render().catch(console.error);
+    return () => { cancelled = true; };
+  }, [containerWidth]);
+
+  // IntersectionObserver for page tracking
   useEffect(() => {
     if (numPages === 0) return;
 
@@ -71,24 +115,17 @@ export default function PokPlanViewer() {
       (entries) => {
         entries.forEach((entry) => {
           const pageNum = Number(entry.target.getAttribute('data-page'));
-
           if (entry.isIntersecting) {
             setCurrentPage(pageNum);
             pageEntryTime.current[pageNum] = Date.now();
-
             if (!seenPages.current.has(pageNum)) {
               seenPages.current.add(pageNum);
-              posthog?.capture('pdf_page_viewed', {
-                document: 'pok_plan',
-                page: pageNum,
-                total_pages: numPages,
-              });
+              posthog?.capture('pdf_page_viewed', { document: 'pok_plan', page: pageNum, total_pages: numPages });
             }
           } else {
-            const entry_ms = pageEntryTime.current[pageNum];
-            if (entry_ms != null) {
-              pageDwellMs.current[pageNum] =
-                (pageDwellMs.current[pageNum] ?? 0) + (Date.now() - entry_ms);
+            const t = pageEntryTime.current[pageNum];
+            if (t != null) {
+              pageDwellMs.current[pageNum] = (pageDwellMs.current[pageNum] ?? 0) + (Date.now() - t);
               delete pageEntryTime.current[pageNum];
             }
           }
@@ -97,53 +134,44 @@ export default function PokPlanViewer() {
       { threshold: 0.4 }
     );
 
-    pageRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
+    pageRefs.current.forEach((ref) => { if (ref) observer.observe(ref); });
     return () => observer.disconnect();
   }, [numPages, posthog]);
-
-  const onLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {
-    setNumPages(numPages);
-    numPagesRef.current = numPages;
-    pageRefs.current = new Array(numPages).fill(null);
-  }, []);
 
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col">
       <div className="sticky top-0 z-10 bg-slate-900/95 backdrop-blur border-b border-white/10 px-4 py-3 flex items-center justify-between">
         <span className="text-white font-semibold text-sm">POK Plan</span>
         {numPages > 0 && (
-          <span className="text-slate-400 text-sm">
-            Page {currentPage} / {numPages}
-          </span>
+          <span className="text-slate-400 text-sm">Page {currentPage} / {numPages}</span>
         )}
       </div>
 
-      <div ref={containerRef} className="flex-1 overflow-y-auto flex flex-col items-center py-8 gap-4 px-4">
-        <Document
-          file="/pdf/pok_plan.pdf"
-          onLoadSuccess={onLoadSuccess}
-          loading={<div className="text-slate-400 py-20">Loading document…</div>}
-          error={<div className="text-red-400 py-20">Failed to load PDF.</div>}
-        >
-          {Array.from({ length: numPages }, (_, i) => (
+      <div ref={containerRef} className="flex-1 overflow-y-auto flex flex-col items-center py-8 px-4">
+        {loading && pageImages.length === 0 && (
+          <div className="text-slate-400 py-20">Loading document…</div>
+        )}
+
+        {pageImages.map((src, i) => (
+          <div key={i} className="flex flex-col items-center w-full">
             <div
-              key={i}
               ref={(el) => { pageRefs.current[i] = el; }}
               data-page={i + 1}
               className="shadow-2xl"
             >
-              <Page
-                pageNumber={i + 1}
-                width={width}
-                renderTextLayer={true}
-                renderAnnotationLayer={true}
+              <img
+                src={src}
+                alt={`Page ${i + 1}`}
+                width={containerWidth}
+                draggable={false}
+                style={{ display: 'block', userSelect: 'none' }}
               />
             </div>
-          ))}
-        </Document>
+            {i < numPages - 1 && (
+              <div className="w-full h-8 bg-slate-950" />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -8,12 +8,6 @@ module.exports = withNextIntl({
   trailingSlash: true,
   webpack: (config) => {
     config.resolve.alias.canvas = false;
-    config.resolve.alias.encoding = false;
-    config.module.rules.push({
-      test: /node_modules\/pdfjs-dist.*\.mjs$/,
-      type: 'javascript/auto',
-      resolve: { fullySpecified: false },
-    });
     return config;
   },
 });
