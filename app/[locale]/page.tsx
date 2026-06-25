@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowRight, Sparkles, Network, Shield, Zap, Building2, Globe, Calculator, Receipt, PawPrint, Plane, Heart } from "lucide-react";
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import TrackedAnchor from '@/components/TrackedAnchor';
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
@@ -26,9 +25,9 @@ export default function Home({ params: { locale } }: { params: { locale: string 
               <a href="#verticals" className="text-gray-300 hover:text-white transition-colors">{t('nav.verticals')}</a>
               <a href="#engagement" className="text-gray-300 hover:text-white transition-colors">{t('nav.engagement')}</a>
               <LanguageSwitcher />
-              <TrackedAnchor href="#contact" eventName="nav_contact_clicked" className="px-6 py-2 bg-tovernet-gradient rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
+              <a href="#contact" className="px-6 py-2 bg-tovernet-gradient rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
                 {t('nav.contact')}
-              </TrackedAnchor>
+              </a>
             </div>
           </div>
         </div>
@@ -44,37 +43,32 @@ export default function Home({ params: { locale } }: { params: { locale: string 
               <span className="text-tovernet-300 text-sm font-semibold">{t('hero.badge')}</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              {t('hero.title')}{" "}
+
+            
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-tovernet-400 via-ksiegai-400 to-tovernet-500 bg-clip-text text-transparent">
                 {t('hero.titleHighlight')}
               </span>
-            </h1>
+            </h2>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               {t('hero.subtitle')}
             </p>
             
-            <p className="text-lg text-tovernet-300 mb-12 font-medium">
-              {t('hero.description')}
-            </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <TrackedAnchor
+              <a
                 href="#contact"
-                eventName="hero_cta_clicked"
                 className="inline-flex items-center justify-center gap-2 bg-tovernet-gradient text-white text-lg px-10 py-4 rounded-xl font-semibold shadow-2xl hover-lift magical-glow transition-all"
               >
                 {t('hero.ctaPrimary')}
                 <ArrowRight className="h-5 w-5" />
-              </TrackedAnchor>
-              <TrackedAnchor
+              </a>
+              <a
                 href="#verticals"
-                eventName="hero_secondary_cta_clicked"
                 className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white text-lg px-10 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all"
               >
                 {t('hero.ctaSecondary')}
-              </TrackedAnchor>
+              </a>
             </div>
 
             {/* Key Value Props */}
@@ -212,17 +206,15 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                       </li>
                     ))}
                   </ul>
-                  <TrackedAnchor
+                  <a
                     href="https://ksiegai.pl"
                     target="_blank"
                     rel="noopener noreferrer"
-                    eventName="ksiegai_cta_clicked"
-                    eventProperties={{ destination: 'https://ksiegai.pl' }}
                     className="inline-flex items-center gap-2 bg-ksiegai-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     {t('verticals.ksiegai.cta')}
                     <ArrowRight className="h-5 w-5" />
-                  </TrackedAnchor>
+                  </a>
                 </div>
               </div>
 
@@ -252,9 +244,15 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                       </li>
                     ))}
                   </ul>
-                  <div className="inline-flex items-center gap-2 bg-globalpet-gradient text-white px-6 py-3 rounded-lg font-semibold opacity-75">
-                    <span>{t('verticals.globalPet.cta')}</span>
-                  </div>
+                  <a
+                    href="https://globalpet.online"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-globalpet-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    {t('verticals.globalPet.cta')}
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -322,15 +320,13 @@ export default function Home({ params: { locale } }: { params: { locale: string 
             <p className="text-xl text-gray-300 mb-12">
               {t('contact.subtitle')}
             </p>
-            <TrackedAnchor
+            <a
               href="mailto:contact@tovernet.online"
-              eventName="contact_email_clicked"
-              eventProperties={{ email: 'contact@tovernet.online' }}
               className="inline-flex items-center gap-2 bg-tovernet-gradient text-white text-lg px-12 py-4 rounded-xl font-semibold shadow-2xl hover-lift magical-glow transition-all"
             >
               {t('contact.cta')}
               <ArrowRight className="h-5 w-5" />
-            </TrackedAnchor>
+            </a>
           </div>
         </div>
       </section>
@@ -353,20 +349,24 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                 <h4 className="text-white font-semibold mb-4">{t('footer.verticals')}</h4>
                 <ul className="space-y-2 text-gray-400 text-sm">
                   <li>
-                    <TrackedAnchor href="https://ksiegai.pl" target="_blank" rel="noopener noreferrer" eventName="footer_ksiegai_clicked" eventProperties={{ destination: 'https://ksiegai.pl' }} className="hover:text-ksiegai-400 transition-colors">
+                    <a href="https://ksiegai.pl" target="_blank" rel="noopener noreferrer" className="hover:text-ksiegai-400 transition-colors">
                       {t('footer.ksiegai')}
-                    </TrackedAnchor>
+                    </a>
                   </li>
-                  <li className="text-gray-500">{t('footer.globalPet')}</li>
+                  <li>
+                    <a href="https://globalpet.online" target="_blank" rel="noopener noreferrer" className="hover:text-globalpet-400 transition-colors">
+                      {t('footer.globalPet')}
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h4 className="text-white font-semibold mb-4">{t('footer.contact')}</h4>
                 <ul className="space-y-2 text-gray-400 text-sm">
                   <li>
-                    <TrackedAnchor href="mailto:contact@tovernet.online" eventName="footer_email_clicked" eventProperties={{ email: 'contact@tovernet.online' }} className="hover:text-tovernet-400 transition-colors">
+                    <a href="mailto:contact@tovernet.online" className="hover:text-tovernet-400 transition-colors">
                       contact@tovernet.online
-                    </TrackedAnchor>
+                    </a>
                   </li>
                 </ul>
               </div>
