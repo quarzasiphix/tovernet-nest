@@ -86,9 +86,8 @@ export default function PokPlanViewer() {
       for (let i = 1; i <= pdf.numPages; i++) {
         if (cancelled) return;
         const page = await pdf.getPage(i);
-        const baseViewport = page.getViewport({ scale: 1 });
-        const scale = containerWidth / baseViewport.width;
-        const viewport = page.getViewport({ scale });
+        // fixed scale — matches browser PDF viewer at 96dpi
+        const viewport = page.getViewport({ scale: 1.5 });
 
         const canvas = document.createElement('canvas');
         canvas.width = viewport.width;
@@ -96,7 +95,7 @@ export default function PokPlanViewer() {
         const ctx = canvas.getContext('2d')!;
         await page.render({ canvasContext: ctx, viewport }).promise;
 
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+        const dataUrl = canvas.toDataURL('image/png');
         if (!cancelled) setPageImages((prev) => [...prev, dataUrl]);
       }
 
@@ -105,7 +104,7 @@ export default function PokPlanViewer() {
 
     render().catch(console.error);
     return () => { cancelled = true; };
-  }, [containerWidth]);
+  }, []); // run once only
 
   // IntersectionObserver for page tracking
   useEffect(() => {
@@ -139,7 +138,7 @@ export default function PokPlanViewer() {
   }, [numPages, posthog]);
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col">
+    <div className="bg-slate-950 min-h-screen flex flex-col">
       <div className="sticky top-0 z-10 bg-slate-900/95 backdrop-blur border-b border-white/10 px-4 py-3 flex items-center justify-between">
         <span className="text-white font-semibold text-sm">POK Plan</span>
         {numPages > 0 && (
@@ -147,7 +146,7 @@ export default function PokPlanViewer() {
         )}
       </div>
 
-      <div ref={containerRef} className="flex-1 overflow-y-auto flex flex-col items-center py-8 px-4">
+      <div ref={containerRef} className="flex flex-col items-center py-8 px-4 w-full">
         {loading && pageImages.length === 0 && (
           <div className="text-slate-400 py-20">Loading document…</div>
         )}
@@ -162,9 +161,8 @@ export default function PokPlanViewer() {
               <img
                 src={src}
                 alt={`Page ${i + 1}`}
-                width={containerWidth}
                 draggable={false}
-                style={{ display: 'block', userSelect: 'none' }}
+                style={{ display: 'block', width: '100%', maxWidth: 1000, height: 'auto', userSelect: 'none', touchAction: 'pan-x pan-y pinch-zoom' }}
               />
             </div>
             {i < numPages - 1 && (
