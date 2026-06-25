@@ -30,20 +30,27 @@ export default function PokPlanViewer() {
   }, [posthog, currentPage]);
 
   useEffect(() => {
+    // capture ref objects (not .current) so cleanup reads final values at unmount
+    const entryRef = pageEntryTime;
+    const dwellRef = pageDwellMs;
+    const seenRef = seenPages;
+    const startRef = sessionStart;
+    const pagesRef = numPagesRef;
+
     posthog?.capture('pdf_opened', { document: 'pok_plan' });
     return () => {
-      const entrySnapshot = { ...pageEntryTime.current };
-      const dwellSnapshot = { ...pageDwellMs.current };
+      const entrySnapshot = { ...entryRef.current };
+      const dwellSnapshot = { ...dwellRef.current };
       Object.entries(entrySnapshot).forEach(([page, t]) => {
         const p = Number(page);
         dwellSnapshot[p] = (dwellSnapshot[p] ?? 0) + (Date.now() - t);
       });
-      const seen = Array.from(seenPages.current).sort((a, b) => a - b);
+      const seen = Array.from(seenRef.current).sort((a, b) => a - b);
       const furthest = seen.length ? Math.max(...seen) : 0;
-      const total = numPagesRef.current;
+      const total = pagesRef.current;
       posthog?.capture('pdf_session_end', {
         document: 'pok_plan',
-        total_time_sec: Math.round((Date.now() - sessionStart.current) / 1000),
+        total_time_sec: Math.round((Date.now() - startRef.current) / 1000),
         pages_viewed: seen,
         pages_viewed_count: seen.length,
         furthest_page: furthest,
@@ -158,6 +165,7 @@ export default function PokPlanViewer() {
               data-page={i + 1}
               className="shadow-2xl"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={src}
                 alt={`Page ${i + 1}`}
