@@ -3,6 +3,13 @@
 import { useState, useRef, useEffect } from 'react';
 import { usePostHog } from 'posthog-js/react';
 
+const PDF_META = {
+  documentKey: 'gryfin_plan',
+  documentTitle: 'Gryfin Plan',
+  documentPath: '/pdf/gryfin',
+  assetPath: '/pdf/gryfin-plan.pdf',
+} as const;
+
 export default function GryfinPlanViewer() {
   const [pageImages, setPageImages] = useState<string[]>([]);
   const [numPages, setNumPages] = useState(0);
@@ -19,11 +26,24 @@ export default function GryfinPlanViewer() {
   const pageDwellMs = useRef<Record<number, number>>({});
   const numPagesRef = useRef(0);
 
+  const capturePdfEvent = (event: string, properties: Record<string, unknown> = {}) => {
+    posthog?.capture(event, {
+      document_key: PDF_META.documentKey,
+      document_title: PDF_META.documentTitle,
+      document_path: PDF_META.documentPath,
+      pdf_asset_path: PDF_META.assetPath,
+      ...properties,
+    });
+  };
+
   useEffect(() => {
     if (!posthog) return;
     posthog.startSessionRecording(true);
     const heartbeat = setInterval(() => {
-      posthog.capture('pdf_reading_heartbeat', { document: 'gryfin_plan', current_page: currentPage });
+      capturePdfEvent('pdf_gryfin_reading_heartbeat', {
+        current_page: currentPage,
+        total_pages: numPagesRef.current,
+      });
     }, 60_000);
     return () => clearInterval(heartbeat);
   }, [posthog, currentPage]);
@@ -35,7 +55,7 @@ export default function GryfinPlanViewer() {
     const startRef = sessionStart;
     const pagesRef = numPagesRef;
 
-    posthog?.capture('pdf_opened', { document: 'gryfin_plan' });
+    capturePdfEvent('pdf_gryfin_opened');
     return () => {
       const entrySnapshot = { ...entryRef.current };
       const dwellSnapshot = { ...dwellRef.current };
@@ -46,8 +66,7 @@ export default function GryfinPlanViewer() {
       const seen = Array.from(seenRef.current).sort((a, b) => a - b);
       const furthest = seen.length ? Math.max(...seen) : 0;
       const total = pagesRef.current;
-      posthog?.capture('pdf_session_end', {
-        document: 'gryfin_plan',
+      capturePdfEvent('pdf_gryfin_session_ended', {
         total_time_sec: Math.round((Date.now() - startRef.current) / 1000),
         pages_viewed: seen,
         pages_viewed_count: seen.length,
@@ -80,12 +99,13 @@ export default function GryfinPlanViewer() {
       const lib = pdfjs.default ?? pdfjs;
       lib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${lib.version}/build/pdf.worker.min.js`;
 
-      const pdf = await lib.getDocument('/pdf/gryfin-plan.pdf').promise;
+      const pdf = await lib.getDocument(PDF_META.assetPath).promise;
       if (cancelled) return;
 
       numPagesRef.current = pdf.numPages;
       setNumPages(pdf.numPages);
       pageRefs.current = new Array(pdf.numPages).fill(null);
+      capturePdfEvent('pdf_gryfin_loaded', { total_pages: pdf.numPages });
 
       for (let i = 1; i <= pdf.numPages; i++) {
         if (cancelled) return;
@@ -105,7 +125,12 @@ export default function GryfinPlanViewer() {
       if (!cancelled) setLoading(false);
     };
 
-    render().catch(console.error);
+    render().catch((error) => {
+      capturePdfEvent('pdf_gryfin_load_failed', {
+        error_message: error instanceof Error ? error.message : 'Unknown PDF load error',
+      });
+      console.error(error);
+    });
     return () => { cancelled = true; };
   }, []);
 
@@ -121,7 +146,10 @@ export default function GryfinPlanViewer() {
             pageEntryTime.current[pageNum] = Date.now();
             if (!seenPages.current.has(pageNum)) {
               seenPages.current.add(pageNum);
-              posthog?.capture('pdf_page_viewed', { document: 'gryfin_plan', page: pageNum, total_pages: numPages });
+              capturePdfEvent('pdf_gryfin_page_viewed', {
+                page: pageNum,
+                total_pages: numPages,
+              });
             }
           } else {
             const t = pageEntryTime.current[pageNum];
