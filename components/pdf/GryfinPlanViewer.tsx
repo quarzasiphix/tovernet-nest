@@ -95,6 +95,9 @@ export default function GryfinPlanViewer() {
   useEffect(() => {
     let cancelled = false;
     const render = async () => {
+      setLoading(true);
+      setPageImages([]);
+
       const pdfjs = await import('pdfjs-dist/build/pdf.js' as any);
       const lib = pdfjs.default ?? pdfjs;
       lib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${lib.version}/build/pdf.worker.min.js`;
@@ -110,7 +113,11 @@ export default function GryfinPlanViewer() {
       for (let i = 1; i <= pdf.numPages; i++) {
         if (cancelled) return;
         const page = await pdf.getPage(i);
-        const viewport = page.getViewport({ scale: 1.5 });
+        const baseViewport = page.getViewport({ scale: 1 });
+        const targetWidth = Math.min(containerWidth, 1000);
+        const widthScale = targetWidth > 0 ? targetWidth / baseViewport.width : 1;
+        const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+        const viewport = page.getViewport({ scale: widthScale * pixelRatio });
 
         const canvas = document.createElement('canvas');
         canvas.width = viewport.width;
@@ -132,7 +139,7 @@ export default function GryfinPlanViewer() {
       console.error(error);
     });
     return () => { cancelled = true; };
-  }, []);
+  }, [containerWidth]);
 
   useEffect(() => {
     if (numPages === 0) return;

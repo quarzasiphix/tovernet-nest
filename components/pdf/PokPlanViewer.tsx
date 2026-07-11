@@ -79,6 +79,9 @@ export default function PokPlanViewer() {
   useEffect(() => {
     let cancelled = false;
     const render = async () => {
+      setLoading(true);
+      setPageImages([]);
+
       const pdfjs = await import('pdfjs-dist/build/pdf.js' as any);
       const lib = pdfjs.default ?? pdfjs;
       lib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${lib.version}/build/pdf.worker.min.js`;
@@ -93,8 +96,11 @@ export default function PokPlanViewer() {
       for (let i = 1; i <= pdf.numPages; i++) {
         if (cancelled) return;
         const page = await pdf.getPage(i);
-        // fixed scale — matches browser PDF viewer at 96dpi
-        const viewport = page.getViewport({ scale: 1.5 });
+        const baseViewport = page.getViewport({ scale: 1 });
+        const targetWidth = Math.min(containerWidth, 1000);
+        const widthScale = targetWidth > 0 ? targetWidth / baseViewport.width : 1;
+        const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+        const viewport = page.getViewport({ scale: widthScale * pixelRatio });
 
         const canvas = document.createElement('canvas');
         canvas.width = viewport.width;
@@ -111,7 +117,7 @@ export default function PokPlanViewer() {
 
     render().catch(console.error);
     return () => { cancelled = true; };
-  }, []); // run once only
+  }, [containerWidth]);
 
   // IntersectionObserver for page tracking
   useEffect(() => {
