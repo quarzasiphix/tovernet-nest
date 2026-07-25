@@ -1,7 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowRight, Sparkles, Network, Shield, Zap, Building2, Globe, Calculator, Receipt, PawPrint, Plane, Heart } from "lucide-react";
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+import SiteNav from '@/components/SiteNav';
+import SiteFooter from '@/components/SiteFooter';
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
@@ -9,29 +10,8 @@ export default function Home({ params: { locale } }: { params: { locale: string 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
-      
-      {/* Navigation */}
-      <nav className="border-b border-white/10 backdrop-blur-sm bg-black/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Sparkles className="h-8 w-8 text-tovernet-400" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-tovernet-400 to-ksiegai-400 bg-clip-text text-transparent">
-                TOVERNET
-              </span>
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#what-we-build" className="text-gray-300 hover:text-white transition-colors">{t('nav.whatWeBuild')}</a>
-              <a href="#verticals" className="text-gray-300 hover:text-white transition-colors">{t('nav.verticals')}</a>
-              <a href="#engagement" className="text-gray-300 hover:text-white transition-colors">{t('nav.engagement')}</a>
-              <LanguageSwitcher />
-              <a href="#contact" className="px-6 py-2 bg-tovernet-gradient rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
-                {t('nav.contact')}
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+
+      <SiteNav locale={locale} />
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
@@ -88,6 +68,50 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                 <h3 className="text-white font-semibold mb-2">{t('hero.valueProps.traceability.title')}</h3>
                 <p className="text-gray-400 text-sm">{t('hero.valueProps.traceability.description')}</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Solutions Section */}
+      <section id="industry-solutions" className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {t('industrySolutions.title')}
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                {t('industrySolutions.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <a
+                href={`/${locale}/hodowcy`}
+                className="group relative bg-gradient-to-br from-breeder-900/30 to-amber-900/20 border border-breeder-500/20 rounded-2xl p-8 hover-lift magical-glow-amber overflow-hidden block"
+              >
+                <PawPrint className="h-12 w-12 text-breeder-400 mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">{t('industrySolutions.breederCard.title')}</h3>
+                <p className="text-gray-300 mb-6">{t('industrySolutions.breederCard.description')}</p>
+                <span className="inline-flex items-center gap-2 text-breeder-400 font-semibold group-hover:gap-3 transition-all">
+                  {t('industrySolutions.breederCard.cta')}
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </a>
+
+              <a
+                href={`/${locale}/zwiazki-kynologiczne`}
+                className="group relative bg-gradient-to-br from-kennelclub-900/30 to-blue-900/20 border border-kennelclub-500/20 rounded-2xl p-8 hover-lift magical-glow-blue overflow-hidden block"
+              >
+                <Building2 className="h-12 w-12 text-kennelclub-400 mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">{t('industrySolutions.kennelCard.title')}</h3>
+                <p className="text-gray-300 mb-6">{t('industrySolutions.kennelCard.description')}</p>
+                <span className="inline-flex items-center gap-2 text-kennelclub-400 font-semibold group-hover:gap-3 transition-all">
+                  {t('industrySolutions.kennelCard.cta')}
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </a>
             </div>
           </div>
         </div>
@@ -331,52 +355,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10 py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <Sparkles className="h-6 w-6 text-tovernet-400" />
-                  <span className="text-xl font-bold text-white">TOVERNET</span>
-                </div>
-                <p className="text-gray-400 text-sm">
-                  {t('footer.tagline')}
-                </p>
-              </div>
-              <div>
-                <h4 className="text-white font-semibold mb-4">{t('footer.verticals')}</h4>
-                <ul className="space-y-2 text-gray-400 text-sm">
-                  <li>
-                    <a href="https://ksiegai.pl" target="_blank" rel="noopener noreferrer" className="hover:text-ksiegai-400 transition-colors">
-                      {t('footer.ksiegai')}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://globalpet.online" target="_blank" rel="noopener noreferrer" className="hover:text-globalpet-400 transition-colors">
-                      {t('footer.globalPet')}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-semibold mb-4">{t('footer.contact')}</h4>
-                <ul className="space-y-2 text-gray-400 text-sm">
-                  <li>
-                    <a href="mailto:contact@tovernet.online" className="hover:text-tovernet-400 transition-colors">
-                      contact@tovernet.online
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-              <p>&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} />
     </div>
   );
 }

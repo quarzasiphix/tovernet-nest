@@ -3,7 +3,10 @@
     "whatWeBuild": "What We Build",
     "verticals": "Operating Domains",
     "engagement": "Engagement",
-    "contact": "Discuss Your System"
+    "contact": "Discuss Your System",
+    "breeders": "Breeders",
+    "kennelClubs": "Kennel Clubs",
+    "projects": "Our Projects"
   },
   "hero": {
     "badge": "The Digital Operating Layer",
@@ -68,6 +71,20 @@
       ]
     }
   },
+  "industrySolutions": {
+    "title": "Industry Solutions",
+    "subtitle": "Instead of generic \"non-standard infrastructure\" — concrete solutions for specific industries we already know from the inside.",
+    "breederCard": {
+      "title": "For Dog Breeders",
+      "description": "A website and admin panel that are yours forever, plus a Google Business Profile and local SEO.",
+      "cta": "See the Breeder Offer"
+    },
+    "kennelCard": {
+      "title": "For Kennel Clubs",
+      "description": "Dog registry, pedigrees, payments, and a full audit trail in one system for multiple clubs.",
+      "cta": "See the Kennel Club Offer"
+    }
+  },
   "verticals": {
     "title": "Live Operating Domains",
     "subtitle": "We don't theorize. We operate. These are systems we run ourselves under real legal and operational pressure.",
@@ -129,10 +146,186 @@
   },
   "footer": {
     "tagline": "Digital infrastructure for businesses that cannot afford chaos.",
-    "verticals": "Operating Domains",
+    "solutions": "Industry Solutions",
+    "verticals": "Our Projects",
     "ksiegai": "KsięgaI - Financial Infrastructure",
     "globalPet": "Global Pet - Licensed Logistics",
+    "nekrolog": "Nekrolog Łódź - Funeral Services",
     "contact": "Contact",
     "copyright": "TOVERNET. Built systems scale. Tools don't."
+  },
+  "breeders": {
+    "hero": {
+      "badge": "For Purebred Dog Breeders",
+      "title": "A Website Your Kennel Actually Owns",
+      "subtitle": "A public site and an admin panel that are yours forever — we help build it, launch it, and keep it running.",
+      "ctaPrimary": "Request a Free Quote",
+      "ctaSecondary": "See What We Build"
+    },
+    "problem": {
+      "title": "Facebook and Instagram Aren't Enough",
+      "description": "Prospective puppy owners search for kennels on Google, not just on social media. Without your own site you lose trust, search visibility, and control of your own data — a social profile will never really be yours."
+    },
+    "solution": {
+      "title": "What We Build For Your Kennel",
+      "subtitle": "A proven model we already run live for a Yorkshire Terrier kennel — Gryfin York.",
+      "public": {
+        "title": "Public Website",
+        "description": "Your kennel's storefront on the internet.",
+        "features": [
+          "Current litters and available puppies",
+          "Breeding stock profiles (litter parents)",
+          "Photo gallery of the kennel and dogs",
+          "Customer reviews and an enquiry form"
+        ]
+      },
+      "panel": {
+        "title": "Admin Panel",
+        "description": "You manage the site's content yourself — no developer, no waiting on anyone.",
+        "features": [
+          "Add dogs, litters, and puppies",
+          "Manage the photo gallery",
+          "Reply to customer enquiries",
+          "Publish reviews and updates"
+        ]
+      }
+    },
+    "extra": {
+      "title": "More Than a Website",
+      "subtitle": "We help you show up where your customers are actually searching.",
+      "items": [
+        {
+          "title": "Google Business Profile",
+          "description": "We set up and configure your Google Business Profile so your kennel shows up on Google Maps and local search results."
+        },
+        {
+          "title": "Local SEO",
+          "description": "We optimize the site for the terms prospective puppy owners search for in your region."
+        },
+        {
+          "title": "Your Own Domain & Hosting",
+          "description": "We launch the site on your own domain — it's your property, forever, independent of us."
+        },
+        {
+          "title": "Support & Growth",
+          "description": "We stay with you — fixes, new features, and technical support as your kennel grows."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want a Website For Your Kennel?",
+      "subtitle": "Write to us — we'll put together a free quote tailored to your kennel.",
+      "button": "Request a Free Quote"
+    }
+  },
+  "kennelClubs": {
+    "hero": {
+      "badge": "For Kennel Clubs",
+      "title": "A System For Your Kennel Club Office",
+      "subtitle": "Dog registry, litters, pedigrees, and members in one auditable system — instead of Excel and paper.",
+      "ctaPrimary": "Discuss an Implementation",
+      "ctaSecondary": "See What's Included"
+    },
+    "problem": {
+      "title": "Paper and Excel Don't Scale",
+      "description": "Running a pedigree registry, breeder files, and payments by hand invites errors and makes it hard to keep control of what's happening in the office. What you need is a system that holds all of it in one place — with a full history of every change."
+    },
+    "solution": {
+      "title": "What The System Covers",
+      "subtitle": "Built and battle-tested on our own POK CRM system for kennel club offices.",
+      "features": [
+        {
+          "title": "Pedigree Registry",
+          "description": "A full dog registry with pedigree relationships — parents, litters, kennel names."
+        },
+        {
+          "title": "People Directory",
+          "description": "Members, breeders, and owners in one database — one person can hold multiple roles."
+        },
+        {
+          "title": "Pedigree Issuance",
+          "description": "Generate and track issued pedigree certificates, each with a snapshot of its source data."
+        },
+        {
+          "title": "Champion Titles",
+          "description": "Track titles and achievements attached to specific dogs."
+        },
+        {
+          "title": "Payments",
+          "description": "Track payments tied to specific people and dogs."
+        },
+        {
+          "title": "Full Audit Trail",
+          "description": "Every change in the system is logged — who changed what, and when."
+        }
+      ]
+    },
+    "multiTenant": {
+      "title": "One System, Many Clubs",
+      "description": "Each kennel club operates in its own, fully isolated data space — with its own roles, permissions, and organization settings. One club's data never mixes with another's, even inside the same system."
+    },
+    "security": {
+      "title": "Data Security & Continuity",
+      "description": "Regular backups and rehearsed changes against a local copy before anything touches production — because issued pedigrees are documents your clients already hold in their hands."
+    },
+    "cta": {
+      "title": "Want To Deploy This For Your Club?",
+      "subtitle": "Let's talk about what your records look like today and what can be automated. An initial quote is free.",
+      "button": "Request a Free Quote"
+    }
+  },
+  "projectsPage": {
+    "hero": {
+      "badge": "Our Projects",
+      "title": "Systems We Run Ourselves",
+      "subtitle": "We don't just design infrastructure — we run our own businesses on these same systems, under real legal, operational, and business pressure."
+    },
+    "items": [
+      {
+        "name": "KsięgaI",
+        "badge": "Financial Infrastructure",
+        "description": "A central business registry ready for KSeF — documents, decisions, roles, and finances in one auditable structure.",
+        "cta": "Visit KsięgaI",
+        "url": "https://ksiegai.pl"
+      },
+      {
+        "name": "Global Pet",
+        "badge": "Licensed Logistics",
+        "description": "Licensed animal transport across EU jurisdictions with real-time compliance tracking.",
+        "cta": "Coming Soon",
+        "url": "https://globalpet.online"
+      },
+      {
+        "name": "Nekrolog Łódź",
+        "badge": "Funeral Services",
+        "description": "A funeral home's digital presence — full service offering, product catalog, and round-the-clock contact for families in a difficult moment.",
+        "cta": "Visit Nekrolog Łódź",
+        "url": "https://nekrolog-lodz.pl"
+      },
+      {
+        "name": "Klepsydra",
+        "badge": "Free Tool",
+        "description": "A free online e-obituary generator — instant preview and print, run as a companion tool to Nekrolog Łódź.",
+        "cta": "Try Klepsydra",
+        "url": "https://nekrolog-lodz.pl"
+      }
+    ],
+    "caseStudies": {
+      "title": "The Systems Our Offer Is Modeled On",
+      "subtitle": "Our offer for breeders and kennel clubs is built on systems that already run in production.",
+      "gryfin": {
+        "name": "Gryfin York",
+        "description": "A public site and admin panel for a Yorkshire Terrier kennel — the model our breeder offer is based on."
+      },
+      "pok": {
+        "name": "POK CRM",
+        "description": "An internal kennel club office system — dog registry, pedigrees, payments, multi-tenant for multiple clubs."
+      }
+    },
+    "cta": {
+      "title": "Want a System Like This For Yourself?",
+      "subtitle": "Let's talk about your business and what infrastructure would actually serve it. An initial quote is free.",
+      "button": "Request a Free Quote"
+    }
   }
 }
