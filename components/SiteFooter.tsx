@@ -52,11 +52,6 @@ export default function SiteFooter({ locale }: { locale: string }) {
                     {t('globalPet')}
                   </a>
                 </li>
-                <li>
-                  <a href="https://nekrolog-lodz.pl" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
-                    {t('nekrolog')}
-                  </a>
-                </li>
               </ul>
             </div>
             <div>

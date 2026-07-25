@@ -5,9 +5,13 @@ import { ArrowRight, Sparkles, Calculator, PawPrint, Flower2, Hourglass, PanelsT
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 
-const ITEM_ICONS = [Calculator, PawPrint, Flower2, Hourglass];
-const ITEM_GLOWS = ['magical-glow', 'magical-glow-green', 'magical-glow-amber', 'magical-glow-blue'];
-const ITEM_ACCENTS = ['text-ksiegai-400', 'text-globalpet-400', 'text-gray-300', 'text-gray-300'];
+type ProjectItem = { name: string; badge: string; description: string; cta?: string; url?: string };
+
+const OWN_BRAND_ICONS = [Calculator, PawPrint];
+const OWN_BRAND_GLOWS = ['magical-glow', 'magical-glow-green'];
+const OWN_BRAND_ACCENTS = ['text-ksiegai-400', 'text-globalpet-400'];
+
+const CLIENT_ICONS = [Flower2, Hourglass, PanelsTopLeft, PawPrint, Database];
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const isPolish = locale === 'pl';
@@ -16,8 +20,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? 'Nasze Projekty | TOVERNET'
       : 'Our Projects | TOVERNET',
     description: isPolish
-      ? 'KsięgaI, Global Pet, Nekrolog Łódź i Klepsydra — systemy, które TOVERNET sam projektuje, buduje i prowadzi na produkcji.'
-      : "KsięgaI, Global Pet, Nekrolog Łódź, and Klepsydra — systems TOVERNET designs, builds, and runs in production.",
+      ? 'Nasze własne marki (KsięgaI, Global Pet) i realizacje dla klientów (Nekrolog Łódź, Gryfin York, POK CRM i inne) — systemy, które TOVERNET projektuje, buduje i utrzymuje.'
+      : 'Our own brands (KsięgaI, Global Pet) and client work (Nekrolog Łódź, Gryfin York, POK CRM, and more) — systems TOVERNET designs, builds, and maintains.',
   };
 }
 
@@ -50,55 +54,77 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
         </div>
       </section>
 
-      {/* Project cards */}
+      {/* Own brands */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            {t.raw('items').map((item: { name: string; badge: string; description: string; cta: string; url: string }, i: number) => {
-              const Icon = ITEM_ICONS[i] ?? Sparkles;
-              return (
-                <div key={i} className={`group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover-lift ${ITEM_GLOWS[i] ?? ''} overflow-hidden`}>
-                  <Icon className={`h-10 w-10 mb-4 ${ITEM_ACCENTS[i] ?? 'text-tovernet-400'}`} />
-                  <h3 className="text-2xl font-bold text-white mb-3">{item.name}</h3>
-                  <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-4">
-                    <span className="text-gray-300 text-sm font-semibold">{item.badge}</span>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('ownBrands.title')}</h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">{t('ownBrands.subtitle')}</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {t.raw('ownBrands.items').map((item: ProjectItem, i: number) => {
+                const Icon = OWN_BRAND_ICONS[i] ?? Sparkles;
+                return (
+                  <div key={i} className={`group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover-lift ${OWN_BRAND_GLOWS[i] ?? ''} overflow-hidden`}>
+                    <Icon className={`h-10 w-10 mb-4 ${OWN_BRAND_ACCENTS[i] ?? 'text-tovernet-400'}`} />
+                    <h3 className="text-2xl font-bold text-white mb-3">{item.name}</h3>
+                    <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-4">
+                      <span className="text-gray-300 text-sm font-semibold">{item.badge}</span>
+                    </div>
+                    <p className="text-gray-300 mb-6 leading-relaxed">{item.description}</p>
+                    {item.url && (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                      >
+                        {item.cta}
+                        <ArrowRight className="h-5 w-5" />
+                      </a>
+                    )}
                   </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{item.description}</p>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
-                  >
-                    {item.cta}
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Case studies behind the breeder / kennel club offer */}
+      {/* Client projects */}
       <section className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{t('caseStudies.title')}</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('caseStudies.subtitle')}</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('clientProjects.title')}</h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">{t('clientProjects.subtitle')}</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-breeder-900/30 to-amber-900/20 border border-breeder-500/20 rounded-2xl p-8">
-                <PanelsTopLeft className="h-10 w-10 text-breeder-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{t('caseStudies.gryfin.name')}</h3>
-                <p className="text-gray-300">{t('caseStudies.gryfin.description')}</p>
-              </div>
-              <div className="bg-gradient-to-br from-kennelclub-900/30 to-blue-900/20 border border-kennelclub-500/20 rounded-2xl p-8">
-                <Database className="h-10 w-10 text-kennelclub-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{t('caseStudies.pok.name')}</h3>
-                <p className="text-gray-300">{t('caseStudies.pok.description')}</p>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {t.raw('clientProjects.items').map((item: ProjectItem, i: number) => {
+                const Icon = CLIENT_ICONS[i] ?? PanelsTopLeft;
+                return (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover-lift">
+                    <Icon className="h-8 w-8 text-gray-400 mb-4" />
+                    <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
+                    <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-3">
+                      <span className="text-gray-400 text-xs font-semibold">{item.badge}</span>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">{item.description}</p>
+                    {item.url && (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-white/90 font-semibold hover:text-white transition-colors"
+                      >
+                        {item.cta}
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

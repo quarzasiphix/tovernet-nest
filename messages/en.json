@@ -147,10 +147,9 @@
   "footer": {
     "tagline": "Digital infrastructure for businesses that cannot afford chaos.",
     "solutions": "Industry Solutions",
-    "verticals": "Our Projects",
+    "verticals": "Our Brands",
     "ksiegai": "KsięgaI - Financial Infrastructure",
     "globalPet": "Global Pet - Licensed Logistics",
-    "nekrolog": "Nekrolog Łódź - Funeral Services",
     "contact": "Contact",
     "copyright": "TOVERNET. Built systems scale. Tools don't."
   },
@@ -232,7 +231,7 @@
     },
     "solution": {
       "title": "What The System Covers",
-      "subtitle": "Built and battle-tested on our own POK CRM system for kennel club offices.",
+      "subtitle": "Built and battle-tested as the POK CRM system we run for a kennel club office.",
       "features": [
         {
           "title": "Pedigree Registry",
@@ -277,50 +276,63 @@
   "projectsPage": {
     "hero": {
       "badge": "Our Projects",
-      "title": "Systems We Run Ourselves",
-      "subtitle": "We don't just design infrastructure — we run our own businesses on these same systems, under real legal, operational, and business pressure."
+      "title": "What We Build, And For Whom",
+      "subtitle": "Some of these are our own brands that we run ourselves. Others are client work — we build and maintain the system, but it's their business and their data."
     },
-    "items": [
-      {
-        "name": "KsięgaI",
-        "badge": "Financial Infrastructure",
-        "description": "A central business registry ready for KSeF — documents, decisions, roles, and finances in one auditable structure.",
-        "cta": "Visit KsięgaI",
-        "url": "https://ksiegai.pl"
-      },
-      {
-        "name": "Global Pet",
-        "badge": "Licensed Logistics",
-        "description": "Licensed animal transport across EU jurisdictions with real-time compliance tracking.",
-        "cta": "Coming Soon",
-        "url": "https://globalpet.online"
-      },
-      {
-        "name": "Nekrolog Łódź",
-        "badge": "Funeral Services",
-        "description": "A funeral home's digital presence — full service offering, product catalog, and round-the-clock contact for families in a difficult moment.",
-        "cta": "Visit Nekrolog Łódź",
-        "url": "https://nekrolog-lodz.pl"
-      },
-      {
-        "name": "Klepsydra",
-        "badge": "Free Tool",
-        "description": "A free online e-obituary generator — instant preview and print, run as a companion tool to Nekrolog Łódź.",
-        "cta": "Try Klepsydra",
-        "url": "https://nekrolog-lodz.pl"
-      }
-    ],
-    "caseStudies": {
-      "title": "The Systems Our Offer Is Modeled On",
-      "subtitle": "Our offer for breeders and kennel clubs is built on systems that already run in production.",
-      "gryfin": {
-        "name": "Gryfin York",
-        "description": "A public site and admin panel for a Yorkshire Terrier kennel — the model our breeder offer is based on."
-      },
-      "pok": {
-        "name": "POK CRM",
-        "description": "An internal kennel club office system — dog registry, pedigrees, payments, multi-tenant for multiple clubs."
-      }
+    "ownBrands": {
+      "title": "Our Brands",
+      "subtitle": "Systems we design, build, and run ourselves, under our own legal and business responsibility.",
+      "items": [
+        {
+          "name": "KsięgaI",
+          "badge": "Financial Infrastructure",
+          "description": "A central business registry ready for KSeF — documents, decisions, roles, and finances in one auditable structure.",
+          "cta": "Visit KsięgaI",
+          "url": "https://ksiegai.pl"
+        },
+        {
+          "name": "Global Pet",
+          "badge": "Licensed Logistics",
+          "description": "Licensed animal transport across EU jurisdictions with real-time compliance tracking.",
+          "cta": "Coming Soon",
+          "url": "https://globalpet.online"
+        }
+      ]
+    },
+    "clientProjects": {
+      "title": "Client Projects",
+      "subtitle": "We build and maintain these systems as a contractor — the brand, the data, and the customers belong to our clients, not to us.",
+      "items": [
+        {
+          "name": "Nekrolog Łódź",
+          "badge": "Funeral Home · Client",
+          "description": "A funeral home's digital presence — full service offering, product catalog, and round-the-clock contact for families in a difficult moment.",
+          "cta": "Visit Nekrolog Łódź",
+          "url": "https://nekrolog-lodz.pl"
+        },
+        {
+          "name": "Klepsydra",
+          "badge": "Client Tool",
+          "description": "A free online e-obituary generator built for Nekrolog Łódź's customers — instant preview and print.",
+          "cta": "Try Klepsydra",
+          "url": "https://nekrolog-lodz.pl"
+        },
+        {
+          "name": "Gryfin York",
+          "badge": "Yorkshire Terrier Kennel · Client",
+          "description": "A public site and admin panel for a kennel — the model our breeder offer is based on."
+        },
+        {
+          "name": "Kolorowa Pasja",
+          "badge": "Yorkshire Terrier & Spitz Kennel · Client",
+          "description": "A kennel website showcasing litters and puppies, built and maintained by us for the kennel's owner."
+        },
+        {
+          "name": "POK CRM",
+          "badge": "Kennel Club Office · Client",
+          "description": "An internal dog registry, pedigree, and payments system — the model our kennel club offer is based on."
+        }
+      ]
     },
     "cta": {
       "title": "Want a System Like This For Yourself?",

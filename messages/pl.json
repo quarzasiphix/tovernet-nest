@@ -147,10 +147,9 @@
   "footer": {
     "tagline": "Infrastruktura cyfrowa dla firm, które nie mogą sobie pozwolić na chaos.",
     "solutions": "Rozwiązania Branżowe",
-    "verticals": "Nasze Projekty",
+    "verticals": "Nasze Marki",
     "ksiegai": "KsięgaI - Infrastruktura Finansowa",
     "globalPet": "Global Pet - Licencjonowana Logistyka",
-    "nekrolog": "Nekrolog Łódź - Usługi Pogrzebowe",
     "contact": "Kontakt",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie."
   },
@@ -232,7 +231,7 @@
     },
     "solution": {
       "title": "Co Obejmuje System",
-      "subtitle": "Zbudowany i sprawdzony w praktyce w oparciu o nasz własny system POK CRM dla biur kynologicznych.",
+      "subtitle": "Zbudowany i sprawdzony w praktyce jako system POK CRM, który prowadzimy dla biura kynologicznego.",
       "features": [
         {
           "title": "Księga Rodowodowa",
@@ -277,50 +276,63 @@
   "projectsPage": {
     "hero": {
       "badge": "Nasze Projekty",
-      "title": "Systemy, Które Sami Prowadzimy",
-      "subtitle": "Nie tylko projektujemy infrastrukturę — prowadzimy własne firmy na tych samych systemach, pod realną presją prawną, operacyjną i biznesową."
+      "title": "Co Projektujemy I Dla Kogo",
+      "subtitle": "Część systemów to nasze własne marki, które sami prowadzimy. Część to wdrożenia dla klientów, dla których jesteśmy wykonawcą — budujemy i utrzymujemy ich systemy, ale to ich firmy i ich dane."
     },
-    "items": [
-      {
-        "name": "KsięgaI",
-        "badge": "Infrastruktura Finansowa",
-        "description": "Centralny rejestr biznesowy gotowy na KSeF — dokumenty, decyzje, role i finanse w jednej audytowalnej strukturze.",
-        "cta": "Odwiedź KsięgaI",
-        "url": "https://ksiegai.pl"
-      },
-      {
-        "name": "Global Pet",
-        "badge": "Licencjonowana Logistyka",
-        "description": "Licencjonowany transport zwierząt przez jurysdykcje UE ze śledzeniem zgodności w czasie rzeczywistym.",
-        "cta": "Wkrótce",
-        "url": "https://globalpet.online"
-      },
-      {
-        "name": "Nekrolog Łódź",
-        "badge": "Usługi Pogrzebowe",
-        "description": "Cyfrowa obecność zakładu pogrzebowego — pełna oferta usług, asortyment i całodobowy kontakt dla rodzin w trudnym momencie.",
-        "cta": "Odwiedź Nekrolog Łódź",
-        "url": "https://nekrolog-lodz.pl"
-      },
-      {
-        "name": "Klepsydra",
-        "badge": "Darmowe Narzędzie",
-        "description": "Darmowy generator e-klepsydry online — szybki podgląd i wydruk, prowadzony jako narzędzie siostrzane Nekrologu Łódź.",
-        "cta": "Wypróbuj Klepsydrę",
-        "url": "https://nekrolog-lodz.pl"
-      }
-    ],
-    "caseStudies": {
-      "title": "Systemy, Na Których Wzorujemy Naszą Ofertę",
-      "subtitle": "Oferta dla hodowców i związków kynologicznych opiera się na systemach, które już działają na produkcji.",
-      "gryfin": {
-        "name": "Gryfin York",
-        "description": "Strona publiczna i panel administracyjny dla hodowli Yorkshire Terrierów — model, na którym opieramy ofertę dla hodowców."
-      },
-      "pok": {
-        "name": "POK CRM",
-        "description": "Wewnętrzny system biura kynologicznego — rejestr psów, rodowody, rozliczenia, multi-tenant dla wielu związków."
-      }
+    "ownBrands": {
+      "title": "Nasze Marki",
+      "subtitle": "Systemy, które projektujemy, budujemy i prowadzimy sami, pod własną odpowiedzialnością prawną i biznesową.",
+      "items": [
+        {
+          "name": "KsięgaI",
+          "badge": "Infrastruktura Finansowa",
+          "description": "Centralny rejestr biznesowy gotowy na KSeF — dokumenty, decyzje, role i finanse w jednej audytowalnej strukturze.",
+          "cta": "Odwiedź KsięgaI",
+          "url": "https://ksiegai.pl"
+        },
+        {
+          "name": "Global Pet",
+          "badge": "Licencjonowana Logistyka",
+          "description": "Licencjonowany transport zwierząt przez jurysdykcje UE ze śledzeniem zgodności w czasie rzeczywistym.",
+          "cta": "Wkrótce",
+          "url": "https://globalpet.online"
+        }
+      ]
+    },
+    "clientProjects": {
+      "title": "Realizacje Dla Klientów",
+      "subtitle": "Budujemy i utrzymujemy te systemy jako wykonawca — to marki, dane i klienci naszych zleceniodawców, nie nasze.",
+      "items": [
+        {
+          "name": "Nekrolog Łódź",
+          "badge": "Zakład Pogrzebowy · Klient",
+          "description": "Cyfrowa obecność zakładu pogrzebowego — pełna oferta usług, asortyment i całodobowy kontakt dla rodzin w trudnym momencie.",
+          "cta": "Odwiedź Nekrolog Łódź",
+          "url": "https://nekrolog-lodz.pl"
+        },
+        {
+          "name": "Klepsydra",
+          "badge": "Narzędzie Dla Klienta",
+          "description": "Darmowy generator e-klepsydry online dla klientów Nekrologu Łódź — szybki podgląd i wydruk.",
+          "cta": "Wypróbuj Klepsydrę",
+          "url": "https://nekrolog-lodz.pl"
+        },
+        {
+          "name": "Gryfin York",
+          "badge": "Hodowla Yorkshire Terrierów · Klient",
+          "description": "Strona publiczna i panel administracyjny dla hodowli — model, na którym opieramy ofertę dla hodowców."
+        },
+        {
+          "name": "Kolorowa Pasja",
+          "badge": "Hodowla Yorkshire Terrierów i Szpiców · Klient",
+          "description": "Strona hodowli z prezentacją miotów i szczeniąt, zbudowana i utrzymywana przez nas dla właścicielki hodowli."
+        },
+        {
+          "name": "POK CRM",
+          "badge": "Biuro Związku Kynologicznego · Klient",
+          "description": "Wewnętrzny system rejestru psów, rodowodów i rozliczeń — model, na którym opieramy ofertę dla związków kynologicznych."
+        }
+      ]
     },
     "cta": {
       "title": "Chcesz Takiego Systemu Dla Siebie?",
