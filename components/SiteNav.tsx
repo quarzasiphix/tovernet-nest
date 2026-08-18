@@ -15,13 +15,13 @@ export default function SiteNav({ locale }: { locale: string }) {
               TOVERNET
             </span>
           </a>
-          <div className="hidden md:flex items-center gap-8">
-            <a href={`/${locale}/hodowcy`} className="text-gray-300 hover:text-white transition-colors">{t('breeders')}</a>
-            <a href={`/${locale}/zwiazki-kynologiczne`} className="text-gray-300 hover:text-white transition-colors">{t('kennelClubs')}</a>
-            <a href={`/${locale}/projekty`} className="text-gray-300 hover:text-white transition-colors">{t('projects')}</a>
-            <a href={`/${locale}/poradnik`} className="text-gray-300 hover:text-white transition-colors">{t('poradnik')}</a>
+          <div className="flex items-center gap-4 md:gap-8">
+            <a href={`/${locale}/hodowcy`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('breeders')}</a>
+            <a href={`/${locale}/zwiazki-kynologiczne`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('kennelClubs')}</a>
+            <a href={`/${locale}/projekty`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('projects')}</a>
+            <a href={`/${locale}/poradnik`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('poradnik')}</a>
             <LanguageSwitcher />
-            <a href={`/${locale}#contact`} className="px-6 py-2 bg-tovernet-gradient rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
+            <a href={`/${locale}#contact`} className="hidden sm:inline-flex px-6 py-2 bg-tovernet-gradient rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
               {t('contact')}
             </a>
           </div>

@@ -12,9 +12,7 @@ import PanelShowcase from '@/components/breeders/PanelShowcase';
 import CaseStudyPreview from '@/components/breeders/CaseStudyPreview';
 import QuoteForm from '@/components/breeders/QuoteForm';
 import { buildMetadata } from '@/lib/seo';
-import { poradnikArticles } from '@/lib/poradnik';
-
-const HODOWCY_PORADNIK_KEYS = ['independence', 'pricing', 'panel-choice'];
+import { getArticlesByCategory } from '@/lib/poradnik';
 
 const ECOSYSTEM_ICONS = [Globe2, LayoutDashboard, Home, Database, Camera, MessageSquare, Search, Search, Languages, LifeBuoy];
 
@@ -35,7 +33,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   });
 }
 
-export default function BreedersPage({ params: { locale } }: { params: { locale: string } }) {
+export default function BreedersPage({ params: { locale } }: { params: { locale: 'pl' | 'en' } }) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('breeders');
 
@@ -100,8 +98,11 @@ export default function BreedersPage({ params: { locale } }: { params: { locale:
               <h2 className="text-3xl md:text-5xl font-bold text-kennel-navy-900 mb-5">{t('panelShowcase.title')}</h2>
               <p className="text-lg text-kennel-navy-600 leading-relaxed">{t('panelShowcase.subtitle')}</p>
             </div>
-            <div className="max-w-4xl mx-auto">
-              <PanelShowcase />
+            <div className="max-w-4xl mx-auto relative">
+              <div className="absolute -inset-1.5 rounded-[2rem] bg-gradient-to-r from-kennel-pink-400 via-kennel-teal-400 to-kennel-lavender-400 opacity-70 blur-xl animate-pulse pointer-events-none" />
+              <div className="relative">
+                <PanelShowcase />
+              </div>
             </div>
           </div>
         </section>
@@ -244,8 +245,8 @@ export default function BreedersPage({ params: { locale } }: { params: { locale:
                 {locale === 'pl' ? 'Poczytaj więcej' : 'Read more'}
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
-                {poradnikArticles
-                  .filter((a) => a.locale === locale && HODOWCY_PORADNIK_KEYS.includes(a.key))
+                {getArticlesByCategory(locale, 'breeders')
+                  .slice(0, 3)
                   .map((a) => (
                     <a
                       key={a.slug}

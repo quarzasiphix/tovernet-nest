@@ -13,9 +13,9 @@
     "badge": "Strony i Systemy Dla Branży Zwierzęcej",
     "title": "Strony i Systemy Dla Branży Zwierzęcej",
     "titleHighlight": "Budujemy Systemy, Na Których Opierają Się Firmy",
-    "subtitle": "Tworzymy strony internetowe, panele klientów i dedykowane systemy dla hodowców, organizacji kynologicznych oraz firm pracujących ze zwierzętami. Znamy tę branżę nie tylko od strony technologii — sami w niej działamy.",
+    "subtitle": "Strony, panele i dedykowane systemy dla hodowców, związków kynologicznych i firm pracujących ze zwierzętami. Znamy tę branżę — sami w niej działamy.",
     "description": "",
-    "ctaPrimary": "Zobacz Rozwiązania Dla Branży Zwierzęcej",
+    "ctaPrimary": "Zobacz Nasze Rozwiązania",
     "ctaSecondary": "Porozmawiaj o Projekcie",
     "tagline": "Hodowle • organizacje kynologiczne • transport zwierząt • rejestry i dokumentacja • automatyzacja biura"
   },
@@ -211,7 +211,7 @@
     },
     "panelShowcase": {
       "title": "Wypróbuj panel hodowli",
-      "subtitle": "To nie makieta — kolory i układ odtwarzają prawdziwy panel, który dziś prowadzi hodowlę Gryfin York. Kliknij zakładki po lewej, a w zakładce „Szczenięta” zmień imię, cenę, kolor i status — podgląd po prawej zaktualizuje się od razu."
+      "subtitle": "To działający panel, nie makieta — kliknij zakładki i zmień dane szczenięcia, zobaczysz podgląd na żywo."
     },
     "caseStudy": {
       "title": "Zobacz, jak działa to w prawdziwej hodowli",
@@ -498,8 +498,8 @@
           "name": "KsięgaI",
           "badge": "Infrastruktura Finansowa",
           "description": "Centralny rejestr biznesowy gotowy na KSeF — dokumenty, decyzje, role i finanse w jednej audytowalnej strukturze.",
-          "cta": "Odwiedź KsięgaI",
-          "url": "https://ksiegai.pl"
+          "cta": "Zobacz Case Study",
+          "url": "/projekty/ksiegai"
         },
         {
           "name": "Global Pet",
@@ -682,10 +682,32 @@
         "label": "Odwiedź POKIU",
         "url": "https://pokiu.pl"
       }
+    },
+    "ksiegai": {
+      "badge": "Nasz Własny Produkt",
+      "title": "KsięgaI",
+      "subtitle": "System fakturowania, KSeF i finansów, który sami projektujemy, budujemy i prowadzimy na co dzień — nie tylko sprzedajemy taką infrastrukturę klientom, sami na niej pracujemy.",
+      "role": {
+        "title": "To Nasz Produkt, Nie Tylko Realizacja",
+        "description": "W przeciwieństwie do projektów klienckich, KsięgaI to system, który TOVERNET projektuje, rozwija i utrzymuje jako własny produkt — codzienny dowód na to, że potrafimy zbudować i prowadzić infrastrukturę pod realną presją regulacyjną (KSeF), nie tylko zaprojektować ją na papierze."
+      },
+      "features": [
+        "Fakturowanie z automatyczną wysyłką do Krajowego Systemu e-Faktur (KSeF)",
+        "Generowanie JPK-V7M i wsparcie rozliczeń podatkowych",
+        "Śledzenie i kategoryzacja wydatków firmowych",
+        "Synchronizacja bankowa z automatycznym dopasowywaniem transakcji",
+        "Baza kontrahentów i historia rozliczeń w jednym miejscu",
+        "Pełny dziennik decyzji i zmian — audytowalna historia",
+        "Dostęp dla asystentów AI (Claude i inne) przez własny serwer MCP"
+      ],
+      "cta": {
+        "label": "Odwiedź KsięgaI",
+        "url": "https://ksiegai.pl"
+      }
     }
   },
   "poradnikIndex": {
-    "title": "Poradnik dla hodowców psów",
-    "subtitle": "Praktyczne artykuły o stronach, panelach i niezależności hodowli w internecie — oparte na tym, co realnie budujemy dla klientów."
+    "title": "Poradnik TOVERNET",
+    "subtitle": "Praktyczne artykuły o stronach, panelach i systemach — dla hodowców, związków kynologicznych, firm z branży zwierzęcej i finansów."
   }
 }

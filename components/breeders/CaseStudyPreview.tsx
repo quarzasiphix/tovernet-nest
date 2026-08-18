@@ -109,7 +109,7 @@ export default function CaseStudyPreview({
         </div>
 
         <div>
-          <BrowserChrome url="panel.hodowlagryfinyork.pl">
+          <BrowserChrome url="panel.twojahodowla.pl">
             <PanelStatic />
           </BrowserChrome>
           <p className="mt-3 text-sm font-bold" style={{ color: NAVY }}>{panelLabel}</p>

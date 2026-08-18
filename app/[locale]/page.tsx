@@ -119,9 +119,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
               </a>
 
               <a
-                href="https://ksiegai.pl"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/${locale}/projekty/ksiegai`}
                 className="group relative bg-gradient-to-br from-ksiegai-900/30 to-purple-900/20 border border-ksiegai-500/20 rounded-2xl p-8 hover-lift magical-glow overflow-hidden block"
               >
                 <Calculator className="h-10 w-10 text-ksiegai-400 mb-4" />
@@ -271,9 +269,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                     ))}
                   </ul>
                   <a
-                    href="https://ksiegai.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`/${locale}/projekty/ksiegai`}
                     className="inline-flex items-center gap-2 bg-ksiegai-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                   >
                     {t('verticals.ksiegai.cta')}

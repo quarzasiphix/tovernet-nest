@@ -6,9 +6,12 @@ export type PoradnikSection = {
 
 export type PoradnikFaq = { q: string; a: string };
 
+export type PoradnikCategory = 'breeders' | 'kennel-clubs' | 'animal-industry' | 'finance';
+
 export type PoradnikArticle = {
   /** Pairs the pl/en versions of the same article together for hreflang and cross-links. */
   key: string;
+  category: PoradnikCategory;
   locale: 'pl' | 'en';
   slug: string;
   title: string;
@@ -19,10 +22,59 @@ export type PoradnikArticle = {
   faqs?: PoradnikFaq[];
 };
 
+type CategoryMeta = {
+  offerPath: string;
+  offerExternal?: boolean;
+  color: 'pink' | 'lavender' | 'teal' | 'yellow';
+  label: { pl: string; en: string };
+  description: { pl: string; en: string };
+};
+
+export const poradnikCategories: Record<PoradnikCategory, CategoryMeta> = {
+  breeders: {
+    offerPath: '/hodowcy',
+    color: 'pink',
+    label: { pl: 'Dla hodowców', en: 'For breeders' },
+    description: {
+      pl: 'Strony, panele i niezależność od portali dla hodowców psów.',
+      en: 'Websites, panels, and independence from platforms for dog breeders.',
+    },
+  },
+  'kennel-clubs': {
+    offerPath: '/zwiazki-kynologiczne',
+    color: 'lavender',
+    label: { pl: 'Dla związków kynologicznych', en: 'For kennel clubs' },
+    description: {
+      pl: 'Elektroniczne księgi rodowodowe, panele hodowców i współpraca biura z hodowcami.',
+      en: 'Electronic pedigree registries, breeder panels, and office-to-breeder collaboration.',
+    },
+  },
+  'animal-industry': {
+    offerPath: '/#solutions',
+    color: 'teal',
+    label: { pl: 'Dla firm z branży zwierzęcej', en: 'For animal-industry companies' },
+    description: {
+      pl: 'Rezerwacje, dokumenty i systemy dla transportu zwierząt, hoteli i groomerów.',
+      en: 'Reservations, documents, and systems for animal transport, boarding, and grooming businesses.',
+    },
+  },
+  finance: {
+    offerPath: 'https://ksiegai.pl',
+    offerExternal: true,
+    color: 'yellow',
+    label: { pl: 'Finanse i automatyzacja', en: 'Finance and automation' },
+    description: {
+      pl: 'KSeF, fakturowanie i systemy finansowe zamiast wynajętego oprogramowania.',
+      en: 'KSeF, invoicing, and financial systems instead of rented software.',
+    },
+  },
+};
+
 export const poradnikArticles: PoradnikArticle[] = [
   // ---- 1. Independence: own site vs. renting a profile on a breeder platform ----
   {
     key: 'independence',
+    category: 'breeders',
     locale: 'pl',
     slug: 'wlasna-strona-czy-portal-dla-hodowcow',
     title: 'Własna strona hodowli czy portal dla hodowców? Co się bardziej opłaca',
@@ -70,6 +122,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   },
   {
     key: 'independence',
+    category: 'breeders',
     locale: 'en',
     slug: 'independent-website-vs-breeder-platform',
     title: 'Independent Kennel Website vs. Breeder Platforms: What Do You Actually Own?',
@@ -119,6 +172,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   // ---- 2. Pricing ----
   {
     key: 'pricing',
+    category: 'breeders',
     locale: 'pl',
     slug: 'ile-kosztuje-strona-dla-hodowli-psow',
     title: 'Ile kosztuje strona internetowa dla hodowli psów?',
@@ -166,6 +220,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   },
   {
     key: 'pricing',
+    category: 'breeders',
     locale: 'en',
     slug: 'kennel-website-cost',
     title: 'How Much Does a Kennel Website Cost?',
@@ -215,6 +270,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   // ---- 3. Choosing a panel ----
   {
     key: 'panel-choice',
+    category: 'breeders',
     locale: 'pl',
     slug: 'panel-administracyjny-dla-hodowcy-psow',
     title: 'Panel administracyjny dla hodowcy psów — jak wybrać system do zarządzania miotami i szczeniętami',
@@ -256,6 +312,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   },
   {
     key: 'panel-choice',
+    category: 'breeders',
     locale: 'en',
     slug: 'admin-panel-for-dog-breeders',
     title: 'Choosing an Admin Panel for Your Kennel: What to Look For',
@@ -299,6 +356,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   // ---- 4. Presenting puppies online ----
   {
     key: 'puppy-presentation',
+    category: 'breeders',
     locale: 'pl',
     slug: 'jak-zaprezentowac-szczeniaki-w-internecie',
     title: 'Jak zaprezentować szczenięta w internecie, żeby szybciej znalazły nowy dom',
@@ -334,6 +392,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   },
   {
     key: 'puppy-presentation',
+    category: 'breeders',
     locale: 'en',
     slug: 'how-to-present-puppies-online',
     title: 'How to Present Puppies Online So They Find Homes Faster',
@@ -371,6 +430,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   // ---- 5. Facebook risk / ownership ----
   {
     key: 'facebook-risk',
+    category: 'breeders',
     locale: 'pl',
     slug: 'facebook-zablokowal-profil-hodowli-co-teraz',
     title: 'Facebook zablokował profil hodowli — co teraz?',
@@ -406,6 +466,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   },
   {
     key: 'facebook-risk',
+    category: 'breeders',
     locale: 'en',
     slug: 'what-if-facebook-blocks-your-kennel-page',
     title: 'What If Facebook Blocks Your Kennel Page? Owning Your Audience',
@@ -443,6 +504,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   // ---- 6. Google Business Profile / local SEO ----
   {
     key: 'google-business',
+    category: 'breeders',
     locale: 'pl',
     slug: 'wizytowka-google-dla-hodowli-psow-lokalne-seo',
     title: 'Wizytówka Google dla hodowli psów — jak zdobyć klientów w lokalnym wyszukiwaniu',
@@ -478,6 +540,7 @@ export const poradnikArticles: PoradnikArticle[] = [
   },
   {
     key: 'google-business',
+    category: 'breeders',
     locale: 'en',
     slug: 'google-business-profile-for-kennels',
     title: 'Google Business Profile for Kennels: Local SEO That Brings Buyers',
@@ -511,6 +574,518 @@ export const poradnikArticles: PoradnikArticle[] = [
       },
     ],
   },
+
+  // ---- 7. Kennel clubs: electronic pedigree registry ----
+  {
+    key: 'pedigree-registry',
+    category: 'kennel-clubs',
+    locale: 'pl',
+    slug: 'elektroniczna-ksiega-rodowodowa-dla-zwiazku-kynologicznego',
+    title: 'Elektroniczna księga rodowodowa dla związku kynologicznego — czego naprawdę potrzeba',
+    description: 'Jak powinna wyglądać nowoczesna elektroniczna księga rodowodowa: podział ról biuro/hodowca/publiczna weryfikacja, pełny audyt zmian i zabezpieczenie przed podrabianiem dokumentów.',
+    keywords: ['elektroniczna księga rodowodowa', 'system dla związku kynologicznego', 'PKR online', 'weryfikacja rodowodu QR', 'oprogramowanie dla biura związku'],
+    intro: 'Wiele związków kynologicznych wciąż prowadzi księgę rodowodową w formie papierowej lub w systemie, który nie nadąża za tym, jak faktycznie pracuje biuro i hodowcy. Elektroniczna księga to nie tylko skan papierowego rejestru — to inny podział ról i inny poziom kontroli.',
+    sections: [
+      {
+        heading: 'Dlaczego sam PDF lub arkusz to za mało',
+        paragraphs: [
+          'Rejestr w arkuszu lub luźnych dokumentach PDF nie ma historii zmian, nie rozróżnia, kto i kiedy coś zmienił, i nie da się go bezpiecznie udostępnić hodowcom bez ryzyka nadpisania cudzych danych.',
+        ],
+      },
+      {
+        heading: 'Trzy role, trzy różne potrzeby',
+        paragraphs: [
+          'Biuro związku potrzebuje pełnego dostępu do rejestru, rozliczeń i historii zmian. Hodowca potrzebuje własnego panelu — swoje psy, mioty, wnioski o rodowód ze śledzeniem statusu. Kupujący potrzebuje tylko jednej rzeczy: sprawdzić, czy dokument, który trzyma w ręku, jest prawdziwy — bez logowania się do czegokolwiek.',
+        ],
+        list: [
+          'Panel biura — pełny rejestr, rozliczenia, audyt zmian',
+          'Panel hodowcy — własne psy, mioty, wnioski o rodowód',
+          'Publiczna weryfikacja — kod QR na dokumencie, bez logowania',
+        ],
+      },
+      {
+        heading: 'Weryfikacja kodem QR jako zabezpieczenie',
+        paragraphs: [
+          'Każdy wydany rodowód z kodem QR prowadzącym do publicznej, ograniczonej strony weryfikacyjnej utrudnia sprzedaż podrobionych lub niepokrytych dokumentów — kupujący może to sprawdzić sam, w kilka sekund, telefonem.',
+        ],
+      },
+      {
+        heading: 'Pełny dziennik zmian',
+        paragraphs: [
+          'Kto, co i kiedy zmienił w rejestrze — to podstawowe pytanie w razie sporu lub kontroli. System bez dziennika zmian nie daje na nie odpowiedzi.',
+        ],
+      },
+      {
+        heading: 'Jak wygląda to w praktyce',
+        paragraphs: [
+          'Dokładnie taki podział — panel biura, panel hodowcy i publiczna weryfikacja QR na osobnej, zabezpieczonej domenie — zbudowaliśmy dla POKIU. To nie teoria; to działający system.',
+        ],
+      },
+    ],
+  },
+  {
+    key: 'pedigree-registry',
+    category: 'kennel-clubs',
+    locale: 'en',
+    slug: 'electronic-pedigree-registry-for-kennel-clubs',
+    title: 'Electronic Pedigree Registry for Kennel Clubs — What It Actually Needs',
+    description: 'What a modern electronic pedigree registry needs: role separation between office, breeders, and public verification, a full change audit trail, and protection against document forgery.',
+    keywords: ['electronic pedigree registry', 'kennel club software', 'online pedigree book', 'QR pedigree verification', 'kennel club office software'],
+    intro: 'Many kennel clubs still run their pedigree registry on paper, or on a system that hasn\'t kept up with how the office and breeders actually work. An electronic registry isn\'t just a scanned paper record — it\'s a different split of roles and a different level of control.',
+    sections: [
+      {
+        heading: 'Why a spreadsheet or PDF isn\'t enough',
+        paragraphs: [
+          'A registry kept in a spreadsheet or loose PDF files has no change history, doesn\'t distinguish who changed what and when, and can\'t safely be shared with breeders without risking someone overwriting someone else\'s data.',
+        ],
+      },
+      {
+        heading: 'Three roles, three different needs',
+        paragraphs: [
+          'The club office needs full access to the registry, billing, and change history. Breeders need their own panel — their dogs, litters, and pedigree requests with status tracking. Buyers need exactly one thing: to check whether the document in their hand is genuine — without logging into anything.',
+        ],
+        list: [
+          'Office panel — full registry, billing, change audit',
+          'Breeder panel — own dogs, litters, pedigree requests',
+          'Public verification — QR code on the document, no login required',
+        ],
+      },
+      {
+        heading: 'QR verification as a safeguard',
+        paragraphs: [
+          'Every issued pedigree carrying a QR code to a limited public verification page makes it much harder to sell forged or unbacked documents — a buyer can check it themselves, in seconds, with a phone.',
+        ],
+      },
+      {
+        heading: 'A full change log',
+        paragraphs: [
+          'Who changed what in the registry, and when — that\'s the basic question in any dispute or audit. A system without a change log has no answer to it.',
+        ],
+      },
+      {
+        heading: 'What this looks like in practice',
+        paragraphs: [
+          'Exactly this split — an office panel, a breeder panel, and public QR verification on a separate, locked-down domain — is what we built for POKIU. Not a theory; a running system.',
+        ],
+      },
+    ],
+  },
+
+  // ---- 8. Kennel clubs: breeder-office collaboration ----
+  {
+    key: 'breeder-office-collab',
+    category: 'kennel-clubs',
+    locale: 'pl',
+    slug: 'wspolpraca-biura-zwiazku-z-hodowcami-online',
+    title: 'Współpraca biura związku z hodowcami online — koniec z e-mailami i papierem',
+    description: 'Jak przenieść wnioski o rodowód, rejestrację miotów i komunikację z hodowcami z e-maila i papieru do wspólnego panelu ze śledzeniem statusu.',
+    keywords: ['panel hodowcy online', 'wnioski o rodowód online', 'komunikacja biuro hodowca', 'rejestracja miotu online'],
+    intro: 'Wniosek o rodowód wysłany e-mailem ginie w skrzynce, dokument papierowy trzeba zeskanować, a status sprawy hodowca poznaje dopiero, dzwoniąc do biura. Wspólny panel dla biura i hodowców rozwiązuje wszystkie trzy problemy naraz.',
+    sections: [
+      {
+        heading: 'Gdzie najczęściej grzęźnie komunikacja',
+        paragraphs: [
+          'Wnioski o rodowód, zgłoszenia miotów i pytania o status dokumentów — to najczęstsza korespondencja między hodowcą a biurem związku, i najczęściej ginie w e-mailach, wiadomościach na Facebooku albo telefonach.',
+        ],
+      },
+      {
+        heading: 'Co zyskuje hodowca z własnym panelem',
+        paragraphs: [
+          'Panel hodowcy z widokiem własnych psów, miotów i wniosków o rodowód ze statusem (oczekuje / zatwierdzone / odrzucone) eliminuje pytanie „na jakim etapie jest mój wniosek" — bo odpowiedź jest widoczna od razu.',
+        ],
+      },
+      {
+        heading: 'Co zyskuje biuro',
+        paragraphs: [
+          'Zamiast rozproszonej korespondencji — jedna kolejka wniosków, filtrowana po statusie, z notatkami biura przy każdej sprawie. Mniej telefonów z pytaniem o status oznacza więcej czasu na samą pracę merytoryczną.',
+        ],
+      },
+      {
+        heading: 'Jak to wygląda w działającym systemie',
+        paragraphs: [
+          'Dokładnie taki panel — z filtrowaniem wniosków po statusie i notatkami biura — działa dziś w systemie zbudowanym dla POKIU, jako osobna domena `hodowca.pokiu.pl`, oddzielona od panelu biura.',
+        ],
+      },
+    ],
+  },
+  {
+    key: 'breeder-office-collab',
+    category: 'kennel-clubs',
+    locale: 'en',
+    slug: 'kennel-club-breeder-collaboration-online',
+    title: 'Kennel Club Breeder Collaboration Online — Beyond Email and Paper',
+    description: 'How to move pedigree requests, litter registrations, and breeder communication out of email and paper into a shared panel with status tracking.',
+    keywords: ['online breeder panel', 'pedigree requests online', 'office breeder communication', 'online litter registration'],
+    intro: 'A pedigree request sent by email gets lost in an inbox, a paper document has to be scanned, and a breeder only learns the status of their case by calling the office. A shared panel for the office and breeders solves all three problems at once.',
+    sections: [
+      {
+        heading: 'Where communication usually gets stuck',
+        paragraphs: [
+          'Pedigree requests, litter registrations, and status questions are the most common correspondence between a breeder and the club office — and the most common place it gets lost, in email, Facebook messages, or phone calls.',
+        ],
+      },
+      {
+        heading: 'What a breeder gains from their own panel',
+        paragraphs: [
+          'A breeder panel showing their own dogs, litters, and pedigree requests with a status (pending / approved / rejected) eliminates the "what stage is my request at" question — the answer is visible instantly.',
+        ],
+      },
+      {
+        heading: 'What the office gains',
+        paragraphs: [
+          'Instead of scattered correspondence — one queue of requests, filterable by status, with office notes attached to each case. Fewer status-check phone calls means more time for the actual work.',
+        ],
+      },
+      {
+        heading: 'What this looks like in a running system',
+        paragraphs: [
+          'Exactly this panel — with status-filtered requests and office notes — runs today in the system we built for POKIU, as a separate domain, `hodowca.pokiu.pl`, kept apart from the office panel.',
+        ],
+      },
+    ],
+  },
+
+  // ---- 9. Animal industry: booking system ownership ----
+  {
+    key: 'booking-system-ownership',
+    category: 'animal-industry',
+    locale: 'pl',
+    slug: 'system-rezerwacji-dla-hotelu-dla-zwierzat-czy-warto-miec-wlasny',
+    title: 'System rezerwacji dla hotelu dla zwierząt, groomera lub transportu — czy warto mieć własny',
+    description: 'Gotowe systemy rezerwacji dla hoteli dla zwierząt i groomerów kontra dedykowany system zbudowany pod konkretną firmę — co się bardziej opłaca w dłuższej perspektywie.',
+    keywords: ['system rezerwacji hotel dla psów', 'program dla groomera', 'oprogramowanie dla transportu zwierząt', 'własny system rezerwacji czy gotowe SaaS'],
+    intro: 'Gotowe systemy rezerwacji dla hoteli dla zwierząt, groomerów czy firm transportowych są szybkie do wdrożenia — konto, szablon, gotowe. Problem pojawia się, gdy Twoja firma robi coś, czego szablon nie przewidział, albo gdy miesięczny koszt subskrypcji rośnie razem ze skalą.',
+    sections: [
+      {
+        heading: 'Co dają gotowe systemy rezerwacji',
+        paragraphs: [
+          'Szybkie wdrożenie, gotowy kalendarz, automatyczne przypomnienia SMS — dla firmy zaczynającej od zera to sensowny, tani start.',
+        ],
+      },
+      {
+        heading: 'Gdzie szablon przestaje wystarczać',
+        paragraphs: [
+          'Transport zwierząt między krajami, niestandardowe pakiety usług w hotelu dla zwierząt, integracja rezerwacji z fakturowaniem czy dokumentacją zdrowotną — to funkcje, których gotowy szablon rezerwacyjny zwykle nie przewiduje, bo musi pasować do tysięcy różnych firm naraz.',
+        ],
+        list: [
+          'Miesięczna opłata rośnie wraz z liczbą rezerwacji lub pracowników',
+          'Twoje dane klientów zostają na cudzej platformie',
+          'Niestandardowy proces trzeba obchodzić ręcznie, poza systemem',
+          'Zmiana dostawcy oznacza migrację wszystkiego od zera',
+        ],
+      },
+      {
+        heading: 'Kiedy dedykowany system się opłaca',
+        paragraphs: [
+          'Jeśli Twoja firma ma proces, który realnie różni się od standardowego — wielojęzyczna obsługa klientów międzynarodowych, dokumenty i zgodność prawna przy transporcie zwierząt, płatności powiązane z rozliczeniami — dedykowany system przestaje być luksusem, a zaczyna być oszczędnością czasu.',
+        ],
+      },
+      {
+        heading: 'Model pośredni',
+        paragraphs: [
+          'Nie trzeba wybierać skrajności. Sensowne jest zaczynanie od gotowego narzędzia do prostych rezerwacji, a budowanie dedykowanego systemu dopiero tam, gdzie proces firmy faktycznie odróżnia ją od konkurencji.',
+        ],
+      },
+    ],
+  },
+  {
+    key: 'booking-system-ownership',
+    category: 'animal-industry',
+    locale: 'en',
+    slug: 'pet-business-booking-system-owned-vs-rented',
+    title: 'Booking Systems for Pet Hotels, Groomers, and Transport — Owned or Rented?',
+    description: 'Off-the-shelf booking software for pet hotels and groomers vs. a dedicated system built around your specific business — what pays off in the long run.',
+    keywords: ['pet hotel booking system', 'grooming salon software', 'animal transport software', 'own booking system vs SaaS'],
+    intro: 'Off-the-shelf booking systems for pet hotels, groomers, or transport businesses are fast to set up — create an account, pick a template, done. The problem shows up when your business does something the template didn\'t anticipate, or when the monthly subscription cost grows along with your scale.',
+    sections: [
+      {
+        heading: 'What ready-made booking systems get you',
+        paragraphs: [
+          'Fast setup, a ready calendar, automatic SMS reminders — for a business starting from zero, that\'s a sensible, cheap start.',
+        ],
+      },
+      {
+        heading: 'Where the template stops being enough',
+        paragraphs: [
+          'Cross-border animal transport, custom service packages at a pet hotel, tying bookings into invoicing or health documentation — these are the kinds of features a generic booking template usually doesn\'t cover, because it has to fit thousands of different businesses at once.',
+        ],
+        list: [
+          'Monthly fees scale with bookings or staff count',
+          'Your client data lives on someone else\'s platform',
+          'A non-standard process has to be handled manually, outside the system',
+          'Switching providers means migrating everything from scratch',
+        ],
+      },
+      {
+        heading: 'When a dedicated system pays off',
+        paragraphs: [
+          'If your business has a process genuinely different from the standard — multilingual service for international clients, legal compliance documents for animal transport, payments tied to internal accounting — a dedicated system stops being a luxury and starts saving real time.',
+        ],
+      },
+      {
+        heading: 'A middle path',
+        paragraphs: [
+          'You don\'t have to pick an extreme. It\'s sensible to start with a ready-made tool for simple bookings, and build a dedicated system only where the business\'s process actually sets it apart from competitors.',
+        ],
+      },
+    ],
+  },
+
+  // ---- 10. Animal industry: transport compliance ----
+  {
+    key: 'animal-transport-compliance',
+    category: 'animal-industry',
+    locale: 'pl',
+    slug: 'system-dla-transportu-zwierzat-dokumenty-i-zgodnosc',
+    title: 'System dla transportu zwierząt — dokumenty i zgodność w wielu jurysdykcjach UE',
+    description: 'Jak dedykowany system pomaga licencjonowanym firmom transportującym zwierzęta zarządzać dokumentacją i zgodnością prawną w różnych krajach UE.',
+    keywords: ['transport zwierząt system', 'zgodność prawna transport zwierząt UE', 'licencjonowany transport zwierząt oprogramowanie', 'dokumenty transport zwierząt'],
+    intro: 'Transport zwierząt przez granice UE to nie tylko logistyka — to komplet dokumentów, licencji i wymogów, które różnią się między krajami i muszą być zawsze aktualne i możliwe do udowodnienia w razie kontroli.',
+    sections: [
+      {
+        heading: 'Dlaczego arkusz i folder z dokumentami nie wystarczą',
+        paragraphs: [
+          'Przy transporcie w jednym kraju arkusz kalkulacyjny może wystarczyć. Przy operacjach w kilku jurysdykcjach jednocześnie — z różnymi wymogami dokumentacyjnymi w każdej — ręczne śledzenie zaczyna generować błędy, których konsekwencją bywa zatrzymanie transportu na granicy.',
+        ],
+      },
+      {
+        heading: 'Co powinien śledzić dedykowany system',
+        paragraphs: [
+          'Ważność licencji i certyfikatów, komplet dokumentów wymaganych w każdej jurysdykcji na trasie, oraz historię przewozów możliwą do przedstawienia podczas kontroli.',
+        ],
+        list: [
+          'Śledzenie zgodności w wielu jurysdykcjach jednocześnie',
+          'Automatyczne przypomnienia o wygasających licencjach i certyfikatach',
+          'Koordynacja w czasie rzeczywistym między kierowcą, biurem i klientem',
+          'Pełna historia przewozów jako dowód zgodności',
+        ],
+      },
+      {
+        heading: 'Dlaczego to akurat obszar, gdzie dedykowany system się broni',
+        paragraphs: [
+          'Ogólne systemy logistyczne nie są projektowane pod specyfikę transportu żywych zwierząt — inne wymogi dokumentacyjne, inny reżim kontroli. To dokładnie ten przypadek, w którym gotowe narzędzie kosztuje więcej w obejściach niż zbudowanie systemu dopasowanego do realnych wymogów.',
+        ],
+      },
+    ],
+  },
+  {
+    key: 'animal-transport-compliance',
+    category: 'animal-industry',
+    locale: 'en',
+    slug: 'animal-transport-compliance-systems',
+    title: 'Systems for Animal Transport — Documents and Compliance Across EU Jurisdictions',
+    description: 'How a dedicated system helps licensed animal transport companies manage documentation and legal compliance across different EU countries.',
+    keywords: ['animal transport system', 'EU animal transport compliance', 'licensed animal transport software', 'animal transport documents'],
+    intro: 'Transporting animals across EU borders isn\'t just logistics — it\'s a full set of documents, licenses, and requirements that differ between countries and must always be current and provable during an inspection.',
+    sections: [
+      {
+        heading: 'Why a spreadsheet and a folder of documents fall short',
+        paragraphs: [
+          'For transport within a single country, a spreadsheet might be enough. Operating across several jurisdictions at once — each with different documentation requirements — turns manual tracking into a source of errors, and the consequence is often a transport stopped at the border.',
+        ],
+      },
+      {
+        heading: 'What a dedicated system should track',
+        paragraphs: [
+          'License and certificate validity, the full set of documents required in each jurisdiction along the route, and a transport history that can be presented during an inspection.',
+        ],
+        list: [
+          'Compliance tracking across multiple jurisdictions at once',
+          'Automatic reminders for expiring licenses and certificates',
+          'Real-time coordination between driver, office, and client',
+          'A full transport history as proof of compliance',
+        ],
+      },
+      {
+        heading: 'Why this is exactly where a dedicated system earns its cost',
+        paragraphs: [
+          'Generic logistics software isn\'t designed around the specifics of live animal transport — different documentation requirements, a different inspection regime. This is exactly the case where a ready-made tool costs more in workarounds than building a system matched to the real requirements.',
+        ],
+      },
+    ],
+  },
+
+  // ---- 11. Finance: choosing KSeF software ----
+  {
+    key: 'ksef-software-choice',
+    category: 'finance',
+    locale: 'pl',
+    slug: 'jak-wybrac-program-do-ksef-dla-malej-firmy',
+    title: 'Jak wybrać program do KSeF dla małej firmy',
+    description: 'Na co zwrócić uwagę, wybierając oprogramowanie do KSeF: automatyczne wysyłanie faktur, brak ręcznego przepisywania danych i integracja z resztą firmowych systemów.',
+    keywords: ['program do KSeF dla małej firmy', 'automatyzacja fakturowania KSeF', 'wybór oprogramowania KSeF', 'system fakturowania zgodny z KSeF'],
+    intro: 'Właściciel małej firmy zwykle łączy kilka ról naraz i nie ma czasu na ręczne przepisywanie danych między systemami. Dobry program do KSeF powinien to rozumieć — reszta to kwestia tego, jak daleko sięga automatyzacja.',
+    sections: [
+      {
+        heading: 'Automatyczna komunikacja z KSeF',
+        paragraphs: [
+          'Wystawiona faktura powinna trafiać do Krajowego Systemu e-Faktur automatycznie, bez dodatkowego logowania się do osobnej strony czy aplikacji. Jeśli program tego nie robi, i tak wykonujesz pracę ręcznie — tylko w innym miejscu.',
+        ],
+      },
+      {
+        heading: 'Brak ręcznego przepisywania danych',
+        paragraphs: [
+          'Dane kontrahenta, pozycje faktur, faktury zakupowe pobierane automatycznie — każde miejsce, gdzie trzeba coś ręcznie przepisać, to potencjalny błąd i strata czasu, które się kumulują przy większej liczbie dokumentów.',
+        ],
+      },
+      {
+        heading: 'Prostota interfejsu ma znaczenie',
+        paragraphs: [
+          'Program do KSeF dla małej firmy nie powinien wymagać wiedzy księgowej ani skomplikowanej konfiguracji. Szybkie wystawienie faktury bez przechodzenia przez dziesięć ekranów to nie luksus, tylko podstawa.',
+        ],
+      },
+      {
+        heading: 'Kiedy warto wyjść poza gotowy program do faktur',
+        paragraphs: [
+          'Gotowe programy do KSeF dobrze radzą sobie z samym fakturowaniem. Jeśli faktury to tylko jeden element szerszego procesu — uzgadnianie dokumentów przed wysyłką, role i decyzje w firmie, pełna ścieżka audytu — wtedy potrzebny jest system szerszy niż sama zgodność z KSeF. Dokładnie to jest podejście, na którym zbudowaliśmy KsięgaI.',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Czy program do KSeF musi być płatny w abonamencie?', a: 'Większość dostępnych na rynku rozwiązań działa w modelu subskrypcyjnym. Alternatywą jest dedykowany system wewnętrzny, który integruje fakturowanie z resztą procesów firmy — bez comiesięcznej opłaty za samo wystawianie faktur.' },
+      { q: 'Czy KSeF jest obowiązkowy dla małych firm?', a: 'Zakres i terminy wdrożenia KSeF zmieniają się w czasie — warto sprawdzić aktualny stan przepisów, ale kierunek jest jasny: obowiązkowe fakturowanie elektroniczne obejmie z czasem większość firm.' },
+      { q: 'Czy da się zintegrować KSeF z własnym systemem firmowym?', a: 'Tak — to dokładnie ten przypadek, w którym dedykowany system ma przewagę nad gotowym programem: KSeF staje się jedną z funkcji szerszego systemu, a nie osobnym narzędziem, do którego trzeba się logować.' },
+    ],
+  },
+  {
+    key: 'ksef-software-choice',
+    category: 'finance',
+    locale: 'en',
+    slug: 'choosing-ksef-invoicing-software-for-small-business',
+    title: 'Choosing KSeF Invoicing Software for a Small Business',
+    description: 'What to look for in KSeF-compliant invoicing software: automatic invoice submission, no manual data re-entry, and integration with the rest of your business systems.',
+    keywords: ['KSeF software small business', 'invoicing automation KSeF', 'choosing KSeF software', 'KSeF-compliant invoicing system'],
+    intro: 'A small business owner usually juggles several roles at once and doesn\'t have time to manually re-enter data between systems. Good KSeF software should account for that — the rest comes down to how far the automation actually reaches.',
+    sections: [
+      {
+        heading: 'Automatic communication with KSeF',
+        paragraphs: [
+          'An issued invoice should reach Poland\'s National e-Invoice System automatically, without an extra login to a separate site or app. If the software doesn\'t do this, you\'re still doing the work manually — just in a different place.',
+        ],
+      },
+      {
+        heading: 'No manual re-entry of data',
+        paragraphs: [
+          'Contractor details, invoice line items, purchase invoices pulled in automatically — every place where something has to be manually retyped is a potential error and a time cost that compounds as document volume grows.',
+        ],
+      },
+      {
+        heading: 'Interface simplicity matters',
+        paragraphs: [
+          'KSeF software for a small business shouldn\'t require accounting expertise or complicated setup. Issuing an invoice quickly without clicking through ten screens isn\'t a luxury, it\'s the baseline.',
+        ],
+      },
+      {
+        heading: 'When it makes sense to go beyond a ready-made invoicing app',
+        paragraphs: [
+          'Off-the-shelf KSeF software handles invoicing itself well. If invoicing is just one piece of a bigger process — reconciling documents before submission, roles and decisions inside the business, a full audit trail — then you need a system broader than KSeF compliance alone. That\'s exactly the approach we built KsięgaI on.',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Does KSeF software have to be a paid subscription?', a: 'Most solutions on the market run on a subscription model. The alternative is a dedicated internal system that integrates invoicing with the rest of the business\'s processes — without a recurring fee just to issue invoices.' },
+      { q: 'Is KSeF mandatory for small businesses?', a: 'The scope and rollout timeline for KSeF changes over time — check the current regulations, but the direction is clear: mandatory e-invoicing will eventually cover most businesses.' },
+      { q: 'Can KSeF be integrated into a company\'s own internal system?', a: 'Yes — this is exactly where a dedicated system has an edge over off-the-shelf software: KSeF becomes one function of a broader system, not a separate tool you have to log into.' },
+    ],
+  },
+
+  // ---- 12. Cross-vertical: custom software vs. SaaS ----
+  {
+    key: 'custom-vs-saas',
+    category: 'finance',
+    locale: 'pl',
+    slug: 'wlasny-system-czy-gotowe-saas-kiedy-sie-oplaca',
+    title: 'Własny system czy gotowe SaaS? Kiedy budowa dedykowanego oprogramowania się opłaca',
+    description: 'Różnica między wynajmowaniem gotowego oprogramowania a posiadaniem własnego systemu — kontrola nad danymi, koszt w czasie i kiedy dedykowane rozwiązanie faktycznie się opłaca.',
+    keywords: ['własny system czy SaaS', 'dedykowane oprogramowanie dla firmy', 'kiedy budować własny system', 'kontrola nad danymi firmy'],
+    intro: 'To pytanie wraca w każdej branży, którą obsługujemy — hodowla, związek kynologiczny, firma transportowa czy biuro rachunkowe. Odpowiedź nie brzmi „zawsze buduj własne" ani „zawsze wynajmuj gotowe" — zależy od tego, co faktycznie odróżnia Twoją firmę od innych.',
+    sections: [
+      {
+        heading: 'Różnica jest w tym, kto ma kontrolę',
+        paragraphs: [
+          'Płacąc za gotowe SaaS, wynajmujesz dostęp do narzędzia — przestajesz płacić, tracisz dostęp. Budując własny system, jesteś właścicielem kodu i danych, które mieszkają w Twojej bazie, nie u dostawcy.',
+        ],
+      },
+      {
+        heading: 'Kiedy gotowe SaaS wystarczy',
+        paragraphs: [
+          'Dla potrzeb standardowych — prosta rezerwacja, podstawowe fakturowanie, typowa strona wizytówkowa — gotowe narzędzie jest szybsze i tańsze na start. Nie ma sensu budować od zera czegoś, co tysiące innych firm już rozwiązało.',
+        ],
+      },
+      {
+        heading: 'Kiedy dedykowany system zaczyna się opłacać',
+        paragraphs: [
+          'Gdy proces Twojej firmy jest naprawdę inny niż standardowy, gdy koszty subskrypcji rosną wraz ze skalą szybciej niż korzyści, gdy potrzebujesz integracji, których gotowe narzędzie nie oferuje, albo gdy kontrola nad danymi ma znaczenie prawne lub biznesowe.',
+        ],
+        list: [
+          'Proces firmy różni się od standardowego szablonu',
+          'Koszt subskrypcji rośnie szybciej niż realna wartość',
+          'Potrzebna integracja z innymi systemami firmy',
+          'Dane muszą zostać pod pełną kontrolą firmy',
+        ],
+      },
+      {
+        heading: 'Model hybrydowy, nie skrajność',
+        paragraphs: [
+          'Najbardziej sensowne podejście — używane dziś przez większość dojrzałych firm — to gotowe narzędzia do rzeczy standardowych i dedykowane systemy do tego, co faktycznie stanowi przewagę firmy.',
+        ],
+      },
+      {
+        heading: 'Dowód, że to nie tylko teoria',
+        paragraphs: [
+          'Sami stosujemy tę zasadę: KsięgaI (finanse) i Global Pet (transport zwierząt) to nasze własne, prowadzone na co dzień systemy — a nie tylko przykłady, które sprzedajemy klientom. Ten sam standard budujemy dla hodowli (Gryfin York), związków kynologicznych (POKIU) i firm z branży zwierzęcej.',
+        ],
+      },
+    ],
+  },
+  {
+    key: 'custom-vs-saas',
+    category: 'finance',
+    locale: 'en',
+    slug: 'custom-software-vs-saas-when-it-pays-off',
+    title: 'Custom Software vs. SaaS: When Building Your Own System Pays Off',
+    description: 'The difference between renting off-the-shelf software and owning your own system — control over data, cost over time, and when a dedicated build actually pays off.',
+    keywords: ['custom software vs SaaS', 'dedicated business software', 'when to build custom software', 'own your business data'],
+    intro: 'This question comes up in every industry we work in — kennels, kennel clubs, transport companies, accounting offices. The answer isn\'t "always build custom" or "always rent off-the-shelf" — it depends on what actually sets your business apart.',
+    sections: [
+      {
+        heading: 'The difference is who\'s in control',
+        paragraphs: [
+          'Paying for SaaS means renting access to a tool — stop paying, lose access. Building your own system means owning the code and the data, which lives in your own database, not a vendor\'s.',
+        ],
+      },
+      {
+        heading: 'When off-the-shelf SaaS is enough',
+        paragraphs: [
+          'For standard needs — simple bookings, basic invoicing, a typical storefront site — a ready-made tool is faster and cheaper to start with. There\'s no point building from scratch something thousands of other businesses have already solved.',
+        ],
+      },
+      {
+        heading: 'When a dedicated system starts to pay off',
+        paragraphs: [
+          'When your business\'s process is genuinely different from the standard, when subscription costs scale faster than the benefit, when you need integrations no ready-made tool offers, or when control over your data has legal or business weight.',
+        ],
+        list: [
+          'Your process differs from the standard template',
+          'Subscription cost grows faster than the real value',
+          'You need integration with other business systems',
+          'Data needs to stay under full company control',
+        ],
+      },
+      {
+        heading: 'A hybrid model, not an extreme',
+        paragraphs: [
+          'The most sensible approach — used today by most mature businesses — is ready-made tools for standard things and dedicated systems for whatever actually gives the business its edge.',
+        ],
+      },
+      {
+        heading: 'Proof this isn\'t just theory',
+        paragraphs: [
+          'We apply this ourselves: KsięgaI (finance) and Global Pet (animal transport) are our own systems, run day to day — not just examples we sell to clients. We build the same standard for kennels (Gryfin York), kennel clubs (POKIU), and animal-industry companies.',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticle(locale: 'pl' | 'en', slug: string): PoradnikArticle | undefined {
@@ -519,6 +1094,10 @@ export function getArticle(locale: 'pl' | 'en', slug: string): PoradnikArticle |
 
 export function getArticlesForLocale(locale: 'pl' | 'en'): PoradnikArticle[] {
   return poradnikArticles.filter((a) => a.locale === locale);
+}
+
+export function getArticlesByCategory(locale: 'pl' | 'en', category: PoradnikCategory): PoradnikArticle[] {
+  return poradnikArticles.filter((a) => a.locale === locale && a.category === category);
 }
 
 export function getOtherLocaleSlug(locale: 'pl' | 'en', key: string): string | undefined {

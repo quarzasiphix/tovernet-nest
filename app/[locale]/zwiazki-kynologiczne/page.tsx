@@ -6,6 +6,7 @@ import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import PokPanelDemo from '@/components/PokPanelDemo';
 import { buildMetadata } from '@/lib/seo';
+import { getArticlesByCategory } from '@/lib/poradnik';
 
 const FEATURE_ICONS = [BookOpen, Users, FileCheck, Trophy, Receipt, History];
 const COLLAB_ICONS = [LayoutDashboard, FileUp, Clock3, UserPlus];
@@ -28,7 +29,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   });
 }
 
-export default function KennelClubsPage({ params: { locale } }: { params: { locale: string } }) {
+export default function KennelClubsPage({ params: { locale } }: { params: { locale: 'pl' | 'en' } }) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('kennelClubs');
 
@@ -220,14 +221,34 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
               </div>
             </div>
             <a
-              href="https://ksiegai.pl"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/${locale}/projekty/ksiegai`}
               className="inline-flex items-center gap-2 bg-ksiegai-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex-shrink-0"
             >
               {t('ksiegaiBanner.cta')}
               <ArrowRight className="h-5 w-5" />
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Poradnik cross-links */}
+      <section className="py-16 bg-black/20 backdrop-blur-sm border-y border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm font-bold uppercase tracking-wide text-gray-500 mb-4 text-center">
+              {locale === 'pl' ? 'Poczytaj więcej' : 'Read more'}
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {getArticlesByCategory(locale, 'kennel-clubs').map((a) => (
+                <a
+                  key={a.slug}
+                  href={`/${locale}/poradnik/${a.slug}`}
+                  className="rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors block"
+                >
+                  <p className="text-sm font-bold text-white leading-snug">{a.title}</p>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -13,9 +13,9 @@
     "badge": "Websites and Systems for the Animal Industry",
     "title": "Websites and Systems for the Animal Industry",
     "titleHighlight": "We Build Systems Companies Depend On",
-    "subtitle": "We build websites, client portals, and dedicated systems for breeders, kennel clubs, and companies working with animals. We don't just know this industry from the technology side — we operate in it ourselves.",
+    "subtitle": "Websites, panels, and dedicated systems for breeders, kennel clubs, and animal-industry companies. We know this industry — we operate in it ourselves.",
     "description": "",
-    "ctaPrimary": "See Animal-Industry Solutions",
+    "ctaPrimary": "See Our Solutions",
     "ctaSecondary": "Talk About Your Project",
     "tagline": "Kennels • kennel clubs • animal transport • registries and documentation • office automation"
   },
@@ -211,7 +211,7 @@
     },
     "panelShowcase": {
       "title": "Try the kennel panel",
-      "subtitle": "This isn't a mockup — the colors and layout mirror the real panel running the Gryfin York kennel today. Click the tabs on the left, and in the “Puppies” tab change the name, price, color and status — the preview on the right updates instantly."
+      "subtitle": "A working panel, not a mockup — click the tabs and edit a puppy to see the live preview update."
     },
     "caseStudy": {
       "title": "See it running in a real kennel",
@@ -498,8 +498,8 @@
           "name": "KsięgaI",
           "badge": "Financial Infrastructure",
           "description": "A central business registry ready for KSeF — documents, decisions, roles, and finances in one auditable structure.",
-          "cta": "Visit KsięgaI",
-          "url": "https://ksiegai.pl"
+          "cta": "See Case Study",
+          "url": "/projekty/ksiegai"
         },
         {
           "name": "Global Pet",
@@ -682,10 +682,32 @@
         "label": "Visit POKIU",
         "url": "https://pokiu.pl"
       }
+    },
+    "ksiegai": {
+      "badge": "Our Own Product",
+      "title": "KsięgaI",
+      "subtitle": "An invoicing, KSeF, and finance system we design, build, and run ourselves day to day — not just infrastructure we sell to clients, but one we actually operate on.",
+      "role": {
+        "title": "Our Own Product, Not Just a Client Build",
+        "description": "Unlike client projects, KsięgaI is a system TOVERNET designs, develops, and maintains as its own product — daily proof that we can build and operate infrastructure under real regulatory pressure (KSeF), not just design it on paper."
+      },
+      "features": [
+        "Invoicing with automatic submission to Poland's National e-Invoice System (KSeF)",
+        "JPK-V7M generation and tax filing support",
+        "Business expense tracking and categorization",
+        "Bank sync with automatic transaction matching",
+        "Customer database and billing history in one place",
+        "A full decisions and changes log — an auditable history",
+        "Access for AI assistants (Claude and others) via a dedicated MCP server"
+      ],
+      "cta": {
+        "label": "Visit KsięgaI",
+        "url": "https://ksiegai.pl"
+      }
     }
   },
   "poradnikIndex": {
-    "title": "Guides for Dog Breeders",
-    "subtitle": "Practical articles on kennel websites, panels, and online independence — grounded in what we actually build for clients."
+    "title": "TOVERNET Guides",
+    "subtitle": "Practical articles on websites, panels, and systems — for breeders, kennel clubs, animal-industry companies, and finance."
   }
 }

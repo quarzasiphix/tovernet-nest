@@ -11,6 +11,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: '/zwiazki-kynologiczne', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projekty', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/projekty/gryfin-york', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/projekty/ksiegai', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/projekty/kolorowa-pasja', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/projekty/pokiu', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/projekty/klepsydra', priority: 0.6, changeFrequency: 'monthly' },

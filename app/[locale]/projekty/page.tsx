@@ -81,9 +81,9 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
                     <p className="text-gray-300 mb-6 leading-relaxed">{item.description}</p>
                     {item.url && (
                       <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={item.url.startsWith('http') ? item.url : `/${locale}${item.url}`}
+                        target={item.url.startsWith('http') ? '_blank' : undefined}
+                        rel={item.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
                       >
                         {item.cta}
