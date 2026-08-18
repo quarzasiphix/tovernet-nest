@@ -4,6 +4,7 @@ import { useState } from 'react';
 import {
   Home, PawPrint, Baby, Dog, Camera, MessageSquare, Star, Plus, Search, ImageIcon,
 } from 'lucide-react';
+import PuppyAvatar from './PuppyAvatar';
 
 // Structure borrowed from PokPanelDemo.tsx (sidebar + mobile pill tabs, list+detail
 // layout). Colors lifted from GryfinPanelDemo.tsx / the real GRYFIN YORK panel CSS —
@@ -93,7 +94,9 @@ function PsyTab() {
       {dogs.map((d) => (
         <Card key={d.name}>
           <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style={{ background: PINK_SOFT }}>🐕</div>
+            <div className="h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: PINK_SOFT }}>
+              <PuppyAvatar className="h-7 w-7" color={PINK} />
+            </div>
             <div className="min-w-0">
               <p className="text-sm font-bold truncate" style={{ color: NAVY }}>{d.name}</p>
               <p className="text-xs truncate" style={{ color: MUTED }}>{d.color} · {d.sex}</p>
@@ -218,7 +221,9 @@ function SzczeniatkaTab() {
         <p className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: MUTED }}>Podgląd na stronie publicznej</p>
         <div className="rounded-2xl p-5" style={{ background: CREAM, border: `1px solid ${BORDER}` }}>
           <div className="rounded-2xl overflow-hidden bg-white kennel-card-shadow">
-            <div className="h-36 flex items-center justify-center text-5xl" style={{ background: PINK_SOFT }}>🐕</div>
+            <div className="h-36 flex items-center justify-center" style={{ background: PINK_SOFT }}>
+              <PuppyAvatar className="h-16 w-16" color={PINK} />
+            </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2 mb-1">
                 <p className="text-base font-bold" style={{ color: NAVY }}>{puppy.name || 'Imię szczenięcia'}</p>

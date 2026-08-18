@@ -1,4 +1,5 @@
 import { ArrowRight, PawPrint, LayoutDashboard, Camera, MessageCircle, Baby } from 'lucide-react';
+import PuppyAvatar from './PuppyAvatar';
 
 type BreederHeroProps = {
   badge: string;
@@ -90,8 +91,8 @@ export default function BreederHero({
 
             {/* puppy card (front) */}
             <div className="absolute right-0 bottom-2 w-[62%] rounded-2xl bg-white border border-kennel-navy-400/10 kennel-card-shadow p-4 rotate-[2deg]">
-              <div className="h-24 rounded-xl bg-kennel-pink-100 flex items-center justify-center text-4xl mb-3">
-                🐕
+              <div className="h-24 rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3">
+                <PuppyAvatar className="h-12 w-12" />
               </div>
               <p className="font-bold text-kennel-navy-900 text-sm">Bella</p>
               <p className="text-xs text-kennel-navy-400 mb-3">Blue &amp; Tan · Suczka</p>

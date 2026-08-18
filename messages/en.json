@@ -369,6 +369,11 @@
       "subtitle": "Facebook can help you get attention. Your own website builds trust, holds your kennel's history, and stays under your control.",
       "ctaPrimary": "Request a quote",
       "ctaSecondary": "See Gryfin York"
+    },
+    "kennelClubCredibility": {
+      "title": "The same team also builds systems for kennel clubs",
+      "description": "Pedigree registry, breeder panel, and QR document verification for POKIU — built and maintained by us.",
+      "cta": "See POKIU"
     }
   },
   "kennelClubs": {

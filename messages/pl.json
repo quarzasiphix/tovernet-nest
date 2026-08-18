@@ -369,6 +369,11 @@
       "subtitle": "Facebook może pomagać zdobywać uwagę. Twoja własna strona buduje zaufanie, przechowuje historię hodowli i pozostaje pod Twoją kontrolą.",
       "ctaPrimary": "Poproś o wycenę",
       "ctaSecondary": "Zobacz Gryfin York"
+    },
+    "kennelClubCredibility": {
+      "title": "Ten sam zespół prowadzi też systemy dla związków kynologicznych",
+      "description": "Rejestr rodowodów, panel hodowców i weryfikacja dokumentów kodem QR dla POKIU — zbudowane i utrzymywane przez nas.",
+      "cta": "Zobacz POKIU"
     }
   },
   "kennelClubs": {

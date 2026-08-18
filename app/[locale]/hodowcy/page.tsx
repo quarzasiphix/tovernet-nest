@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import {
   ArrowRight, ExternalLink, Globe2, Home, Camera, LayoutDashboard, PawPrint,
-  Database, MessageSquare, Search, Languages, LifeBuoy,
+  Database, MessageSquare, Search, Languages, LifeBuoy, ShieldCheck,
 } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -87,6 +87,26 @@ export default function BreedersPage({ params: { locale } }: { params: { locale:
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Kennel-club credibility band */}
+        <section className="py-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto rounded-2xl bg-kennel-lavender-50 border border-kennel-lavender-300/40 p-6 sm:p-7 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+              <ShieldCheck className="h-9 w-9 text-kennel-lavender-500 flex-shrink-0" />
+              <div className="flex-1">
+                <p className="font-bold text-kennel-navy-900">{t('kennelClubCredibility.title')}</p>
+                <p className="text-sm text-kennel-navy-600 mt-1">{t('kennelClubCredibility.description')}</p>
+              </div>
+              <a
+                href={`/${locale}/projekty/pokiu`}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-kennel-lavender-500 hover:opacity-80 transition-opacity flex-shrink-0"
+              >
+                {t('kennelClubCredibility.cta')}
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>

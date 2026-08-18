@@ -1,4 +1,5 @@
 import { ArrowRight, PawPrint, LayoutDashboard } from 'lucide-react';
+import PuppyAvatar from './PuppyAvatar';
 
 type BreederHomeCardProps = {
   href: string;
@@ -32,7 +33,9 @@ export default function BreederHomeCard({ href, title, description, cta }: Breed
           </div>
         </div>
         <div className="absolute right-0 bottom-0 w-[52%] h-14 rounded-xl bg-white border border-kennel-navy-400/10 shadow-sm p-2 flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-kennel-pink-100 flex items-center justify-center text-sm flex-shrink-0">🐕</div>
+          <div className="h-8 w-8 rounded-lg bg-kennel-pink-100 flex items-center justify-center flex-shrink-0">
+            <PuppyAvatar className="h-5 w-5" />
+          </div>
           <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-kennel-yellow-100 text-amber-700">Dostępny</span>
         </div>
       </div>
