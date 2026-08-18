@@ -1,22 +1,31 @@
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ArrowRight, BookOpen, Users, FileCheck, Trophy, Receipt, History, Building2, ShieldCheck } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, FileCheck, Trophy, Receipt, History, Building2, ShieldCheck, LayoutDashboard, FileUp, Clock3, UserPlus, Calculator, QrCode, ScanLine, KeyRound, Lock, ExternalLink } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import PokPanelDemo from '@/components/PokPanelDemo';
+import { buildMetadata } from '@/lib/seo';
 
 const FEATURE_ICONS = [BookOpen, Users, FileCheck, Trophy, Receipt, History];
+const COLLAB_ICONS = [LayoutDashboard, FileUp, Clock3, UserPlus];
+const QR_ICONS = [QrCode, ScanLine, KeyRound, Lock];
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params: { locale } }: { params: { locale: 'pl' | 'en' } }): Promise<Metadata> {
   const isPolish = locale === 'pl';
-  return {
+  return buildMetadata({
+    locale,
+    path: '/zwiazki-kynologiczne',
     title: isPolish
       ? 'System Dla Związków Kynologicznych | TOVERNET'
       : 'System For Kennel Clubs | TOVERNET',
     description: isPolish
       ? 'Rejestr psów, rodowody, rozliczenia i pełny audyt w jednym systemie multi-tenant dla biur związków kynologicznych.'
       : 'Dog registry, pedigrees, payments, and a full audit trail in one multi-tenant system for kennel club offices.',
-  };
+    keywords: isPolish
+      ? ['system dla związku kynologicznego', 'elektroniczna księga rodowodowa', 'panel hodowcy online', 'weryfikacja rodowodu kodem QR', 'rejestr psów program']
+      : ['kennel club software', 'electronic pedigree registry', 'breeder panel for kennel clubs', 'QR pedigree verification'],
+  });
 }
 
 export default function KennelClubsPage({ params: { locale } }: { params: { locale: string } }) {
@@ -98,8 +107,91 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
         </div>
       </section>
 
-      {/* Multi-tenant + Security */}
+      {/* Interactive office panel demo */}
       <section className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('screenshots.title')}</h2>
+            <p className="text-xl text-gray-300 leading-relaxed">{t('screenshots.subtitle')}</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <PokPanelDemo />
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-8 text-center">
+            <p className="text-gray-400 mb-4">{t('screenshots.caption')}</p>
+            <a
+              href={`/${locale}/projekty/pokiu`}
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/10 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+            >
+              {t('screenshots.linkLabel')}
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Breeder collaboration */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('collaboration.title')}</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('collaboration.subtitle')}</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.raw('collaboration.items').map((item: { title: string; description: string }, i: number) => {
+                const Icon = COLLAB_ICONS[i] ?? LayoutDashboard;
+                return (
+                  <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
+                    <Icon className="h-8 w-8 text-kennelclub-400 mb-3" />
+                    <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm">{item.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* QR verification */}
+      <section className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('qrVerification.title')}</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('qrVerification.subtitle')}</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {t.raw('qrVerification.items').map((item: { title: string; description: string }, i: number) => {
+                const Icon = QR_ICONS[i] ?? QrCode;
+                return (
+                  <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
+                    <Icon className="h-8 w-8 text-kennelclub-400 mb-3" />
+                    <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm">{item.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="text-center">
+              <p className="text-gray-400 mb-3">{t('qrVerification.proof')}</p>
+              <a
+                href={`/${locale}/projekty/pokiu`}
+                className="inline-flex items-center gap-2 text-kennelclub-300 font-semibold hover:text-kennelclub-200 transition-colors"
+              >
+                {t('qrVerification.proofCta')}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Multi-tenant + Security */}
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -112,6 +204,30 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
               <h3 className="text-2xl font-bold text-white mb-4">{t('security.title')}</h3>
               <p className="text-gray-300 leading-relaxed">{t('security.description')}</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* KsięgaI cross-sell banner */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto bg-gradient-to-br from-ksiegai-900/30 to-purple-900/20 border border-ksiegai-500/30 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 justify-between">
+            <div className="flex items-center gap-4">
+              <Calculator className="h-10 w-10 text-ksiegai-400 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{t('ksiegaiBanner.title')}</h3>
+                <p className="text-gray-300">{t('ksiegaiBanner.description')}</p>
+              </div>
+            </div>
+            <a
+              href="https://ksiegai.pl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-ksiegai-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex-shrink-0"
+            >
+              {t('ksiegaiBanner.cta')}
+              <ArrowRight className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </section>

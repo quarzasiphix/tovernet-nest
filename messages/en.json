@@ -6,88 +6,116 @@
     "contact": "Discuss Your System",
     "breeders": "Breeders",
     "kennelClubs": "Kennel Clubs",
-    "projects": "Our Projects"
+    "projects": "Our Projects",
+    "poradnik": "Guides"
   },
   "hero": {
-    "badge": "The Digital Operating Layer",
-    "title": "The Digital Operating Layer",
+    "badge": "Websites and Systems for the Animal Industry",
+    "title": "Websites and Systems for the Animal Industry",
     "titleHighlight": "We Build Systems Companies Depend On",
-    "subtitle": "Digital infrastructure for organizations that must operate at scale, compliance, and full control.",
+    "subtitle": "We build websites, client portals, and dedicated systems for breeders, kennel clubs, and companies working with animals. We don't just know this industry from the technology side — we operate in it ourselves.",
     "description": "",
-    "ctaPrimary": "Request Infrastructure Review",
-    "ctaSecondary": "See What We Operate",
-    "valueProps": {
-      "clarity": {
-        "title": "Operational Clarity",
-        "description": "Systems that respect law, scale, and money"
-      },
-      "decision": {
-        "title": "Systemized Decision-Making",
-        "description": "Automation that coordinates people and data"
-      },
-      "traceability": {
-        "title": "Traceability",
-        "description": "Full audit trails and governance"
-      }
-    }
+    "ctaPrimary": "See Animal-Industry Solutions",
+    "ctaSecondary": "Talk About Your Project",
+    "tagline": "Kennels • kennel clubs • animal transport • registries and documentation • office automation"
   },
-  "whatWeBuild": {
-    "title": "What We Architect",
-    "subtitle": "Everything is built specifically for your business logic. No generic tools. No forced workflows.",
-    "internal": {
-      "title": "Internal Systems",
-      "description": "Finance, documents, workflows — structured around how your business actually operates.",
-      "features": [
-        "Compliance-critical systems",
-        "Automated decision workflows",
-        "Document & data governance"
-      ]
-    },
-    "external": {
-      "title": "External Systems",
-      "description": "Web platforms, client portals, and customer-facing interfaces that scale.",
-      "features": [
-        "Custom business websites as systems",
-        "Client & admin portals",
-        "Integration layers"
-      ]
-    },
-    "automation": {
-      "title": "Automation & Orchestration",
-      "description": "AI-assisted operations and workflow automation that coordinates people, data, and decisions.",
-      "features": [
-        "Internal automation workflows",
-        "AI-assisted decision support",
-        "Cross-system orchestration"
-      ]
-    },
-    "governance": {
-      "title": "Governance & Auditability",
-      "description": "Data structure, visibility, and full audit trails for regulated environments.",
-      "features": [
-        "Compliance tracking & reporting",
-        "Full operational history",
-        "Data structure & visibility"
-      ]
-    }
-  },
-  "industrySolutions": {
-    "title": "Industry Solutions",
-    "subtitle": "Instead of generic \"non-standard infrastructure\" — concrete solutions for specific industries we already know from the inside.",
-    "breederCard": {
-      "title": "For Dog Breeders",
-      "description": "A website and admin panel that are yours forever, plus a Google Business Profile and local SEO.",
+  "paths": {
+    "title": "Solutions For Your Industry",
+    "subtitle": "Four concrete paths. Pick yours — each has a full offer on its own page.",
+    "breeders": {
+      "title": "For Breeders",
+      "description": "A site and panel your kennel updates itself.",
       "cta": "See the Breeder Offer"
     },
-    "kennelCard": {
+    "kennelClubs": {
       "title": "For Kennel Clubs",
-      "description": "Dog registry, pedigrees, payments, and a full audit trail in one system for multiple clubs.",
+      "description": "Registries of people, dogs, and litters, pedigrees, registration cards, document numbering, public QR verification, a change history, and an office-to-breeder collaboration portal.",
       "cta": "See the Kennel Club Offer"
+    },
+    "animalIndustry": {
+      "title": "For Animal-Industry Companies",
+      "description": "Dedicated systems for animal transport, pet hotels, groomers, trainers, shelters, marketplaces, and other companies. Bookings, documents, payments, customer handling, and internal processes.",
+      "cta": "Let's Talk About Your Project"
+    },
+    "finance": {
+      "title": "Finance & Administration",
+      "description": "Invoices, KSeF compliance, documents, payments, settlements, and dedicated internal systems. KsięgaI is our own product in this space — real proof we can build and run it.",
+      "cta": "Visit KsięgaI"
+    }
+  },
+  "whyWeKnow": {
+    "title": "We Don't Learn This Industry After Signing the Contract",
+    "description": "We build software for breeders and kennel clubs, and at the same time we operate in international animal transport ourselves (Global Pet). We know animal documentation and provenance, working with breeders and owners, logistics, and organizational processes firsthand — not just from a requirements doc.",
+    "items": [
+      {
+        "title": "Animal Documentation & Provenance",
+        "description": "Pedigrees, registration cards, document numbering — we know what they need to look like and how they move between breeder, club, and owner."
+      },
+      {
+        "title": "Working With Breeders and Owners",
+        "description": "We know where friction shows up in that relationship — and how a system can remove it instead of adding another form."
+      },
+      {
+        "title": "Animal Transport Logistics",
+        "description": "We run Global Pet — licensed animal transport across EU jurisdictions. We know the physical and legal constraints of that work firsthand."
+      },
+      {
+        "title": "Office Organizational Processes",
+        "description": "From a breeder's request to an issued document — we know where offices lose time to paper and Excel."
+      }
+    ]
+  },
+  "projectsShowcase": {
+    "clientWork": {
+      "title": "Client Projects",
+      "subtitle": "These aren't mockups — they're systems we run for real clients today.",
+      "featured": [
+        {
+          "name": "POKIU",
+          "badge": "A Full Digital System For a Kennel Club",
+          "description": "Polska Organizacja Kynologiczna International Union. Dog and pedigree registry, a breeder collaboration portal, public QR document verification — one system, three audiences.",
+          "cta": "See the POKIU Case Study",
+          "url": "/projekty/pokiu"
+        },
+        {
+          "name": "Gryfin York",
+          "badge": "Kennel Site + Management Panel",
+          "description": "A Yorkshire Terrier kennel. A public site with current litters and a gallery, paired with a panel where the owner manages dogs, litters, and content herself — without our day-to-day involvement.",
+          "cta": "See the Gryfin York Case Study",
+          "url": "/projekty/gryfin-york"
+        }
+      ],
+      "secondaryLabel": "More client work:",
+      "secondary": [
+        {
+          "name": "Kolorowa Pasja",
+          "url": "/projekty/kolorowa-pasja"
+        },
+        {
+          "name": "Nekrolog Łódź",
+          "url": "/projekty/nekrolog-lodz"
+        },
+        {
+          "name": "Klepsydra",
+          "url": "/projekty/klepsydra"
+        }
+      ],
+      "allCta": "See All Projects"
+    },
+    "industriesKnown": {
+      "title": "Industries We Know",
+      "tags": [
+        "Purebred dog breeders",
+        "Kennel clubs",
+        "Animal transport",
+        "Funeral homes",
+        "Finance & KSeF"
+      ]
     }
   },
   "verticals": {
-    "title": "Live Operating Domains",
-    "subtitle": "We don't theorize. We operate. These are systems we run ourselves under real legal and operational pressure.",
+    "title": "TOVERNET Products",
+    "subtitle": "We don't just design infrastructure for others — we run these systems ourselves, day to day, under real legal and operational pressure.",
     "ksiegai": {
       "title": "Financial Infrastructure",
       "badge": "KSeF-Ready Systems",
@@ -111,15 +139,9 @@
       "cta": "Coming Soon"
     }
   },
-  "whyCustom": {
-    "title": "Why Custom Infrastructure?",
-    "subtitle": "Most software forces companies to adapt to tools.",
-    "highlight": "We build tools around companies.",
-    "description": "Built systems scale. Tools don't. When you need structure that respects your business logic, regulatory requirements, and growth trajectory — generic SaaS won't cut it."
-  },
   "engagement": {
     "title": "How Engagement Works",
-    "subtitle": "This is not one-off web dev. This is infrastructure partnership.",
+    "subtitle": "This is not one-off web dev. It's a partnership that stays with you after launch.",
     "steps": [
       {
         "title": "Map",
@@ -140,12 +162,12 @@
     ]
   },
   "contact": {
-    "title": "Ready to Build Structure?",
-    "subtitle": "Custom digital infrastructure for businesses that outgrew templates.",
-    "cta": "Request Infrastructure Review"
+    "title": "Ready For a Site or System For Your Industry?",
+    "subtitle": "Write to us — let's talk about your project and what's actually worth building.",
+    "cta": "Let's Talk About Your Project"
   },
   "footer": {
-    "tagline": "Digital infrastructure for businesses that cannot afford chaos.",
+    "tagline": "Websites and systems for the animal industry — plus business software, automation, and financial systems for other industries.",
     "solutions": "Industry Solutions",
     "verticals": "Our Brands",
     "ksiegai": "KsięgaI - Financial Infrastructure",
@@ -156,65 +178,197 @@
   "breeders": {
     "hero": {
       "badge": "For Purebred Dog Breeders",
-      "title": "A Website Your Kennel Actually Owns",
-      "subtitle": "A public site and an admin panel that are yours forever — we help build it, launch it, and keep it running.",
-      "ctaPrimary": "Request a Free Quote",
-      "ctaSecondary": "See What We Build"
+      "title": "A kennel website you can update yourself",
+      "subtitle": "Add a dog, litter or puppy in your panel and it appears immediately on your own website—without waiting for a developer or depending on Facebook.",
+      "ctaPrimary": "See the working system",
+      "ctaSecondary": "Request a free quote",
+      "flowLabel": "Panel → Website",
+      "statusFrom": "Available",
+      "statusTo": "Reserved"
     },
-    "problem": {
-      "title": "Facebook and Instagram Aren't Enough",
-      "description": "Prospective puppy owners search for kennels on Google, not just on social media. Without your own site you lose trust, search visibility, and control of your own data — a social profile will never really be yours."
-    },
-    "solution": {
-      "title": "What We Build For Your Kennel",
-      "subtitle": "A proven model we already run live for a Yorkshire Terrier kennel — Gryfin York.",
-      "public": {
-        "title": "Public Website",
-        "description": "Your kennel's storefront on the internet.",
-        "features": [
-          "Current litters and available puppies",
-          "Breeding stock profiles (litter parents)",
-          "Photo gallery of the kennel and dogs",
-          "Customer reviews and an enquiry form"
-        ]
-      },
-      "panel": {
-        "title": "Admin Panel",
-        "description": "You manage the site's content yourself — no developer, no waiting on anyone.",
-        "features": [
-          "Add dogs, litters, and puppies",
-          "Manage the photo gallery",
-          "Reply to customer enquiries",
-          "Publish reviews and updates"
-        ]
-      }
-    },
-    "extra": {
-      "title": "More Than a Website",
-      "subtitle": "We help you show up where your customers are actually searching.",
+    "proof": {
+      "badge": "Already running in a real kennel — GRYFIN YORK",
       "items": [
         {
-          "title": "Google Business Profile",
-          "description": "We set up and configure your Google Business Profile so your kennel shows up on Google Maps and local search results."
+          "value": "13",
+          "label": "breeding dogs in the panel"
         },
         {
-          "title": "Local SEO",
-          "description": "We optimize the site for the terms prospective puppy owners search for in your region."
+          "value": "2",
+          "label": "planned litters"
         },
         {
-          "title": "Your Own Domain & Hosting",
-          "description": "We launch the site on your own domain — it's your property, forever, independent of us."
+          "value": "200+",
+          "label": "photos and files"
         },
         {
-          "title": "Support & Growth",
-          "description": "We stay with you — fixes, new features, and technical support as your kennel grows."
+          "value": "100%",
+          "label": "content added by the breeder herself"
+        }
+      ],
+      "linkLabel": "Visit the Gryfin York site",
+      "linkUrl": "https://hodowlagryfinyork.pl"
+    },
+    "panelShowcase": {
+      "title": "Try the kennel panel",
+      "subtitle": "This isn't a mockup — the colors and layout mirror the real panel running the Gryfin York kennel today. Click the tabs on the left, and in the “Puppies” tab change the name, price, color and status — the preview on the right updates instantly."
+    },
+    "caseStudy": {
+      "title": "See it running in a real kennel",
+      "publicLabel": "GRYFIN YORK public website",
+      "panelLabel": "Admin panel",
+      "publicItems": [
+        "Available puppies and planned litters",
+        "Breeding dog profiles and individual puppy pages",
+        "Kennel photo gallery",
+        "Customer reviews and reservation information",
+        "Contact form and enquiries"
+      ],
+      "panelItems": [
+        "Add dogs, create litters, connect parents",
+        "Add puppies and set prices",
+        "Change reservation status with one click",
+        "Upload photos straight from a phone",
+        "Manage enquiries and publish reviews"
+      ],
+      "callout": "The kennel owner adds dogs, puppies, litters and photos herself, and updates reservation statuses on her own.",
+      "ctaOpenLabel": "Open Gryfin York",
+      "ctaPanelLabel": "See what the panel can do"
+    },
+    "ecosystem": {
+      "title": "A complete system for your kennel",
+      "subtitle": "Not just a website — one connected ecosystem built around your kennel.",
+      "hub": "Your kennel",
+      "items": [
+        "Public kennel website",
+        "Admin panel",
+        "Your own domain",
+        "Dog, litter and puppy database",
+        "Photos and galleries",
+        "Customer enquiries",
+        "Google Business Profile",
+        "Local search visibility",
+        "Optional multilingual version",
+        "Support and future development"
+      ]
+    },
+    "ownership": {
+      "title": "Your kennel. Your domain. Your data.",
+      "items": [
+        "You control the domain, independent of us.",
+        "Your photos, content and data remain your property.",
+        "The website doesn't disappear if Facebook blocks your page.",
+        "The project can be moved or handed to another developer.",
+        "There's no compulsory monthly software licence.",
+        "TOVERNET can optionally provide hosting, maintenance and future development."
+      ]
+    },
+    "pricing": {
+      "title": "A quote tailored to your kennel",
+      "description": "Every kennel starts from a different place. We first check what you already have and what you need. Then we present a clear scope, timeline and quote before any work begins.",
+      "variesTitle": "The scope depends on what you already have",
+      "variesItems": [
+        "Migrating an old website",
+        "Importing dozens of dog profiles",
+        "Transferring hundreds of photos",
+        "Multiple language versions",
+        "Domain and professional email setup",
+        "Custom reservation flows",
+        "Buyer applications",
+        "Pedigrees or documents",
+        "Additional panel functions"
+      ],
+      "cta": "Request a free quote"
+    },
+    "process": {
+      "title": "How we work together",
+      "subtitle": "A simple, transparent process from the first conversation to launch.",
+      "steps": [
+        {
+          "title": "Tell us about your kennel",
+          "description": "A short conversation about what you need."
+        },
+        {
+          "title": "We review your materials",
+          "description": "We check your current website, photos and data."
+        },
+        {
+          "title": "We design the website and panel",
+          "description": "A design built around your kennel."
+        },
+        {
+          "title": "We import your dogs and content",
+          "description": "We migrate your data, photos and profiles."
+        },
+        {
+          "title": "Training and launch",
+          "description": "We train you on the panel and launch the site."
         }
       ]
     },
-    "cta": {
-      "title": "Want a Website For Your Kennel?",
-      "subtitle": "Write to us — we'll put together a free quote tailored to your kennel.",
-      "button": "Request a Free Quote"
+    "quoteForm": {
+      "title": "Tell us about your kennel — we'll put together a free quote.",
+      "subtitle": "A few short questions. No commitment.",
+      "steps": [
+        "Your kennel",
+        "Scope",
+        "Contact"
+      ],
+      "step1": {
+        "kennelName": "Kennel name",
+        "breed": "Breed",
+        "existingSite": "Existing website or Facebook page (optional)"
+      },
+      "step2": {
+        "siteTypeLabel": "New website or migrating an existing one?",
+        "siteTypeNew": "New website",
+        "siteTypeMigration": "Migrating an existing website",
+        "functionsLabel": "Which functions are you interested in?",
+        "functions": [
+          "Admin panel",
+          "Photo gallery",
+          "Reservation statuses",
+          "Customer reviews",
+          "Enquiry form",
+          "Pedigrees / documents"
+        ],
+        "languagesLabel": "Language versions",
+        "languages": [
+          "English",
+          "German",
+          "Dutch",
+          "Polish"
+        ],
+        "dogCountLabel": "Roughly how many dogs will you add to start?",
+        "dogCountOptions": [
+          "1-5",
+          "6-15",
+          "16-30",
+          "30+"
+        ]
+      },
+      "step3": {
+        "contactName": "Full name",
+        "email": "Email address",
+        "phone": "Phone (optional)",
+        "notes": "Additional information"
+      },
+      "nav": {
+        "back": "Back",
+        "next": "Next",
+        "submit": "Send enquiry"
+      },
+      "thankYou": {
+        "title": "Thank you!",
+        "message": "We've opened your email app with a ready-to-send message — just hit send. We'll get back to you with a free quote as soon as we can."
+      },
+      "emailSubject": "Kennel website quote"
+    },
+    "finalCta": {
+      "title": "Build your own place for your kennel",
+      "subtitle": "Facebook can help you get attention. Your own website builds trust, holds your kennel's history, and stays under your control.",
+      "ctaPrimary": "Request a quote",
+      "ctaSecondary": "See Gryfin York"
     }
   },
   "kennelClubs": {
@@ -231,7 +385,7 @@
     },
     "solution": {
       "title": "What The System Covers",
-      "subtitle": "Built and battle-tested as the POK CRM system we run for a kennel club office.",
+      "subtitle": "Built and battle-tested as the CRM system we run for POKIU (Polska Organizacja Kynologiczna International Union).",
       "features": [
         {
           "title": "Pedigree Registry",
@@ -259,6 +413,58 @@
         }
       ]
     },
+    "screenshots": {
+      "title": "Try the Real Office Panel",
+      "subtitle": "This isn't a screenshot — it's an interactive rebuild of the same requests panel that runs POKIU's office today. Click a request, approve it, or reject it.",
+      "caption": "The same panel (with real data instead of this demo) runs the office at:",
+      "linkLabel": "See the POKIU Case Study"
+    },
+    "collaboration": {
+      "title": "Collaborate With Breeders Without Email and Scans",
+      "subtitle": "Breeders in the club get their own portal — the office sees every request and document in one place, with status tracking.",
+      "items": [
+        {
+          "title": "Breeder Portal",
+          "description": "The breeder logs into their own account — sees their dogs and litters registered with the club, plus the history of pedigrees already issued."
+        },
+        {
+          "title": "Requests Online",
+          "description": "A request for a pedigree or other document is submitted through the portal instead of an email with scans — it lands straight in the office's queue."
+        },
+        {
+          "title": "Status Tracking",
+          "description": "Every request has a clear status — Pending, Approved, Rejected — with an office note. The breeder always knows where things stand."
+        },
+        {
+          "title": "Kennel Team",
+          "description": "A kennel owner can invite co-owners and staff into their own portal, with the right access role."
+        }
+      ]
+    },
+    "qrVerification": {
+      "title": "QR-Code Pedigree Verification",
+      "subtitle": "Every issued pedigree can carry its own QR code, pointing to a separate public verification domain — no login, no panel access, just a document preview.",
+      "items": [
+        {
+          "title": "A QR Code On The Document",
+          "description": "Pedigrees and litter cards are printed with a unique QR code tied to a specific dog or document."
+        },
+        {
+          "title": "A Public Verification Page",
+          "description": "A buyer scans the code and lands on a separate domain — sees basic dog info, with no login and no access to the rest of the system."
+        },
+        {
+          "title": "Unlock With A Security Code",
+          "description": "A preview of the original document can be unlocked with a security code — making forged or unbacked pedigrees much harder to pass off as genuine."
+        },
+        {
+          "title": "Locked Down At The Edge",
+          "description": "The verification domain is gated at the edge server — there's no path from it to a login screen or office data."
+        }
+      ],
+      "proof": "This exact system runs today for POKIU (psy.pokiu.pl).",
+      "proofCta": "See the POKIU Case Study"
+    },
     "multiTenant": {
       "title": "One System, Many Clubs",
       "description": "Each kennel club operates in its own, fully isolated data space — with its own roles, permissions, and organization settings. One club's data never mixes with another's, even inside the same system."
@@ -266,6 +472,11 @@
     "security": {
       "title": "Data Security & Continuity",
       "description": "Regular backups and rehearsed changes against a local copy before anything touches production — because issued pedigrees are documents your clients already hold in their hands."
+    },
+    "ksiegaiBanner": {
+      "title": "Need Accounting For Your Association Too? We Cover That.",
+      "description": "A kennel club is usually organized as an association with its own bookkeeping — membership fees, invoices, KSeF compliance. We run that side in KsięgaI, our financial system — one provider for both needs.",
+      "cta": "Visit KsięgaI"
     },
     "cta": {
       "title": "Want To Deploy This For Your Club?",
@@ -301,36 +512,48 @@
     },
     "clientProjects": {
       "title": "Client Projects",
-      "subtitle": "We build and maintain these systems as a contractor — the brand, the data, and the customers belong to our clients, not to us.",
+      "subtitle": "We build and maintain these systems as a contractor — the brand, the data, and the customers belong to our clients, not to us. Click through for the full case study.",
+      "caseStudyLabel": "Case study",
       "items": [
         {
+          "slug": "nekrolog-lodz",
           "name": "Nekrolog Łódź",
           "badge": "Funeral Home · Client",
-          "description": "A funeral home's digital presence — full service offering, product catalog, and round-the-clock contact for families in a difficult moment.",
-          "cta": "Visit Nekrolog Łódź",
-          "url": "https://nekrolog-lodz.pl"
+          "description": "Jolanta Kostowska's funeral home's digital presence — full service offering, product catalog, and round-the-clock contact for families in a difficult moment.",
+          "cta": "Visit the Site",
+          "url": "https://nekrolog-lodz.com"
         },
         {
+          "slug": "klepsydra",
           "name": "Klepsydra",
           "badge": "Client Tool",
-          "description": "A free online e-obituary generator built for Nekrolog Łódź's customers — instant preview and print.",
+          "description": "A free online e-obituary generator, marketed as a tool from Jolanta Kostowska Nekrolog Łódź — built and maintained by us.",
           "cta": "Try Klepsydra",
-          "url": "https://nekrolog-lodz.pl"
+          "url": "https://klepsydra.nekrolog-lodz.com"
         },
         {
+          "slug": "gryfin-york",
           "name": "Gryfin York",
           "badge": "Yorkshire Terrier Kennel · Client",
-          "description": "A public site and admin panel for a kennel — the model our breeder offer is based on."
+          "description": "A public site and admin panel for a kennel — the model our breeder offer is based on.",
+          "cta": "Visit the Kennel Site",
+          "url": "https://hodowlagryfinyork.pl"
         },
         {
+          "slug": "kolorowa-pasja",
           "name": "Kolorowa Pasja",
           "badge": "Yorkshire Terrier & Spitz Kennel · Client",
-          "description": "A kennel website showcasing litters and puppies, built and maintained by us for the kennel's owner."
+          "description": "A kennel website showcasing litters and puppies, built and maintained by us for the kennel's owner.",
+          "cta": "Visit the Kennel Site",
+          "url": "https://kolorowapasja.pl"
         },
         {
-          "name": "POK CRM",
-          "badge": "Kennel Club Office · Client",
-          "description": "An internal dog registry, pedigree, and payments system — the model our kennel club offer is based on."
+          "slug": "pokiu",
+          "name": "POKIU",
+          "badge": "Kennel Club · Client",
+          "description": "Polska Organizacja Kynologiczna International Union. A dog registry, pedigree, breeder-portal, and public QR document verification system.",
+          "cta": "Visit POKIU",
+          "url": "https://pokiu.pl"
         }
       ]
     },
@@ -339,5 +562,130 @@
       "subtitle": "Let's talk about your business and what infrastructure would actually serve it. An initial quote is free.",
       "button": "Request a Free Quote"
     }
+  },
+  "caseStudies": {
+    "back": "All Projects",
+    "roleLabel": "Our Role",
+    "featuresLabel": "What We Built",
+    "nekrologLodz": {
+      "badge": "Client · Funeral Home",
+      "title": "Nekrolog Łódź",
+      "subtitle": "Digital presence for Jolanta Kostowska's family-run funeral home — 30+ years in business, round-the-clock help, funerals arranged without an upfront deposit.",
+      "role": {
+        "title": "We're the Contractor Behind This Site",
+        "description": "We designed, built, and maintain the funeral home's website — from content structure to SEO. It's Jolanta Kostowska's brand and business; we own the technology behind it."
+      },
+      "features": [
+        "Full service catalog — funeral arrangement, cremation, exhumation, domestic and international transport of the deceased",
+        "Heavy local SEO for funeral-service search terms in Łódź",
+        "Product-line pages — coffins, urns, wreaths, flower arrangements, musical accompaniment",
+        "24/7 contact with no upfront deposit required"
+      ],
+      "cta": {
+        "label": "Visit Nekrolog Łódź",
+        "url": "https://nekrolog-lodz.com"
+      }
+    },
+    "klepsydra": {
+      "badge": "Client · Online Tool",
+      "title": "Klepsydra",
+      "subtitle": "A free online funeral e-obituary generator, marketed as a tool from Jolanta Kostowska Nekrolog Łódź — built by us as a standalone app.",
+      "role": {
+        "title": "We Built This Tool From Scratch",
+        "description": "Klepsydra runs under the client's brand (\"Klepsydra online from Nekrolog Łódź funeral home\"), but we designed and maintain the application itself — separate from the main site, on its own subdomain."
+      },
+      "features": [
+        "In-browser obituary generator — no install, no account required",
+        "A4 layout preview before printing",
+        "Print or save-as-PDF export",
+        "Its own subdomain and SEO, independent of the main funeral home site"
+      ],
+      "cta": {
+        "label": "Try Klepsydra",
+        "url": "https://klepsydra.nekrolog-lodz.com"
+      }
+    },
+    "gryfinYork": {
+      "badge": "Client · Yorkshire Terrier Kennel",
+      "title": "Gryfin York",
+      "subtitle": "A home-based Yorkshire Terrier kennel in Łódź — breeding since 2016, multiple coat colors, raised in a home environment.",
+      "role": {
+        "title": "We Build and Run the Whole System",
+        "description": "This is the reference project behind our breeder offer: a public site plus an admin panel, both on the kennel's own domain. We run both on an ongoing basis."
+      },
+      "features": [
+        "Public site — current litters, available puppies, gallery, reviews",
+        "Admin panel — the owner manages dogs, litters, and puppies herself",
+        "Photo gallery management and review publishing with no developer involved",
+        "Customer enquiry form"
+      ],
+      "cta": {
+        "label": "Visit the Kennel",
+        "url": "https://hodowlagryfinyork.pl"
+      }
+    },
+    "kolorowaPasja": {
+      "badge": "Client · Yorkshire Terrier & Spitz Kennel",
+      "title": "Kolorowa Pasja",
+      "subtitle": "A boutique purebred kennel — a simple, elegant storefront site we've been running for a while.",
+      "role": {
+        "title": "A Simple Site, Fully Maintained",
+        "description": "Not every kennel needs a full admin panel from day one. For Kolorowa Pasja we built a simple, elegant storefront site and handle its upkeep — a good starting point before growing into a full system."
+      },
+      "features": [
+        "An elegant storefront site showcasing the kennel",
+        "Litter and available-puppy listings",
+        "A puppy enquiry form",
+        "Ongoing maintenance and small content updates"
+      ],
+      "cta": {
+        "label": "Visit the Kennel",
+        "url": "https://kolorowapasja.pl"
+      }
+    },
+    "pokiu": {
+      "badge": "Client · Kennel Club",
+      "title": "POKIU",
+      "subtitle": "Polska Organizacja Kynologiczna International Union — a full dog registry, pedigree, breeder-portal, and public document verification system.",
+      "role": {
+        "title": "We Build and Run the Whole Office System",
+        "description": "For POKIU we built an internal system serving three distinct audiences on one platform, split by domain: the association's office, breeders, and public document verification."
+      },
+      "architecture": {
+        "title": "Three Domains, One System",
+        "items": [
+          {
+            "domain": "panel.pokiu.pl",
+            "description": "The full office panel — dog registry, litters, pedigrees, payments, change audit."
+          },
+          {
+            "domain": "hodowca.pokiu.pl",
+            "description": "The breeder portal — their own dogs, litters, and pedigree requests with status tracking."
+          },
+          {
+            "domain": "psy.pokiu.pl",
+            "description": "Public QR document verification — and nothing else. No login, no panel access, enforced at the edge."
+          }
+        ]
+      },
+      "security": {
+        "title": "QR-Code Pedigree Verification",
+        "description": "Every issued pedigree and litter card carries a QR code pointing to psy.pokiu.pl. A buyer scans it, sees basic dog info, and can unlock a preview of the original document with a security code — making forged or unbacked pedigrees much harder to pass off as genuine."
+      },
+      "features": [
+        "Pedigree registry and breeder directory in one system",
+        "Breeder portal with pedigree requests and Pending / Approved / Rejected status tracking",
+        "Public QR document verification on its own, locked-down domain",
+        "A full change log — who changed what, and when"
+      ],
+      "cta": {
+        "label": "Visit POKIU",
+        "url": "https://pokiu.pl"
+      }
+    }
+  },
+  "poradnikIndex": {
+    "title": "Guides for Dog Breeders",
+    "subtitle": "Practical articles on kennel websites, panels, and online independence — grounded in what we actually build for clients."
   }
 }

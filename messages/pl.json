@@ -6,88 +6,116 @@
     "contact": "Omów Swój System",
     "breeders": "Hodowcy",
     "kennelClubs": "Związki Kynologiczne",
-    "projects": "Nasze Projekty"
+    "projects": "Nasze Projekty",
+    "poradnik": "Poradnik"
   },
   "hero": {
-    "badge": "Cyfrowa Warstwa Operacyjna",
-    "title": "Cyfrowa Warstwa Operacyjna",
+    "badge": "Strony i Systemy Dla Branży Zwierzęcej",
+    "title": "Strony i Systemy Dla Branży Zwierzęcej",
     "titleHighlight": "Budujemy Systemy, Na Których Opierają Się Firmy",
-    "subtitle": "Infrastruktura cyfrowa dla organizacji, które muszą działać w skali, zgodności i pełnej kontroli.",
+    "subtitle": "Tworzymy strony internetowe, panele klientów i dedykowane systemy dla hodowców, organizacji kynologicznych oraz firm pracujących ze zwierzętami. Znamy tę branżę nie tylko od strony technologii — sami w niej działamy.",
     "description": "",
-    "ctaPrimary": "Zamów Przegląd Infrastruktury",
-    "ctaSecondary": "Zobacz Co Prowadzimy",
-    "valueProps": {
-      "clarity": {
-        "title": "Przejrzystość Operacyjna",
-        "description": "Systemy respektujące prawo, skalę i finanse"
-      },
-      "decision": {
-        "title": "Usystematyzowane Podejmowanie Decyzji",
-        "description": "Automatyzacja koordynująca ludzi i dane"
-      },
-      "traceability": {
-        "title": "Identyfikowalność",
-        "description": "Pełne ścieżki audytu i zarządzanie"
-      }
-    }
+    "ctaPrimary": "Zobacz Rozwiązania Dla Branży Zwierzęcej",
+    "ctaSecondary": "Porozmawiaj o Projekcie",
+    "tagline": "Hodowle • organizacje kynologiczne • transport zwierząt • rejestry i dokumentacja • automatyzacja biura"
   },
-  "whatWeBuild": {
-    "title": "Co Projektujemy",
-    "subtitle": "Wszystko jest budowane specjalnie pod logikę Twojego biznesu. Żadnych ogólnych narzędzi. Żadnych wymuszonych przepływów pracy.",
-    "internal": {
-      "title": "Systemy Wewnętrzne",
-      "description": "Finanse, dokumenty, przepływy pracy — ustrukturyzowane wokół tego, jak faktycznie działa Twój biznes.",
-      "features": [
-        "Systemy krytyczne pod względem zgodności",
-        "Zautomatyzowane przepływy decyzyjne",
-        "Zarządzanie dokumentami i danymi"
-      ]
-    },
-    "external": {
-      "title": "Systemy Zewnętrzne",
-      "description": "Platformy internetowe, portale klienckie i interfejsy skierowane do klientów, które skalują się.",
-      "features": [
-        "Niestandardowe strony biznesowe jako systemy",
-        "Portale klienckie i administracyjne",
-        "Warstwy integracyjne"
-      ]
-    },
-    "automation": {
-      "title": "Automatyzacja i Koordynacja Operacyjna",
-      "description": "Operacje wspomagane AI i automatyzacja przepływów pracy koordynująca ludzi, dane i decyzje.",
-      "features": [
-        "Wewnętrzne przepływy automatyzacji",
-        "Wsparcie decyzyjne wspomagane AI",
-        "Koordynacja operacyjna między systemami"
-      ]
-    },
-    "governance": {
-      "title": "Zarządzanie i Audytowalność",
-      "description": "Struktura danych, widoczność i pełne ścieżki audytu dla środowisk regulowanych.",
-      "features": [
-        "Śledzenie i raportowanie zgodności",
-        "Pełna historia operacyjna",
-        "Struktura i widoczność danych"
-      ]
-    }
-  },
-  "industrySolutions": {
-    "title": "Rozwiązania Branżowe",
-    "subtitle": "Zamiast ogólnej „niestandardowej infrastruktury” — konkretne rozwiązania dla konkretnych branż, które już znamy od środka.",
-    "breederCard": {
-      "title": "Dla Hodowców Psów",
-      "description": "Własna strona i panel administracyjny na zawsze Twoje, plus wizytówka Google i lokalne SEO.",
+  "paths": {
+    "title": "Rozwiązania Dla Twojej Branży",
+    "subtitle": "Cztery konkretne ścieżki. Wybierz swoją — każda ma pełną ofertę na własnej stronie.",
+    "breeders": {
+      "title": "Dla Hodowców",
+      "description": "Strona i panel, które hodowca aktualizuje samodzielnie.",
       "cta": "Zobacz Ofertę Dla Hodowców"
     },
-    "kennelCard": {
-      "title": "Dla Związków Kynologicznych",
-      "description": "Rejestr psów, rodowody, rozliczenia i pełny audyt w jednym systemie dla wielu związków.",
+    "kennelClubs": {
+      "title": "Dla Organizacji Kynologicznych",
+      "description": "Rejestry osób, psów i miotów, rodowody, karty rejestracji, numeracja dokumentów, publiczna weryfikacja QR, historia zmian oraz panel współpracy biura z hodowcami.",
       "cta": "Zobacz Ofertę Dla Związków"
+    },
+    "animalIndustry": {
+      "title": "Dla Firm Z Branży Zwierzęcej",
+      "description": "Dedykowane systemy dla transportu zwierząt, hoteli, groomerów, trenerów, schronisk, marketplace'ów i innych firm. Rezerwacje, dokumenty, płatności, obsługa klientów i procesy wewnętrzne.",
+      "cta": "Porozmawiajmy o Twoim Projekcie"
+    },
+    "finance": {
+      "title": "Finanse i Administracja",
+      "description": "Faktury, KSeF, dokumenty, płatności, rozliczenia i dedykowane systemy wewnętrzne. KsięgaI to nasz własny produkt w tym obszarze — realny dowód, że to potrafimy zbudować i utrzymać.",
+      "cta": "Zobacz KsięgaI"
+    }
+  },
+  "whyWeKnow": {
+    "title": "Nie Uczymy Się Branży Zwierzęcej Dopiero Po Podpisaniu Umowy",
+    "description": "Tworzymy oprogramowanie dla hodowców i organizacji kynologicznych, a jednocześnie sami działamy w międzynarodowym transporcie zwierząt (Global Pet). Znamy w praktyce dokumentację i pochodzenie zwierząt, współpracę z hodowcami i właścicielami, logistykę oraz procesy organizacyjne — nie tylko z opisu wymagań klienta.",
+    "items": [
+      {
+        "title": "Dokumentacja i Pochodzenie Zwierząt",
+        "description": "Rodowody, karty rejestracji, numeracja dokumentów — wiemy, jak muszą wyglądać i jak krążą między hodowcą, związkiem i właścicielem."
+      },
+      {
+        "title": "Współpraca z Hodowcami i Właścicielami",
+        "description": "Wiemy, gdzie w tej relacji pojawiają się tarcia — i jak system może je usunąć zamiast dokładać kolejny formularz."
+      },
+      {
+        "title": "Logistyka Transportu Zwierząt",
+        "description": "Prowadzimy Global Pet — licencjonowany transport zwierząt przez jurysdykcje UE. Znamy ograniczenia fizyczne i prawne tej pracy z pierwszej ręki."
+      },
+      {
+        "title": "Procesy Organizacyjne Biura",
+        "description": "Od wniosku hodowcy po wystawiony dokument — wiemy, gdzie biuro traci czas na papier i Excel."
+      }
+    ]
+  },
+  "projectsShowcase": {
+    "clientWork": {
+      "title": "Realizacje Dla Klientów",
+      "subtitle": "To nie makiety — to systemy, które dziś prowadzimy dla realnych klientów.",
+      "featured": [
+        {
+          "name": "POKIU",
+          "badge": "Pełny System Dla Organizacji Kynologicznej",
+          "description": "Polska Organizacja Kynologiczna International Union. Rejestr psów i rodowodów, panel współpracy z hodowcami, publiczna weryfikacja dokumentów kodem QR — jeden system, trzy grupy odbiorców.",
+          "cta": "Zobacz Case Study POKIU",
+          "url": "/projekty/pokiu"
+        },
+        {
+          "name": "Gryfin York",
+          "badge": "Strona Hodowli + Panel Zarządzania",
+          "description": "Hodowla Yorkshire Terrierów. Strona publiczna z aktualnymi miotami i galerią, połączona z panelem, w którym hodowczyni sama zarządza psami, miotami i treścią — bez naszej pomocy na co dzień.",
+          "cta": "Zobacz Case Study Gryfin York",
+          "url": "/projekty/gryfin-york"
+        }
+      ],
+      "secondaryLabel": "Więcej realizacji:",
+      "secondary": [
+        {
+          "name": "Kolorowa Pasja",
+          "url": "/projekty/kolorowa-pasja"
+        },
+        {
+          "name": "Nekrolog Łódź",
+          "url": "/projekty/nekrolog-lodz"
+        },
+        {
+          "name": "Klepsydra",
+          "url": "/projekty/klepsydra"
+        }
+      ],
+      "allCta": "Zobacz Wszystkie Projekty"
+    },
+    "industriesKnown": {
+      "title": "Branże, Które Znamy",
+      "tags": [
+        "Hodowcy psów rasowych",
+        "Organizacje kynologiczne",
+        "Transport zwierząt",
+        "Zakłady pogrzebowe",
+        "Finanse i KSeF"
+      ]
     }
   },
   "verticals": {
-    "title": "Obszar Operacyjny",
-    "subtitle": "Nie teoretyzujemy. Działamy. To są systemy, które sami prowadzimy pod rzeczywistą presją prawną i operacyjną.",
+    "title": "Produkty TOVERNET",
+    "subtitle": "Nie tylko projektujemy infrastrukturę dla innych — te systemy sami prowadzimy na co dzień, pod realną presją prawną i operacyjną.",
     "ksiegai": {
       "title": "Infrastruktura Finansowa",
       "badge": "Systemy Gotowe na KSeF",
@@ -111,15 +139,9 @@
       "cta": "Wkrótce"
     }
   },
-  "whyCustom": {
-    "title": "Dlaczego Niestandardowa Infrastruktura?",
-    "subtitle": "Większość oprogramowania zmusza firmy do dostosowania się do narzędzi.",
-    "highlight": "My budujemy narzędzia wokół firm.",
-    "description": "Zbudowane systemy skalują się. Narzędzia nie. Gdy potrzebujesz struktury respektującej logikę Twojego biznesu, wymagania regulacyjne i trajektorię wzrostu — ogólny SaaS nie wystarczy."
-  },
   "engagement": {
     "title": "Jak Wygląda Współpraca",
-    "subtitle": "To nie jest jednorazowy web dev. To partnerstwo infrastrukturalne.",
+    "subtitle": "To nie jest jednorazowy web dev. To partnerstwo, które zostaje z Tobą po starcie.",
     "steps": [
       {
         "title": "Mapowanie",
@@ -140,12 +162,12 @@
     ]
   },
   "contact": {
-    "title": "Gotowy na Budowanie Struktury?",
-    "subtitle": "Niestandardowa infrastruktura cyfrowa dla firm, które wyrosły z szablonów.",
-    "cta": "Zamów Przegląd Infrastruktury"
+    "title": "Gotowy Na Stronę Lub System Dla Swojej Branży?",
+    "subtitle": "Napisz do nas — porozmawiajmy o Twoim projekcie i o tym, co faktycznie ma sens zbudować.",
+    "cta": "Porozmawiajmy o Projekcie"
   },
   "footer": {
-    "tagline": "Infrastruktura cyfrowa dla firm, które nie mogą sobie pozwolić na chaos.",
+    "tagline": "Strony i systemy dla branży zwierzęcej — oraz oprogramowanie biznesowe, automatyzacje i systemy finansowe dla innych branż.",
     "solutions": "Rozwiązania Branżowe",
     "verticals": "Nasze Marki",
     "ksiegai": "KsięgaI - Infrastruktura Finansowa",
@@ -156,65 +178,197 @@
   "breeders": {
     "hero": {
       "badge": "Dla Hodowców Psów Rasowych",
-      "title": "Własna Strona Twojej Hodowli",
-      "subtitle": "Strona i panel administracyjny, które są Twoje na zawsze — pomagamy je zbudować, uruchomić i utrzymać.",
-      "ctaPrimary": "Poproś o Bezpłatną Wycenę",
-      "ctaSecondary": "Zobacz Co Budujemy"
+      "title": "Strona hodowli, którą aktualizujesz samodzielnie",
+      "subtitle": "Dodajesz psa, miot lub szczenię w panelu, a zmiana od razu pojawia się na Twojej własnej stronie. Bez czekania na programistę i bez uzależnienia od Facebooka.",
+      "ctaPrimary": "Zobacz działający system",
+      "ctaSecondary": "Poproś o bezpłatną wycenę",
+      "flowLabel": "Panel → Strona",
+      "statusFrom": "Dostępny",
+      "statusTo": "Zarezerwowany"
     },
-    "problem": {
-      "title": "Facebook i Instagram To Nie Wystarczy",
-      "description": "Przyszli właściciele szczeniąt szukają hodowli w Google, nie tylko na social mediach. Bez własnej strony tracisz zaufanie, widoczność w wyszukiwarce i kontrolę nad swoimi danymi — a profil na portalu społecznościowym nigdy nie będzie naprawdę Twój."
-    },
-    "solution": {
-      "title": "Co Budujemy Dla Twojej Hodowli",
-      "subtitle": "Sprawdzony model, który już prowadzimy na żywo dla hodowli Yorkshire Terrierów — Gryfin York.",
-      "public": {
-        "title": "Strona Publiczna",
-        "description": "Wizytówka Twojej hodowli w internecie.",
-        "features": [
-          "Aktualne mioty i dostępne szczenięta",
-          "Profile psów hodowlanych (rodzice miotu)",
-          "Galeria zdjęć hodowli i psów",
-          "Opinie klientów i formularz zapytań"
-        ]
-      },
-      "panel": {
-        "title": "Panel Administracyjny",
-        "description": "Samodzielnie zarządzasz treścią strony — bez programisty, bez czekania na kogoś.",
-        "features": [
-          "Dodawanie psów, miotów i szczeniąt",
-          "Zarządzanie galerią zdjęć",
-          "Odpowiadanie na zapytania klientów",
-          "Publikowanie opinii i aktualności"
-        ]
-      }
-    },
-    "extra": {
-      "title": "Więcej Niż Strona",
-      "subtitle": "Pomagamy być widocznym tam, gdzie faktycznie szukają Cię klienci.",
+    "proof": {
+      "badge": "System działa już w hodowli GRYFIN YORK",
       "items": [
         {
-          "title": "Wizytówka Google",
-          "description": "Zakładamy i konfigurujemy Twój profil Google Firma, żeby hodowla pojawiała się w Mapach Google i wynikach lokalnych."
+          "value": "13",
+          "label": "psów hodowlanych w panelu"
         },
         {
-          "title": "SEO Lokalne",
-          "description": "Optymalizujemy stronę pod frazy, których szukają przyszli właściciele szczeniąt w Twoim regionie."
+          "value": "2",
+          "label": "planowane mioty"
         },
         {
-          "title": "Własna Domena i Hosting",
-          "description": "Uruchamiamy stronę na Twojej własnej domenie — to Twoja własność, na zawsze, niezależnie od nas."
+          "value": "200+",
+          "label": "zdjęć i plików"
         },
         {
-          "title": "Wsparcie i Rozwój",
-          "description": "Zostajemy przy Tobie — poprawki, nowe funkcje i pomoc techniczna w miarę rozwoju hodowli."
+          "value": "100%",
+          "label": "treści dodaje sama hodowczyni"
+        }
+      ],
+      "linkLabel": "Zobacz stronę Gryfin York",
+      "linkUrl": "https://hodowlagryfinyork.pl"
+    },
+    "panelShowcase": {
+      "title": "Wypróbuj panel hodowli",
+      "subtitle": "To nie makieta — kolory i układ odtwarzają prawdziwy panel, który dziś prowadzi hodowlę Gryfin York. Kliknij zakładki po lewej, a w zakładce „Szczenięta” zmień imię, cenę, kolor i status — podgląd po prawej zaktualizuje się od razu."
+    },
+    "caseStudy": {
+      "title": "Zobacz, jak działa to w prawdziwej hodowli",
+      "publicLabel": "Publiczna strona GRYFIN YORK",
+      "panelLabel": "Panel administracyjny",
+      "publicItems": [
+        "Dostępne szczenięta i planowane mioty",
+        "Profile psów hodowlanych i indywidualne strony szczeniąt",
+        "Galeria zdjęć hodowli",
+        "Opinie klientów i informacje o rezerwacji",
+        "Formularz kontaktowy i zapytania"
+      ],
+      "panelItems": [
+        "Dodawanie psów, tworzenie miotów, łączenie rodziców",
+        "Dodawanie szczeniąt, ustawianie cen",
+        "Zmiana statusu rezerwacji jednym kliknięciem",
+        "Wgrywanie zdjęć wprost z telefonu",
+        "Zarządzanie zapytaniami i publikowanie opinii"
+      ],
+      "callout": "Właścicielka hodowli samodzielnie dodaje psy, szczenięta, mioty i zdjęcia oraz aktualizuje statusy rezerwacji.",
+      "ctaOpenLabel": "Otwórz Gryfin York",
+      "ctaPanelLabel": "Zobacz możliwości panelu"
+    },
+    "ecosystem": {
+      "title": "Kompletny system Twojej hodowli",
+      "subtitle": "Nie tylko strona — jeden połączony ekosystem zbudowany wokół Twojej hodowli.",
+      "hub": "Twoja hodowla",
+      "items": [
+        "Publiczna strona hodowli",
+        "Panel administracyjny",
+        "Własna domena",
+        "Baza psów, miotów i szczeniąt",
+        "Zdjęcia i galerie",
+        "Zapytania od klientów",
+        "Wizytówka Google",
+        "Widoczność w wyszukiwarce lokalnej",
+        "Opcjonalna wersja wielojęzyczna",
+        "Wsparcie i dalszy rozwój"
+      ]
+    },
+    "ownership": {
+      "title": "Twoja hodowla. Twoja domena. Twoje dane.",
+      "items": [
+        "Domena należy do Ciebie — kontrolujesz ją niezależnie od nas.",
+        "Zdjęcia, treści i dane pozostają Twoją własnością.",
+        "Strona nie zniknie, jeśli Facebook zablokuje Twój profil.",
+        "Projekt można przenieść lub przekazać innemu programiście.",
+        "Brak obowiązkowej miesięcznej licencji na oprogramowanie.",
+        "TOVERNET może opcjonalnie zapewnić hosting, opiekę i dalszy rozwój."
+      ]
+    },
+    "pricing": {
+      "title": "Wycena dopasowana do Twojej hodowli",
+      "description": "Każda hodowla zaczyna z innego miejsca. Najpierw sprawdzamy, co już posiadasz i czego potrzebujesz. Następnie przedstawiamy jasny zakres, termin i wycenę przed rozpoczęciem pracy.",
+      "variesTitle": "Zakres pracy zależy od tego, co już masz",
+      "variesItems": [
+        "Migracja starej strony",
+        "Import dziesiątek profili psów",
+        "Przeniesienie setek zdjęć",
+        "Kilka wersji językowych",
+        "Konfiguracja domeny i firmowej poczty",
+        "Niestandardowe rezerwacje",
+        "Wnioski od kupujących",
+        "Rodowody lub dokumenty",
+        "Dodatkowe funkcje panelu"
+      ],
+      "cta": "Poproś o bezpłatną wycenę"
+    },
+    "process": {
+      "title": "Jak wygląda współpraca",
+      "subtitle": "Prosty, przejrzysty proces od pierwszej rozmowy do uruchomienia strony.",
+      "steps": [
+        {
+          "title": "Opowiedz nam o hodowli",
+          "description": "Krótka rozmowa o tym, czego potrzebujesz."
+        },
+        {
+          "title": "Przegląd materiałów",
+          "description": "Sprawdzamy obecną stronę, zdjęcia i dane."
+        },
+        {
+          "title": "Projekt strony i panelu",
+          "description": "Projektujemy wygląd dopasowany do Twojej hodowli."
+        },
+        {
+          "title": "Import psów i treści",
+          "description": "Przenosimy dane, zdjęcia i profile psów."
+        },
+        {
+          "title": "Szkolenie i uruchomienie",
+          "description": "Uczymy Cię panelu i uruchamiamy stronę."
         }
       ]
     },
-    "cta": {
-      "title": "Chcesz Stronę Dla Swojej Hodowli?",
-      "subtitle": "Napisz do nas — przygotujemy bezpłatną wycenę dopasowaną do Twojej hodowli.",
-      "button": "Poproś o Bezpłatną Wycenę"
+    "quoteForm": {
+      "title": "Opowiedz nam o swojej hodowli — przygotujemy bezpłatną wycenę.",
+      "subtitle": "Kilka krótkich pytań. Bez zobowiązań.",
+      "steps": [
+        "O hodowli",
+        "Zakres",
+        "Kontakt"
+      ],
+      "step1": {
+        "kennelName": "Nazwa hodowli",
+        "breed": "Rasa",
+        "existingSite": "Obecna strona lub profil na Facebooku (opcjonalnie)"
+      },
+      "step2": {
+        "siteTypeLabel": "Nowa strona czy migracja istniejącej?",
+        "siteTypeNew": "Nowa strona",
+        "siteTypeMigration": "Migracja istniejącej strony",
+        "functionsLabel": "Które funkcje Cię interesują?",
+        "functions": [
+          "Panel administracyjny",
+          "Galeria zdjęć",
+          "Statusy rezerwacji",
+          "Opinie klientów",
+          "Formularz zapytań",
+          "Rodowody / dokumenty"
+        ],
+        "languagesLabel": "Wersje językowe",
+        "languages": [
+          "Polski",
+          "Angielski",
+          "Niemiecki",
+          "Niderlandzki"
+        ],
+        "dogCountLabel": "Ile psów planujesz dodać na start?",
+        "dogCountOptions": [
+          "1-5",
+          "6-15",
+          "16-30",
+          "30+"
+        ]
+      },
+      "step3": {
+        "contactName": "Imię i nazwisko",
+        "email": "Adres e-mail",
+        "phone": "Telefon (opcjonalnie)",
+        "notes": "Dodatkowe informacje"
+      },
+      "nav": {
+        "back": "Wstecz",
+        "next": "Dalej",
+        "submit": "Wyślij zapytanie"
+      },
+      "thankYou": {
+        "title": "Dziękujemy!",
+        "message": "Otworzyliśmy Twój program pocztowy z gotową wiadomością — wystarczy ją wysłać. Odezwiemy się z bezpłatną wyceną tak szybko, jak to możliwe."
+      },
+      "emailSubject": "Wycena strony dla hodowli"
+    },
+    "finalCta": {
+      "title": "Zbuduj własne miejsce dla swojej hodowli",
+      "subtitle": "Facebook może pomagać zdobywać uwagę. Twoja własna strona buduje zaufanie, przechowuje historię hodowli i pozostaje pod Twoją kontrolą.",
+      "ctaPrimary": "Poproś o wycenę",
+      "ctaSecondary": "Zobacz Gryfin York"
     }
   },
   "kennelClubs": {
@@ -231,7 +385,7 @@
     },
     "solution": {
       "title": "Co Obejmuje System",
-      "subtitle": "Zbudowany i sprawdzony w praktyce jako system POK CRM, który prowadzimy dla biura kynologicznego.",
+      "subtitle": "Zbudowany i sprawdzony w praktyce jako system CRM, który prowadzimy dla POKIU (Polska Organizacja Kynologiczna International Union).",
       "features": [
         {
           "title": "Księga Rodowodowa",
@@ -259,6 +413,58 @@
         }
       ]
     },
+    "screenshots": {
+      "title": "Wypróbuj Prawdziwy Panel Biura",
+      "subtitle": "To nie zrzuty ekranu — to interaktywna rekonstrukcja tego samego panelu wniosków, który dziś prowadzi biuro POKIU. Kliknij wniosek, zatwierdź go albo odrzuć.",
+      "caption": "Ten sam panel (z prawdziwymi danymi zamiast demo) prowadzi dziś biuro:",
+      "linkLabel": "Zobacz Case Study POKIU"
+    },
+    "collaboration": {
+      "title": "Współpraca Z Hodowcami Bez Maili i Skanów",
+      "subtitle": "Hodowcy w związku dostają własny panel — biuro widzi wszystkie wnioski i dokumenty w jednym miejscu, ze śledzeniem statusu.",
+      "items": [
+        {
+          "title": "Panel Hodowcy",
+          "description": "Hodowca loguje się na własne konto — widzi swoje psy i mioty zarejestrowane w związku oraz historię wystawionych rodowodów."
+        },
+        {
+          "title": "Wnioski Online",
+          "description": "Wniosek o rodowód lub inny dokument hodowca składa przez panel, zamiast wysyłać maila ze skanami — trafia od razu do kolejki biura."
+        },
+        {
+          "title": "Śledzenie Statusu",
+          "description": "Każdy wniosek ma jasny status — Oczekuje, Zatwierdzone, Odrzucone — wraz z notatką biura. Hodowca zawsze wie, na jakim jest etapie."
+        },
+        {
+          "title": "Zespół Hodowli",
+          "description": "Właściciel hodowli zaprasza współwłaścicieli i pracowników do własnego panelu, z odpowiednimi rolami dostępu."
+        }
+      ]
+    },
+    "qrVerification": {
+      "title": "Weryfikacja Rodowodu Kodem QR",
+      "subtitle": "Każdy wydany rodowód może mieć własny kod QR, prowadzący na osobną, publiczną domenę weryfikacyjną — bez logowania, bez dostępu do panelu, tylko podgląd dokumentu.",
+      "items": [
+        {
+          "title": "Kod QR Na Dokumencie",
+          "description": "Rodowód i karta miotu drukowane są z unikalnym kodem QR przypisanym do konkretnego psa lub dokumentu."
+        },
+        {
+          "title": "Publiczna Strona Weryfikacji",
+          "description": "Kupujący skanuje kod i trafia na osobną domenę — widzi podstawowe dane psa, bez logowania i bez dostępu do reszty systemu."
+        },
+        {
+          "title": "Odblokowanie Kodem Bezpieczeństwa",
+          "description": "Podgląd oryginalnego dokumentu można odblokować kodem bezpieczeństwa — utrudnia to podrabianie i sprzedaż rodowodów bez pokrycia."
+        },
+        {
+          "title": "Odizolowane Na Poziomie Edge",
+          "description": "Domena weryfikacyjna jest zablokowana na poziomie serwera brzegowego — nie sposób przez nią trafić na panel logowania czy dane biura."
+        }
+      ],
+      "proof": "Dokładnie taki system działa dziś dla POKIU (psy.pokiu.pl).",
+      "proofCta": "Zobacz Case Study POKIU"
+    },
     "multiTenant": {
       "title": "Jeden System, Wiele Związków",
       "description": "Każdy związek kynologiczny działa we własnej, w pełni odizolowanej przestrzeni danych — ze swoimi rolami, uprawnieniami i ustawieniami organizacji. Dane jednego związku nigdy nie mieszają się z danymi innego, nawet w tym samym systemie."
@@ -266,6 +472,11 @@
     "security": {
       "title": "Bezpieczeństwo i Ciągłość Danych",
       "description": "Regularne kopie zapasowe i próby odtworzenia zmian na kopii lokalnej, zanim trafią do systemu produkcyjnego — bo wydane rodowody to dokumenty, które klienci mają już w rękach."
+    },
+    "ksiegaiBanner": {
+      "title": "Księgowość Waszego Stowarzyszenia? To Też Ogarniamy.",
+      "description": "Związek kynologiczny to zwykle stowarzyszenie z własną księgowością — składki, faktury, KSeF. Prowadzimy taką księgowość w KsięgaI, naszym systemie finansowym — równolegle do systemu rejestru psów, jako jeden dostawca dla obu potrzeb.",
+      "cta": "Zobacz KsięgaI"
     },
     "cta": {
       "title": "Chcesz Wdrożyć System W Swoim Związku?",
@@ -301,36 +512,48 @@
     },
     "clientProjects": {
       "title": "Realizacje Dla Klientów",
-      "subtitle": "Budujemy i utrzymujemy te systemy jako wykonawca — to marki, dane i klienci naszych zleceniodawców, nie nasze.",
+      "subtitle": "Budujemy i utrzymujemy te systemy jako wykonawca — to marki, dane i klienci naszych zleceniodawców, nie nasze. Kliknij, żeby zobaczyć pełne case study.",
+      "caseStudyLabel": "Case study",
       "items": [
         {
+          "slug": "nekrolog-lodz",
           "name": "Nekrolog Łódź",
           "badge": "Zakład Pogrzebowy · Klient",
-          "description": "Cyfrowa obecność zakładu pogrzebowego — pełna oferta usług, asortyment i całodobowy kontakt dla rodzin w trudnym momencie.",
-          "cta": "Odwiedź Nekrolog Łódź",
-          "url": "https://nekrolog-lodz.pl"
+          "description": "Cyfrowa obecność zakładu pogrzebowego Jolanty Kostowskiej — pełna oferta usług, asortyment i całodobowy kontakt dla rodzin w trudnym momencie.",
+          "cta": "Zobacz Stronę",
+          "url": "https://nekrolog-lodz.com"
         },
         {
+          "slug": "klepsydra",
           "name": "Klepsydra",
           "badge": "Narzędzie Dla Klienta",
-          "description": "Darmowy generator e-klepsydry online dla klientów Nekrologu Łódź — szybki podgląd i wydruk.",
+          "description": "Darmowy generator e-klepsydry online, marketowany jako narzędzie zakładu Jolanta Kostowska Nekrolog Łódź — zbudowany i utrzymywany przez nas.",
           "cta": "Wypróbuj Klepsydrę",
-          "url": "https://nekrolog-lodz.pl"
+          "url": "https://klepsydra.nekrolog-lodz.com"
         },
         {
+          "slug": "gryfin-york",
           "name": "Gryfin York",
           "badge": "Hodowla Yorkshire Terrierów · Klient",
-          "description": "Strona publiczna i panel administracyjny dla hodowli — model, na którym opieramy ofertę dla hodowców."
+          "description": "Strona publiczna i panel administracyjny dla hodowli — model, na którym opieramy ofertę dla hodowców.",
+          "cta": "Zobacz Stronę Hodowli",
+          "url": "https://hodowlagryfinyork.pl"
         },
         {
+          "slug": "kolorowa-pasja",
           "name": "Kolorowa Pasja",
           "badge": "Hodowla Yorkshire Terrierów i Szpiców · Klient",
-          "description": "Strona hodowli z prezentacją miotów i szczeniąt, zbudowana i utrzymywana przez nas dla właścicielki hodowli."
+          "description": "Strona hodowli z prezentacją miotów i szczeniąt, zbudowana i utrzymywana przez nas dla właścicielki hodowli.",
+          "cta": "Zobacz Stronę Hodowli",
+          "url": "https://kolorowapasja.pl"
         },
         {
-          "name": "POK CRM",
-          "badge": "Biuro Związku Kynologicznego · Klient",
-          "description": "Wewnętrzny system rejestru psów, rodowodów i rozliczeń — model, na którym opieramy ofertę dla związków kynologicznych."
+          "slug": "pokiu",
+          "name": "POKIU",
+          "badge": "Związek Kynologiczny · Klient",
+          "description": "Polska Organizacja Kynologiczna International Union. System rejestru psów, rodowodów, panelu hodowców i publicznej weryfikacji dokumentów kodem QR.",
+          "cta": "Odwiedź POKIU",
+          "url": "https://pokiu.pl"
         }
       ]
     },
@@ -339,5 +562,130 @@
       "subtitle": "Porozmawiajmy o Twoim biznesie i o tym, jaka infrastruktura mu służy. Wycena wstępna jest bezpłatna.",
       "button": "Poproś o Bezpłatną Wycenę"
     }
+  },
+  "caseStudies": {
+    "back": "Wszystkie Projekty",
+    "roleLabel": "Nasza Rola",
+    "featuresLabel": "Co Zbudowaliśmy",
+    "nekrologLodz": {
+      "badge": "Klient · Zakład Pogrzebowy",
+      "title": "Nekrolog Łódź",
+      "subtitle": "Cyfrowa obecność rodzinnego zakładu pogrzebowego Jolanty Kostowskiej — ponad 30 lat na rynku, całodobowa pomoc, organizacja pogrzebu bez zaliczki.",
+      "role": {
+        "title": "Jesteśmy Wykonawcą Tej Strony",
+        "description": "Zaprojektowaliśmy, zbudowaliśmy i utrzymujemy stronę internetową zakładu — od struktury treści po SEO. To marka i firma Jolanty Kostowskiej; my odpowiadamy za technologię w tle."
+      },
+      "features": [
+        "Pełna oferta usług — organizacja pogrzebów, kremacja, ekshumacja, transport zmarłych krajowy i międzynarodowy",
+        "Rozbudowane SEO lokalne pod frazy związane z usługami pogrzebowymi w Łodzi",
+        "Strony asortymentowe — trumny, urny, wieńce, wiązanki, oprawa muzyczna",
+        "Kontakt 24/7 i zgłoszenie bez konieczności wpłaty zaliczki"
+      ],
+      "cta": {
+        "label": "Odwiedź Nekrolog Łódź",
+        "url": "https://nekrolog-lodz.com"
+      }
+    },
+    "klepsydra": {
+      "badge": "Klient · Narzędzie Online",
+      "title": "Klepsydra",
+      "subtitle": "Darmowy generator e-klepsydry pogrzebowej, marketowany jako narzędzie zakładu Jolanta Kostowska Nekrolog Łódź — zbudowany przez nas jako osobna aplikacja.",
+      "role": {
+        "title": "Zbudowaliśmy To Narzędzie Od Zera",
+        "description": "Klepsydra działa pod marką klienta („Klepsydra online od zakładu pogrzebowego Nekrolog Łódź”), ale to my zaprojektowaliśmy i utrzymujemy samą aplikację — osobną od głównej strony, na własnej subdomenie."
+      },
+      "features": [
+        "Generator klepsydry działający w przeglądarce — bez instalacji i bez rejestracji",
+        "Podgląd układu A4 przed wydrukiem",
+        "Eksport do wydruku lub zapis pliku PDF",
+        "Osobna subdomena i SEO niezależne od głównej strony zakładu"
+      ],
+      "cta": {
+        "label": "Wypróbuj Klepsydrę",
+        "url": "https://klepsydra.nekrolog-lodz.com"
+      }
+    },
+    "gryfinYork": {
+      "badge": "Klient · Hodowla Yorkshire Terrierów",
+      "title": "Gryfin York",
+      "subtitle": "Domowa hodowla Yorkshire Terrierów w Łodzi — hodowla od 2016 roku, różne odmiany kolorystyczne, wychowanie domowe.",
+      "role": {
+        "title": "Budujemy I Prowadzimy Cały System",
+        "description": "To referencyjny projekt naszej oferty dla hodowców: publiczna strona plus panel administracyjny, oba na własnej domenie hodowli. Prowadzimy je na bieżąco."
+      },
+      "features": [
+        "Strona publiczna — aktualne mioty, dostępne szczenięta, galeria, opinie",
+        "Panel administracyjny — hodowczyni sama zarządza psami, miotami i szczeniętami",
+        "Zarządzanie galerią zdjęć i publikowanie opinii bez programisty",
+        "Formularz zapytań od klientów"
+      ],
+      "cta": {
+        "label": "Odwiedź Hodowlę",
+        "url": "https://hodowlagryfinyork.pl"
+      }
+    },
+    "kolorowaPasja": {
+      "badge": "Klient · Hodowla Yorkshire Terrierów i Szpiców",
+      "title": "Kolorowa Pasja",
+      "subtitle": "Butikowa hodowla psów rasowych — prosta, elegancka strona wizytówkowa, którą prowadzimy od jakiegoś czasu.",
+      "role": {
+        "title": "Prosta Strona, Pełne Utrzymanie",
+        "description": "Nie każda hodowla potrzebuje pełnego panelu od pierwszego dnia. Dla Kolorowej Pasji zbudowaliśmy prostą, elegancką stronę wizytówkową i zajmujemy się jej utrzymaniem — dobry punkt startowy przed rozrostem do pełnego systemu."
+      },
+      "features": [
+        "Elegancka strona wizytówkowa z prezentacją hodowli",
+        "Prezentacja miotów i dostępnych szczeniąt",
+        "Formularz zapytań o psa",
+        "Bieżące utrzymanie i drobne aktualizacje treści"
+      ],
+      "cta": {
+        "label": "Odwiedź Hodowlę",
+        "url": "https://kolorowapasja.pl"
+      }
+    },
+    "pokiu": {
+      "badge": "Klient · Związek Kynologiczny",
+      "title": "POKIU",
+      "subtitle": "Polska Organizacja Kynologiczna International Union — pełny system rejestru psów, rodowodów, panelu hodowców i publicznej weryfikacji dokumentów.",
+      "role": {
+        "title": "Budujemy I Prowadzimy Cały System Biura",
+        "description": "Dla POKIU zbudowaliśmy wewnętrzny system obsługujący trzy różne grupy odbiorców na jednej platformie, rozdzielone domenowo: biuro związku, hodowców i publiczną weryfikację dokumentów."
+      },
+      "architecture": {
+        "title": "Trzy Domeny, Jeden System",
+        "items": [
+          {
+            "domain": "panel.pokiu.pl",
+            "description": "Pełny panel biura — rejestr psów, mioty, rodowody, rozliczenia, audyt zmian."
+          },
+          {
+            "domain": "hodowca.pokiu.pl",
+            "description": "Panel hodowcy — własne psy, mioty i wnioski o rodowód ze śledzeniem statusu."
+          },
+          {
+            "domain": "psy.pokiu.pl",
+            "description": "Publiczna weryfikacja dokumentów kodem QR — i nic więcej. Brak logowania, brak dostępu do panelu, wymuszone na poziomie edge."
+          }
+        ]
+      },
+      "security": {
+        "title": "Weryfikacja Rodowodu Kodem QR",
+        "description": "Każdy wydany rodowód i karta miotu ma kod QR prowadzący na psy.pokiu.pl. Kupujący skanuje kod, widzi podstawowe dane psa i może odblokować podgląd oryginalnego dokumentu kodem bezpieczeństwa — utrudnia to podrabianie i sprzedaż rodowodów bez pokrycia."
+      },
+      "features": [
+        "Księga rodowodowa i kartoteka hodowców w jednym systemie",
+        "Panel hodowcy z wnioskami o rodowód i statusem Oczekuje / Zatwierdzone / Odrzucone",
+        "Publiczna weryfikacja dokumentów kodem QR na osobnej, zabezpieczonej domenie",
+        "Pełny dziennik zmian — kto, co i kiedy zmienił w systemie"
+      ],
+      "cta": {
+        "label": "Odwiedź POKIU",
+        "url": "https://pokiu.pl"
+      }
+    }
+  },
+  "poradnikIndex": {
+    "title": "Poradnik dla hodowców psów",
+    "subtitle": "Praktyczne artykuły o stronach, panelach i niezależności hodowli w internecie — oparte na tym, co realnie budujemy dla klientów."
   }
 }

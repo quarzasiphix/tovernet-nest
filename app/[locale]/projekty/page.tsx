@@ -4,8 +4,9 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowRight, Sparkles, Calculator, PawPrint, Flower2, Hourglass, PanelsTopLeft, Database } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import { buildMetadata } from '@/lib/seo';
 
-type ProjectItem = { name: string; badge: string; description: string; cta?: string; url?: string };
+type ProjectItem = { name: string; badge: string; description: string; cta?: string; url?: string; slug?: string };
 
 const OWN_BRAND_ICONS = [Calculator, PawPrint];
 const OWN_BRAND_GLOWS = ['magical-glow', 'magical-glow-green'];
@@ -13,16 +14,21 @@ const OWN_BRAND_ACCENTS = ['text-ksiegai-400', 'text-globalpet-400'];
 
 const CLIENT_ICONS = [Flower2, Hourglass, PanelsTopLeft, PawPrint, Database];
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params: { locale } }: { params: { locale: 'pl' | 'en' } }): Promise<Metadata> {
   const isPolish = locale === 'pl';
-  return {
+  return buildMetadata({
+    locale,
+    path: '/projekty',
     title: isPolish
       ? 'Nasze Projekty | TOVERNET'
       : 'Our Projects | TOVERNET',
     description: isPolish
       ? 'Nasze własne marki (KsięgaI, Global Pet) i realizacje dla klientów (Nekrolog Łódź, Gryfin York, POK CRM i inne) — systemy, które TOVERNET projektuje, buduje i utrzymuje.'
       : 'Our own brands (KsięgaI, Global Pet) and client work (Nekrolog Łódź, Gryfin York, POK CRM, and more) — systems TOVERNET designs, builds, and maintains.',
-  };
+    keywords: isPolish
+      ? ['portfolio TOVERNET', 'realizacje dla klientów', 'systemy dla branży zwierzęcej', 'przykłady stron dla hodowli']
+      : ['TOVERNET portfolio', 'client case studies', 'animal industry systems'],
+  });
 }
 
 export default function ProjectsPage({ params: { locale } }: { params: { locale: string } }) {
@@ -104,24 +110,34 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
               {t.raw('clientProjects.items').map((item: ProjectItem, i: number) => {
                 const Icon = CLIENT_ICONS[i] ?? PanelsTopLeft;
                 return (
-                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover-lift">
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover-lift flex flex-col">
                     <Icon className="h-8 w-8 text-gray-400 mb-4" />
                     <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
-                    <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-3">
+                    <div className="inline-block px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-3 self-start">
                       <span className="text-gray-400 text-xs font-semibold">{item.badge}</span>
                     </div>
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">{item.description}</p>
-                    {item.url && (
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-white/90 font-semibold hover:text-white transition-colors"
-                      >
-                        {item.cta}
-                        <ArrowRight className="h-4 w-4" />
-                      </a>
-                    )}
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed flex-1">{item.description}</p>
+                    <div className="flex items-center justify-between gap-3 pt-2 border-t border-white/10">
+                      {item.slug && (
+                        <a
+                          href={`/${locale}/projekty/${item.slug}`}
+                          className="inline-flex items-center gap-2 text-sm text-white font-semibold hover:text-tovernet-300 transition-colors"
+                        >
+                          {t('clientProjects.caseStudyLabel')}
+                          <ArrowRight className="h-4 w-4" />
+                        </a>
+                      )}
+                      {item.url && (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                        >
+                          {item.cta} ↗
+                        </a>
+                      )}
+                    </div>
                   </div>
                 );
               })}

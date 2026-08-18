@@ -66,9 +66,23 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'TOVERNET',
+    url: 'https://tovernet.online',
+    description: locale === 'pl'
+      ? 'TOVERNET projektuje i utrzymuje strony internetowe oraz systemy dla hodowców psów, organizacji kynologicznych i firm z branży zwierzęcej.'
+      : 'TOVERNET designs and maintains websites and systems for dog breeders, kennel clubs, and animal-industry companies.',
+  };
+
   return (
     <html lang={locale}>
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

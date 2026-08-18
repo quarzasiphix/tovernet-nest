@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tovernet.online"),
   title: "TOVERNET - Digital Infrastructure for Businesses That Cannot Afford Chaos",
   description: "TOVERNET designs and operates custom digital systems for businesses that want structure, not tools. We build bespoke infrastructure, workflows, and platforms that scale.",
   keywords: ["digital infrastructure", "business systems", "custom software", "automation", "compliance systems", "operational infrastructure"],
