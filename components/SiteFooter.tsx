@@ -70,8 +70,16 @@ export default function SiteFooter({ locale }: { locale: string }) {
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+          <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} {t('copyright')}</p>
+            <div className="flex items-center gap-4">
+              <a href={`/${locale}/polityka-prywatnosci`} className="hover:text-gray-300 transition-colors">
+                {t('privacyPolicy')}
+              </a>
+              <a href={`/${locale}/regulamin`} className="hover:text-gray-300 transition-colors">
+                {t('terms')}
+              </a>
+            </div>
           </div>
         </div>
       </div>

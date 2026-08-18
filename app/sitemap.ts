@@ -17,6 +17,8 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: '/projekty/klepsydra', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/projekty/nekrolog-lodz', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/poradnik', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/polityka-prywatnosci', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/regulamin', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
 function alternatesFor(pathByLocale: Record<'pl' | 'en', string>) {
