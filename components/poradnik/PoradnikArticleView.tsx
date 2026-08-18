@@ -1,4 +1,4 @@
-import type { PoradnikArticle } from '@/lib/poradnik';
+import { poradnikCtas, type PoradnikArticle } from '@/lib/poradnik';
 
 type Props = {
   locale: 'pl' | 'en';
@@ -90,19 +90,39 @@ export default function PoradnikArticleView({ locale, article, otherSlug }: Prop
               </section>
             )}
 
-            <div className="mt-14 rounded-2xl bg-tovernet-gradient p-8 text-center">
-              <p className="text-white text-lg font-semibold mb-4">
-                {locale === 'pl'
-                  ? 'Prowadzisz hodowlę i chcesz własną stronę oraz panel?'
-                  : 'Run a kennel and want your own website and panel?'}
-              </p>
-              <a
-                href={`/${locale}/hodowcy#quote`}
-                className="inline-flex items-center gap-2 bg-white text-tovernet-700 px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity"
-              >
-                {locale === 'pl' ? 'Poproś o bezpłatną wycenę' : 'Request a free quote'}
-              </a>
-            </div>
+            {article.externalResource && (
+              <section className="mt-10">
+                <a
+                  href={article.externalResource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 rounded-xl bg-white border border-kennel-navy-400/10 kennel-card-shadow p-5 hover-lift"
+                >
+                  <div className="flex-1">
+                    <p className="text-xs font-bold uppercase tracking-wide text-kennel-yellow-500 mb-1">
+                      {locale === 'pl' ? 'Poczytaj więcej' : 'Read more'}
+                    </p>
+                    <p className="font-bold text-kennel-navy-900 mb-1">{article.externalResource.label}</p>
+                    <p className="text-kennel-navy-600 text-sm leading-relaxed">{article.externalResource.description}</p>
+                  </div>
+                </a>
+              </section>
+            )}
+
+            {(() => {
+              const cta = poradnikCtas[article.category];
+              return (
+                <div className="mt-14 rounded-2xl bg-tovernet-gradient p-8 text-center">
+                  <p className="text-white text-lg font-semibold mb-4">{cta.message[locale]}</p>
+                  <a
+                    href={`/${locale}${cta.offerPath}`}
+                    className="inline-flex items-center gap-2 bg-white text-tovernet-700 px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    {cta.label[locale]}
+                  </a>
+                </div>
+              );
+            })()}
 
             {otherSlug && (
               <p className="mt-8 text-center text-sm text-kennel-navy-400">

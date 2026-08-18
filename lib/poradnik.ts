@@ -20,6 +20,8 @@ export type PoradnikArticle = {
   intro: string;
   sections: PoradnikSection[];
   faqs?: PoradnikFaq[];
+  /** Optional link to an external resource for deeper reading (e.g. ksef.support for KSeF articles). */
+  externalResource?: { label: string; description: string; url: string };
 };
 
 type CategoryMeta = {
@@ -59,14 +61,36 @@ export const poradnikCategories: Record<PoradnikCategory, CategoryMeta> = {
     },
   },
   finance: {
-    offerPath: 'https://ksiegai.pl',
-    offerExternal: true,
+    offerPath: '/projekty/ksiegai',
     color: 'yellow',
     label: { pl: 'Finanse i automatyzacja', en: 'Finance and automation' },
     description: {
       pl: 'KSeF, fakturowanie i systemy finansowe zamiast wynajętego oprogramowania.',
       en: 'KSeF, invoicing, and financial systems instead of rented software.',
     },
+  },
+};
+
+export const poradnikCtas: Record<PoradnikCategory, { offerPath: string; label: { pl: string; en: string }; message: { pl: string; en: string } }> = {
+  breeders: {
+    offerPath: '/hodowcy#quote',
+    label: { pl: 'Poproś o bezpłatną wycenę', en: 'Request a free quote' },
+    message: { pl: 'Prowadzisz hodowlę i chcesz własną stronę oraz panel?', en: 'Run a kennel and want your own website and panel?' },
+  },
+  'kennel-clubs': {
+    offerPath: '#contact',
+    label: { pl: 'Porozmawiajmy o Twoim związku', en: "Let's talk about your club" },
+    message: { pl: 'Prowadzisz związek kynologiczny i chcesz nowoczesny system?', en: 'Run a kennel club and want a modern system?' },
+  },
+  'animal-industry': {
+    offerPath: '#contact',
+    label: { pl: 'Porozmawiajmy o Twoim projekcie', en: "Let's talk about your project" },
+    message: { pl: 'Prowadzisz firmę z branży zwierzęcej i potrzebujesz systemu?', en: 'Run an animal-industry business and need a system?' },
+  },
+  finance: {
+    offerPath: '/projekty/ksiegai',
+    label: { pl: 'Zobacz KsięgaI', en: 'See KsięgaI' },
+    message: { pl: 'Szukasz systemu do fakturowania i KSeF?', en: 'Looking for an invoicing and KSeF system?' },
   },
 };
 
@@ -946,6 +970,11 @@ export const poradnikArticles: PoradnikArticle[] = [
       { q: 'Czy KSeF jest obowiązkowy dla małych firm?', a: 'Zakres i terminy wdrożenia KSeF zmieniają się w czasie — warto sprawdzić aktualny stan przepisów, ale kierunek jest jasny: obowiązkowe fakturowanie elektroniczne obejmie z czasem większość firm.' },
       { q: 'Czy da się zintegrować KSeF z własnym systemem firmowym?', a: 'Tak — to dokładnie ten przypadek, w którym dedykowany system ma przewagę nad gotowym programem: KSeF staje się jedną z funkcji szerszego systemu, a nie osobnym narzędziem, do którego trzeba się logować.' },
     ],
+    externalResource: {
+      label: 'ksef.support',
+      description: 'Niezależny przewodnik po KSeF — jak przygotować firmę krok po kroku, zanim e-faktury staną się obowiązkowe.',
+      url: 'https://ksef.support',
+    },
   },
   {
     key: 'ksef-software-choice',
@@ -987,6 +1016,11 @@ export const poradnikArticles: PoradnikArticle[] = [
       { q: 'Is KSeF mandatory for small businesses?', a: 'The scope and rollout timeline for KSeF changes over time — check the current regulations, but the direction is clear: mandatory e-invoicing will eventually cover most businesses.' },
       { q: 'Can KSeF be integrated into a company\'s own internal system?', a: 'Yes — this is exactly where a dedicated system has an edge over off-the-shelf software: KSeF becomes one function of a broader system, not a separate tool you have to log into.' },
     ],
+    externalResource: {
+      label: 'ksef.support',
+      description: 'An independent guide to KSeF — how to prepare your business step by step before e-invoicing becomes mandatory.',
+      url: 'https://ksef.support',
+    },
   },
 
   // ---- 12. Cross-vertical: custom software vs. SaaS ----
