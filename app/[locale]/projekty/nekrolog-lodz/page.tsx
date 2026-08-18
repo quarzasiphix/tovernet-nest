@@ -23,6 +23,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? ['strona zakładu pogrzebowego', 'lokalne SEO zakład pogrzebowy', 'strona internetowa dla firmy pogrzebowej']
       : ['funeral home website', 'local SEO funeral home', 'funeral business web design'],
     type: 'article',
+    ogImage: '/screenshots/clients/nekrolog-lodz.png',
   });
 }
 

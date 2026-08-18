@@ -22,6 +22,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? ['prosta strona dla hodowli psów', 'strona wizytówkowa hodowla', 'przykład strony hodowla Yorkshire Terrier']
       : ['simple kennel website example', 'boutique dog breeder website', 'kennel storefront site'],
     type: 'article',
+    ogImage: '/screenshots/clients/kolorowa-pasja.png',
   });
 }
 

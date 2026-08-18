@@ -21,6 +21,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? ['hodowla Yorkshire Terrier strona i panel', 'przykład strony dla hodowli psów', 'panel administracyjny hodowla przykład']
       : ['Yorkshire Terrier kennel website example', 'dog breeder website example', 'breeder admin panel example'],
     type: 'article',
+    ogImage: '/screenshots/clients/gryfin-york.png',
   });
 }
 

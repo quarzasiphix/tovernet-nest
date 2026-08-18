@@ -27,6 +27,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     keywords: isPolish
       ? ['system dla związku kynologicznego', 'elektroniczna księga rodowodowa', 'panel hodowcy online', 'weryfikacja rodowodu kodem QR', 'rejestr psów program']
       : ['kennel club software', 'electronic pedigree registry', 'breeder panel for kennel clubs', 'QR pedigree verification'],
+    ogImage: '/screenshots/pok/dashboard.png',
   });
 }
 

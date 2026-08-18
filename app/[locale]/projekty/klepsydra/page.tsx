@@ -21,6 +21,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? ['generator e-klepsydry online', 'darmowa klepsydra pogrzebowa', 'aplikacja dla zakładu pogrzebowego']
       : ['online obituary generator', 'free e-obituary tool', 'funeral home web app'],
     type: 'article',
+    ogImage: '/screenshots/clients/klepsydra.png',
   });
 }
 

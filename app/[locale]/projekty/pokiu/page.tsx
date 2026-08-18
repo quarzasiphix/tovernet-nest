@@ -25,6 +25,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? ['system dla związku kynologicznego przykład', 'weryfikacja rodowodu kodem QR', 'panel hodowcy online przykład']
       : ['kennel club software example', 'QR pedigree verification example', 'breeder portal example'],
     type: 'article',
+    ogImage: '/screenshots/pok/dashboard.png',
   });
 }
 

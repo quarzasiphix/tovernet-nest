@@ -32,6 +32,7 @@ export async function generateMetadata({
     description: article.description,
     keywords: article.keywords,
     type: 'article',
+    ogImage: article.category === 'kennel-clubs' ? '/screenshots/pok/dashboard.png' : undefined,
   });
 }
 
