@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
 import { getArticlesForLocale, getOtherLocaleSlug } from '@/lib/poradnik';
+import { auditGuides, getOtherLocaleGuideSlug, PROVIDER_AUDIT_MAIN_PATH, PROVIDER_AUDIT_HUB_PATH } from '@/lib/provider-audit';
 import { SITE_URL } from '@/lib/seo';
 
 type StaticRoute = { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] };
@@ -43,6 +44,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: alternatesFor({ pl: route.path, en: route.path }),
       });
     }
+  }
+
+  // Provider-audit main service page + SEO hub — per-locale-distinct paths,
+  // same pattern as poradnik articles below.
+  entries.push({
+    url: `${SITE_URL}/pl${PROVIDER_AUDIT_MAIN_PATH.pl}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    alternates: alternatesFor({ pl: PROVIDER_AUDIT_MAIN_PATH.pl, en: PROVIDER_AUDIT_MAIN_PATH.en }),
+  });
+  entries.push({
+    url: `${SITE_URL}/en${PROVIDER_AUDIT_MAIN_PATH.en}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    alternates: alternatesFor({ pl: PROVIDER_AUDIT_MAIN_PATH.pl, en: PROVIDER_AUDIT_MAIN_PATH.en }),
+  });
+  entries.push({
+    url: `${SITE_URL}/pl${PROVIDER_AUDIT_HUB_PATH.pl}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+    alternates: alternatesFor({ pl: PROVIDER_AUDIT_HUB_PATH.pl, en: PROVIDER_AUDIT_HUB_PATH.en }),
+  });
+  entries.push({
+    url: `${SITE_URL}/en${PROVIDER_AUDIT_HUB_PATH.en}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+    alternates: alternatesFor({ pl: PROVIDER_AUDIT_HUB_PATH.pl, en: PROVIDER_AUDIT_HUB_PATH.en }),
+  });
+
+  for (const guide of auditGuides) {
+    const otherSlug = getOtherLocaleGuideSlug(guide.locale, guide.key);
+    const pathByLocale =
+      guide.locale === 'pl'
+        ? { pl: `/${guide.slug}`, en: otherSlug ? `/${otherSlug}` : `/${guide.slug}` }
+        : { pl: otherSlug ? `/${otherSlug}` : `/${guide.slug}`, en: `/${guide.slug}` };
+
+    entries.push({
+      url: `${SITE_URL}/${guide.locale}/${guide.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: alternatesFor(pathByLocale),
+    });
   }
 
   for (const locale of locales) {

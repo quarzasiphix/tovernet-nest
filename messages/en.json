@@ -7,7 +7,8 @@
     "breeders": "Breeders",
     "kennelClubs": "Kennel Clubs",
     "projects": "Our Projects",
-    "poradnik": "Guides"
+    "poradnik": "Guides",
+    "providerAudit": "Provider Audits"
   },
   "hero": {
     "badge": "Websites and Systems for the Animal Industry",
@@ -176,7 +177,8 @@
     "copyright": "TOVERNET. Built systems scale. Tools don't.",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms of Use",
-    "nekrolog": "Nekrolog Kostowska — Funeral Services & Digital Development"
+    "nekrolog": "Nekrolog Kostowska — Funeral Services & Digital Development",
+    "digitalAdmin": "Tovernet is the deciding party for implementing new technology and for contracts with contractors and service providers across the brands we operate."
   },
   "breeders": {
     "hero": {
@@ -888,5 +890,275 @@
   "poradnikIndex": {
     "title": "TOVERNET Guides",
     "subtitle": "Practical articles on websites, panels, and systems — for breeders, kennel clubs, animal-industry companies, and finance."
+  },
+  "providerAudit": {
+    "main": {
+      "badge": "Independent digital provider audit",
+      "title": "We check whether your digital vendor is actually delivering what you're paying for",
+      "subtitle": "Independent verification of SEO agencies, software houses, and IT vendors — technical audits, invoice checks, access mapping, and support recovering control of your domain, website, and accounts.",
+      "ctaPrimary": "Request an initial assessment",
+      "ctaSecondary": "See what we verify",
+      "trustLine": "The initial assessment is free. We don't represent vendors — we work for the client only.",
+      "problem": {
+        "title": "You're paying every month. You have no way to check what for.",
+        "text": "Plenty of businesses sign a contract with an SEO agency, a software house, or an IT freelancer, pay invoices month after month — and don't have the technical knowledge or time to check whether the work is actually happening, whether they still control their own website and domain, and whether what they see in a report matches reality. Tovernet steps into that gap as an independent, technical third party — with no stake in protecting the vendor."
+      },
+      "verify": {
+        "title": "What we verify",
+        "cards": [
+          {
+            "title": "Scope-to-delivery match",
+            "description": "We compare the agreed contract scope against what can actually be technically confirmed."
+          },
+          {
+            "title": "Invoices & payment history",
+            "description": "We check whether issued invoices actually match delivered work and agreed rates."
+          },
+          {
+            "title": "Technical site & infrastructure audit",
+            "description": "We check code, configuration, performance, and security — based on observable data, not claims."
+          },
+          {
+            "title": "Access & account map",
+            "description": "We establish who actually has access to the domain, hosting, CMS, email, and analytics accounts."
+          },
+          {
+            "title": "Content & publication verification",
+            "description": "We confirm whether ordered content, articles, and publications actually exist and are publicly accessible."
+          },
+          {
+            "title": "Backlink & SEO visibility analysis",
+            "description": "We check whether claimed backlinks are real, active, and actually point to the client's site."
+          },
+          {
+            "title": "License & code-ownership check",
+            "description": "We establish whether the software, plugins, and themes in use are licensed to the client or the vendor."
+          },
+          {
+            "title": "Backup & continuity check",
+            "description": "We check whether current backups exist and who has access to them."
+          }
+        ]
+      },
+      "providersCovered": {
+        "title": "Which providers this covers",
+        "items": [
+          "SEO and marketing agencies",
+          "Software houses and dev shops",
+          "Freelance and independent developers",
+          "Hosting and server providers",
+          "Domain registrars and administrators",
+          "CRM, ERP, and CMS vendors"
+        ]
+      },
+      "process": {
+        "title": "How the engagement works",
+        "steps": [
+          {
+            "title": "Free initial assessment",
+            "description": "A short conversation and review of the situation to determine whether, and to what extent, an audit makes sense."
+          },
+          {
+            "title": "Access & document inventory",
+            "description": "We gather contracts, invoices, access, and correspondence — the starting point for verification."
+          },
+          {
+            "title": "Technical verification",
+            "description": "We check code, configuration, data, and publications against the agreed scope."
+          },
+          {
+            "title": "Report & recommendations",
+            "description": "We present an organized picture: what's confirmed, what's not, and what needs explanation."
+          },
+          {
+            "title": "Implementation support",
+            "description": "We help recover access, switch vendors, or hand the material to your legal counsel."
+          }
+        ]
+      },
+      "deliverables": {
+        "title": "What you get",
+        "items": [
+          "A technical report with a timeline and evidence",
+          "An access map — who has access to what, today",
+          "A comparison of the agreed scope against observable delivery",
+          "An estimated market value of the delivered work",
+          "A list of concrete next-step recommendations"
+        ],
+        "matrixNote": "Below is an illustrative, example obligation matrix — the real document is tailored to the specific contract and client situation.",
+        "matrixExample": {
+          "headers": [
+            "Area",
+            "Contract obligation",
+            "Confirmed status"
+          ],
+          "rows": [
+            [
+              "Technical SEO",
+              "Monthly audit",
+              "Partially confirmed"
+            ],
+            [
+              "Content",
+              "4 articles / month",
+              "Confirmed"
+            ],
+            [
+              "Backlinks",
+              "10 links / month",
+              "Unconfirmed"
+            ],
+            [
+              "Client access",
+              "Full Search Console access",
+              "No access"
+            ]
+          ]
+        }
+      },
+      "formats": {
+        "title": "Engagement formats",
+        "items": [
+          {
+            "title": "One-time audit",
+            "description": "A full verification of a specific contract or engagement period, ending with a report."
+          },
+          {
+            "title": "Ongoing oversight",
+            "description": "Regular, independent checks on an active vendor relationship — before a problem grows."
+          },
+          {
+            "title": "Vendor transition support",
+            "description": "Recovering access, verifying handover, and safely moving to a new vendor."
+          }
+        ],
+        "noPricing": "No fixed price list — audit scope and cost depend on the size and complexity of the case. The initial assessment is always free."
+      },
+      "caseStudy": {
+        "title": "This isn't theoretical — we do this every day for Nekrolog Kostowska",
+        "text": "For Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, Tovernet has run the digital infrastructure for years, decides on technology implementations, and coordinates contractors and service providers. That's the same scope of responsibility we offer as an independent audit to other businesses.",
+        "cta": "See the Nekrolog Łódź case study"
+      },
+      "legalBoundary": {
+        "line1": "Tovernet is not a law firm and doesn't provide legal services. Our role is to deliver reliable technical documentation and facts — further decisions, including legal ones, are made by the client together with their own chosen lawyer.",
+        "line2": "We don't rule on the legality of a vendor's conduct, don't represent the client in proceedings, and don't guarantee recovery of funds. If a case requires legal escalation, the material we prepare goes to the client's legal counsel as supporting documentation."
+      },
+      "faq": [
+        {
+          "q": "How is a Tovernet audit different from legal advice?",
+          "a": "We're not a law firm. We handle the technical side: what was actually delivered, who has access to what, whether invoices match reality. Legal questions are left to the client's own lawyer."
+        },
+        {
+          "q": "How much does an audit cost?",
+          "a": "It depends on the scope and complexity of the case — we don't have a fixed price list. The initial assessment, where we scope the work, is always free."
+        },
+        {
+          "q": "Does Tovernet contact my vendor directly?",
+          "a": "Only with your explicit consent and within an agreed scope. By default we work for the client only, based on available documents and access."
+        },
+        {
+          "q": "Can the report be used in court?",
+          "a": "The report is technical documentation, not a court-appointed expert opinion. It can serve as supporting material for a lawyer — how it's used is a decision for the counsel handling the case."
+        },
+        {
+          "q": "What if I don't have access to my own website or domain?",
+          "a": "That's a common starting point. The first step is establishing what technically exists and what a realistic recovery path looks like."
+        },
+        {
+          "q": "Do you guarantee getting my money back?",
+          "a": "No. We establish the facts and provide an estimated market value for the delivered work — financial and legal decisions remain the client's."
+        },
+        {
+          "q": "How long does an audit take?",
+          "a": "It depends on scope — from a few days for a simple check to a few weeks for a complex case spanning multiple systems and contracts."
+        },
+        {
+          "q": "Is the audit confidential?",
+          "a": "Yes. Materials and findings go to the client only, unless they decide otherwise."
+        },
+        {
+          "q": "Do you only check SEO agencies?",
+          "a": "No — we also cover software houses, IT freelancers, hosting and domain providers, and CRM/ERP/CMS vendors."
+        },
+        {
+          "q": "What if my vendor isn't doing anything wrong?",
+          "a": "That's a valuable outcome too. An audit sometimes confirms the relationship is working correctly — that peace of mind is worth as much as catching a problem."
+        }
+      ],
+      "intake": {
+        "title": "Request an initial assessment",
+        "subtitle": "A free, initial conversation about your situation. We typically respond within 1-2 business days.",
+        "companyName": "Company name",
+        "providerType": "Type of provider this concerns",
+        "providerTypeOptions": [
+          "SEO agency",
+          "Software house",
+          "IT freelancer",
+          "Hosting / domain",
+          "Other"
+        ],
+        "disputeStage": "Current stage",
+        "disputeStageOptions": [
+          "Doubts about work quality",
+          "Ongoing dispute",
+          "No access to our own assets",
+          "Engagement ended, need a review"
+        ],
+        "affectedAssets": "What the case involves",
+        "affectedAssetsOptions": [
+          "Domain",
+          "Hosting",
+          "Website / CMS",
+          "Source code",
+          "Ad / analytics accounts",
+          "Invoices & payments"
+        ],
+        "contactName": "Full name",
+        "email": "Email",
+        "notes": "Brief description of the situation",
+        "submit": "Send request",
+        "thankYou": {
+          "title": "Thank you",
+          "message": "We've opened your email client with a prepared message — just hit send. We'll get back to you within 1-2 business days."
+        },
+        "emailSubject": "Initial assessment — digital provider audit"
+      }
+    },
+    "hub": {
+      "badge": "Regain digital control",
+      "title": "Regain control of your company's domain, website, and accounts",
+      "subtitle": "If you don't have access to your own digital assets, have doubts about a vendor's work, or are ending an engagement that was never properly handed over — we help establish the facts and regain control.",
+      "ctaPrimary": "Check what can be recovered",
+      "ctaSecondary": "See the full audit service",
+      "intro": "Digital independence — real, verifiable control over your domain, website, accounts, and data — is easy to lose when a vendor relationship runs without clear boundaries. Below are specific situations and how Tovernet helps with each one.",
+      "links": [
+        {
+          "title": "SEO agency not delivering",
+          "description": "How to independently verify whether an agency is actually doing the contracted work.",
+          "href": "/seo-agency-not-delivering"
+        },
+        {
+          "title": "Recovering your domain and website",
+          "description": "Registrar ownership, the authinfo code, hosting, DNS, and CMS — what you need to know.",
+          "href": "/recovering-your-domain-and-website"
+        },
+        {
+          "title": "Vendor won't hand over your website",
+          "description": "The inventory to run before escalating — what to do first.",
+          "href": "/vendor-wont-hand-over-your-website"
+        },
+        {
+          "title": "What should SEO or IT services cost",
+          "description": "Four different numbers that get conflated when assessing the value of delivered work.",
+          "href": "/what-should-seo-it-services-cost"
+        },
+        {
+          "title": "Technical reports for vendor disputes",
+          "description": "Organized technical documentation for a conversation with a vendor or your lawyer.",
+          "href": "/technical-report-for-vendor-disputes"
+        }
+      ],
+      "caseStudyCta": "See how we do this every day for Nekrolog Łódź"
+    }
   }
 }

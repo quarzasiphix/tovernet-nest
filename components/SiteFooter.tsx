@@ -15,8 +15,11 @@ export default function SiteFooter({ locale }: { locale: string }) {
                 <Sparkles className="h-6 w-6 text-tovernet-400" />
                 <span className="text-xl font-bold text-white">TOVERNET</span>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mb-3">
                 {t('tagline')}
+              </p>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                {t('digitalAdmin')}
               </p>
             </div>
             <div>
@@ -40,6 +43,11 @@ export default function SiteFooter({ locale }: { locale: string }) {
                 <li>
                   <a href={`/${locale}/poradnik`} className="hover:text-breeder-400 transition-colors">
                     {tn('poradnik')}
+                  </a>
+                </li>
+                <li>
+                  <a href={`/${locale}/${locale === 'pl' ? 'audyt-dostawcy-uslug-cyfrowych' : 'digital-provider-audit'}`} className="hover:text-kennelclub-400 transition-colors">
+                    {tn('providerAudit')}
                   </a>
                 </li>
               </ul>

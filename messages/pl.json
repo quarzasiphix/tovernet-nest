@@ -7,7 +7,8 @@
     "breeders": "Hodowcy",
     "kennelClubs": "Związki Kynologiczne",
     "projects": "Nasze Projekty",
-    "poradnik": "Poradnik"
+    "poradnik": "Poradnik",
+    "providerAudit": "Audyt wykonawców"
   },
   "hero": {
     "badge": "Strony i Systemy Dla Branży Zwierzęcej",
@@ -176,7 +177,8 @@
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie.",
     "privacyPolicy": "Polityka Prywatności",
     "terms": "Regulamin",
-    "nekrolog": "Nekrolog Kostowska — Usługi Pogrzebowe i Rozwój Cyfrowy"
+    "nekrolog": "Nekrolog Kostowska — Usługi Pogrzebowe i Rozwój Cyfrowy",
+    "digitalAdmin": "Tovernet jest podmiotem decyzyjnym przy wdrażaniu nowych rozwiązań technologicznych oraz w umowach z wykonawcami i dostawcami usług dla obsługiwanych przez nas marek."
   },
   "breeders": {
     "hero": {
@@ -888,5 +890,275 @@
   "poradnikIndex": {
     "title": "Poradnik TOVERNET",
     "subtitle": "Praktyczne artykuły o stronach, panelach i systemach — dla hodowców, związków kynologicznych, firm z branży zwierzęcej i finansów."
+  },
+  "providerAudit": {
+    "main": {
+      "badge": "Niezależny audyt dostawców cyfrowych",
+      "title": "Sprawdzamy, czy Twój dostawca cyfrowy faktycznie wykonuje to, za co płacisz",
+      "subtitle": "Niezależna weryfikacja pracy agencji SEO, software house’ów i dostawców IT — audyt techniczny, kontrola faktur, mapa dostępów i wsparcie przy odzyskiwaniu kontroli nad domeną, stroną i kontami.",
+      "ctaPrimary": "Zamów wstępną ocenę",
+      "ctaSecondary": "Zobacz, co sprawdzamy",
+      "trustLine": "Wstępna ocena jest bezpłatna. Nie reprezentujemy dostawców — pracujemy wyłącznie dla klienta.",
+      "problem": {
+        "title": "Płacisz co miesiąc. Nie masz jak sprawdzić, za co.",
+        "text": "Wiele firm podpisuje umowę z agencją SEO, software house'em albo freelancerem IT, płaci faktury miesiąc po miesiącu — i nie ma technicznej wiedzy ani czasu, żeby sprawdzić, czy praca faktycznie się dzieje, czy dostęp do własnej strony i domeny wciąż należy do nich, i czy to, co widzą w raporcie, odpowiada rzeczywistości. Tovernet wchodzi w tę lukę jako niezależna, techniczna strona trzecia — bez interesu w tym, żeby chronić dostawcę."
+      },
+      "verify": {
+        "title": "Co sprawdzamy",
+        "cards": [
+          {
+            "title": "Zgodność wykonania z umową",
+            "description": "Porównujemy uzgodniony zakres prac z tym, co faktycznie da się potwierdzić technicznie."
+          },
+          {
+            "title": "Faktury i historia płatności",
+            "description": "Weryfikujemy, czy wystawione faktury odpowiadają realnie wykonanym pracom i uzgodnionym stawkom."
+          },
+          {
+            "title": "Audyt techniczny strony i infrastruktury",
+            "description": "Sprawdzamy kod, konfigurację, wydajność i bezpieczeństwo — nie na podstawie deklaracji, tylko obserwowalnych danych."
+          },
+          {
+            "title": "Mapa dostępów i kont",
+            "description": "Ustalamy, kto faktycznie ma dostęp do domeny, hostingu, CMS, poczty i kont analitycznych."
+          },
+          {
+            "title": "Weryfikacja treści i publikacji",
+            "description": "Potwierdzamy, czy zamówione treści, artykuły i publikacje rzeczywiście istnieją i są dostępne publicznie."
+          },
+          {
+            "title": "Analiza linków i widoczności SEO",
+            "description": "Sprawdzamy, czy deklarowane linki pozycjonujące są realne, aktywne i rzeczywiście prowadzą do strony klienta."
+          },
+          {
+            "title": "Kontrola licencji i własności kodu",
+            "description": "Ustalamy, czy użyte oprogramowanie, wtyczki i motywy są licencjonowane na klienta, czy na wykonawcę."
+          },
+          {
+            "title": "Kopie zapasowe i ciągłość działania",
+            "description": "Sprawdzamy, czy istnieją aktualne kopie zapasowe i kto ma do nich dostęp."
+          }
+        ]
+      },
+      "providersCovered": {
+        "title": "Jakich dostawców obejmuje audyt",
+        "items": [
+          "Agencje SEO i marketingowe",
+          "Software house'y i domy produkcyjne",
+          "Freelancerzy i niezależni programiści",
+          "Dostawcy hostingu i serwerów",
+          "Rejestratorzy i administratorzy domen",
+          "Dostawcy systemów CRM, ERP i CMS"
+        ]
+      },
+      "process": {
+        "title": "Jak wygląda współpraca",
+        "steps": [
+          {
+            "title": "Wstępna, bezpłatna ocena",
+            "description": "Krótka rozmowa i przegląd sytuacji, żeby ustalić, czy i w jakim zakresie audyt ma sens."
+          },
+          {
+            "title": "Inwentaryzacja dostępów i dokumentów",
+            "description": "Zbieramy umowy, faktury, dostępy i korespondencję — punkt wyjścia do dalszej weryfikacji."
+          },
+          {
+            "title": "Weryfikacja techniczna",
+            "description": "Sprawdzamy kod, konfigurację, dane i publikacje wobec uzgodnionego zakresu."
+          },
+          {
+            "title": "Raport i rekomendacje",
+            "description": "Przedstawiamy uporządkowany obraz: co potwierdzone, co niepotwierdzone, co wymaga wyjaśnienia."
+          },
+          {
+            "title": "Wsparcie we wdrożeniu",
+            "description": "Pomagamy w odzyskaniu dostępów, zmianie dostawcy albo przekazaniu materiału pełnomocnikowi."
+          }
+        ]
+      },
+      "deliverables": {
+        "title": "Co otrzymujesz",
+        "items": [
+          "Raport techniczny z chronologią i dowodami",
+          "Mapę dostępów — kto ma dostęp do czego, na dziś",
+          "Zestawienie ustalonego zakresu z obserwowalnym wykonaniem",
+          "Szacunkową wartość rynkową wykonanych prac",
+          "Listę konkretnych rekomendacji dalszych kroków"
+        ],
+        "matrixNote": "Poniżej przykładowa, poglądowa macierz zobowiązań — realny dokument dopasowujemy do konkretnej umowy i sytuacji klienta.",
+        "matrixExample": {
+          "headers": [
+            "Obszar",
+            "Zobowiązanie z umowy",
+            "Stan potwierdzony"
+          ],
+          "rows": [
+            [
+              "SEO techniczne",
+              "Audyt co miesiąc",
+              "Częściowo potwierdzone"
+            ],
+            [
+              "Treści",
+              "4 artykuły / miesiąc",
+              "Potwierdzone"
+            ],
+            [
+              "Linki pozycjonujące",
+              "10 linków / miesiąc",
+              "Niepotwierdzone"
+            ],
+            [
+              "Dostęp klienta",
+              "Pełny dostęp do Search Console",
+              "Brak dostępu"
+            ]
+          ]
+        }
+      },
+      "formats": {
+        "title": "Formaty współpracy",
+        "items": [
+          {
+            "title": "Audyt jednorazowy",
+            "description": "Pełna weryfikacja konkretnej umowy lub okresu współpracy, zakończona raportem."
+          },
+          {
+            "title": "Bieżący nadzór",
+            "description": "Regularna, niezależna kontrola trwającej współpracy z dostawcą — zanim problem urośnie."
+          },
+          {
+            "title": "Wsparcie przy zmianie dostawcy",
+            "description": "Odzyskanie dostępów, kontrola przekazania i bezpieczne przejście do nowego wykonawcy."
+          }
+        ],
+        "noPricing": "Bez sztywnego cennika — zakres i koszt audytu zależą od wielkości i złożoności sprawy. Wstępna ocena jest zawsze bezpłatna."
+      },
+      "caseStudy": {
+        "title": "Nie jest to teoria — robimy to na co dzień dla Nekrolog Kostowska",
+        "text": "Dla Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, Tovernet od lat prowadzi infrastrukturę cyfrową, decyduje o wdrożeniach i koordynuje wykonawców i dostawców usług. To ten sam zakres odpowiedzialności, który oferujemy jako niezależny audyt innym firmom.",
+        "cta": "Zobacz case study Nekrolog Łódź"
+      },
+      "legalBoundary": {
+        "line1": "Tovernet nie jest kancelarią prawną i nie świadczy usług prawnych. Naszą rolą jest dostarczenie rzetelnej dokumentacji technicznej i faktów — dalsze decyzje, w tym prawne, podejmuje klient wraz z wybranym przez siebie prawnikiem.",
+        "line2": "Nie orzekamy o legalności działania dostawcy, nie prowadzimy postępowań w imieniu klienta i nie gwarantujemy odzyskania środków. Jeśli sprawa wymaga eskalacji prawnej, przygotowany przez nas materiał trafia do pełnomocnika klienta jako dokumentacja pomocnicza."
+      },
+      "faq": [
+        {
+          "q": "Czym różni się audyt Tovernet od zwykłej porady prawnej?",
+          "a": "Nie jesteśmy kancelarią prawną. Zajmujemy się stroną techniczną: co faktycznie zostało wykonane, kto ma dostęp do czego, czy faktury odpowiadają realiom. Kwestie prawne pozostawiamy prawnikowi klienta."
+        },
+        {
+          "q": "Ile kosztuje audyt?",
+          "a": "Zależy od zakresu i złożoności sprawy — nie mamy sztywnego cennika. Wstępna ocena, w której ustalamy zakres, jest zawsze bezpłatna."
+        },
+        {
+          "q": "Czy Tovernet kontaktuje się bezpośrednio z moim dostawcą?",
+          "a": "Tylko za Twoją wyraźną zgodą i w uzgodnionym zakresie. Domyślnie pracujemy wyłącznie dla klienta, na podstawie dostępnych dokumentów i dostępów."
+        },
+        {
+          "q": "Czy raport można wykorzystać w sądzie?",
+          "a": "Raport to dokumentacja techniczna, nie opinia biegłego sądowego. Może stanowić materiał pomocniczy dla prawnika — o jego wykorzystaniu decyduje pełnomocnik prowadzący sprawę."
+        },
+        {
+          "q": "Co jeśli nie mam dostępu do własnej strony lub domeny?",
+          "a": "To częsty punkt wyjścia. Pierwszym krokiem jest ustalenie, co technicznie istnieje i jaka jest realna ścieżka odzyskania dostępu."
+        },
+        {
+          "q": "Czy gwarantujecie odzyskanie pieniędzy?",
+          "a": "Nie. Ustalamy fakty i przedstawiamy szacunkową wartość rynkową wykonanych prac — decyzje finansowe i prawne podejmuje klient."
+        },
+        {
+          "q": "Jak długo trwa audyt?",
+          "a": "Zależy od zakresu — od kilku dni przy prostej weryfikacji do kilku tygodni przy złożonej sprawie obejmującej wiele systemów i umów."
+        },
+        {
+          "q": "Czy audyt jest poufny?",
+          "a": "Tak. Materiały i ustalenia trafiają wyłącznie do klienta, chyba że zdecyduje inaczej."
+        },
+        {
+          "q": "Czy sprawdzacie tylko agencje SEO?",
+          "a": "Nie — obejmujemy też software house'y, freelancerów IT, dostawców hostingu, domen i systemów CRM/ERP/CMS."
+        },
+        {
+          "q": "Co jeśli mój dostawca nie robi nic złego?",
+          "a": "To też ważny wynik. Audyt czasem potwierdza, że współpraca przebiega prawidłowo — daje to spokój równie wartościowy, co wykrycie problemu."
+        }
+      ],
+      "intake": {
+        "title": "Zamów wstępną ocenę",
+        "subtitle": "Bezpłatna, wstępna rozmowa o Twojej sytuacji. Odpowiadamy zwykle w ciągu 1–2 dni roboczych.",
+        "companyName": "Nazwa firmy",
+        "providerType": "Rodzaj dostawcy, którego dotyczy sprawa",
+        "providerTypeOptions": [
+          "Agencja SEO",
+          "Software house",
+          "Freelancer IT",
+          "Hosting / domena",
+          "Inny"
+        ],
+        "disputeStage": "Etap sytuacji",
+        "disputeStageOptions": [
+          "Wątpliwości co do jakości pracy",
+          "Trwający spór",
+          "Brak dostępu do własnych zasobów",
+          "Zakończona współpraca, potrzebny przegląd"
+        ],
+        "affectedAssets": "Czego dotyczy sprawa",
+        "affectedAssetsOptions": [
+          "Domena",
+          "Hosting",
+          "Strona / CMS",
+          "Kod źródłowy",
+          "Konta reklamowe / analityczne",
+          "Faktury i płatności"
+        ],
+        "contactName": "Imię i nazwisko",
+        "email": "E-mail",
+        "notes": "Krótki opis sytuacji",
+        "submit": "Wyślij zgłoszenie",
+        "thankYou": {
+          "title": "Dziękujemy",
+          "message": "Otworzyliśmy Twój program pocztowy z przygotowaną wiadomością — wystarczy ją wysłać. Odezwiemy się w ciągu 1–2 dni roboczych."
+        },
+        "emailSubject": "Wstępna ocena — audyt dostawcy cyfrowego"
+      }
+    },
+    "hub": {
+      "badge": "Odzyskaj kontrolę cyfrową",
+      "title": "Odzyskaj kontrolę nad domeną, stroną i kontami swojej firmy",
+      "subtitle": "Jeśli nie masz dostępu do własnych zasobów cyfrowych, masz wątpliwości co do pracy dostawcy albo kończysz współpracę, która nie została uporządkowana — pomagamy ustalić fakty i odzyskać kontrolę.",
+      "ctaPrimary": "Sprawdź, co można odzyskać",
+      "ctaSecondary": "Zobacz pełną usługę audytu",
+      "intro": "Cyfrowa niezależność firmy — czyli realna, sprawdzalna kontrola nad domeną, stroną, kontami i danymi — to coś, co łatwo stracić, gdy współpraca z wykonawcą przebiega bez jasnych zasad. Poniżej zebraliśmy konkretne sytuacje i to, jak Tovernet pomaga w każdej z nich.",
+      "links": [
+        {
+          "title": "Agencja SEO nie wywiązuje się z umowy",
+          "description": "Jak niezależnie zweryfikować, czy agencja faktycznie wykonuje zamówione prace.",
+          "href": "/agencja-seo-nie-wykonuje-umowy"
+        },
+        {
+          "title": "Odzyskanie domeny i strony",
+          "description": "Rejestrator, kod authinfo, hosting, DNS i CMS — co technicznie trzeba wiedzieć.",
+          "href": "/odzyskanie-domeny-i-strony"
+        },
+        {
+          "title": "Wykonawca nie chce wydać strony",
+          "description": "Inwentaryzacja przed eskalacją — co zrobić w pierwszej kolejności.",
+          "href": "/wykonawca-nie-chce-wydac-strony"
+        },
+        {
+          "title": "Ile powinna kosztować usługa SEO lub IT",
+          "description": "Cztery różne liczby, które łatwo pomylić przy ocenie wartości wykonanej pracy.",
+          "href": "/wycena-uslug-seo-it"
+        },
+        {
+          "title": "Raport techniczny do sporu z wykonawcą",
+          "description": "Uporządkowana dokumentacja techniczna do rozmowy z wykonawcą lub dla prawnika.",
+          "href": "/raport-techniczny-do-sporu"
+        }
+      ],
+      "caseStudyCta": "Zobacz, jak robimy to na co dzień dla Nekrolog Łódź"
+    }
   }
 }

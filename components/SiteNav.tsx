@@ -20,6 +20,7 @@ export default function SiteNav({ locale }: { locale: string }) {
             <a href={`/${locale}/zwiazki-kynologiczne`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('kennelClubs')}</a>
             <a href={`/${locale}/projekty`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('projects')}</a>
             <a href={`/${locale}/poradnik`} className="hidden md:inline text-gray-300 hover:text-white transition-colors">{t('poradnik')}</a>
+            <a href={`/${locale}/${locale === 'pl' ? 'audyt-dostawcy-uslug-cyfrowych' : 'digital-provider-audit'}`} className="hidden lg:inline text-gray-300 hover:text-white transition-colors">{t('providerAudit')}</a>
             <LanguageSwitcher />
             <a href={`/${locale}#contact`} className="hidden sm:inline-flex px-6 py-2 bg-tovernet-gradient rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
               {t('contact')}
