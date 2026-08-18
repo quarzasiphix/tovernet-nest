@@ -91,11 +91,37 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
 
   const canNext = step === 0 ? form.kennelName.trim().length > 0 && form.breed.trim().length > 0 : true;
 
-  const submit = () => {
-    const body = buildMailBody(form, c);
-    const mailto = `mailto:contact@tovernet.online?subject=${encodeURIComponent(`${c.emailSubject} — ${form.kennelName}`)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setSent(true);
+  const submit = async () => {
+    try {
+      const res = await fetch('https://api.ksiegai.pl/v1/public', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'tovernetLead.submit',
+          source: 'tovernet-nest:hodowcy-quote',
+          kennelName: form.kennelName,
+          breed: form.breed,
+          existingSite: form.existingSite,
+          siteType: form.siteType,
+          functions: form.functions,
+          languages: form.languages,
+          dogCount: form.dogCount,
+          contactName: form.contactName,
+          email: form.email,
+          phone: form.phone,
+          notes: form.notes,
+        }),
+      });
+      if (!res.ok) throw new Error(`gateway ${res.status}`);
+      setSent(true);
+    } catch {
+      // Gateway unreachable — fall back to mailto so the lead is never
+      // silently lost.
+      const body = buildMailBody(form, c);
+      const mailto = `mailto:contact@tovernet.online?subject=${encodeURIComponent(`${c.emailSubject} — ${form.kennelName}`)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+      setSent(true);
+    }
   };
 
   if (sent) {

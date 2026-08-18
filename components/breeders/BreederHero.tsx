@@ -138,7 +138,7 @@ export default function BreederHero({
 
               {/* public dog profile card — bleeds toward the edge of the viewport to invite scrolling */}
               <div className="relative z-10 ml-auto w-[72%] translate-y-3 rounded-2xl bg-white border border-kennel-navy-400/10 kennel-card-shadow p-4 rotate-2">
-                <div className="aspect-square rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3 overflow-hidden">
+                <div className="mx-auto h-32 w-32 rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3 overflow-hidden">
                   {dog?.photoUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={dog.photoUrl} alt={dog.name} className="h-full w-full object-cover" />
@@ -200,7 +200,7 @@ export default function BreederHero({
 
             {/* puppy card (front) */}
             <div className="absolute right-0 bottom-2 w-[62%] rounded-2xl bg-white border border-kennel-navy-400/10 kennel-card-shadow p-4 rotate-[2deg]">
-              <div className="h-24 rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3 overflow-hidden">
+              <div className="mx-auto h-32 w-32 rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3 overflow-hidden">
                 {dog?.photoUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={dog.photoUrl} alt={dog.name} className="h-full w-full object-cover" />
