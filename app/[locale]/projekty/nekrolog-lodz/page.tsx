@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
+import {
+  ArrowLeft, ArrowRight, ArrowUpRight, Compass, ServerCog, FileSignature, Headset,
+  Unlock, LogOut, SearchCheck, ShieldQuestion, Scale,
+} from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import { buildMetadata } from '@/lib/seo';
@@ -73,6 +76,96 @@ export default function NekrologLodzCaseStudy({ params: { locale } }: { params: 
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: GOLD }}>{t('roleLabel')}</p>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">{c('role.title')}</h2>
             <p className="text-gray-300 leading-relaxed">{c('role.description')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ongoing operational relationship — TOVERNET's own navy/blue identity,
+          deliberately distinct from the client-brand gold/serif above it */}
+      <section className="py-20 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-14 rounded-2xl bg-kennelclub-500/10 border border-kennelclub-500/30 p-8 magical-glow-blue">
+            <p className="text-white leading-relaxed text-lg">{c('positioning.text')}</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">{c('responsibilities.title')}</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {c.raw('responsibilities.items').map((item: { title: string; description: string }, i: number) => {
+                const Icon = [Compass, ServerCog, FileSignature, Headset][i] ?? Compass;
+                return (
+                  <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
+                    <Icon className="h-8 w-8 text-kennelclub-400 mb-4" />
+                    <h3 className="text-white font-bold mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="text-center text-gray-400 text-sm max-w-2xl mx-auto leading-relaxed">{c('responsibilities.contactPoint')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Digital independence */}
+      <section className="py-20 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 border-t border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-kennelclub-300">{c('independence.eyebrow')}</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">{c('independence.title')}</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">{c('independence.intro')}</p>
+            <p className="text-gray-300 leading-relaxed">{c('independence.continuation')}</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+            {c.raw('independence.cards').map((item: { title: string; description: string }, i: number) => {
+              const Icon = [Unlock, LogOut, SearchCheck, ShieldQuestion][i] ?? Unlock;
+              return (
+                <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
+                  <Icon className="h-8 w-8 text-kennelclub-400 mb-4" />
+                  <h3 className="text-white font-bold mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Before / after */}
+          <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6 mb-16">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+              <p className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-4">{c('independence.before.title')}</p>
+              <ul className="space-y-2.5">
+                {c.raw('independence.before.items').map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gray-600 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-kennelclub-500/30 bg-kennelclub-500/5 p-6 magical-glow-blue">
+              <p className="text-sm font-bold text-kennelclub-300 uppercase tracking-wide mb-4">{c('independence.after.title')}</p>
+              <ul className="space-y-2.5">
+                {c.raw('independence.after.items').map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2 text-white text-sm">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-kennelclub-400 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Dispute support subsection */}
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-3 mb-4 justify-center">
+              <Scale className="h-7 w-7 text-kennelclub-400" />
+              <h3 className="text-xl md:text-2xl font-bold text-white text-center">{c('disputeSupport.title')}</h3>
+            </div>
+            <p className="text-gray-300 leading-relaxed text-center mb-6">{c('disputeSupport.text')}</p>
+            <p className="text-gray-500 text-xs leading-relaxed text-center max-w-xl mx-auto border-t border-white/10 pt-5">
+              {c('disputeSupport.disclaimer')}
+            </p>
           </div>
         </div>
       </section>

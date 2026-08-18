@@ -166,6 +166,31 @@ export default async function BreedersPage({ params: { locale } }: { params: { l
                 ctaPanelHref="#panel-showcase"
               />
             </div>
+
+            <div className="max-w-3xl mx-auto mt-10 rounded-2xl bg-white border border-kennel-navy-400/10 kennel-card-shadow p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+              <div className="flex-1">
+                <p className="font-bold text-kennel-navy-900 mb-1.5">{t('simpleStart.title')}</p>
+                <p className="text-sm text-kennel-navy-600 leading-relaxed">{t('simpleStart.description')}</p>
+              </div>
+              <div className="flex flex-col gap-2 flex-shrink-0">
+                <a
+                  href={`/${locale}/projekty/kolorowa-pasja`}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-kennel-pink-600 hover:opacity-80 transition-opacity"
+                >
+                  {t('simpleStart.caseStudyCta')}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://kolorowapasja.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-kennel-navy-600 hover:text-kennel-navy-900 transition-colors"
+                >
+                  {t('simpleStart.visitCta')}
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 

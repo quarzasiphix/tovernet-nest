@@ -169,13 +169,14 @@
   "footer": {
     "tagline": "Strony i systemy dla branży zwierzęcej — oraz oprogramowanie biznesowe, automatyzacje i systemy finansowe dla innych branż.",
     "solutions": "Rozwiązania Branżowe",
-    "verticals": "Nasze Marki",
-    "ksiegai": "KsięgaI - Infrastruktura Finansowa",
-    "globalPet": "Global Pet - Licencjonowana Logistyka",
+    "verticals": "Marki i przedsięwzięcia",
+    "ksiegai": "KsięgaI — Infrastruktura Finansowa",
+    "globalPet": "Global Pet — Licencjonowany Transport Zwierząt",
     "contact": "Kontakt",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie.",
     "privacyPolicy": "Polityka Prywatności",
-    "terms": "Regulamin"
+    "terms": "Regulamin",
+    "nekrolog": "Nekrolog Kostowska — Usługi Pogrzebowe i Rozwój Cyfrowy"
   },
   "breeders": {
     "hero": {
@@ -381,6 +382,12 @@
       "title": "Ten sam zespół prowadzi też systemy dla związków kynologicznych",
       "description": "Rejestr rodowodów, panel hodowców i weryfikacja dokumentów kodem QR dla POKIU — zbudowane i utrzymywane przez nas.",
       "cta": "Zobacz POKIU"
+    },
+    "simpleStart": {
+      "title": "Nie każda hodowla potrzebuje pełnego panelu od pierwszego dnia",
+      "description": "Dla Kolorowej Pasji zbudowaliśmy prostą, elegancką stronę wizytówkową i zajmujemy się jej utrzymaniem — dobry punkt startowy przed rozrostem do pełnego systemu jak w Gryfin York.",
+      "caseStudyCta": "Zobacz case study",
+      "visitCta": "Odwiedź Kolorową Pasję"
     }
   },
   "kennelClubs": {
@@ -617,6 +624,79 @@
       "cta": {
         "label": "Odwiedź Nekrolog Łódź",
         "url": "https://nekrolog-lodz.com"
+      },
+      "positioning": {
+        "text": "Tovernet odpowiada za zarządzanie obszarem cyfryzacji i infrastruktury internetowej Nekrolog Kostowska. Zakres współpracy obejmuje rozwój oprogramowania, administrację systemami, kierunek rozwoju usług cyfrowych, koordynację wykonawców i umów technologicznych oraz obsługę spraw związanych z realizowanymi wdrożeniami."
+      },
+      "responsibilities": {
+        "title": "Zakres odpowiedzialności Tovernet",
+        "items": [
+          {
+            "title": "Strategia i cyfryzacja",
+            "description": "Kierunek rozwoju usług, procesów oraz nowych produktów cyfrowych."
+          },
+          {
+            "title": "Systemy i infrastruktura",
+            "description": "Tworzenie oprogramowania, strony internetowe, domeny, hosting, bezpieczeństwo i administracja techniczna."
+          },
+          {
+            "title": "Umowy i wykonawcy",
+            "description": "Koordynacja współpracy, realizacji oraz umów dotyczących technologii i usług internetowych."
+          },
+          {
+            "title": "Administracja i doradztwo",
+            "description": "Bieżące wsparcie operacyjne oraz koordynacja spraw formalnych i spornych związanych z obsługiwanym obszarem cyfrowym."
+          }
+        ],
+        "contactPoint": "Tovernet jest oficjalnym punktem kontaktowym w sprawach technicznych, systemowych, wdrożeniowych oraz związanych ze współpracą cyfrową w obszarze rozwiązań, którymi zarządza dla Nekrolog Kostowska."
+      },
+      "independence": {
+        "eyebrow": "Cyfrowa niezależność",
+        "title": "Odzyskanie kontroli nad marką i jej infrastrukturą",
+        "intro": "Ważnym elementem współpracy było odzyskanie przez Nekrolog Kostowska pełnej kontroli nad kluczowymi zasobami cyfrowymi oraz uniezależnienie działalności od zewnętrznych wykonawców. Pomogliśmy uporządkować własność i dostępy do domen, stron internetowych, hostingu, kont, materiałów oraz pozostałych elementów infrastruktury cyfrowej.",
+        "continuation": "Wspieraliśmy również bezpieczne zakończenie niekorzystnych lub niewłaściwie realizowanych współprac, w których występowały zastrzeżenia dotyczące zakresu, jakości albo faktycznego wykonania zamówionych usług. Zabezpieczyliśmy ciągłość działania, dokumentację techniczną oraz kontrolę nad cyfrowym majątkiem marki.",
+        "cards": [
+          {
+            "title": "Odzyskanie zasobów",
+            "description": "Domeny, strony internetowe, konta, materiały, dostępy i pozostałe aktywa cyfrowe."
+          },
+          {
+            "title": "Wyjście z zależności",
+            "description": "Migracja usług i infrastruktury bez utraty ciągłości działania."
+          },
+          {
+            "title": "Weryfikacja realizacji",
+            "description": "Techniczna analiza zakresu prac, konfiguracji, raportów i rzeczywiście dostarczonych rezultatów."
+          },
+          {
+            "title": "Wsparcie w sporach",
+            "description": "Zabezpieczenie materiałów, uporządkowanie dokumentacji i przedstawienie technicznego stanu faktycznego."
+          }
+        ],
+        "before": {
+          "title": "Wcześniej",
+          "items": [
+            "Rozproszone dostępy",
+            "Zależność od wykonawców",
+            "Niejasna kontrola nad zasobami",
+            "Trudność w zweryfikowaniu wykonanych prac"
+          ]
+        },
+        "after": {
+          "title": "Dziś",
+          "items": [
+            "Uporządkowana własność i dostęp",
+            "Infrastruktura pod kontrolą",
+            "Niezależność operacyjna",
+            "Udokumentowany stan techniczny",
+            "Dalszy rozwój zarządzany przez Tovernet"
+          ]
+        }
+      },
+      "disputeSupport": {
+        "title": "Wsparcie techniczne w sporach z wykonawcami",
+        "text": "Kiedy dochodzi do sporu z agencją, dostawcą oprogramowania lub innym wykonawcą, Tovernet pomaga ustalić techniczny stan faktyczny: jakie prace zostały wykonane, jakie zasoby powstały, kto posiada do nich dostęp oraz czy deklarowany zakres usług znajduje potwierdzenie w systemach i dokumentacji. Przygotowujemy uporządkowane materiały, chronologię zdarzeń i informacje techniczne, które mogą wspierać właścicieli firmy oraz ich profesjonalnych pełnomocników.",
+        "disclaimer": "Tovernet nie świadczy usług prawnych ani nie zastępuje profesjonalnych pełnomocników. Zapewnia wsparcie techniczne, operacyjne i dokumentacyjne oraz pomaga zabezpieczyć interes przedsiębiorstwa w obszarze cyfrowym."
       }
     },
     "klepsydra": {
@@ -624,8 +704,8 @@
       "title": "Klepsydra",
       "subtitle": "Darmowy generator e-klepsydry pogrzebowej, marketowany jako narzędzie zakładu Jolanta Kostowska Nekrolog Łódź — zbudowany przez nas jako osobna aplikacja.",
       "role": {
-        "title": "Zbudowaliśmy To Narzędzie Od Zera",
-        "description": "Klepsydra działa pod marką klienta („Klepsydra online od zakładu pogrzebowego Nekrolog Łódź”), ale to my zaprojektowaliśmy i utrzymujemy samą aplikację — osobną od głównej strony, na własnej subdomenie."
+        "title": "Tworzymy I Prowadzimy Tę Usługę",
+        "description": "Klepsydra od Nekrolog Kostowska to cyfrowa usługa pamięci stworzona i rozwijana przez Tovernet. Odpowiadamy za technologię, utrzymanie systemu, bezpieczeństwo, administrację usługi oraz jej dalszy rozwój."
       },
       "features": [
         "Generator klepsydry działający w przeglądarce — bez instalacji i bez rejestracji",
@@ -636,7 +716,8 @@
       "cta": {
         "label": "Wypróbuj Klepsydrę",
         "url": "https://klepsydra.nekrolog-lodz.com"
-      }
+      },
+      "operatorLine": "Warstwę technologiczną i płatności (Stripe) usługi Klepsydra zapewnia i utrzymuje Tovernet sp. z o.o. — na zlecenie Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, zgodnie z regulaminem serwisu klepsydra.nekrolog-lodz.com."
     },
     "gryfinYork": {
       "badge": "Klient · Hodowla Yorkshire Terrierów",

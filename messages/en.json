@@ -169,13 +169,14 @@
   "footer": {
     "tagline": "Websites and systems for the animal industry — plus business software, automation, and financial systems for other industries.",
     "solutions": "Industry Solutions",
-    "verticals": "Our Brands",
-    "ksiegai": "KsięgaI - Financial Infrastructure",
-    "globalPet": "Global Pet - Licensed Logistics",
+    "verticals": "Brands & Ventures",
+    "ksiegai": "KsięgaI — Financial Infrastructure",
+    "globalPet": "Global Pet — Licensed Animal Logistics",
     "contact": "Contact",
     "copyright": "TOVERNET. Built systems scale. Tools don't.",
     "privacyPolicy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "nekrolog": "Nekrolog Kostowska — Funeral Services & Digital Development"
   },
   "breeders": {
     "hero": {
@@ -381,6 +382,12 @@
       "title": "The same team also builds systems for kennel clubs",
       "description": "Pedigree registry, breeder panel, and QR document verification for POKIU — built and maintained by us.",
       "cta": "See POKIU"
+    },
+    "simpleStart": {
+      "title": "Not every kennel needs the full panel from day one",
+      "description": "For Kolorowa Pasja we built a simple, elegant storefront site and handle its ongoing maintenance — a good starting point before growing into a full system like Gryfin York.",
+      "caseStudyCta": "See the case study",
+      "visitCta": "Visit Kolorowa Pasja"
     }
   },
   "kennelClubs": {
@@ -617,6 +624,79 @@
       "cta": {
         "label": "Visit Nekrolog Łódź",
         "url": "https://nekrolog-lodz.com"
+      },
+      "positioning": {
+        "text": "Tovernet manages the digital and web infrastructure side of Nekrolog Kostowska. That covers software development, systems administration, the direction of new digital services, coordinating vendors and technology contracts, and handling matters tied to the implementations we run."
+      },
+      "responsibilities": {
+        "title": "Tovernet's Areas of Responsibility",
+        "items": [
+          {
+            "title": "Strategy & digitalization",
+            "description": "Setting the direction for services, processes, and new digital products."
+          },
+          {
+            "title": "Systems & infrastructure",
+            "description": "Software development, websites, domains, hosting, security, and technical administration."
+          },
+          {
+            "title": "Contracts & vendors",
+            "description": "Coordinating technology partners, delivery, and contracts tied to web and technology services."
+          },
+          {
+            "title": "Administration & advisory",
+            "description": "Ongoing operational support and coordination of formal and disputed matters within the digital area we manage."
+          }
+        ],
+        "contactPoint": "Tovernet is the official point of contact for technical, systems, implementation, and digital-cooperation matters concerning the solutions we manage for Nekrolog Kostowska."
+      },
+      "independence": {
+        "eyebrow": "Digital Independence",
+        "title": "Regaining Control of the Brand's Infrastructure",
+        "intro": "A key part of this relationship was helping Nekrolog Kostowska regain full control of its core digital assets and become independent of outside vendors. We helped sort out ownership and access to domains, websites, hosting, accounts, materials, and the rest of the digital infrastructure.",
+        "continuation": "We also supported the safe wind-down of vendor relationships that weren't working — cases where there were real concerns about scope, quality, or what had actually been delivered. We secured continuity of operations, technical documentation, and control over the brand's digital assets throughout.",
+        "cards": [
+          {
+            "title": "Asset recovery",
+            "description": "Domains, websites, accounts, materials, access, and other digital assets."
+          },
+          {
+            "title": "Breaking dependency",
+            "description": "Migrating services and infrastructure without losing operational continuity."
+          },
+          {
+            "title": "Delivery verification",
+            "description": "A technical review of work scope, configuration, reports, and what was actually delivered."
+          },
+          {
+            "title": "Dispute support",
+            "description": "Securing materials, organizing documentation, and laying out the technical facts."
+          }
+        ],
+        "before": {
+          "title": "Before",
+          "items": [
+            "Scattered access",
+            "Dependency on outside vendors",
+            "Unclear control over assets",
+            "Difficulty verifying completed work"
+          ]
+        },
+        "after": {
+          "title": "Today",
+          "items": [
+            "Ownership and access sorted out",
+            "Infrastructure under control",
+            "Operational independence",
+            "A documented technical record",
+            "Ongoing development managed by Tovernet"
+          ]
+        }
+      },
+      "disputeSupport": {
+        "title": "Technical Support in Vendor Disputes",
+        "text": "When a dispute comes up with an agency, a software vendor, or another contractor, Tovernet helps establish the technical facts: what work was actually done, what assets exist, who has access to them, and whether the claimed scope of work holds up against what's actually in the systems and documentation. We put together organized materials, a timeline of events, and technical findings that can support business owners and their legal counsel.",
+        "disclaimer": "Tovernet does not provide legal services and does not act as legal counsel. We provide technical, operational, and documentary support, and help protect the business's interests on the digital side."
       }
     },
     "klepsydra": {
@@ -624,8 +704,8 @@
       "title": "Klepsydra",
       "subtitle": "A free online funeral e-obituary generator, marketed as a tool from Jolanta Kostowska Nekrolog Łódź — built by us as a standalone app.",
       "role": {
-        "title": "We Built This Tool From Scratch",
-        "description": "Klepsydra runs under the client's brand (\"Klepsydra online from Nekrolog Łódź funeral home\"), but we designed and maintain the application itself — separate from the main site, on its own subdomain."
+        "title": "We Build and Run This Service",
+        "description": "Klepsydra, offered under Nekrolog Kostowska's brand, is a digital memorial service built and run by Tovernet. We're responsible for the technology, keeping the system running, security, day-to-day operation of the service, and its ongoing development."
       },
       "features": [
         "In-browser obituary generator — no install, no account required",
@@ -636,7 +716,8 @@
       "cta": {
         "label": "Try Klepsydra",
         "url": "https://klepsydra.nekrolog-lodz.com"
-      }
+      },
+      "operatorLine": "The technology and payments layer (Stripe) behind Klepsydra is provided and maintained by Tovernet sp. z o.o., on behalf of Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, per the service's own terms at klepsydra.nekrolog-lodz.com."
     },
     "gryfinYork": {
       "badge": "Client · Yorkshire Terrier Kennel",

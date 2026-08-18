@@ -111,6 +111,7 @@ export default function KlepsydraCaseStudy({ params: { locale } }: { params: { l
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
+          <p className="mt-8 text-xs text-gray-600 max-w-md mx-auto">{c('operatorLine')}</p>
         </div>
       </section>
 

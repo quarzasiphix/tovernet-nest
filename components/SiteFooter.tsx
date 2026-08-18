@@ -57,6 +57,11 @@ export default function SiteFooter({ locale }: { locale: string }) {
                     {t('globalPet')}
                   </a>
                 </li>
+                <li>
+                  <a href={`/${locale}/projekty/nekrolog-lodz`} className="hover:text-kennelclub-400 transition-colors">
+                    {t('nekrolog')}
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
