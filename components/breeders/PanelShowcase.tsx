@@ -5,10 +5,14 @@ import {
   Home, PawPrint, Baby, Dog, Camera, MessageSquare, Star, Plus, Search, ImageIcon,
 } from 'lucide-react';
 import PuppyAvatar from './PuppyAvatar';
+import type { GryfinSiteContent } from '@/lib/gryfin';
+import { sexLabel } from '@/lib/gryfin';
 
 // Structure borrowed from PokPanelDemo.tsx (sidebar + mobile pill tabs, list+detail
 // layout). Colors lifted from GryfinPanelDemo.tsx / the real GRYFIN YORK panel CSS —
-// this is the actual palette the panel runs on, not a generic mockup.
+// this is the actual palette the panel runs on, not a generic mockup. Content is the
+// real GRYFIN YORK data (dogs/litters/puppies/testimonials/gallery) pulled at build
+// time from their public get-site-content Edge Function — see /p/grif/CLAUDE.md.
 const CREAM = '#fbf7ef';
 const CARD = '#ffffff';
 const BORDER = '#f0e6d2';
@@ -44,6 +48,22 @@ const STATUS_META: Record<Status, { label: string; fg: string; bg: string }> = {
   sprzedany: { label: 'Sprzedany', fg: PINK, bg: PINK_SOFT },
 };
 
+// Real puppy statuses (schema) collapse onto the 3-state demo above.
+const REAL_STATUS_TO_DEMO: Record<string, Status> = {
+  dostepny: 'dostepny',
+  'wstepnie-zarezerwowany': 'zarezerwowany',
+  zarezerwowany: 'zarezerwowany',
+  'w-nowym-domu': 'sprzedany',
+};
+
+const LITTER_STATUS_LABEL: Record<string, string> = {
+  planowany: 'Planowany',
+  oczekujemy: 'W drodze',
+  urodzone: 'Urodzone',
+  rezerwacje: 'Rezerwacje otwarte',
+  zakonczony: 'Zakończony',
+};
+
 const COLOR_PRESETS = ['Blue & Tan', 'Gold', 'Biewer', 'Parti'];
 
 function Card({ children }: { children: React.ReactNode }) {
@@ -54,12 +74,14 @@ function Card({ children }: { children: React.ReactNode }) {
   );
 }
 
-function StartTab() {
+type StartStats = { dogsCount: number; plannedLittersCount: number; galleryCount: number; testimonialsCount: number };
+
+function StartTab({ statsInput, activity }: { statsInput: StartStats; activity: string[] }) {
   const stats = [
-    { label: 'Psów hodowlanych', value: 13, bg: TEAL_SOFT, fg: TEAL },
-    { label: 'Mioty planowane', value: 2, bg: LAVENDER_SOFT, fg: LAVENDER },
-    { label: 'Zdjęcia i pliki', value: '200+', bg: YELLOW_SOFT, fg: '#b45309' },
-    { label: 'Nowe zapytania', value: 4, bg: PINK_SOFT, fg: PINK },
+    { label: 'Psów hodowlanych', value: statsInput.dogsCount, bg: TEAL_SOFT, fg: TEAL },
+    { label: 'Mioty planowane', value: statsInput.plannedLittersCount, bg: LAVENDER_SOFT, fg: LAVENDER },
+    { label: 'Zdjęcia i pliki', value: statsInput.galleryCount, bg: YELLOW_SOFT, fg: '#b45309' },
+    { label: 'Opinie klientów', value: statsInput.testimonialsCount, bg: PINK_SOFT, fg: PINK },
   ];
   return (
     <div className="space-y-4">
@@ -71,35 +93,37 @@ function StartTab() {
           </div>
         ))}
       </div>
-      <Card>
-        <p className="text-sm font-bold mb-3" style={{ color: NAVY }}>Ostatnia aktywność</p>
-        <ul className="space-y-2 text-xs" style={{ color: MUTED }}>
-          <li>Dodano nowy miot — Bella × Max (5 szczeniąt)</li>
-          <li>Zmieniono status: Rocky → Zarezerwowany</li>
-          <li>Dodano 12 nowych zdjęć do galerii</li>
-        </ul>
-      </Card>
+      {activity.length > 0 && (
+        <Card>
+          <p className="text-sm font-bold mb-3" style={{ color: NAVY }}>Ostatnia aktywność</p>
+          <ul className="space-y-2 text-xs" style={{ color: MUTED }}>
+            {activity.map((line, i) => <li key={i}>{line}</li>)}
+          </ul>
+        </Card>
+      )}
     </div>
   );
 }
 
-function PsyTab() {
-  const dogs = [
-    { name: 'Bella', color: 'Blue & Tan', sex: 'Suczka' as Sex },
-    { name: 'Max', color: 'Gold', sex: 'Reproduktor' as Sex },
-    { name: 'Luna', color: 'Biewer', sex: 'Suczka' as Sex },
-  ];
+type PsyDog = { name: string; color: string | null; sex: Sex; photoUrl: string | null };
+
+function PsyTab({ dogs }: { dogs: PsyDog[] }) {
   return (
     <div className="grid sm:grid-cols-2 gap-3">
       {dogs.map((d) => (
         <Card key={d.name}>
           <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: PINK_SOFT }}>
-              <PuppyAvatar className="h-7 w-7" color={PINK} />
+            <div className="h-12 w-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden" style={{ background: PINK_SOFT }}>
+              {d.photoUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={d.photoUrl} alt={d.name} className="h-full w-full object-cover" />
+              ) : (
+                <PuppyAvatar className="h-7 w-7" color={PINK} />
+              )}
             </div>
             <div className="min-w-0">
               <p className="text-sm font-bold truncate" style={{ color: NAVY }}>{d.name}</p>
-              <p className="text-xs truncate" style={{ color: MUTED }}>{d.color} · {d.sex}</p>
+              <p className="text-xs truncate" style={{ color: MUTED }}>{[d.color, d.sex].filter(Boolean).join(' · ')}</p>
             </div>
           </div>
         </Card>
@@ -108,22 +132,20 @@ function PsyTab() {
   );
 }
 
-function MiotyTab() {
-  const litters = [
-    { parents: 'Bella × Max', date: 'sierpień 2026', puppies: 5 },
-    { parents: 'Luna × Rex', date: 'listopad 2026', puppies: 4 },
-  ];
+type MiotyLitter = { key: string; parents: string; statusLine: string; puppiesCount: number };
+
+function MiotyTab({ litters }: { litters: MiotyLitter[] }) {
   return (
     <div className="space-y-2">
       {litters.map((m) => (
-        <Card key={m.parents}>
+        <Card key={m.key}>
           <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-sm font-bold" style={{ color: NAVY }}>{m.parents}</p>
-              <p className="text-xs" style={{ color: MUTED }}>Planowany: {m.date}</p>
+              <p className="text-xs" style={{ color: MUTED }}>{m.statusLine}</p>
             </div>
             <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: LAVENDER_SOFT, color: LAVENDER }}>
-              {m.puppies} szczeniąt
+              {m.puppiesCount} szczeniąt
             </span>
           </div>
         </Card>
@@ -134,14 +156,8 @@ function MiotyTab() {
 
 type Puppy = { name: string; price: string; sex: Sex; color: string; status: Status };
 
-function SzczeniatkaTab() {
-  const [puppy, setPuppy] = useState<Puppy>({
-    name: 'Rocky',
-    price: '4500 zł',
-    sex: 'Reproduktor',
-    color: 'Gold',
-    status: 'dostepny',
-  });
+function SzczeniatkaTab({ initial, photoUrl }: { initial: Puppy; photoUrl: string | null }) {
+  const [puppy, setPuppy] = useState<Puppy>(initial);
 
   const set = <K extends keyof Puppy>(key: K, value: Puppy[K]) => setPuppy((p) => ({ ...p, [key]: value }));
   const statusMeta = STATUS_META[puppy.status];
@@ -216,13 +232,18 @@ function SzczeniatkaTab() {
         </div>
       </Card>
 
-      {/* live public-site preview */}
+      {/* live public-site preview, seeded from a real GRYFIN YORK puppy — try editing it */}
       <div>
         <p className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: MUTED }}>Podgląd na stronie publicznej</p>
         <div className="rounded-2xl p-5" style={{ background: CREAM, border: `1px solid ${BORDER}` }}>
           <div className="rounded-2xl overflow-hidden bg-white kennel-card-shadow">
-            <div className="h-36 flex items-center justify-center" style={{ background: PINK_SOFT }}>
-              <PuppyAvatar className="h-16 w-16" color={PINK} />
+            <div className="h-36 flex items-center justify-center overflow-hidden" style={{ background: PINK_SOFT }}>
+              {photoUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={photoUrl} alt={puppy.name} className="h-full w-full object-cover" />
+              ) : (
+                <PuppyAvatar className="h-16 w-16" color={PINK} />
+              )}
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2 mb-1">
@@ -241,30 +262,35 @@ function SzczeniatkaTab() {
   );
 }
 
-function ZdjeciaTab() {
+function ZdjeciaTab({ images }: { images: string[] }) {
+  const tints = [YELLOW_SOFT, TEAL_SOFT, PINK_SOFT, LAVENDER_SOFT];
+  const cells = images.length > 0 ? images : Array.from({ length: 10 }).map(() => null);
   return (
     <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
-      {Array.from({ length: 10 }).map((_, i) => (
-        <div key={i} className="aspect-square rounded-xl flex items-center justify-center" style={{ background: [YELLOW_SOFT, TEAL_SOFT, PINK_SOFT, LAVENDER_SOFT][i % 4] }}>
-          <ImageIcon className="h-5 w-5" style={{ color: MUTED, opacity: 0.5 }} />
+      {cells.map((url, i) => (
+        <div key={i} className="aspect-square rounded-xl flex items-center justify-center overflow-hidden" style={{ background: tints[i % 4] }}>
+          {url ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={url} alt="" className="h-full w-full object-cover" />
+          ) : (
+            <ImageIcon className="h-5 w-5" style={{ color: MUTED, opacity: 0.5 }} />
+          )}
         </div>
       ))}
     </div>
   );
 }
 
-function OpinieTab() {
-  const reviews = [
-    { author: 'Anna K.', text: 'Wspaniała hodowla, piesek zdrowy i towarzyski od pierwszego dnia.' },
-    { author: 'Marek W.', text: 'Pełen profesjonalizm i troska o szczenięta. Polecam każdemu.' },
-  ];
+type Review = { author: string; text: string; rating: number };
+
+function OpinieTab({ reviews }: { reviews: Review[] }) {
   return (
     <div className="space-y-2">
-      {reviews.map((r) => (
-        <Card key={r.author}>
+      {reviews.map((r, i) => (
+        <Card key={`${r.author}-${i}`}>
           <div className="flex items-center gap-1 mb-2">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="h-3.5 w-3.5" style={{ color: YELLOW, fill: YELLOW }} />
+            {Array.from({ length: 5 }).map((_, j) => (
+              <Star key={j} className="h-3.5 w-3.5" style={{ color: YELLOW, fill: j < r.rating ? YELLOW : 'transparent' }} />
             ))}
           </div>
           <p className="text-sm mb-2" style={{ color: NAVY }}>&ldquo;{r.text}&rdquo;</p>
@@ -276,8 +302,10 @@ function OpinieTab() {
 }
 
 function ZapytaniaTab() {
+  // Enquiries hold real customer contact details and are never exposed via the
+  // public content API — this tab stays an illustrative example, not live data.
   const requests = [
-    { name: 'Katarzyna N.', about: 'Rocky — Gold', status: 'Nowe' },
+    { name: 'Katarzyna N.', about: 'Zapytanie o dostępne szczenię', status: 'Nowe' },
     { name: 'Tomasz P.', about: 'Zapytanie o planowany miot', status: 'Odpowiedziano' },
   ];
   return (
@@ -302,8 +330,75 @@ function ZapytaniaTab() {
   );
 }
 
-export default function PanelShowcase() {
+export default function PanelShowcase({ content }: { content: GryfinSiteContent | null }) {
   const [tab, setTab] = useState<TabKey>('szczeniaki');
+
+  const dogs = content?.dogs ?? [];
+  const litters = content?.litters ?? [];
+  const puppies = content?.puppies ?? [];
+  const testimonials = content?.testimonials ?? [];
+  const gallery = content?.gallery ?? [];
+
+  const dogNameById = new Map(dogs.map((d) => [d.id, d.name]));
+  const activeDogs = dogs.filter((d) => d.status === 'aktywny');
+  const activeLitters = litters.filter((l) => l.status !== 'zakonczony');
+
+  const startStats: StartStats = {
+    dogsCount: activeDogs.length,
+    plannedLittersCount: activeLitters.length,
+    galleryCount: gallery.length,
+    testimonialsCount: testimonials.length,
+  };
+
+  const activityEvents = [
+    ...dogs.map((d) => ({ at: d.created_at, line: `Dodano psa: ${d.name}` })),
+    ...litters.map((l) => ({ at: l.created_at, line: `Nowy miot: ${l.name} (${l.puppies_count} szczeniąt)` })),
+    ...puppies.map((p) => ({ at: p.created_at, line: `Dodano szczenię: ${p.name}` })),
+  ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime());
+  const activity = activityEvents.slice(0, 3).map((e) => e.line);
+
+  const psyDogs: PsyDog[] = activeDogs.slice(0, 4).map((d) => ({
+    name: d.name,
+    color: d.color,
+    sex: sexLabel(d.sex),
+    photoUrl: d.photo_url,
+  }));
+
+  const miotyLitters: MiotyLitter[] = activeLitters.slice(0, 4).map((l) => {
+    const mother = l.mother_id ? dogNameById.get(l.mother_id) : null;
+    const father = l.father_id ? dogNameById.get(l.father_id) : null;
+    const parents = [mother, father].filter(Boolean).join(' × ') || l.name;
+    const statusLabel = LITTER_STATUS_LABEL[l.status] ?? l.status;
+    return {
+      key: l.id,
+      parents,
+      statusLine: l.planned_date ? `${statusLabel}: ${l.planned_date}` : statusLabel,
+      puppiesCount: l.puppies_count,
+    };
+  });
+
+  const heroPuppySource = puppies.find((p) => p.status === 'dostepny') ?? puppies[0];
+  const szczeniatkaInitial: Puppy = heroPuppySource
+    ? {
+        name: heroPuppySource.name,
+        price: '',
+        sex: sexLabel(heroPuppySource.sex),
+        color: heroPuppySource.color ?? '',
+        status: REAL_STATUS_TO_DEMO[heroPuppySource.status] ?? 'dostepny',
+      }
+    : { name: 'Rocky', price: '4500 zł', sex: 'Reproduktor', color: 'Gold', status: 'dostepny' };
+
+  const galleryImages = gallery.slice(0, 10).map((g) => g.image_url);
+
+  const reviews: Review[] = testimonials.slice(0, 4).map((t) => ({
+    author: t.customer_name,
+    text: t.content,
+    rating: t.rating,
+  }));
+  const fallbackReviews: Review[] = [
+    { author: 'Anna K.', text: 'Wspaniała hodowla, piesek zdrowy i towarzyski od pierwszego dnia.', rating: 5 },
+    { author: 'Marek W.', text: 'Pełen profesjonalizm i troska o szczenięta. Polecam każdemu.', rating: 5 },
+  ];
 
   return (
     <div className="rounded-3xl overflow-hidden border kennel-card-shadow" style={{ borderColor: BORDER }}>
@@ -374,12 +469,12 @@ export default function PanelShowcase() {
             </div>
           </div>
 
-          {tab === 'start' && <StartTab />}
-          {tab === 'psy' && <PsyTab />}
-          {tab === 'mioty' && <MiotyTab />}
-          {tab === 'szczeniaki' && <SzczeniatkaTab />}
-          {tab === 'zdjecia' && <ZdjeciaTab />}
-          {tab === 'opinie' && <OpinieTab />}
+          {tab === 'start' && <StartTab statsInput={startStats} activity={activity} />}
+          {tab === 'psy' && <PsyTab dogs={psyDogs} />}
+          {tab === 'mioty' && <MiotyTab litters={miotyLitters} />}
+          {tab === 'szczeniaki' && <SzczeniatkaTab initial={szczeniatkaInitial} photoUrl={heroPuppySource?.photo_url ?? null} />}
+          {tab === 'zdjecia' && <ZdjeciaTab images={galleryImages} />}
+          {tab === 'opinie' && <OpinieTab reviews={reviews.length > 0 ? reviews : fallbackReviews} />}
           {tab === 'zapytania' && <ZapytaniaTab />}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Link2, FileCheck2, ScrollText, QrCode, AlertTriangle, Lock } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import { buildMetadata } from '@/lib/seo';
@@ -100,6 +100,99 @@ export default function PokiuCaseStudy({ params: { locale } }: { params: { local
             <ShieldCheck className="h-10 w-10 mb-4" style={{ color: GOLD }} />
             <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: GOLD }}>{c('security.title')}</h2>
             <p className="leading-relaxed" style={{ color: ECRU }}>{c('security.description')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Provenance chain */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: GOLD }}>
+              {isPolish ? 'Łańcuch Pochodzenia' : 'Chain of Provenance'}
+            </p>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">{c('provenance.title')}</h2>
+            <p className="opacity-80 leading-relaxed max-w-2xl mx-auto">{c('provenance.intro')}</p>
+          </div>
+
+          {/* Timeline */}
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            {c.raw('provenance.timeline').map((step: { title: string; description: string }, i: number) => {
+              const Icon = [ScrollText, FileCheck2, Link2, QrCode][i] ?? ScrollText;
+              return (
+                <div key={i} className="relative rounded-2xl p-5 bg-white border" style={{ borderColor: 'rgba(201,163,78,0.35)' }}>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-white" style={{ background: GOLD }}>
+                      {i + 1}
+                    </span>
+                    <Icon className="h-5 w-5" style={{ color: GOLD }} />
+                  </div>
+                  <p className="font-bold text-sm mb-1.5">{step.title}</p>
+                  <p className="text-xs opacity-75 leading-relaxed">{step.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Quotes */}
+          <div className="max-w-3xl mx-auto space-y-4 mb-12">
+            <div className="rounded-2xl p-6 text-white" style={{ background: HERO_GRADIENT }}>
+              <p className="italic leading-relaxed" style={{ color: GOLD_SOFT }}>&bdquo;{c('provenance.exampleQuote')}&rdquo;</p>
+            </div>
+            <p className="text-center opacity-80 leading-relaxed">{c('provenance.buyerQuote')}</p>
+          </div>
+
+          {/* 4 layers */}
+          <div className="max-w-5xl mx-auto">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-6 text-center" style={{ color: GOLD }}>{c('provenance.layersTitle')}</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+              {c.raw('provenance.layers').map((layer: { title: string; description: string }, i: number) => (
+                <div key={i} className="rounded-2xl p-5 bg-white border" style={{ borderColor: 'rgba(201,163,78,0.35)' }}>
+                  <p className="font-bold text-sm mb-1.5" style={{ color: GOLD }}>{layer.title}</p>
+                  <p className="text-xs opacity-75 leading-relaxed">{layer.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Disclaimers */}
+          <div className="max-w-3xl mx-auto rounded-2xl p-6 border" style={{ borderColor: 'rgba(201,163,78,0.4)', background: 'rgba(201,163,78,0.06)' }}>
+            <div className="flex items-center gap-2 mb-3">
+              <AlertTriangle className="h-5 w-5" style={{ color: GOLD }} />
+              <p className="font-bold text-sm">{c('provenance.disclaimerTitle')}</p>
+            </div>
+            <ul className="space-y-2">
+              {c.raw('provenance.disclaimers').map((d: string, i: number) => (
+                <li key={i} className="text-xs opacity-80 leading-relaxed">{d}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Tovernet / KsięgaI credibility */}
+      <section className="py-16" style={{ background: 'rgba(31,36,48,0.04)' }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-4">
+              <Lock className="h-8 w-8" style={{ color: GOLD }} />
+              <h2 className="text-2xl md:text-3xl font-bold">{c('credibility.title')}</h2>
+            </div>
+            <p className="opacity-80 leading-relaxed mb-8">{c('credibility.description')}</p>
+
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: GOLD }}>{c('credibility.connectionTitle')}</p>
+            <div className="grid sm:grid-cols-2 gap-3 mb-8">
+              {c.raw('credibility.connections').map((item: string, i: number) => (
+                <div key={i} className="flex items-start gap-2 bg-white rounded-xl p-3 border" style={{ borderColor: 'rgba(201,163,78,0.3)' }}>
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ background: GOLD }} />
+                  <span className="text-sm opacity-80">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-sm opacity-70 italic leading-relaxed border-t pt-6" style={{ borderColor: 'rgba(201,163,78,0.3)' }}>
+              {c('credibility.positioning')}
+            </p>
           </div>
         </div>
       </section>

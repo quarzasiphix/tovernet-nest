@@ -186,7 +186,11 @@
       "ctaSecondary": "Request a free quote",
       "flowLabel": "Panel → Website",
       "statusFrom": "Available",
-      "statusTo": "Reserved"
+      "statusTo": "Reserved",
+      "titleHighlightWord": "yourself",
+      "mobileLivePill": "Changes appear on the website right away",
+      "mobileProofLine": "The system already runs at Gryfin York kennel",
+      "mobileProofStats": "13 dogs · 2 litters · 200+ photos"
     },
     "proof": {
       "badge": "Already running in a real kennel — GRYFIN YORK",
@@ -208,6 +212,7 @@
           "label": "content added by the breeder herself"
         }
       ],
+      "disclaimer": "Gryfin York is a live, working example — not a limit on what we can build. Tell us how your site should look and work, and we'll quote it and build it.",
       "linkLabel": "Visit the Gryfin York site",
       "linkUrl": "https://hodowlagryfinyork.pl"
     },
@@ -709,6 +714,71 @@
       "cta": {
         "label": "Visit POKIU",
         "url": "https://pokiu.pl"
+      },
+      "provenance": {
+        "title": "Not just a digital pedigree. A full chain of provenance.",
+        "intro": "When a dog entering the POKIU registry already has a pedigree issued by another organization (e.g. ZKwP, FCI), the system doesn't turn that document into a dead scan in a folder. It builds a documented chain of provenance: original pedigree → verified by POKIU → registered with POKIU → digitally verifiable POKIU pedigree — and shows every link in that chain publicly, on the same page where the pedigree itself gets verified.",
+        "timeline": [
+          {
+            "title": "Original pedigree",
+            "description": "A document issued by another kennel organization — submitted by the breeder or the office."
+          },
+          {
+            "title": "Verified by POKIU",
+            "description": "The office checks the microchip and parents against the source document, manually redacts personal data, and publishes a preview."
+          },
+          {
+            "title": "Registered with POKIU",
+            "description": "The dog enters the POKIU registry with a full reference back to the source document."
+          },
+          {
+            "title": "Digitally verifiable POKIU pedigree",
+            "description": "The issued POKIU pedigree, with a QR code linking to the public chain of provenance."
+          }
+        ],
+        "layersTitle": "Four separate layers — never conflated",
+        "layers": [
+          {
+            "title": "1. Document attached",
+            "description": "Whether the original source document is attached to the registration."
+          },
+          {
+            "title": "2. Consistency with the POKIU registry",
+            "description": "Whether the microchip and parent data in the source document match the POKIU registry."
+          },
+          {
+            "title": "3. Source document verification",
+            "description": "Whether POKIU staff actually verified the document, or only attached it."
+          },
+          {
+            "title": "4. DNA-confirmed parentage",
+            "description": "Shown only when a real DNA test result exists — never as a default status."
+          }
+        ],
+        "exampleQuote": "The POKIU document was issued based on a verified source document issued by [organization], number [number].",
+        "buyerQuote": "A buyer, breeder, or foreign organization can independently confirm the document's authenticity, its consistency with the registry, and the source of the registered lineage.",
+        "disclaimerTitle": "Important disclaimers",
+        "disclaimers": [
+          "Displaying the source document does not mean its original issuer recognizes the POKIU pedigree.",
+          "Digital verification is not proof of genetic parentage — only a DNA test confirms parentage, and the system only shows that status when one actually exists."
+        ]
+      },
+      "credibility": {
+        "title": "Technology infrastructure built on experience with systems that carry real consequences",
+        "description": "TOVERNET is also the technology company behind KsięgaI, a financial and accounting platform integrated with the production environment of Poland's National e-Invoicing System (KSeF 2.0), an official Ministry of Finance system. KsięgaI handles sensitive business financial documents, tightly scoped user permissions, authentication mechanisms, KSeF tokens and certificates, audit events, and access to official Ministry of Finance services. That's practical experience building systems where data integrity, authorization, and auditability carry real financial and legal consequences.",
+        "connectionTitle": "The same approach runs POKIU's infrastructure",
+        "connections": [
+          "Role-based access control",
+          "Separation of public and protected data",
+          "Secure verification codes",
+          "Complete event and document history",
+          "Controlled access to original document scans",
+          "Document status verification",
+          "Auditable administrative actions",
+          "Registry-backed QR verification",
+          "Secure handling of sensitive credentials"
+        ],
+        "positioning": "TOVERNET is POKIU's technology and security partner. Verifying kynological records and issuing pedigrees remains POKIU's responsibility alone."
       }
     },
     "ksiegai": {

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import PanelShowcase from '@/components/breeders/PanelShowcase';
 import { buildMetadata } from '@/lib/seo';
+import { getGryfinSiteContent } from '@/lib/gryfin';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: 'pl' | 'en' } }): Promise<Metadata> {
   const isPolish = locale === 'pl';
@@ -23,11 +24,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   });
 }
 
-export default function GryfinYorkCaseStudy({ params: { locale } }: { params: { locale: string } }) {
+export default async function GryfinYorkCaseStudy({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('caseStudies');
-  const c = useTranslations('caseStudies.gryfinYork');
-  const b = useTranslations('breeders');
+  const t = await getTranslations('caseStudies');
+  const c = await getTranslations('caseStudies.gryfinYork');
+  const b = await getTranslations('breeders');
+
+  const gryfinContent = await getGryfinSiteContent();
 
   return (
     <div className="min-h-screen bg-slate-950">
@@ -123,7 +126,7 @@ export default function GryfinYorkCaseStudy({ params: { locale } }: { params: { 
               <p className="text-kennel-navy-600 leading-relaxed">{b('panelShowcase.subtitle')}</p>
             </div>
             <div className="max-w-4xl mx-auto">
-              <PanelShowcase />
+              <PanelShowcase content={gryfinContent} />
             </div>
           </div>
         </section>

@@ -186,7 +186,11 @@
       "ctaSecondary": "Poproś o bezpłatną wycenę",
       "flowLabel": "Panel → Strona",
       "statusFrom": "Dostępny",
-      "statusTo": "Zarezerwowany"
+      "statusTo": "Zarezerwowany",
+      "titleHighlightWord": "samodzielnie",
+      "mobileLivePill": "Zmiany pojawiają się na stronie od razu",
+      "mobileProofLine": "System działa już w hodowli Gryfin York",
+      "mobileProofStats": "13 psów · 2 mioty · 200+ zdjęć"
     },
     "proof": {
       "badge": "System działa już w hodowli GRYFIN YORK",
@@ -208,6 +212,7 @@
           "label": "treści dodaje sama hodowczyni"
         }
       ],
+      "disclaimer": "Gryfin York to żywy, działający przykład — nie limit tego, co możemy zbudować. Powiedz nam, jak ma wyglądać i działać Twoja strona, a przygotujemy wycenę i to zrealizujemy.",
       "linkLabel": "Zobacz stronę Gryfin York",
       "linkUrl": "https://hodowlagryfinyork.pl"
     },
@@ -709,6 +714,71 @@
       "cta": {
         "label": "Odwiedź POKIU",
         "url": "https://pokiu.pl"
+      },
+      "provenance": {
+        "title": "Nie tylko cyfrowy rodowód. Pełny łańcuch pochodzenia.",
+        "intro": "Gdy pies wchodzący do rejestru POKIU ma już rodowód wystawiony przez inną organizację (np. ZKwP, FCI), system nie zamienia tego dokumentu w martwy skan w folderze. Tworzy udokumentowany łańcuch pochodzenia: oryginalny rodowód → weryfikacja przez biuro POKIU → rejestracja w POKIU → cyfrowo weryfikowalny rodowód POKIU — i pokazuje każde z tych ogniw publicznie, na tej samej stronie, na której weryfikuje się rodowód.",
+        "timeline": [
+          {
+            "title": "Oryginalny rodowód",
+            "description": "Dokument wystawiony przez inną organizację kynologiczną — przesłany przez hodowcę lub biuro."
+          },
+          {
+            "title": "Weryfikacja przez POKIU",
+            "description": "Biuro sprawdza zgodność mikroczipa i rodziców z dokumentem źródłowym, ręcznie zaczernia dane osobowe i publikuje podgląd."
+          },
+          {
+            "title": "Rejestracja w POKIU",
+            "description": "Pies wchodzi do rejestru POKIU z pełnym odniesieniem do dokumentu źródłowego."
+          },
+          {
+            "title": "Cyfrowo weryfikowalny rodowód POKIU",
+            "description": "Wydany rodowód POKIU, z kodem QR prowadzącym do publicznego łańcucha pochodzenia."
+          }
+        ],
+        "layersTitle": "Cztery oddzielne warstwy — nigdy nie mylone ze sobą",
+        "layers": [
+          {
+            "title": "1. Dokument dołączony",
+            "description": "Czy oryginalny dokument źródłowy jest podpięty do rejestracji."
+          },
+          {
+            "title": "2. Zgodność z rejestrem POKIU",
+            "description": "Czy mikroczip i dane rodziców w dokumencie źródłowym zgadzają się z rejestrem POKIU."
+          },
+          {
+            "title": "3. Weryfikacja dokumentu źródłowego",
+            "description": "Czy biuro POKIU faktycznie zweryfikowało dokument, czy tylko go dołączyło."
+          },
+          {
+            "title": "4. Rodzicielstwo potwierdzone DNA",
+            "description": "Pokazywane wyłącznie, gdy istnieje realny wynik badania DNA — nigdy jako domyślny status."
+          }
+        ],
+        "exampleQuote": "Dokument POKIU został wydany na podstawie zweryfikowanego dokumentu źródłowego wystawionego przez [organizacja], numer [numer].",
+        "buyerQuote": "Kupujący, hodowca lub zagraniczna organizacja może samodzielnie potwierdzić autentyczność dokumentu, zgodność danych oraz źródło zarejestrowanego pochodzenia.",
+        "disclaimerTitle": "Ważne zastrzeżenia",
+        "disclaimers": [
+          "Wyświetlenie dokumentu źródłowego nie oznacza, że jego wystawca uznaje rodowód POKIU.",
+          "Weryfikacja cyfrowa nie stanowi dowodu pokrewieństwa genetycznego — wyłącznie badanie DNA potwierdza rodzicielstwo, i tylko wtedy system to pokazuje."
+        ]
+      },
+      "credibility": {
+        "title": "Zaplecze technologiczne z doświadczeniem w systemach o realnych konsekwencjach",
+        "description": "TOVERNET to również firma technologiczna stojąca za KsięgaI — platformą finansowo-księgową zintegrowaną ze środowiskiem produkcyjnym Krajowego Systemu e-Faktur (KSeF 2.0), oficjalnego systemu Ministerstwa Finansów. KsięgaI obsługuje wrażliwe dokumenty finansowe firm, precyzyjnie zakresowane uprawnienia użytkowników, mechanizmy uwierzytelniania, tokeny i certyfikaty KSeF, zdarzenia audytowe oraz dostęp do oficjalnych usług Ministerstwa Finansów. To praktyczne doświadczenie w budowaniu systemów, w których integralność danych, autoryzacja i audytowalność mają realne konsekwencje finansowe i prawne.",
+        "connectionTitle": "To samo podejście stoi za infrastrukturą POKIU",
+        "connections": [
+          "Kontrola dostępu oparta na rolach",
+          "Rozdzielenie danych publicznych i chronionych",
+          "Bezpieczne kody weryfikacyjne",
+          "Pełna historia zdarzeń i dokumentów",
+          "Kontrolowany dostęp do oryginalnych skanów dokumentów",
+          "Weryfikacja statusu dokumentów",
+          "Audytowalne działania administracyjne",
+          "Weryfikacja QR oparta na rejestrze",
+          "Bezpieczna obsługa poufnych danych uwierzytelniających"
+        ],
+        "positioning": "TOVERNET jest partnerem technologicznym i bezpieczeństwa POKIU. Za weryfikację danych kynologicznych i wydawanie rodowodów odpowiada wyłącznie POKIU."
       }
     },
     "ksiegai": {

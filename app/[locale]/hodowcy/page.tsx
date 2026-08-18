@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import {
   ArrowRight, ExternalLink, Globe2, Home, Camera, LayoutDashboard, PawPrint,
@@ -13,6 +13,7 @@ import CaseStudyPreview from '@/components/breeders/CaseStudyPreview';
 import QuoteForm from '@/components/breeders/QuoteForm';
 import { buildMetadata } from '@/lib/seo';
 import { getArticlesByCategory } from '@/lib/poradnik';
+import { getGryfinSiteContent, pickHeroPuppy, sexLabel } from '@/lib/gryfin';
 
 const ECOSYSTEM_ICONS = [Globe2, LayoutDashboard, Home, Database, Camera, MessageSquare, Search, Search, Languages, LifeBuoy];
 
@@ -33,9 +34,20 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   });
 }
 
-export default function BreedersPage({ params: { locale } }: { params: { locale: 'pl' | 'en' } }) {
+export default async function BreedersPage({ params: { locale } }: { params: { locale: 'pl' | 'en' } }) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('breeders');
+  const t = await getTranslations('breeders');
+
+  const gryfinContent = await getGryfinSiteContent();
+  const heroSource = pickHeroPuppy(gryfinContent);
+  const heroDog = heroSource
+    ? {
+        name: heroSource.name,
+        color: heroSource.color,
+        sexLabel: sexLabel(heroSource.sex),
+        photoUrl: heroSource.photo_url,
+      }
+    : null;
 
   return (
     <div className="min-h-screen bg-slate-950">
@@ -45,14 +57,19 @@ export default function BreedersPage({ params: { locale } }: { params: { locale:
         <BreederHero
           badge={t('hero.badge')}
           title={t('hero.title')}
+          titleHighlightWord={t('hero.titleHighlightWord')}
           subtitle={t('hero.subtitle')}
           ctaPrimary={t('hero.ctaPrimary')}
           ctaPrimaryHref="#case-study"
           ctaSecondary={t('hero.ctaSecondary')}
           ctaSecondaryHref="#quote"
           flowLabel={t('hero.flowLabel')}
+          mobileLivePill={t('hero.mobileLivePill')}
+          mobileProofLine={t('hero.mobileProofLine')}
+          mobileProofStats={t('hero.mobileProofStats')}
           statusFrom={t('hero.statusFrom')}
           statusTo={t('hero.statusTo')}
+          dog={heroDog}
         />
 
         {/* Proof strip */}
@@ -65,6 +82,9 @@ export default function BreedersPage({ params: { locale } }: { params: { locale:
                   <span className="text-kennel-teal-600 text-sm font-bold">{t('proof.badge')}</span>
                 </span>
               </div>
+              <p className="text-center text-sm sm:text-base text-kennel-navy-500 max-w-2xl mx-auto mb-8">
+                {t('proof.disclaimer')}
+              </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                 {t.raw('proof.items').map((item: { value: string; label: string }, i: number) => {
                   const tintBg = ['bg-kennel-teal-50', 'bg-kennel-pink-50', 'bg-kennel-lavender-50', 'bg-kennel-yellow-50'];
@@ -121,7 +141,7 @@ export default function BreedersPage({ params: { locale } }: { params: { locale:
             <div className="max-w-4xl mx-auto relative">
               <div className="absolute -inset-1.5 rounded-[2rem] bg-gradient-to-r from-kennel-pink-400 via-kennel-teal-400 to-kennel-lavender-400 opacity-70 blur-xl animate-pulse pointer-events-none" />
               <div className="relative">
-                <PanelShowcase />
+                <PanelShowcase content={gryfinContent} />
               </div>
             </div>
           </div>
