@@ -5,6 +5,7 @@ import { ArrowRight, BookOpen, Users, FileCheck, Trophy, Receipt, History, Build
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import PokPanelDemo from '@/components/PokPanelDemo';
+import PedigreeVerificationDemo from '@/components/kennelclub/PedigreeVerificationDemo';
 import { buildMetadata } from '@/lib/seo';
 import { getArticlesByCategory } from '@/lib/poradnik';
 
@@ -177,6 +178,7 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
                 );
               })}
             </div>
+            <PedigreeVerificationDemo content={t.raw('qrVerification.demo')} />
             <div className="text-center">
               <p className="text-gray-400 mb-3">{t('qrVerification.proof')}</p>
               <a

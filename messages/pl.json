@@ -470,7 +470,28 @@
         }
       ],
       "proof": "Dokładnie taki system działa dziś dla POKIU (psy.pokiu.pl).",
-      "proofCta": "Zobacz Case Study POKIU"
+      "proofCta": "Zobacz Case Study POKIU",
+      "demo": {
+        "intro": "Wypróbuj — to nie makieta, to ten sam mechanizm co w prawdziwym systemie POKIU.",
+        "fields": {
+          "breed": "Rasa",
+          "sex": "Płeć",
+          "birthDate": "Data urodzenia",
+          "pkrNumber": "Nr PKR",
+          "kennel": "Hodowla",
+          "parents": "Rodzice",
+          "breeder": "Hodowca",
+          "certificateNumber": "Nr certyfikatu"
+        },
+        "verifiedBadge": "Zweryfikowany w rejestrze",
+        "unlockLabel": "Odblokuj podgląd dokumentu kodem bezpieczeństwa",
+        "unlockPlaceholder": "Kod bezpieczeństwa",
+        "unlockHint": "Kod demo:",
+        "unlockButton": "Odblokuj",
+        "unlockedTitle": "Dokument oryginalny",
+        "unlockedBadge": "Podgląd rodowodu odblokowany — bez możliwości pobrania",
+        "errorLabel": "Nieprawidłowy kod bezpieczeństwa."
+      }
     },
     "multiTenant": {
       "title": "Jeden System, Wiele Związków",

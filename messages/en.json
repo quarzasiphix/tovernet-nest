@@ -470,7 +470,28 @@
         }
       ],
       "proof": "This exact system runs today for POKIU (psy.pokiu.pl).",
-      "proofCta": "See the POKIU Case Study"
+      "proofCta": "See the POKIU Case Study",
+      "demo": {
+        "intro": "Try it — this isn't a mockup, it's the same mechanism running in the real POKIU system.",
+        "fields": {
+          "breed": "Breed",
+          "sex": "Sex",
+          "birthDate": "Birth date",
+          "pkrNumber": "PKR no.",
+          "kennel": "Kennel",
+          "parents": "Parents",
+          "breeder": "Breeder",
+          "certificateNumber": "Certificate no."
+        },
+        "verifiedBadge": "Verified in the registry",
+        "unlockLabel": "Unlock the document preview with a security code",
+        "unlockPlaceholder": "Security code",
+        "unlockHint": "Demo code:",
+        "unlockButton": "Unlock",
+        "unlockedTitle": "Original document",
+        "unlockedBadge": "Pedigree preview unlocked — no download available",
+        "errorLabel": "Invalid security code."
+      }
     },
     "multiTenant": {
       "title": "One System, Many Clubs",
