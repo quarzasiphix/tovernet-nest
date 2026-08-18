@@ -237,7 +237,7 @@ function SzczeniatkaTab({ initial, photoUrl }: { initial: Puppy; photoUrl: strin
         <p className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: MUTED }}>Podgląd na stronie publicznej</p>
         <div className="rounded-2xl p-5" style={{ background: CREAM, border: `1px solid ${BORDER}` }}>
           <div className="rounded-2xl overflow-hidden bg-white kennel-card-shadow">
-            <div className="h-36 flex items-center justify-center overflow-hidden" style={{ background: PINK_SOFT }}>
+            <div className="aspect-square flex items-center justify-center overflow-hidden" style={{ background: PINK_SOFT }}>
               {photoUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={photoUrl} alt={puppy.name} className="h-full w-full object-cover" />

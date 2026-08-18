@@ -74,7 +74,7 @@ export default function BreederHero({
             </div>
 
             {/* Mobile-only heading: gradient emphasis on the key word. Desktop heading (below) is unchanged. */}
-            <h1 className="lg:hidden text-4xl font-bold text-kennel-navy-900 mb-4 leading-tight">
+            <h1 className="lg:hidden text-3xl font-bold text-kennel-navy-900 mb-4 leading-tight">
               {renderHighlightedTitle(title, titleHighlightWord)}
             </h1>
             <h1 className="hidden lg:block text-5xl font-bold text-kennel-navy-900 mb-6 leading-tight">
@@ -138,7 +138,7 @@ export default function BreederHero({
 
               {/* public dog profile card — bleeds toward the edge of the viewport to invite scrolling */}
               <div className="relative z-10 ml-auto w-[72%] translate-y-3 rounded-2xl bg-white border border-kennel-navy-400/10 kennel-card-shadow p-4 rotate-2">
-                <div className="h-28 rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3 overflow-hidden">
+                <div className="aspect-square rounded-xl bg-kennel-pink-100 flex items-center justify-center mb-3 overflow-hidden">
                   {dog?.photoUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={dog.photoUrl} alt={dog.name} className="h-full w-full object-cover" />
