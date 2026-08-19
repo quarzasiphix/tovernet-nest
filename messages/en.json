@@ -46,7 +46,7 @@
   },
   "whyWeKnow": {
     "title": "We Don't Learn This Industry After Signing the Contract",
-    "description": "We build software for breeders and kennel clubs, and at the same time we operate in international animal transport ourselves (Global Pet). We know animal documentation and provenance, working with breeders and owners, logistics, and organizational processes firsthand — not just from a requirements doc.",
+    "description": "We build software for breeders and kennel clubs, and at the same time we operate in international animal transport ourselves (GlobalPet Transport). We know animal documentation and provenance, working with breeders and owners, logistics, and organizational processes firsthand — not just from a requirements doc.",
     "items": [
       {
         "title": "Animal Documentation & Provenance",
@@ -58,7 +58,7 @@
       },
       {
         "title": "Animal Transport Logistics",
-        "description": "We run Global Pet — licensed animal transport across EU jurisdictions. We know the physical and legal constraints of that work firsthand."
+        "description": "We run GlobalPet Transport — licensed animal transport across EU jurisdictions. We know the physical and legal constraints of that work firsthand."
       },
       {
         "title": "Office Organizational Processes",
@@ -172,7 +172,7 @@
     "solutions": "Industry Solutions",
     "verticals": "Brands & Ventures",
     "ksiegai": "KsięgaI — Financial Infrastructure",
-    "globalPet": "Global Pet — Licensed Animal Logistics",
+    "globalPet": "GlobalPet Transport — Licensed Animal Logistics",
     "contact": "Contact",
     "copyright": "TOVERNET. Built systems scale. Tools don't.",
     "privacyPolicy": "Privacy Policy",
@@ -544,7 +544,7 @@
           "url": "/projekty/ksiegai"
         },
         {
-          "name": "Global Pet",
+          "name": "GlobalPet Transport",
           "badge": "Licensed Logistics",
           "description": "Licensed animal transport across EU jurisdictions with real-time compliance tracking.",
           "cta": "Coming Soon",

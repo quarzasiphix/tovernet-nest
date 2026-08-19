@@ -46,7 +46,7 @@
   },
   "whyWeKnow": {
     "title": "Nie Uczymy Się Branży Zwierzęcej Dopiero Po Podpisaniu Umowy",
-    "description": "Tworzymy oprogramowanie dla hodowców i organizacji kynologicznych, a jednocześnie sami działamy w międzynarodowym transporcie zwierząt (Global Pet). Znamy w praktyce dokumentację i pochodzenie zwierząt, współpracę z hodowcami i właścicielami, logistykę oraz procesy organizacyjne — nie tylko z opisu wymagań klienta.",
+    "description": "Tworzymy oprogramowanie dla hodowców i organizacji kynologicznych, a jednocześnie sami działamy w międzynarodowym transporcie zwierząt (GlobalPet Transport). Znamy w praktyce dokumentację i pochodzenie zwierząt, współpracę z hodowcami i właścicielami, logistykę oraz procesy organizacyjne — nie tylko z opisu wymagań klienta.",
     "items": [
       {
         "title": "Dokumentacja i Pochodzenie Zwierząt",
@@ -58,7 +58,7 @@
       },
       {
         "title": "Logistyka Transportu Zwierząt",
-        "description": "Prowadzimy Global Pet — licencjonowany transport zwierząt przez jurysdykcje UE. Znamy ograniczenia fizyczne i prawne tej pracy z pierwszej ręki."
+        "description": "Prowadzimy GlobalPet Transport — licencjonowany transport zwierząt przez jurysdykcje UE. Znamy ograniczenia fizyczne i prawne tej pracy z pierwszej ręki."
       },
       {
         "title": "Procesy Organizacyjne Biura",
@@ -172,7 +172,7 @@
     "solutions": "Rozwiązania Branżowe",
     "verticals": "Marki i przedsięwzięcia",
     "ksiegai": "KsięgaI — Infrastruktura Finansowa",
-    "globalPet": "Global Pet — Licencjonowany Transport Zwierząt",
+    "globalPet": "GlobalPet Transport — Licencjonowany Transport Zwierząt",
     "contact": "Kontakt",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie.",
     "privacyPolicy": "Polityka Prywatności",
@@ -544,7 +544,7 @@
           "url": "/projekty/ksiegai"
         },
         {
-          "name": "Global Pet",
+          "name": "GlobalPet Transport",
           "badge": "Licencjonowana Logistyka",
           "description": "Licencjonowany transport zwierząt przez jurysdykcje UE ze śledzeniem zgodności w czasie rzeczywistym.",
           "cta": "Wkrótce",

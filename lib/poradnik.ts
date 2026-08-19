@@ -1067,7 +1067,7 @@ export const poradnikArticles: PoradnikArticle[] = [
       {
         heading: 'Dowód, że to nie tylko teoria',
         paragraphs: [
-          'Sami stosujemy tę zasadę: KsięgaI (finanse) i Global Pet (transport zwierząt) to nasze własne, prowadzone na co dzień systemy — a nie tylko przykłady, które sprzedajemy klientom. Ten sam standard budujemy dla hodowli (Gryfin York), związków kynologicznych (POKIU) i firm z branży zwierzęcej.',
+          'Sami stosujemy tę zasadę: KsięgaI (finanse) i GlobalPet Transport (transport zwierząt) to nasze własne, prowadzone na co dzień systemy — a nie tylko przykłady, które sprzedajemy klientom. Ten sam standard budujemy dla hodowli (Gryfin York), związków kynologicznych (POKIU) i firm z branży zwierzęcej.',
         ],
       },
     ],
@@ -1115,7 +1115,7 @@ export const poradnikArticles: PoradnikArticle[] = [
       {
         heading: 'Proof this isn\'t just theory',
         paragraphs: [
-          'We apply this ourselves: KsięgaI (finance) and Global Pet (animal transport) are our own systems, run day to day — not just examples we sell to clients. We build the same standard for kennels (Gryfin York), kennel clubs (POKIU), and animal-industry companies.',
+          'We apply this ourselves: KsięgaI (finance) and GlobalPet Transport (animal transport) are our own systems, run day to day — not just examples we sell to clients. We build the same standard for kennels (Gryfin York), kennel clubs (POKIU), and animal-industry companies.',
         ],
       },
     ],

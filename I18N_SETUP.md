@@ -84,7 +84,7 @@ All content is translated including:
 - Hero section
 - Value propositions
 - What We Build section
-- Operating Verticals (KsięgaI & Global Pet)
+- Operating Verticals (KsięgaI & GlobalPet Transport)
 - Why Custom section
 - Engagement model
 - Contact section

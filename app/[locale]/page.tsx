@@ -278,7 +278,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                 </div>
               </div>
 
-              {/* Global Pet */}
+              {/* GlobalPet Transport */}
               <div className="group relative bg-gradient-to-br from-globalpet-900/40 to-green-900/40 border border-globalpet-500/30 rounded-3xl p-10 hover-lift magical-glow-green overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-globalpet-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
                 <div className="relative z-10">

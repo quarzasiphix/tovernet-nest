@@ -28,7 +28,7 @@
 ### ✅ Design Features
 - **Magical purplish-blue theme** - TOVERNET brand colors
 - **KsięgaI showcase** - Purple/blue gradient with accounting icons
-- **Global Pet showcase** - Green gradient with paw prints and transport icons
+- **GlobalPet Transport showcase** - Green gradient with paw prints and transport icons
 - Responsive design (mobile-first)
 - Smooth animations and hover effects
 - Magical glow effects on key elements
@@ -36,7 +36,7 @@
 ### ✅ Sections
 1. **Hero Section** - Core positioning and value proposition
 2. **What We Architect** - Four key service areas
-3. **Live Operating Verticals** - KsięgaI and Global Pet showcases
+3. **Live Operating Verticals** - KsięgaI and GlobalPet Transport showcases
 4. **Why Custom** - Positioning statement
 5. **Engagement Model** - 4-step process
 6. **Contact Section** - CTA for infrastructure review
@@ -47,7 +47,7 @@
 ```css
 TOVERNET:    #6b5fff → #8b5cf6 → #a78bfa (purplish-blue)
 KsięgaI:     #7c3aed → #8b5cf6 → #a78bfa (purple tones)
-Global Pet:  #22c55e → #4ade80 → #86efac (green tones)
+GlobalPet Transport:  #22c55e → #4ade80 → #86efac (green tones)
 ```
 
 ## Key Features
@@ -64,7 +64,7 @@ Global Pet:  #22c55e → #4ade80 → #86efac (green tones)
 - Document reconciliation messaging
 - Verified business network highlight
 
-### Global Pet Vertical (Green)
+### GlobalPet Transport Vertical (Green)
 - Paw Print, Plane, and Heart icons
 - "EU Pet Transport" badge
 - "Coming Soon" status
@@ -98,7 +98,7 @@ href="mailto:contact@tovernet.online"
 
 ### Update Links
 - KsięgaI: Line 245 (currently https://ksiegai.pl)
-- Add Global Pet link when ready
+- Add GlobalPet Transport link when ready
 
 ### Add Google Analytics
 Add to `app/layout.tsx` in the metadata export.

@@ -23,8 +23,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? 'Nasze Projekty | TOVERNET'
       : 'Our Projects | TOVERNET',
     description: isPolish
-      ? 'Nasze własne marki (KsięgaI, Global Pet) i realizacje dla klientów (Nekrolog Łódź, Gryfin York, POK CRM i inne) — systemy, które TOVERNET projektuje, buduje i utrzymuje.'
-      : 'Our own brands (KsięgaI, Global Pet) and client work (Nekrolog Łódź, Gryfin York, POK CRM, and more) — systems TOVERNET designs, builds, and maintains.',
+      ? 'Nasze własne marki (KsięgaI, GlobalPet Transport) i realizacje dla klientów (Nekrolog Łódź, Gryfin York, POK CRM i inne) — systemy, które TOVERNET projektuje, buduje i utrzymuje.'
+      : 'Our own brands (KsięgaI, GlobalPet Transport) and client work (Nekrolog Łódź, Gryfin York, POK CRM, and more) — systems TOVERNET designs, builds, and maintains.',
     keywords: isPolish
       ? ['portfolio TOVERNET', 'realizacje dla klientów', 'systemy dla branży zwierzęcej', 'przykłady stron dla hodowli']
       : ['TOVERNET portfolio', 'client case studies', 'animal industry systems'],

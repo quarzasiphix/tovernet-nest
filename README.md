@@ -4,7 +4,7 @@ Digital infrastructure for businesses that cannot afford chaos.
 
 ## Overview
 
-TOVERNET is a Next.js website showcasing our digital operating layer - custom business systems, infrastructure, and our live operating verticals (KsięgaI and Global Pet).
+TOVERNET is a Next.js website showcasing our digital operating layer - custom business systems, infrastructure, and our live operating verticals (KsięgaI and GlobalPet Transport).
 
 ## Features
 
@@ -77,7 +77,7 @@ The website includes comprehensive SEO optimization:
 
 - **TOVERNET**: Purplish-blue gradient (#6b5fff to #a78bfa)
 - **KsięgaI**: Purple tones (#7c3aed to #a78bfa)
-- **Global Pet**: Green tones (#22c55e to #86efac)
+- **GlobalPet Transport**: Green tones (#22c55e to #86efac)
 
 ## License
 
