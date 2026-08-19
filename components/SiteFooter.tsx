@@ -61,7 +61,8 @@ export default function SiteFooter({ locale }: { locale: string }) {
                   </a>
                 </li>
                 <li>
-                  <a href="https://globalpet.online" target="_blank" rel="noopener noreferrer" className="hover:text-globalpet-400 transition-colors">
+                  {/* TODO: swap back to https://globalpet.online once GlobalPet Transport's licence comes through */}
+                  <a href="https://www.facebook.com/share/194QgDs1Nu/" target="_blank" rel="noopener noreferrer" className="hover:text-globalpet-400 transition-colors">
                     {t('globalPet')}
                   </a>
                 </li>
