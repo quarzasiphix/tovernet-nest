@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/pdf/",
     },
     sitemap: "https://tovernet.online/sitemap.xml",
   };
