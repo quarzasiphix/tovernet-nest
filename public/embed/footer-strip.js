@@ -1,10 +1,17 @@
 /*
  * Tovernet embeddable footer strip.
  * Usage: <script src="https://tovernet.online/embed/footer-strip.js" data-client="kolorowa-pasja" async></script>
- * Optional attrs: data-mobile-safe-bottom="80" (px reserved on mobile for e.g. a sticky call button)
+ * Optional attrs: data-mobile-safe-bottom="80" (extra px to force-reserve on mobile, on top of
+ *                 whatever is auto-detected — most sites won't need this, see below)
  *                 data-config-url="https://tovernet.online/embed/footer-strip.config.json"
  * Content (headline/tagline/logo/url) is fetched live from data-config-url so editing that
  * file on tovernet.online updates every site embedding this script, no client redeploy needed.
+ *
+ * Mobile sticky bars: many client sites have a fixed call/WhatsApp bar pinned to the bottom
+ * of the viewport on mobile, which would otherwise sit on top of this strip. The script
+ * auto-detects any fixed/sticky element hugging the bottom of the viewport at render time and
+ * reserves that much extra bottom padding — no per-site config needed. data-mobile-safe-bottom
+ * is only a manual top-up for cases the heuristic misses (e.g. the bar mounts later than us).
  */
 (function () {
   var currentScript = document.currentScript;
@@ -54,16 +61,42 @@
     document.head.appendChild(style);
   }
 
+  function detectStickyBottomHeight(stripEl) {
+    if (window.innerWidth > 639) return 0;
+    var maxH = 0;
+    var candidates = document.querySelectorAll('body *');
+    for (var i = 0; i < candidates.length; i++) {
+      var el = candidates[i];
+      if (el === stripEl || stripEl.contains(el) || el.contains(stripEl)) continue;
+      var cs = window.getComputedStyle(el);
+      if (cs.position !== 'fixed' && cs.position !== 'sticky') continue;
+      if (cs.visibility === 'hidden' || cs.display === 'none' || parseFloat(cs.opacity) === 0) continue;
+      var rect = el.getBoundingClientRect();
+      if (rect.height <= 0 || rect.height > 200) continue;
+      if (rect.width < window.innerWidth * 0.5) continue;
+      var distFromBottom = window.innerHeight - rect.bottom;
+      if (distFromBottom < -2 || distFromBottom > 24) continue;
+      if (rect.height > maxH) maxH = rect.height;
+    }
+    return maxH;
+  }
+
+  function applyMobileSafeBottom(a) {
+    if (window.innerWidth > 639) {
+      a.style.paddingBottom = '';
+      return;
+    }
+    var detected = detectStickyBottomHeight(a);
+    var extra = Math.max(detected, mobileSafeBottom);
+    a.style.paddingBottom = extra > 0 ? (16 + extra) + 'px' : '';
+  }
+
   function render(cfg) {
     var a = document.createElement('a');
     a.className = 'tvn-strip';
     a.href = cfg.url;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-
-    if (mobileSafeBottom > 0 && window.matchMedia('(max-width: 639px)').matches) {
-      a.style.paddingBottom = (16 + mobileSafeBottom) + 'px';
-    }
 
     var logo = document.createElement('span');
     logo.className = 'tvn-logo';
@@ -95,6 +128,14 @@
     a.appendChild(arrow);
 
     currentScript.parentNode.insertBefore(a, currentScript);
+
+    applyMobileSafeBottom(a);
+    setTimeout(function () { applyMobileSafeBottom(a); }, 500);
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { applyMobileSafeBottom(a); }, 150);
+    });
   }
 
   fetch(configUrl, { cache: 'no-store' })
