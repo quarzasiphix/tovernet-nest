@@ -56,7 +56,7 @@ export default function SiteFooter({ locale }: { locale: string }) {
               <h4 className="text-white font-semibold mb-4">{t('verticals')}</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li>
-                  <a href="https://ksiegai.pl" target="_blank" rel="noopener noreferrer" className="hover:text-ksiegai-400 transition-colors">
+                  <a href={`/${locale}/projekty/ksiegai`} className="hover:text-ksiegai-400 transition-colors">
                     {t('ksiegai')}
                   </a>
                 </li>
