@@ -1,0 +1,29 @@
+{
+  "default": {
+    "headline": "Strona stworzona przez",
+    "brand": "Tovernet",
+    "tagline": "Nowoczesne strony i systemy dla Twojego biznesu",
+    "url": "https://tovernet.online",
+    "logo": "https://tovernet.online/embed/tovernet-logo.png"
+  },
+  "clients": {
+    "kolorowa-pasja": {
+      "url": "https://tovernet.online/pl/projekty/kolorowa-pasja/"
+    },
+    "gryfin-york": {
+      "url": "https://tovernet.online/pl/projekty/gryfin-york/"
+    },
+    "nekrolog-lodz": {
+      "url": "https://tovernet.online/pl/projekty/nekrolog-lodz/"
+    },
+    "klepsydra": {
+      "url": "https://tovernet.online/pl/projekty/klepsydra/"
+    },
+    "ksiegai": {
+      "url": "https://tovernet.online/pl/projekty/ksiegai/"
+    },
+    "ksef-bez-paniki": {
+      "url": "https://tovernet.online/pl/projekty/ksiegai/"
+    }
+  }
+}
