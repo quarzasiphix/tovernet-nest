@@ -163,7 +163,7 @@ export default async function BreedersPage({ params: { locale } }: { params: { l
                 ctaOpenLabel={t('caseStudy.ctaOpenLabel')}
                 ctaOpenHref="https://hodowlagryfinyork.pl"
                 ctaPanelLabel={t('caseStudy.ctaPanelLabel')}
-                ctaPanelHref="#panel-showcase"
+                ctaPanelHref={`/${locale}/projekty/gryfin-york`}
               />
             </div>
 
@@ -238,6 +238,56 @@ export default async function BreedersPage({ params: { locale } }: { params: { l
                     <p className="text-gray-200 leading-relaxed">{item}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Kolorowa Pasja CTA */}
+        <section className="py-20" style={{ background: '#121212' }}>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden"
+              style={{ background: '#1A1F2C', border: '1px solid rgba(212,175,55,0.35)' }}
+            >
+              <div
+                className="absolute -top-24 -right-24 h-64 w-64 rounded-full blur-3xl opacity-20 pointer-events-none"
+                style={{ background: '#D4AF37' }}
+              />
+              <div
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 relative z-10"
+                style={{ background: 'rgba(212,175,55,0.12)', border: '1px solid rgba(212,175,55,0.35)' }}
+              >
+                <PawPrint className="h-4 w-4" style={{ color: '#D4AF37' }} />
+                <span className="text-sm font-semibold" style={{ color: '#F4CF63' }}>
+                  {t('kolorowaPasjaCta.badge')}
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 relative z-10">
+                {t('kolorowaPasjaCta.title')}
+              </h2>
+              <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-8 relative z-10 leading-relaxed">
+                {t('kolorowaPasjaCta.description')}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 relative z-10">
+                <a
+                  href={`/${locale}/projekty/kolorowa-pasja`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-transform hover:scale-105"
+                  style={{ background: 'linear-gradient(135deg, #D4AF37 0%, #F4CF63 50%, #D4AF37 100%)', color: '#121212' }}
+                >
+                  {t('kolorowaPasjaCta.cta')}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://kolorowapasja.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border transition-colors"
+                  style={{ borderColor: 'rgba(212,175,55,0.35)', color: '#F4CF63' }}
+                >
+                  {t('kolorowaPasjaCta.visitCta')}
+                  <ExternalLink className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>

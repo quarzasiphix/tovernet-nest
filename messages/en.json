@@ -273,6 +273,13 @@
         "TOVERNET can optionally provide hosting, maintenance and future development."
       ]
     },
+    "kolorowaPasjaCta": {
+      "badge": "Another build",
+      "title": "Another simple website for a dog breeder.",
+      "description": "Everything is possible — from a minimal one-pager to a full system with an admin panel. Kolorowa Pasja is an example of the simpler end: a clean kennel website for Yorkshire and Biewer Terriers, no extra features, just exactly what's needed.",
+      "cta": "See the Kolorowa Pasja case study",
+      "visitCta": "Visit the kennel site"
+    },
     "pricing": {
       "title": "A quote tailored to your kennel",
       "description": "Every kennel starts from a different place. We first check what you already have and what you need. Then we present a clear scope, timeline and quote before any work begins.",

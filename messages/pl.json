@@ -273,6 +273,13 @@
         "TOVERNET może opcjonalnie zapewnić hosting, opiekę i dalszy rozwój."
       ]
     },
+    "kolorowaPasjaCta": {
+      "badge": "Kolejna realizacja",
+      "title": "Kolejna prosta strona dla hodowcy psów.",
+      "description": "Wszystko jest możliwe — od minimalnej wizytówki po pełny system z panelem. Kolorowa Pasja to przykład prostszego podejścia: przejrzysta strona hodowli Yorkshire Terrierów i Biewer Terrierów, bez zbędnych funkcji, dokładnie tyle, ile potrzeba.",
+      "cta": "Zobacz case study Kolorowa Pasja",
+      "visitCta": "Odwiedź stronę hodowli"
+    },
     "pricing": {
       "title": "Wycena dopasowana do Twojej hodowli",
       "description": "Każda hodowla zaczyna z innego miejsca. Najpierw sprawdzamy, co już posiadasz i czego potrzebujesz. Następnie przedstawiamy jasny zakres, termin i wycenę przed rozpoczęciem pracy.",
