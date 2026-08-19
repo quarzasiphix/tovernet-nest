@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import {
-  ArrowRight, PawPrint, Building2, Truck, Calculator, Receipt, Plane, FileCheck, Users, ClipboardList, Sparkles,
+  ArrowRight, PawPrint, Building2, Truck, Calculator, Receipt, Plane, FileCheck, Users, ClipboardList, Sparkles, Facebook,
 } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -303,15 +303,26 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="https://globalpet.online"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-globalpet-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-                  >
-                    {t('verticals.globalPet.cta')}
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="https://globalpet.online"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-globalpet-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                    >
+                      {t('verticals.globalPet.cta')}
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/share/194QgDs1Nu/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GlobalPet Transport na Facebooku"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-globalpet-500/20 border border-globalpet-400/30 text-globalpet-300 hover:bg-globalpet-500/30 hover:text-white transition-colors"
+                    >
+                      <Facebook className="h-5 w-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
