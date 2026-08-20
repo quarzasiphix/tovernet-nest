@@ -14,11 +14,13 @@ type QuoteFormContent = {
   title: string;
   subtitle: string;
   steps: string[];
-  step1: { kennelName: string; breed: string; existingSite: string };
+  step1: { kennelName: string; breed: string; existingSite: string; domainKnownLabel: string; domainKnownOptions: string[] };
   step2: {
     siteTypeLabel: string;
     siteTypeNew: string;
     siteTypeMigration: string;
+    migrationLabel: string;
+    migrationOptions: string[];
     functionsLabel: string;
     functions: string[];
     languagesLabel: string;
@@ -26,23 +28,27 @@ type QuoteFormContent = {
     dogCountLabel: string;
     dogCountOptions: string[];
   };
-  step3: { contactName: string; email: string; phone: string; notes: string };
+  step3: { contactName: string; email: string; phone: string; currentProblem: string; notes: string };
   nav: { back: string; next: string; submit: string };
   thankYou: { title: string; message: string };
   emailSubject: string;
+  assessmentNote: string;
 };
 
 type FormState = {
   kennelName: string;
   breed: string;
   existingSite: string;
+  domainKnown: string;
   siteType: string;
+  migrationNeeded: string;
   functions: string[];
   languages: string[];
   dogCount: string;
   contactName: string;
   email: string;
   phone: string;
+  currentProblem: string;
   notes: string;
 };
 
@@ -50,13 +56,16 @@ const EMPTY: FormState = {
   kennelName: '',
   breed: '',
   existingSite: '',
+  domainKnown: '',
   siteType: '',
+  migrationNeeded: '',
   functions: [],
   languages: [],
   dogCount: '',
   contactName: '',
   email: '',
   phone: '',
+  currentProblem: '',
   notes: '',
 };
 
@@ -69,13 +78,16 @@ function buildMailBody(f: FormState, c: QuoteFormContent) {
     `${c.step1.kennelName}: ${f.kennelName}`,
     `${c.step1.breed}: ${f.breed}`,
     f.existingSite ? `${c.step1.existingSite}: ${f.existingSite}` : null,
+    f.domainKnown ? `${c.step1.domainKnownLabel}: ${f.domainKnown}` : null,
     '',
     f.siteType ? `${c.step2.siteTypeLabel}: ${f.siteType}` : null,
+    f.migrationNeeded ? `${c.step2.migrationLabel}: ${f.migrationNeeded}` : null,
     f.functions.length ? `${c.step2.functionsLabel}: ${f.functions.join(', ')}` : null,
     f.languages.length ? `${c.step2.languagesLabel}: ${f.languages.join(', ')}` : null,
     f.dogCount ? `${c.step2.dogCountLabel}: ${f.dogCount}` : null,
     '',
     f.phone ? `${c.step3.phone}: ${f.phone}` : null,
+    f.currentProblem ? `${c.step3.currentProblem}: ${f.currentProblem}` : null,
     f.notes ? `${c.step3.notes}: ${f.notes}` : null,
   ].filter((l): l is string => l !== null);
   return lines.join('\n');
@@ -102,13 +114,16 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
           kennelName: form.kennelName,
           breed: form.breed,
           existingSite: form.existingSite,
+          domainKnown: form.domainKnown,
           siteType: form.siteType,
+          migrationNeeded: form.migrationNeeded,
           functions: form.functions,
           languages: form.languages,
           dogCount: form.dogCount,
           contactName: form.contactName,
           email: form.email,
           phone: form.phone,
+          currentProblem: form.currentProblem,
           notes: form.notes,
         }),
       });
@@ -176,6 +191,21 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
               style={{ border: `1.5px solid ${BORDER}`, color: NAVY }}
             />
           </div>
+          <div>
+            <label className="text-sm font-semibold mb-2 block" style={{ color: NAVY }}>{c.step1.domainKnownLabel}</label>
+            <div className="flex flex-wrap gap-2">
+              {c.step1.domainKnownOptions.map((opt) => (
+                <button
+                  key={opt}
+                  onClick={() => set('domainKnown', opt)}
+                  className="h-9 px-3 rounded-full text-xs font-bold transition"
+                  style={form.domainKnown === opt ? { background: TEAL, color: 'white' } : { border: `1.5px solid ${BORDER}`, color: MUTED }}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
@@ -190,6 +220,21 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
                   onClick={() => set('siteType', opt)}
                   className="h-11 rounded-xl text-sm font-semibold transition"
                   style={form.siteType === opt ? { background: TEAL, color: 'white' } : { border: `1.5px solid ${BORDER}`, color: MUTED }}
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <label className="text-sm font-semibold mb-2 block" style={{ color: NAVY }}>{c.step2.migrationLabel}</label>
+            <div className="flex flex-wrap gap-2">
+              {c.step2.migrationOptions.map((opt) => (
+                <button
+                  key={opt}
+                  onClick={() => set('migrationNeeded', opt)}
+                  className="h-9 px-3 rounded-full text-xs font-bold transition"
+                  style={form.migrationNeeded === opt ? { background: TEAL, color: 'white' } : { border: `1.5px solid ${BORDER}`, color: MUTED }}
                 >
                   {opt}
                 </button>
@@ -275,6 +320,16 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
             />
           </div>
           <div>
+            <label className="text-sm font-semibold mb-1.5 block" style={{ color: NAVY }}>{c.step3.currentProblem}</label>
+            <textarea
+              value={form.currentProblem}
+              onChange={(e) => set('currentProblem', e.target.value)}
+              rows={2}
+              className="w-full rounded-xl px-4 py-3 text-sm outline-none resize-none"
+              style={{ border: `1.5px solid ${BORDER}`, color: NAVY }}
+            />
+          </div>
+          <div>
             <label className="text-sm font-semibold mb-1.5 block" style={{ color: NAVY }}>{c.step3.notes}</label>
             <textarea
               value={form.notes}
@@ -310,6 +365,7 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
           )}
         </button>
       </div>
+      <p className="text-xs text-center mt-4" style={{ color: MUTED }}>{c.assessmentNote}</p>
     </div>
   );
 }

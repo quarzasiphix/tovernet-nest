@@ -190,14 +190,14 @@
   "breeders": {
     "hero": {
       "badge": "For Purebred Dog Breeders",
-      "title": "A kennel website you can update yourself",
-      "subtitle": "Add a dog, litter or puppy in your panel and it appears immediately on your own website—without waiting for a developer or depending on Facebook.",
-      "ctaPrimary": "See the working system",
-      "ctaSecondary": "Request a free quote",
+      "title": "A kennel website and system built around how you actually work",
+      "subtitle": "We can build a new website and panel from scratch, extend what you already have, migrate your kennel away from a previous provider, or help you regain control of your domain, content and accounts. From presenting dogs and litters to enquiries, reservations, documents and everyday kennel management.",
+      "ctaPrimary": "See what we can do",
+      "ctaSecondary": "Tell us about your kennel",
       "flowLabel": "Panel → Website",
       "statusFrom": "Available",
       "statusTo": "Reserved",
-      "titleHighlightWord": "yourself",
+      "titleHighlightWord": "actually",
       "mobileLivePill": "Changes appear on the website right away",
       "mobileProofLine": "The system already runs at Gryfin York kennel",
       "mobileProofStats": "13 dogs · 2 litters · 200+ photos"
@@ -278,55 +278,32 @@
         "The project can be moved or handed to another developer.",
         "There's no compulsory monthly software licence.",
         "TOVERNET can optionally provide hosting, maintenance and future development."
-      ]
-    },
-    "kolorowaPasjaCta": {
-      "badge": "Another build",
-      "title": "Another simple website for a dog breeder.",
-      "description": "Everything is possible — from a minimal one-pager to a full system with an admin panel. Kolorowa Pasja is an example of the simpler end: a clean kennel website for Yorkshire and Biewer Terriers, no extra features, just exactly what's needed.",
-      "cta": "See the Kolorowa Pasja case study",
-      "visitCta": "Visit the kennel site"
-    },
-    "pricing": {
-      "title": "A quote tailored to your kennel",
-      "description": "Every kennel starts from a different place. We first check what you already have and what you need. Then we present a clear scope, timeline and quote before any work begins.",
-      "variesTitle": "The scope depends on what you already have",
-      "variesItems": [
-        "Migrating an old website",
-        "Importing dozens of dog profiles",
-        "Transferring hundreds of photos",
-        "Multiple language versions",
-        "Domain and professional email setup",
-        "Custom reservation flows",
-        "Buyer applications",
-        "Pedigrees or documents",
-        "Additional panel functions"
       ],
-      "cta": "Request a free quote"
+      "intro": "Owning an independent website is different from renting visibility on a portal, relying exclusively on Facebook, or depending on a contractor-controlled account. Portals and social media can stay useful distribution channels — the goal is to stop them being your kennel’s only digital foundation."
     },
     "process": {
       "title": "How we work together",
-      "subtitle": "A simple, transparent process from the first conversation to launch.",
+      "subtitle": "A simple, understandable, low-risk process — even if you’re not technical.",
       "steps": [
         {
-          "title": "Tell us about your kennel",
-          "description": "A short conversation about what you need."
+          "title": "Understanding your situation",
+          "description": "Current website, domain, accounts, problems and the outcome you want."
         },
         {
-          "title": "We review your materials",
-          "description": "We check your current website, photos and data."
+          "title": "Project and access map",
+          "description": "We decide what to keep, migrate, rebuild or recover."
         },
         {
-          "title": "We design the website and panel",
-          "description": "A design built around your kennel."
+          "title": "Design and implementation",
+          "description": "Public website, panel and selected integrations."
         },
         {
-          "title": "We import your dogs and content",
-          "description": "We migrate your data, photos and profiles."
+          "title": "Migration and launch",
+          "description": "Content transfer, redirect plan, testing and deployment."
         },
         {
-          "title": "Training and launch",
-          "description": "We train you on the panel and launch the site."
+          "title": "Ongoing support",
+          "description": "Maintenance, development, analytics, SEO and new functionality."
         }
       ]
     },
@@ -341,7 +318,13 @@
       "step1": {
         "kennelName": "Kennel name",
         "breed": "Breed",
-        "existingSite": "Existing website or Facebook page (optional)"
+        "existingSite": "Existing website or Facebook page (optional)",
+        "domainKnownLabel": "Do you know who controls your domain?",
+        "domainKnownOptions": [
+          "Yes",
+          "No",
+          "I don’t have a domain yet"
+        ]
       },
       "step2": {
         "siteTypeLabel": "New website or migrating an existing one?",
@@ -369,12 +352,19 @@
           "6-15",
           "16-30",
           "30+"
+        ],
+        "migrationLabel": "Do you need migration from an old website or another provider?",
+        "migrationOptions": [
+          "Yes",
+          "No",
+          "Not sure"
         ]
       },
       "step3": {
         "contactName": "Full name",
         "email": "Email address",
         "phone": "Phone (optional)",
+        "currentProblem": "Current problem with your website or provider (optional)",
         "notes": "Additional information"
       },
       "nav": {
@@ -386,24 +376,224 @@
         "title": "Thank you!",
         "message": "We've opened your email app with a ready-to-send message — just hit send. We'll get back to you with a free quote as soon as we can."
       },
-      "emailSubject": "Kennel website quote"
+      "emailSubject": "Kennel website quote",
+      "assessmentNote": "The initial assessment is free. This enquiry is not a binding order. Pricing is always individual — we check what you already have before proposing to replace it. We only build what you actually need."
     },
     "finalCta": {
-      "title": "Build your own place for your kennel",
-      "subtitle": "Facebook can help you get attention. Your own website builds trust, holds your kennel's history, and stays under your control.",
-      "ctaPrimary": "Request a quote",
-      "ctaSecondary": "See Gryfin York"
+      "title": "Show us how your kennel works today",
+      "subtitle": "Whether you’re starting from Facebook, an old WordPress site, an unfinished website, or a working system that needs to grow — we’ll check the situation and suggest a sensible next step.",
+      "ctaPrimary": "Request a free assessment",
+      "ctaSecondary": "See our work"
     },
-    "kennelClubCredibility": {
-      "title": "The same team also builds systems for kennel clubs",
-      "description": "Pedigree registry, breeder panel, and QR document verification for POKIU — built and maintained by us.",
-      "cta": "See POKIU"
+    "situation": {
+      "title": "Wherever your kennel is today",
+      "subtitle": "Recognise your situation? Let’s start there.",
+      "cards": [
+        {
+          "title": "You don’t have your own website yet",
+          "description": "We build your independent kennel website from scratch — domain, visual identity, content structure and enquiry flow."
+        },
+        {
+          "title": "You have an old or hard-to-use website",
+          "description": "We review your current website, keep the content worth keeping, and rebuild the experience without forcing you to start over."
+        },
+        {
+          "title": "You have to ask a contractor for every change",
+          "description": "We introduce a panel for managing dogs, litters, puppies, photos, reviews, availability and enquiries — you make the changes yourself."
+        },
+        {
+          "title": "You don’t know who controls your domain and accounts",
+          "description": "We map your digital assets and help you organise access to your domain, hosting, website, email, analytics and social profiles."
+        },
+        {
+          "title": "You have a problem with a previous contractor",
+          "description": "We technically assess what exists, what was actually delivered, who controls each asset, and how to transfer the project safely."
+        },
+        {
+          "title": "Facebook or a portal is your only channel",
+          "description": "We build an independent source of truth that stays under your control, while Facebook and portals keep working as marketing channels."
+        }
+      ]
     },
-    "simpleStart": {
-      "title": "Not every kennel needs the full panel from day one",
-      "description": "For Kolorowa Pasja we built a simple, elegant storefront site and handle its ongoing maintenance — a good starting point before growing into a full system like Gryfin York.",
-      "caseStudyCta": "See the case study",
-      "visitCta": "Visit Kolorowa Pasja"
+    "capabilities": {
+      "title": "What we can build for your kennel",
+      "subtitle": "We size the exact scope to how your kennel actually works — not one fixed package.",
+      "website": {
+        "title": "Public website and identity",
+        "items": [
+          "Unique visual design",
+          "Your own domain",
+          "Kennel story and values",
+          "Breeds and specialization",
+          "Breeding dogs",
+          "Individual dog profiles",
+          "Achievements and health information",
+          "Planned and historical litters",
+          "Available puppies",
+          "Gallery",
+          "Reviews",
+          "Reservation rules",
+          "Contact information",
+          "Multilingual versions",
+          "Mobile optimization",
+          "Local and breed-specific SEO"
+        ]
+      },
+      "panel": {
+        "title": "Breeder management panel",
+        "note": "The exact modules are chosen to fit how you work — not every project automatically includes every feature.",
+        "items": [
+          "Dogs",
+          "Females and stud dogs",
+          "Litters",
+          "Planned litters",
+          "Puppies",
+          "Availability statuses",
+          "Prices",
+          "Pickup dates",
+          "Photos and documents",
+          "Reviews",
+          "Enquiries",
+          "Multiple users and permissions",
+          "Automatic publication on the public website"
+        ]
+      },
+      "enquiries": {
+        "title": "Enquiries, reservations and client communication",
+        "note": "Not every feature below is production-ready in every project — we distinguish what already works from what can still be developed.",
+        "items": [
+          "Structured puppy enquiries",
+          "Reservation statuses",
+          "Internal notes",
+          "Contact history",
+          "Automatic confirmations",
+          "Collecting the information needed before a reservation",
+          "Simplified communication with future owners"
+        ]
+      },
+      "documents": {
+        "title": "Documents and kennel-club information",
+        "note": "We don’t assume automatic integration with POKIU or any other kennel-club system for every breeder — it depends on the specific situation and permissions.",
+        "items": [
+          "Pedigrees",
+          "Dog and litter documents",
+          "Health-test information",
+          "Downloadable files",
+          "Microchip information",
+          "Ownership and registration records",
+          "Links to public verification or kennel-club systems where an appropriate integration exists"
+        ]
+      }
+    },
+    "migration": {
+      "title": "You don’t have to start from zero",
+      "intro": "We assess every situation individually before changing anything.",
+      "items": [
+        "Auditing the current website",
+        "Transferring content from WordPress or another CMS",
+        "Preserving useful text, photos and search visibility",
+        "Identifying the domain registrar and hosting provider",
+        "Organizing administrative access",
+        "Transferring or rebuilding email",
+        "Creating backups before migration",
+        "Planning redirects from old URLs",
+        "Minimizing disruption during the change",
+        "Separating assets owned by the breeder from tools controlled by the previous provider",
+        "Coordinating the technical handover"
+      ]
+    },
+    "contractors": {
+      "title": "We help you stay in control of contractors and digital services",
+      "intro": "Breeders often work with several providers at once:",
+      "providerTypes": [
+        "Website developers",
+        "Hosting companies",
+        "Domain registrars",
+        "SEO agencies",
+        "Advertising specialists",
+        "Photographers",
+        "Social-media managers",
+        "Portals and listing platforms"
+      ],
+      "helpIntro": "We can help you:",
+      "helpItems": [
+        "Understand what you’re actually paying for",
+        "Verify who controls the domain, hosting and accounts",
+        "Check whether agreed technical work is actually visible",
+        "Organize access and ownership",
+        "Prepare a safe change of provider",
+        "Supervise the technical handover",
+        "Document the current condition of the website",
+        "Compare contracted work with technically observable results",
+        "Estimate a sensible market scope for future work"
+      ],
+      "nekrologNote": "Our long-running work with Nekrolog Łódź shows what this looks like in practice — digital-asset recovery, technical verification, supplier coordination and documentation within a real, long-term client relationship.",
+      "linkNekrologLabel": "See the Nekrolog Łódź case study",
+      "linkAuditLabel": "See the independent digital provider audit",
+      "boundariesTitle": "What we don’t do",
+      "boundariesItems": [
+        "We are not a law firm.",
+        "We do not provide legal representation.",
+        "We do not determine whether a contract is legally valid.",
+        "Our technical findings can support you and your lawyer, but they are not a legal opinion or a court-expert report."
+      ]
+    },
+    "evidence": {
+      "title": "Different kennels need different solutions",
+      "subtitle": "Four projects, four different situations — proof of what we can actually build and maintain.",
+      "gryfin": {
+        "badge": "Gryfin York",
+        "kicker": "Complete system",
+        "description": "A full public website plus a panel the breeder manages herself — structured dogs, litters and puppies, live availability, migration from the previous website and provider, ongoing development and support.",
+        "linkCase": "/projekty/gryfin-york",
+        "linkCaseLabel": "See the full case study",
+        "linkLive": "https://hodowlagryfinyork.pl",
+        "linkLiveLabel": "Visit the kennel website"
+      },
+      "kolorowaPasja": {
+        "badge": "Kolorowa Pasja",
+        "kicker": "A simpler approach",
+        "description": "Proof that we can also deliver and maintain a simpler, presentation-focused breeder website when a full management system isn’t needed.",
+        "linkCase": "/projekty/kolorowa-pasja",
+        "linkCaseLabel": "See the case study",
+        "linkLive": "https://kolorowapasja.pl",
+        "linkLiveLabel": "Visit the kennel website"
+      },
+      "pokiu": {
+        "badge": "POKIU",
+        "kicker": "The kennel-club side",
+        "description": "Evidence that we also understand the organizational side of kynology — dog and litter registries, pedigrees, breeder-office cooperation, document verification and structured records.",
+        "linkCase": "/projekty/pokiu",
+        "linkCaseLabel": "See the case study"
+      },
+      "nekrolog": {
+        "badge": "Nekrolog Łódź",
+        "kicker": "Outside the breeder niche",
+        "description": "Evidence of long-term digital responsibility outside the breeder niche — maintaining a client’s digital infrastructure, recovering control of assets, coordinating contractors, and supporting technical documentation during a supplier dispute.",
+        "linkCase": "/projekty/nekrolog-lodz",
+        "linkCaseLabel": "See the case study"
+      },
+      "note": "We are not formally part of the POKIU board, and POKIU does not endorse all of our breeder projects — it’s a separate, independent project that shows our experience in kynology."
+    },
+    "flexibleScope": {
+      "title": "We don’t sell one template to every kennel",
+      "description": "Every kennel starts from a different place. The right solution depends on whether you already have a website, whether content and domain need migrating, how many breeds and dogs you have, whether you need a private panel, how many languages the site should run in, what your enquiry or reservation process looks like, what documents you need, how many people manage the kennel, what integrations you expect, and what ongoing support you want. That’s why we start with an individual assessment, not a price list.",
+      "variesTitle": "The scope of work depends on what you already have",
+      "variesItems": [
+        "Migrating an old website",
+        "Importing dozens of dog profiles",
+        "Moving hundreds of photos",
+        "Several language versions",
+        "Domain and business-email setup",
+        "Custom reservation flows",
+        "Applications from buyers",
+        "Pedigrees or documents",
+        "Number of breeds and breeding dogs",
+        "Number of people managing the kennel",
+        "Kennel-club system integrations",
+        "Additional panel features"
+      ],
+      "cta": "Request a free quote"
     }
   },
   "kennelClubs": {
@@ -737,8 +927,8 @@
     },
     "gryfinYork": {
       "badge": "Client · Yorkshire Terrier Kennel",
-      "title": "Gryfin York",
-      "subtitle": "A home-based Yorkshire Terrier kennel in Łódź — breeding since 2016, multiple coat colors, raised in a home environment.",
+      "title": "Gryfin York — from an old WordPress site to its own kennel system",
+      "subtitle": "We helped sort out the situation left by previous contractors, moved the kennel onto independent infrastructure, and built a website connected to a panel the breeder can run herself.",
       "role": {
         "title": "We Build and Run the Whole System",
         "description": "This is the reference project behind our breeder offer: a public site plus an admin panel, both on the kennel's own domain. We run both on an ongoing basis."
@@ -752,6 +942,95 @@
       "cta": {
         "label": "Visit the Kennel",
         "url": "https://hodowlagryfinyork.pl"
+      },
+      "about": {
+        "title": "Who is Gryfin York",
+        "paragraphs": [
+          "Gryfin York is a home-based Yorkshire Terrier kennel in Łódź, run by Monika since 2016. The kennel specializes in several color varieties of the breed — from classic Blue & Tan, through Gold, to Biewer and Parti — and puppies are raised at home, in close contact with the family.",
+          "For a kennel this size, the website has to do two things at once: show available puppies and planned litters clearly and up to date, while building trust with future owners through a warm, personal visual identity rather than a stiff, corporate template."
+        ]
+      },
+      "startingSituation": {
+        "title": "Starting situation",
+        "paragraphs": [
+          "Before working with Tovernet, the kennel ran on an old WordPress website, previously maintained by another contractor.",
+          "Updating content — adding a new litter, changing a puppy’s status, uploading photos — meant contacting the contractor or working manually in the WordPress panel every time, which wasn’t convenient for a breeder without a technical background.",
+          "Some of the material — photos, dog descriptions, kennel history — was valuable and worth keeping. The technical infrastructure itself, though, needed organizing and more independence from a single contractor."
+        ],
+        "list": [
+          "A WordPress website run by a previous contractor",
+          "Every change required contacting the contractor or manual work in the WordPress panel",
+          "An inconvenient technical workflow for day-to-day updates",
+          "A need to migrate content and infrastructure without losing material",
+          "A need for more independence from a single contractor"
+        ]
+      },
+      "migrationWork": {
+        "title": "Migration and recovery work",
+        "intro": "Before designing anything new, we reviewed what already existed.",
+        "items": [
+          "Reviewed the existing WordPress website and its content",
+          "Identified content and assets worth preserving",
+          "Organized the migration to new, independent infrastructure",
+          "Set up a new technical foundation under the kennel’s control",
+          "Moved or rebuilt the relevant content",
+          "Handled the domain transition where necessary",
+          "Reduced dependence on previous providers",
+          "Ensured continuity for visitors",
+          "Introduced a maintainable foundation for future development"
+        ]
+      },
+      "designDecision": {
+        "title": "Why Gryfin York looks different from Tovernet",
+        "paragraphs": [
+          "Tovernet normally uses a dark, purple system identity — the Gryfin York website deliberately doesn’t inherit that styling.",
+          "The color varieties of Yorkshire Terrier the kennel raises, and its warm, family atmosphere, called for a colorful identity that builds emotional trust — not a generic “luxury kennel” template.",
+          "A priority was also presenting puppy information clearly — color, availability status, price — in a way that makes sense to someone who has never searched for a purebred dog before."
+        ]
+      },
+      "deliveredSystem": {
+        "title": "The delivered system",
+        "intro": "Only functionality that is actually live on the Gryfin York website is listed below.",
+        "items": [
+          "Breeding dogs",
+          "Females and stud dogs",
+          "Litters",
+          "Planned litters",
+          "Individual puppies",
+          "Availability and reservation statuses",
+          "Prices",
+          "Pickup dates",
+          "Photos",
+          "Reviews",
+          "Enquiries",
+          "Reservation rules",
+          "Gallery",
+          "Contact",
+          "Mobile support"
+        ]
+      },
+      "panelToWebsite": {
+        "title": "Panel → Website",
+        "description": "Monika changes a puppy’s status or information in the panel, and the current information appears on the public website — without asking Tovernet to edit the page."
+      },
+      "realScaleTitle": "Project scale",
+      "result": {
+        "title": "The outcome for the kennel",
+        "items": [
+          "An independent web presence, not tied to a single contractor",
+          "Clearer presentation of dogs and puppies for future owners",
+          "Easier, self-service updates without waiting for a developer",
+          "Organized information about dogs, litters and puppies",
+          "A foundation for further system development and new modules",
+          "An ongoing technical relationship with Tovernet after launch"
+        ]
+      },
+      "linksSection": {
+        "title": "See more",
+        "breederOfferLabel": "See what we can build for your kennel",
+        "breederOfferUrl": "/hodowcy",
+        "pokiuLabel": "See what this looks like on the kennel-club side — the POKIU case study",
+        "pokiuUrl": "/projekty/pokiu"
       }
     },
     "kolorowaPasja": {
@@ -940,10 +1219,26 @@
         "title": "Access to a Company Doesn't Mean Access to Everything",
         "intro": "Every company is isolated at the database level — not just hidden by frontend logic. Roles differ in what they can see and what they can do.",
         "roles": [
-          { "role": "Owner", "sees": "The whole company", "canDo": "Manages KSeF, access, and credentials" },
-          { "role": "Accountant", "sees": "Documents and books covered by their role", "canDo": "Posts, reconciles, and handles documents" },
-          { "role": "Employee", "sees": "Assigned modules", "canDo": "Issues or prepares documents" },
-          { "role": "AI Agent", "sees": "Only the data available to the person who connected it", "canDo": "Only permitted MCP operations, within its assigned permission tier" }
+          {
+            "role": "Owner",
+            "sees": "The whole company",
+            "canDo": "Manages KSeF, access, and credentials"
+          },
+          {
+            "role": "Accountant",
+            "sees": "Documents and books covered by their role",
+            "canDo": "Posts, reconciles, and handles documents"
+          },
+          {
+            "role": "Employee",
+            "sees": "Assigned modules",
+            "canDo": "Issues or prepares documents"
+          },
+          {
+            "role": "AI Agent",
+            "sees": "Only the data available to the person who connected it",
+            "canDo": "Only permitted MCP operations, within its assigned permission tier"
+          }
         ],
         "mainSentence": "An AI agent's permissions aren't a separate \"superaccess\" tier. The agent operates exactly within the bounds of the person and company that connected it — at one of several permission tiers, from read-only to full posting.",
         "isolationNote": "Every organization is isolated by a company identifier and database-level access rules — over 700 such rules across the system, not a single exception."
@@ -985,11 +1280,22 @@
         "intro": "A document doesn't just \"appear\" in the books. First it arrives, then it's analyzed, reconciled, approved — and only then does it become a journal entry.",
         "modulesTitle": "The Modules That Make This Up",
         "modules": [
-          "Chart of accounts", "Journal entries", "Posting queue awaiting review",
-          "Income and expense documents", "Suppliers, customers and products", "Bank and cash operations",
-          "Payments and reconciliation", "Assets", "Loans", "Share capital",
-          "Company resolutions", "Article 210 KSH workflows", "Legal cases", "Company documents",
-          "Accounting-period locking", "VAT and tax context"
+          "Chart of accounts",
+          "Journal entries",
+          "Posting queue awaiting review",
+          "Income and expense documents",
+          "Suppliers, customers and products",
+          "Bank and cash operations",
+          "Payments and reconciliation",
+          "Assets",
+          "Loans",
+          "Share capital",
+          "Company resolutions",
+          "Article 210 KSH workflows",
+          "Legal cases",
+          "Company documents",
+          "Accounting-period locking",
+          "VAT and tax context"
         ],
         "queueNote": "An imported document first lands in a posting queue awaiting review. Only an approved queue item becomes an actual journal entry — and old entries are never hard-deleted, only marked voided along with a reason.",
         "branches": {
@@ -1011,9 +1317,15 @@
         "description": "KsięgaI records not just the current result but the business meaning of an operation: who performed it, in what context, what it concerned, and what caused it. Every KSeF submission attempt lands in an immutable submission log — whether or not it succeeded.",
         "examplesTitle": "Example Events",
         "examples": [
-          "Invoice created", "Document imported", "Correction proposed",
-          "Payment matched", "Entry approved", "KSeF submission started",
-          "UPO received", "Permission granted", "Credential disabled"
+          "Invoice created",
+          "Document imported",
+          "Correction proposed",
+          "Payment matched",
+          "Entry approved",
+          "KSeF submission started",
+          "UPO received",
+          "Permission granted",
+          "Credential disabled"
         ],
         "supports": "This supports auditability, safer automation, and explaining why the system reached a given state — without letting AI directly edit the database tables.",
         "aiNote": "AI issues a business command — it doesn't edit the database."

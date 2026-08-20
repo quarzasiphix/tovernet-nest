@@ -190,14 +190,14 @@
   "breeders": {
     "hero": {
       "badge": "Dla Hodowców Psów Rasowych",
-      "title": "Strona hodowli, którą aktualizujesz samodzielnie",
-      "subtitle": "Dodajesz psa, miot lub szczenię w panelu, a zmiana od razu pojawia się na Twojej własnej stronie. Bez czekania na programistę i bez uzależnienia od Facebooka.",
-      "ctaPrimary": "Zobacz działający system",
-      "ctaSecondary": "Poproś o bezpłatną wycenę",
+      "title": "Strona i system hodowli dopasowane do tego, jak naprawdę pracujesz",
+      "subtitle": "Możemy zbudować nową stronę i panel od podstaw, rozwinąć to, co już masz, przenieść hodowlę od poprzedniego wykonawcy albo pomóc odzyskać kontrolę nad domeną, treściami i kontami. Od prezentacji psów i miotów po zapytania, rezerwacje, dokumenty i codzienną obsługę hodowli.",
+      "ctaPrimary": "Zobacz, co możemy zrobić",
+      "ctaSecondary": "Opowiedz nam o swojej hodowli",
       "flowLabel": "Panel → Strona",
       "statusFrom": "Dostępny",
       "statusTo": "Zarezerwowany",
-      "titleHighlightWord": "samodzielnie",
+      "titleHighlightWord": "naprawdę",
       "mobileLivePill": "Zmiany pojawiają się na stronie od razu",
       "mobileProofLine": "System działa już w hodowli Gryfin York",
       "mobileProofStats": "13 psów · 2 mioty · 200+ zdjęć"
@@ -278,55 +278,32 @@
         "Projekt można przenieść lub przekazać innemu programiście.",
         "Brak obowiązkowej miesięcznej licencji na oprogramowanie.",
         "TOVERNET może opcjonalnie zapewnić hosting, opiekę i dalszy rozwój."
-      ]
-    },
-    "kolorowaPasjaCta": {
-      "badge": "Kolejna realizacja",
-      "title": "Kolejna prosta strona dla hodowcy psów.",
-      "description": "Wszystko jest możliwe — od minimalnej wizytówki po pełny system z panelem. Kolorowa Pasja to przykład prostszego podejścia: przejrzysta strona hodowli Yorkshire Terrierów i Biewer Terrierów, bez zbędnych funkcji, dokładnie tyle, ile potrzeba.",
-      "cta": "Zobacz case study Kolorowa Pasja",
-      "visitCta": "Odwiedź stronę hodowli"
-    },
-    "pricing": {
-      "title": "Wycena dopasowana do Twojej hodowli",
-      "description": "Każda hodowla zaczyna z innego miejsca. Najpierw sprawdzamy, co już posiadasz i czego potrzebujesz. Następnie przedstawiamy jasny zakres, termin i wycenę przed rozpoczęciem pracy.",
-      "variesTitle": "Zakres pracy zależy od tego, co już masz",
-      "variesItems": [
-        "Migracja starej strony",
-        "Import dziesiątek profili psów",
-        "Przeniesienie setek zdjęć",
-        "Kilka wersji językowych",
-        "Konfiguracja domeny i firmowej poczty",
-        "Niestandardowe rezerwacje",
-        "Wnioski od kupujących",
-        "Rodowody lub dokumenty",
-        "Dodatkowe funkcje panelu"
       ],
-      "cta": "Poproś o bezpłatną wycenę"
+      "intro": "Posiadanie niezależnej strony to co innego niż wynajmowanie widoczności na portalu, poleganie wyłącznie na Facebooku czy zależność od konta kontrolowanego przez wykonawcę. Portale i social media mogą zostać wartościowymi kanałami dystrybucji — chodzi o to, by nie były jedyną cyfrową podstawą Twojej hodowli."
     },
     "process": {
       "title": "Jak wygląda współpraca",
-      "subtitle": "Prosty, przejrzysty proces od pierwszej rozmowy do uruchomienia strony.",
+      "subtitle": "Prosty, zrozumiały i mało ryzykowny proces — nawet jeśli nie znasz się na technologii.",
       "steps": [
         {
-          "title": "Opowiedz nam o hodowli",
-          "description": "Krótka rozmowa o tym, czego potrzebujesz."
+          "title": "Rozpoznanie sytuacji",
+          "description": "Obecna strona, domena, konta, problemy i cel, który chcesz osiągnąć."
         },
         {
-          "title": "Przegląd materiałów",
-          "description": "Sprawdzamy obecną stronę, zdjęcia i dane."
+          "title": "Mapa projektu i dostępów",
+          "description": "Ustalamy, co zachować, co migrować, co przebudować, a co odzyskać."
         },
         {
-          "title": "Projekt strony i panelu",
-          "description": "Projektujemy wygląd dopasowany do Twojej hodowli."
+          "title": "Projekt i wdrożenie",
+          "description": "Strona publiczna, panel i wybrane integracje."
         },
         {
-          "title": "Import psów i treści",
-          "description": "Przenosimy dane, zdjęcia i profile psów."
+          "title": "Migracja i uruchomienie",
+          "description": "Przeniesienie treści, plan przekierowań, testy i wdrożenie."
         },
         {
-          "title": "Szkolenie i uruchomienie",
-          "description": "Uczymy Cię panelu i uruchamiamy stronę."
+          "title": "Dalsze wsparcie",
+          "description": "Utrzymanie, rozwój, analityka, SEO i nowe funkcje."
         }
       ]
     },
@@ -341,7 +318,13 @@
       "step1": {
         "kennelName": "Nazwa hodowli",
         "breed": "Rasa",
-        "existingSite": "Obecna strona lub profil na Facebooku (opcjonalnie)"
+        "existingSite": "Obecna strona lub profil na Facebooku (opcjonalnie)",
+        "domainKnownLabel": "Czy wiesz, kto kontroluje Twoją domenę?",
+        "domainKnownOptions": [
+          "Tak",
+          "Nie",
+          "Nie mam jeszcze domeny"
+        ]
       },
       "step2": {
         "siteTypeLabel": "Nowa strona czy migracja istniejącej?",
@@ -369,12 +352,19 @@
           "6-15",
           "16-30",
           "30+"
+        ],
+        "migrationLabel": "Czy potrzebujesz migracji ze starej strony lub od innego wykonawcy?",
+        "migrationOptions": [
+          "Tak",
+          "Nie",
+          "Nie jestem pewna/pewien"
         ]
       },
       "step3": {
         "contactName": "Imię i nazwisko",
         "email": "Adres e-mail",
         "phone": "Telefon (opcjonalnie)",
+        "currentProblem": "Obecny problem ze stroną lub dostawcą (opcjonalnie)",
         "notes": "Dodatkowe informacje"
       },
       "nav": {
@@ -386,24 +376,224 @@
         "title": "Dziękujemy!",
         "message": "Otworzyliśmy Twój program pocztowy z gotową wiadomością — wystarczy ją wysłać. Odezwiemy się z bezpłatną wyceną tak szybko, jak to możliwe."
       },
-      "emailSubject": "Wycena strony dla hodowli"
+      "emailSubject": "Wycena strony dla hodowli",
+      "assessmentNote": "Wstępna ocena jest bezpłatna. To zapytanie nie jest wiążącym zamówieniem. Wycena jest zawsze indywidualna — najpierw sprawdzamy, co już masz, zanim zaproponujemy to zastąpić czymś nowym. Budujemy tylko to, czego faktycznie potrzebujesz."
     },
     "finalCta": {
-      "title": "Zbuduj własne miejsce dla swojej hodowli",
-      "subtitle": "Facebook może pomagać zdobywać uwagę. Twoja własna strona buduje zaufanie, przechowuje historię hodowli i pozostaje pod Twoją kontrolą.",
-      "ctaPrimary": "Poproś o wycenę",
-      "ctaSecondary": "Zobacz Gryfin York"
+      "title": "Pokaż nam, jak dziś działa Twoja hodowla",
+      "subtitle": "Niezależnie od tego, czy zaczynasz od Facebooka, starego WordPressa, niedokończonej strony czy działającego systemu, który wymaga rozwoju — sprawdzimy sytuację i zaproponujemy rozsądny następny krok.",
+      "ctaPrimary": "Poproś o bezpłatną ocenę",
+      "ctaSecondary": "Zobacz nasze realizacje"
     },
-    "kennelClubCredibility": {
-      "title": "Ten sam zespół prowadzi też systemy dla związków kynologicznych",
-      "description": "Rejestr rodowodów, panel hodowców i weryfikacja dokumentów kodem QR dla POKIU — zbudowane i utrzymywane przez nas.",
-      "cta": "Zobacz POKIU"
+    "situation": {
+      "title": "Niezależnie od tego, w jakim miejscu jest dziś Twoja hodowla",
+      "subtitle": "Rozpoznajesz swoją sytuację? Zacznijmy właśnie od niej.",
+      "cards": [
+        {
+          "title": "Nie masz jeszcze własnej strony",
+          "description": "Zbudujemy niezależną stronę hodowli od podstaw — domenę, identyfikację wizualną, strukturę treści i formularz zapytań."
+        },
+        {
+          "title": "Masz starą lub trudną w obsłudze stronę",
+          "description": "Sprawdzimy obecną stronę, zachowamy wartościowe treści i przebudujemy doświadczenie użytkownika bez zmuszania Cię do zaczynania od zera."
+        },
+        {
+          "title": "Za każdą zmianę musisz prosić wykonawcę",
+          "description": "Wprowadzimy panel do zarządzania psami, miotami, szczeniętami, zdjęciami, opiniami, dostępnością i zapytaniami — zmiany wprowadzasz samodzielnie."
+        },
+        {
+          "title": "Nie wiesz, kto kontroluje domenę i konta",
+          "description": "Zmapujemy Twoje zasoby cyfrowe i pomożemy uporządkować dostęp do domeny, hostingu, strony, poczty, analityki i profili społecznościowych."
+        },
+        {
+          "title": "Masz problem z poprzednim wykonawcą",
+          "description": "Ocenimy technicznie, co istnieje, co zostało zrealizowane, kto kontroluje poszczególne zasoby i jak bezpiecznie przenieść projekt."
+        },
+        {
+          "title": "Facebook lub portal jest Twoim jedynym kanałem",
+          "description": "Zbudujemy niezależne źródło prawdy, które pozostaje pod Twoją kontrolą — Facebook i portale nadal wspierają je jako kanały marketingowe."
+        }
+      ]
     },
-    "simpleStart": {
-      "title": "Nie każda hodowla potrzebuje pełnego panelu od pierwszego dnia",
-      "description": "Dla Kolorowej Pasji zbudowaliśmy prostą, elegancką stronę wizytówkową i zajmujemy się jej utrzymaniem — dobry punkt startowy przed rozrostem do pełnego systemu jak w Gryfin York.",
-      "caseStudyCta": "Zobacz case study",
-      "visitCta": "Odwiedź Kolorową Pasję"
+    "capabilities": {
+      "title": "Co możemy zbudować dla Twojej hodowli",
+      "subtitle": "Dokładny zakres dobieramy do tego, jak pracuje Twoja hodowla — to nie jeden sztywny pakiet.",
+      "website": {
+        "title": "Strona publiczna i identyfikacja",
+        "items": [
+          "Unikalny projekt wizualny",
+          "Własna domena",
+          "Historia i wartości hodowli",
+          "Rasy i specjalizacja",
+          "Psy hodowlane",
+          "Indywidualne profile psów",
+          "Osiągnięcia i informacje zdrowotne",
+          "Planowane i archiwalne mioty",
+          "Dostępne szczenięta",
+          "Galeria",
+          "Opinie",
+          "Zasady rezerwacji",
+          "Dane kontaktowe",
+          "Wersje wielojęzyczne",
+          "Optymalizacja mobilna",
+          "Lokalne i rasowe SEO"
+        ]
+      },
+      "panel": {
+        "title": "Panel do zarządzania hodowlą",
+        "note": "Dokładne moduły dobieramy do Twojego sposobu pracy — nie każdy projekt automatycznie zawiera każdą funkcję.",
+        "items": [
+          "Psy",
+          "Suki i reproduktory",
+          "Mioty",
+          "Planowane mioty",
+          "Szczenięta",
+          "Statusy dostępności",
+          "Ceny",
+          "Terminy odbioru",
+          "Zdjęcia i dokumenty",
+          "Opinie",
+          "Zapytania",
+          "Wielu użytkowników i uprawnienia",
+          "Automatyczna publikacja na stronie publicznej"
+        ]
+      },
+      "enquiries": {
+        "title": "Zapytania, rezerwacje i komunikacja z klientami",
+        "note": "Nie każda funkcja poniżej jest gotowa od razu w każdym projekcie — rozróżniamy to, co już działa, od tego, co można dopiero rozwinąć.",
+        "items": [
+          "Ustrukturyzowane zapytania o szczenię",
+          "Statusy rezerwacji",
+          "Notatki wewnętrzne",
+          "Historia kontaktu",
+          "Automatyczne potwierdzenia",
+          "Zbieranie informacji potrzebnych przed rezerwacją",
+          "Uproszczona komunikacja z przyszłymi właścicielami"
+        ]
+      },
+      "documents": {
+        "title": "Dokumenty i informacje kynologiczne",
+        "note": "Nie zakładamy automatycznej integracji z POKIU ani innym systemem związku dla każdej hodowli — zależy to od konkretnej sytuacji i uprawnień.",
+        "items": [
+          "Rodowody",
+          "Dokumenty psów i miotów",
+          "Informacje o badaniach zdrowotnych",
+          "Pliki do pobrania",
+          "Informacje o czipowaniu",
+          "Dane własności i rejestracji",
+          "Powiązania z publiczną weryfikacją lub systemami związków kynologicznych, tam gdzie istnieje odpowiednia integracja"
+        ]
+      }
+    },
+    "migration": {
+      "title": "Nie musisz zaczynać od zera",
+      "intro": "Każdą sytuację oceniamy indywidualnie, zanim cokolwiek zmienimy.",
+      "items": [
+        "Audyt obecnej strony",
+        "Przeniesienie treści z WordPressa lub innego CMS-a",
+        "Zachowanie wartościowych tekstów, zdjęć i widoczności w wyszukiwarce",
+        "Ustalenie rejestratora domeny i dostawcy hostingu",
+        "Uporządkowanie dostępu administracyjnego",
+        "Przeniesienie lub odbudowa poczty",
+        "Wykonanie kopii zapasowych przed migracją",
+        "Zaplanowanie przekierowań ze starych adresów URL",
+        "Minimalizacja zakłóceń w trakcie zmiany",
+        "Rozdzielenie zasobów należących do hodowcy od narzędzi kontrolowanych przez poprzedniego wykonawcę",
+        "Koordynacja technicznego przekazania"
+      ]
+    },
+    "contractors": {
+      "title": "Pomożemy Ci zachować kontrolę nad wykonawcami i usługami cyfrowymi",
+      "intro": "Hodowcy często pracują równolegle z wieloma dostawcami:",
+      "providerTypes": [
+        "Programiści stron",
+        "Firmy hostingowe",
+        "Rejestratorzy domen",
+        "Agencje SEO",
+        "Specjaliści od reklam",
+        "Fotografowie",
+        "Osoby prowadzące social media",
+        "Portale i platformy ogłoszeniowe"
+      ],
+      "helpIntro": "Możemy pomóc Ci:",
+      "helpItems": [
+        "Zrozumieć, za co dokładnie płacisz",
+        "Zweryfikować, kto kontroluje domenę, hosting i konta",
+        "Sprawdzić, czy uzgodnione prace techniczne są w ogóle widoczne",
+        "Uporządkować dostęp i własność",
+        "Przygotować bezpieczną zmianę wykonawcy",
+        "Nadzorować techniczne przekazanie",
+        "Udokumentować obecny stan strony",
+        "Porównać zakontraktowane prace z technicznie obserwowalnym efektem",
+        "Oszacować rozsądny rynkowy zakres przyszłych prac"
+      ],
+      "nekrologNote": "Nasza wieloletnia współpraca z Nekrolog Łódź pokazuje, jak to wygląda w praktyce — odzyskiwanie kontroli nad zasobami cyfrowymi, weryfikacja techniczna, koordynacja wykonawców i dokumentacja w ramach realnej, długoterminowej relacji z klientem.",
+      "linkNekrologLabel": "Zobacz case study Nekrolog Łódź",
+      "linkAuditLabel": "Zobacz niezależny audyt dostawców cyfrowych",
+      "boundariesTitle": "Czego nie robimy",
+      "boundariesItems": [
+        "Nie jesteśmy kancelarią prawną.",
+        "Nie zapewniamy reprezentacji prawnej.",
+        "Nie orzekamy o ważności umowy.",
+        "Nasze ustalenia techniczne mogą wesprzeć Ciebie i Twojego prawnika, ale nie są opinią prawną ani opinią biegłego sądowego."
+      ]
+    },
+    "evidence": {
+      "title": "Różne hodowle potrzebują różnych rozwiązań",
+      "subtitle": "Cztery projekty, cztery różne sytuacje — dowód na to, co realnie potrafimy zbudować i utrzymać.",
+      "gryfin": {
+        "badge": "Gryfin York",
+        "kicker": "Kompletny system",
+        "description": "Pełna strona publiczna plus panel, którym hodowczyni zarządza samodzielnie — ustrukturyzowane psy, mioty i szczenięta, dostępność na żywo, migracja od poprzedniej strony i wykonawcy, ciągły rozwój i wsparcie.",
+        "linkCase": "/projekty/gryfin-york",
+        "linkCaseLabel": "Zobacz pełny case study",
+        "linkLive": "https://hodowlagryfinyork.pl",
+        "linkLiveLabel": "Zobacz stronę hodowli"
+      },
+      "kolorowaPasja": {
+        "badge": "Kolorowa Pasja",
+        "kicker": "Prostsze podejście",
+        "description": "Dowód, że potrafimy też dostarczyć i utrzymać prostszą, wizytówkową stronę hodowli, kiedy pełny system zarządzania nie jest potrzebny.",
+        "linkCase": "/projekty/kolorowa-pasja",
+        "linkCaseLabel": "Zobacz case study",
+        "linkLive": "https://kolorowapasja.pl",
+        "linkLiveLabel": "Odwiedź stronę hodowli"
+      },
+      "pokiu": {
+        "badge": "POKIU",
+        "kicker": "Strona organizacyjna kynologii",
+        "description": "Dowód, że rozumiemy też organizacyjną stronę kynologii — rejestry psów i miotów, rodowody, współpraca z biurem hodowlanym, weryfikacja dokumentów i uporządkowane historie.",
+        "linkCase": "/projekty/pokiu",
+        "linkCaseLabel": "Zobacz case study"
+      },
+      "nekrolog": {
+        "badge": "Nekrolog Łódź",
+        "kicker": "Poza branżą hodowlaną",
+        "description": "Dowód długoterminowej odpowiedzialności cyfrowej poza branżą hodowlaną — utrzymanie infrastruktury klienta, odzyskiwanie kontroli nad zasobami, koordynacja wykonawców i wsparcie dokumentacji technicznej podczas sporu z dostawcą.",
+        "linkCase": "/projekty/nekrolog-lodz",
+        "linkCaseLabel": "Zobacz case study"
+      },
+      "note": "Nie jesteśmy formalnie częścią zarządu POKIU ani nie twierdzimy, że POKIU zatwierdza wszystkie nasze projekty dla hodowców — to osobny, niezależny projekt, który pokazuje nasze doświadczenie w kynologii."
+    },
+    "flexibleScope": {
+      "title": "Nie sprzedajemy jednego szablonu każdej hodowli",
+      "description": "Każda hodowla zaczyna z innego miejsca. Rozwiązanie zależy od tego, czy masz już stronę, czy trzeba migrować treści i domenę, ile ras i psów hodujesz, czy potrzebujesz prywatnego panelu, w ilu językach ma działać strona, jak wygląda proces zapytań i rezerwacji, jakich dokumentów potrzebujesz, ile osób zarządza hodowlą, jakich integracji oczekujesz i jakiego wsparcia po uruchomieniu. Dlatego zaczynamy od indywidualnej oceny, a nie od cennika.",
+      "variesTitle": "Zakres pracy zależy od tego, co już masz",
+      "variesItems": [
+        "Migracja starej strony",
+        "Import dziesiątek profili psów",
+        "Przeniesienie setek zdjęć",
+        "Kilka wersji językowych",
+        "Konfiguracja domeny i firmowej poczty",
+        "Niestandardowe rezerwacje",
+        "Wnioski od kupujących",
+        "Rodowody lub dokumenty",
+        "Liczba ras i psów hodowlanych",
+        "Liczba osób zarządzających hodowlą",
+        "Integracje z systemami kynologicznymi",
+        "Dodatkowe funkcje panelu"
+      ],
+      "cta": "Poproś o bezpłatną wycenę"
     }
   },
   "kennelClubs": {
@@ -737,8 +927,8 @@
     },
     "gryfinYork": {
       "badge": "Klient · Hodowla Yorkshire Terrierów",
-      "title": "Gryfin York",
-      "subtitle": "Domowa hodowla Yorkshire Terrierów w Łodzi — hodowla od 2016 roku, różne odmiany kolorystyczne, wychowanie domowe.",
+      "title": "Gryfin York — od starego WordPressa do własnego systemu hodowli",
+      "subtitle": "Pomogliśmy uporządkować sytuację po wcześniejszych wykonawcach, przenieśliśmy hodowlę na niezależną infrastrukturę i zbudowaliśmy stronę połączoną z panelem, który hodowczyni może obsługiwać samodzielnie.",
       "role": {
         "title": "Budujemy I Prowadzimy Cały System",
         "description": "To referencyjny projekt naszej oferty dla hodowców: publiczna strona plus panel administracyjny, oba na własnej domenie hodowli. Prowadzimy je na bieżąco."
@@ -752,6 +942,95 @@
       "cta": {
         "label": "Odwiedź Hodowlę",
         "url": "https://hodowlagryfinyork.pl"
+      },
+      "about": {
+        "title": "Kim jest Gryfin York",
+        "paragraphs": [
+          "Gryfin York to domowa hodowla Yorkshire Terrierów w Łodzi, prowadzona przez Monikę od 2016 roku. Hodowla specjalizuje się w różnych odmianach kolorystycznych rasy — od klasycznych Blue & Tan, przez Gold, po Biewer i Parti — a szczenięta wychowują się w warunkach domowych, w bliskim kontakcie z rodziną.",
+          "Dla hodowli tej wielkości strona internetowa musi robić dwie rzeczy naraz: pokazywać dostępne szczenięta i planowane mioty w sposób jasny i aktualny, a jednocześnie budować zaufanie przyszłych właścicieli — poprzez ciepłą, osobistą identyfikację wizualną, a nie sztywny, korporacyjny szablon."
+        ]
+      },
+      "startingSituation": {
+        "title": "Sytuacja wyjściowa",
+        "paragraphs": [
+          "Przed współpracą z Tovernet hodowla działała na starej stronie opartej o WordPressa, prowadzonej wcześniej przez innego wykonawcę.",
+          "Aktualizacja treści — dodanie nowego miotu, zmiana statusu szczenięcia, wgranie zdjęć — za każdym razem wymagała kontaktu z wykonawcą albo ręcznej pracy w panelu WordPressa, co nie było wygodne dla hodowczyni bez technicznego zaplecza.",
+          "Część materiałów — zdjęcia, opisy psów, historia hodowli — była wartościowa i wymagała zachowania. Sama infrastruktura techniczna wymagała jednak uporządkowania i większej niezależności od pojedynczego wykonawcy."
+        ],
+        "list": [
+          "Strona oparta na WordPressie, prowadzona przez wcześniejszego wykonawcę",
+          "Każda zmiana wymagała kontaktu z wykonawcą lub ręcznej pracy w panelu WordPressa",
+          "Niewygodny przepływ techniczny przy codziennych aktualizacjach",
+          "Potrzeba migracji treści i infrastruktury bez utraty materiałów",
+          "Potrzeba większej niezależności od pojedynczego wykonawcy"
+        ]
+      },
+      "migrationWork": {
+        "title": "Migracja i odzyskanie kontroli",
+        "intro": "Zanim zaczęliśmy projektować cokolwiek nowego, przejrzeliśmy to, co już istniało.",
+        "items": [
+          "Przegląd istniejącej strony WordPress i jej zawartości",
+          "Wskazanie treści i materiałów wartych zachowania",
+          "Zorganizowanie migracji na nową, niezależną infrastrukturę",
+          "Uruchomienie nowego zaplecza technicznego pod kontrolą hodowli",
+          "Przeniesienie lub odtworzenie istotnych treści",
+          "Obsługa przejścia domeny tam, gdzie było to konieczne",
+          "Zmniejszenie zależności od wcześniejszych dostawców",
+          "Zachowanie ciągłości dla odwiedzających stronę",
+          "Wprowadzenie fundamentu technicznego łatwego w dalszym rozwoju"
+        ]
+      },
+      "designDecision": {
+        "title": "Dlaczego Gryfin York wygląda inaczej niż Tovernet",
+        "paragraphs": [
+          "Na co dzień Tovernet posługuje się ciemną, fioletową identyfikacją systemową — strona Gryfin York celowo tej stylistyki nie przejęła.",
+          "Yorkshire Terriery w odmianach kolorystycznych, którymi zajmuje się hodowla, oraz domowa, rodzinna atmosfera wymagały ciepłej, kolorowej identyfikacji, budującej emocjonalne zaufanie — nie generycznego szablonu „luksusowej hodowli”.",
+          "Priorytetem było też czytelne prezentowanie informacji o szczeniętach — koloru, statusu dostępności, ceny — w sposób zrozumiały dla osoby, która nigdy wcześniej nie szukała psa rasowego."
+        ]
+      },
+      "deliveredSystem": {
+        "title": "Wdrożony system",
+        "intro": "Poniżej wyłącznie funkcjonalność, która realnie działa na stronie Gryfin York.",
+        "items": [
+          "Psy hodowlane",
+          "Suki i reproduktory",
+          "Mioty",
+          "Planowane mioty",
+          "Pojedyncze szczenięta",
+          "Statusy dostępności i rezerwacji",
+          "Ceny",
+          "Terminy odbioru",
+          "Zdjęcia",
+          "Opinie",
+          "Zapytania",
+          "Zasady rezerwacji",
+          "Galeria",
+          "Kontakt",
+          "Wsparcie urządzeń mobilnych"
+        ]
+      },
+      "panelToWebsite": {
+        "title": "Panel → Strona",
+        "description": "Monika zmienia status lub dane szczenięcia w panelu, a aktualna informacja pojawia się na publicznej stronie — bez proszenia Tovernet o edycję strony."
+      },
+      "realScaleTitle": "Skala projektu",
+      "result": {
+        "title": "Efekt dla hodowli",
+        "items": [
+          "Niezależna obecność w internecie, niezwiązana z jednym wykonawcą",
+          "Czytelniejsza prezentacja psów i szczeniąt dla przyszłych właścicieli",
+          "Łatwiejsze, samodzielne aktualizacje bez czekania na programistę",
+          "Uporządkowane informacje o psach, miotach i szczeniętach",
+          "Fundament pod dalszy rozwój systemu i nowe moduły",
+          "Ciągła współpraca techniczna z Tovernet po uruchomieniu"
+        ]
+      },
+      "linksSection": {
+        "title": "Zobacz więcej",
+        "breederOfferLabel": "Zobacz, co możemy zbudować dla Twojej hodowli",
+        "breederOfferUrl": "/hodowcy",
+        "pokiuLabel": "Zobacz, jak to wygląda po stronie związku kynologicznego — case study POKIU",
+        "pokiuUrl": "/projekty/pokiu"
       }
     },
     "kolorowaPasja": {
@@ -940,10 +1219,26 @@
         "title": "Dostęp do Firmy Nie Oznacza Dostępu do Wszystkiego",
         "intro": "Każda firma jest odizolowana na poziomie bazy danych — nie tylko ukryta przez logikę frontendu. Role różnią się tym, co widzą i co mogą wykonać.",
         "roles": [
-          { "role": "Właściciel", "sees": "Całą firmę", "canDo": "Zarządza KSeF, dostępami i poświadczeniami" },
-          { "role": "Księgowa", "sees": "Dokumenty i księgi objęte rolą", "canDo": "Księguje, uzgadnia i obsługuje dokumenty" },
-          { "role": "Pracownik", "sees": "Przydzielone moduły", "canDo": "Wystawia lub przygotowuje dokumenty" },
-          { "role": "Agent AI", "sees": "Tylko dane dostępne osobie, która go podłączyła", "canDo": "Wyłącznie dozwolone operacje MCP, w ramach przypisanego poziomu uprawnień" }
+          {
+            "role": "Właściciel",
+            "sees": "Całą firmę",
+            "canDo": "Zarządza KSeF, dostępami i poświadczeniami"
+          },
+          {
+            "role": "Księgowa",
+            "sees": "Dokumenty i księgi objęte rolą",
+            "canDo": "Księguje, uzgadnia i obsługuje dokumenty"
+          },
+          {
+            "role": "Pracownik",
+            "sees": "Przydzielone moduły",
+            "canDo": "Wystawia lub przygotowuje dokumenty"
+          },
+          {
+            "role": "Agent AI",
+            "sees": "Tylko dane dostępne osobie, która go podłączyła",
+            "canDo": "Wyłącznie dozwolone operacje MCP, w ramach przypisanego poziomu uprawnień"
+          }
         ],
         "mainSentence": "Uprawnienia agenta AI nie są osobnym „superdostępem”. Agent działa dokładnie w granicach osoby i firmy, która go podłączyła — w ramach jednego z kilku poziomów dostępu, od odczytu po pełne księgowanie.",
         "isolationNote": "Każda organizacja jest odizolowana przez identyfikator firmy i reguły dostępu na poziomie bazy danych — ponad 700 takich reguł w całym systemie, nie pojedynczy wyjątek."
@@ -985,11 +1280,22 @@
         "intro": "Dokument nie „pojawia się” w księdze. Najpierw wpływa, jest analizowany, uzgadniany, zatwierdzany i dopiero wtedy staje się zapisem księgowym.",
         "modulesTitle": "Moduły, które się na to składają",
         "modules": [
-          "Plan kont", "Dziennik zapisów księgowych", "Kolejka księgowań do weryfikacji",
-          "Dokumenty przychodowe i kosztowe", "Kontrahenci i produkty", "Operacje bankowe i kasowe",
-          "Płatności i uzgadnianie", "Środki trwałe", "Pożyczki", "Kapitał zakładowy",
-          "Uchwały spółki", "Procesy zgodne z art. 210 KSH", "Sprawy prawne", "Dokumenty firmowe",
-          "Blokowanie okresów księgowych", "Kontekst VAT i podatkowy"
+          "Plan kont",
+          "Dziennik zapisów księgowych",
+          "Kolejka księgowań do weryfikacji",
+          "Dokumenty przychodowe i kosztowe",
+          "Kontrahenci i produkty",
+          "Operacje bankowe i kasowe",
+          "Płatności i uzgadnianie",
+          "Środki trwałe",
+          "Pożyczki",
+          "Kapitał zakładowy",
+          "Uchwały spółki",
+          "Procesy zgodne z art. 210 KSH",
+          "Sprawy prawne",
+          "Dokumenty firmowe",
+          "Blokowanie okresów księgowych",
+          "Kontekst VAT i podatkowy"
         ],
         "queueNote": "Zaimportowany dokument najpierw trafia do kolejki księgowań oczekujących na przegląd. Dopiero zatwierdzona pozycja z kolejki staje się właściwym zapisem księgowym — a stare zapisy nigdy nie są twardo usuwane, tylko oznaczane jako anulowane wraz z powodem.",
         "branches": {
@@ -1011,9 +1317,15 @@
         "description": "KsięgaI rejestruje nie tylko aktualny wynik, lecz także znaczenie biznesowe operacji: kto wykonał działanie, w jakim kontekście, czego dotyczyło i co je spowodowało. Każda próba wysyłki do KSeF trafia do niezmienialnego dziennika submission — niezależnie od tego, czy się powiodła.",
         "examplesTitle": "Przykładowe zdarzenia",
         "examples": [
-          "Faktura wystawiona", "Dokument zaimportowany", "Korekta zaproponowana",
-          "Płatność dopasowana", "Zapis zatwierdzony", "Wysyłka do KSeF rozpoczęta",
-          "UPO odebrane", "Uprawnienie nadane", "Poświadczenie wyłączone"
+          "Faktura wystawiona",
+          "Dokument zaimportowany",
+          "Korekta zaproponowana",
+          "Płatność dopasowana",
+          "Zapis zatwierdzony",
+          "Wysyłka do KSeF rozpoczęta",
+          "UPO odebrane",
+          "Uprawnienie nadane",
+          "Poświadczenie wyłączone"
         ],
         "supports": "To wspiera audytowalność, bezpieczniejszą automatyzację i wyjaśnianie, dlaczego system znalazł się w danym stanie — bez pozwalania AI na bezpośrednią zmianę tabel w bazie.",
         "aiNote": "AI wydaje polecenie biznesowe — nie edytuje bazy danych."

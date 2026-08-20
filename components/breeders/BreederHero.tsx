@@ -73,12 +73,9 @@ export default function BreederHero({
               <span className="text-kennel-pink-600 text-sm font-semibold">{badge}</span>
             </div>
 
-            {/* Mobile-only heading: gradient emphasis on the key word. Desktop heading (below) is unchanged. */}
-            <h1 className="lg:hidden text-3xl font-bold text-kennel-navy-900 mb-4 leading-tight">
+            {/* Single h1 for the whole page — sized responsively, with gradient emphasis on the key word. */}
+            <h1 className="text-3xl lg:text-5xl font-bold text-kennel-navy-900 mb-4 lg:mb-6 leading-tight">
               {renderHighlightedTitle(title, titleHighlightWord)}
-            </h1>
-            <h1 className="hidden lg:block text-5xl font-bold text-kennel-navy-900 mb-6 leading-tight">
-              {title}
             </h1>
 
             <p className="text-lg md:text-xl text-kennel-navy-600 mb-6 lg:mb-10 leading-relaxed max-w-xl">
