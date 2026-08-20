@@ -16,10 +16,24 @@ export default function LanguageSwitcher() {
   const switchLocale = (newLocale: string) => {
     posthog.capture('language_switched', { from_locale: locale, to_locale: newLocale });
     startTransition(() => {
-      const segments = pathname.split('/');
-      segments[1] = newLocale;
+      // Prefer the page's own declared alternate URL (from generateMetadata's
+      // alternates.languages, rendered as <link rel="alternate" hreflang="...">).
+      // Falls back to a naive locale-segment swap for pages where the slug is
+      // identical in both locales (most pages) or the tag isn't present.
+      const altLink = Array.from(document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"]')).find(
+        (l) => l.hreflang === newLocale,
+      );
+      let target: string;
+      if (altLink?.href) {
+        const url = new URL(altLink.href);
+        target = url.pathname + url.search;
+      } else {
+        const segments = pathname.split('/');
+        segments[1] = newLocale;
+        target = segments.join('/');
+      }
       document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
-      router.replace(segments.join('/'));
+      router.replace(target);
       setIsOpen(false);
     });
   };
