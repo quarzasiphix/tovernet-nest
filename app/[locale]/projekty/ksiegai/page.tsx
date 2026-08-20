@@ -406,6 +406,30 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
         </div>
       </section>
 
+      {/* Proof wall: real production numbers */}
+      <section className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{c('proofWall.title')}</h2>
+            <p className="text-sm text-gray-500">{c('proofWall.subtitle')}</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
+            {c.raw('proofWall.stats').map((stat: { value: string; label: string }, i: number) => (
+              <div key={i} className="text-center bg-white/5 border border-white/10 rounded-2xl p-5">
+                <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-ksiegai-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                  {stat.value}
+                </p>
+                <p className="text-xs text-gray-400 leading-snug">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="max-w-2xl mx-auto text-sm text-gray-400 leading-relaxed text-center mb-3">{c('proofWall.caveat')}</p>
+          <p className="max-w-2xl mx-auto text-xs text-gray-600 italic text-center">{c('proofWall.note')}</p>
+        </div>
+      </section>
+
       {/* Features recap */}
       <section className="py-16 bg-black/20 backdrop-blur-sm border-y border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -1045,6 +1045,19 @@
         "description": "KsięgaI wasn't built from a feature list drawn up by a software house. We develop it while running our own companies — issuing real invoices, importing real bank statements, handling KSeF, and working with real accountants. Tovernet was, and is, its own first and most demanding user — every broken workflow immediately hit a real business process, not just a test environment."
       },
       "storyLine": "We started with an invoicing program and built a controlled operating layer for the whole company — connecting documents, accounting, banking, KSeF, and AI agents in one model of accountability.",
+      "proofWall": {
+        "title": "Numbers, Not Just Words",
+        "subtitle": "System state as of August 20, 2026 — production data, not sample data.",
+        "stats": [
+          { "value": "90", "label": "companies registered in the system" },
+          { "value": "338", "label": "invoices issued" },
+          { "value": "173", "label": "incoming invoices received through KSeF" },
+          { "value": "1,863", "label": "bank transactions imported" },
+          { "value": "6", "label": "companies with an active KSeF connection" }
+        ],
+        "caveat": "The number of invoices submitted directly through KSeF is still small — companies are only now switching on full production e-invoicing through it. What's already battle-tested is the connection itself and the whole reconciliation pipeline behind it: 173 incoming invoices received and processed.",
+        "note": "These numbers will keep growing as the system grows — a production snapshot, not a marketing number."
+      },
       "features": [
         "Invoicing with automatic submission to Poland's National e-Invoice System (KSeF)",
         "JPK-V7M generation and tax filing support",

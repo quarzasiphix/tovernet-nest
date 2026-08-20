@@ -1045,6 +1045,19 @@
         "description": "KsięgaI nie powstała z listy funkcji przygotowanej przez software house. Rozwijamy ją, prowadząc własne spółki, wystawiając rzeczywiste faktury, importując prawdziwe wyciągi, obsługując KSeF i współpracując z księgowymi. Tovernet był i jest pierwszym, najbardziej wymagającym użytkownikiem własnego produktu — każdy zepsuty proces natychmiast dotykał realnej działalności firmy, a nie tylko środowiska testowego."
       },
       "storyLine": "Zaczęliśmy od programu do faktur, a zbudowaliśmy kontrolowaną warstwę operacyjną dla całej firmy — łączącą dokumenty, księgowość, bankowość, KSeF i agentów AI w jednym modelu odpowiedzialności.",
+      "proofWall": {
+        "title": "Liczby, Nie Tylko Słowa",
+        "subtitle": "Stan systemu na 20 sierpnia 2026 — dane produkcyjne, nie przykładowe.",
+        "stats": [
+          { "value": "90", "label": "zarejestrowanych firm w systemie" },
+          { "value": "338", "label": "wystawionych faktur" },
+          { "value": "173", "label": "faktur przychodzących odebranych przez KSeF" },
+          { "value": "1 863", "label": "zaimportowanych transakcji bankowych" },
+          { "value": "6", "label": "firm z aktywnym połączeniem KSeF" }
+        ],
+        "caveat": "Liczba faktur wysłanych bezpośrednio przez KSeF jest na razie mała — firmy dopiero włączają pełne fakturowanie produkcyjne przez KSeF. To, co już jest sprawdzone w boju, to samo połączenie i cały potok uzgadniania za nim: 173 faktury przychodzące odebrane i przetworzone.",
+        "note": "Te liczby będą rosły wraz z rozwojem systemu — to migawka stanu produkcyjnego, nie liczby marketingowe."
+      },
       "features": [
         "Fakturowanie z automatyczną wysyłką do Krajowego Systemu e-Faktur (KSeF)",
         "Generowanie JPK-V7M i wsparcie rozliczeń podatkowych",
