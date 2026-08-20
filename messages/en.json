@@ -881,11 +881,170 @@
     "ksiegai": {
       "badge": "Our Own Product",
       "title": "KsięgaI",
-      "subtitle": "An invoicing, KSeF, and finance system we design, build, and run ourselves day to day — not just infrastructure we sell to clients, but one we actually operate on.",
+      "subtitle": "Financial infrastructure for Polish companies — built around KSeF, accountability, and automation.",
+      "description": "KsięgaI connects invoicing, KSeF, payments, documents, banking, and the company's books in one system. Every company keeps control over its data, access, and decisions — whether the action is taken by the owner, the accountant, an employee, or a connected AI agent.",
+      "proofBadges": [
+        "Production connection to KSeF",
+        "Multi-company permission system",
+        "Bank and document reconciliation",
+        "Secure access for AI agents"
+      ],
+      "ctaSecondary": "See the system architecture",
       "role": {
         "title": "Our Own Product, Not Just a Client Build",
         "description": "Unlike client projects, KsięgaI is a system TOVERNET designs, develops, and maintains as its own product — daily proof that we can build and operate infrastructure under real regulatory pressure (KSeF), not just design it on paper."
       },
+      "problem": {
+        "title": "The Problem Doesn't End When the Invoice Is Issued",
+        "description": "Issuing an invoice is the easy part. The real problem starts afterward: who approved it, was it sent to the right KSeF environment, did the client pay, was the bank transaction reconciled, did the document reach the books, and who was actually allowed to perform each of those operations.",
+        "workflow": [
+          "Invoice issued",
+          "Approved by an authorized person",
+          "Sent to the correct KSeF environment",
+          "Payment reconciled against a bank transaction",
+          "Document posted to the books",
+          "Every step logged along with who had the right to perform it"
+        ]
+      },
+      "ksefArchitecture": {
+        "title": "Every KSeF Operation Has Its Own Level of Responsibility",
+        "intro": "KSeF isn't \"send an XML.\" The system has to handle authentication and company identity, test and production environments, tokens and certificates, permissions, active sessions, XML generation and parsing, submissions, UPO and status retrieval, errors and retries, incoming-invoice synchronization, and separating the owner's role from the accountant's and everyone else's. Instead of one broad endpoint with one broad permission, each of these operations has its own access level.",
+        "cards": [
+          {
+            "title": "Token Verification",
+            "description": "Checks the connection without granting access to any financial operation — available to any signed-in user, before the account is even linked to a company."
+          },
+          {
+            "title": "Credential Management",
+            "description": "Available only to the company's owner and admin — not to everyone who handles the bookkeeping."
+          },
+          {
+            "title": "Document Synchronization",
+            "description": "A controlled operation running in the context of one specific company, triggered by a dedicated worker process."
+          },
+          {
+            "title": "Invoice Submission",
+            "description": "Separated from synchronization and handled by its own dedicated submission process with its own queue."
+          }
+        ],
+        "auditQuote": "We didn't consider the implementation correct just because it \"worked.\" We compared it field by field against the official KSeF schema and tested real transitions against the Ministry of Finance's environment.",
+        "auditFindingsTitle": "What that verification actually found",
+        "auditFindings": [
+          "Incoming invoices from counterparties weren't being reconciled against the register of received documents — a critical defect, fixed before broader production use.",
+          "An operator-precedence bug in VAT calculation, plus KSeF rejecting invoices with multiple VAT rates.",
+          "A field required by the official XSD schema that was missing."
+        ],
+        "leakFix": "The same verification pass also found a case where one endpoint wasn't scoping its query to the right company — it could theoretically have exposed another company's KSeF token metadata. Found in our own internal audit, confirmed against real data, and fixed before it could be exploited."
+      },
+      "permissions": {
+        "title": "Access to a Company Doesn't Mean Access to Everything",
+        "intro": "Every company is isolated at the database level — not just hidden by frontend logic. Roles differ in what they can see and what they can do.",
+        "roles": [
+          { "role": "Owner", "sees": "The whole company", "canDo": "Manages KSeF, access, and credentials" },
+          { "role": "Accountant", "sees": "Documents and books covered by their role", "canDo": "Posts, reconciles, and handles documents" },
+          { "role": "Employee", "sees": "Assigned modules", "canDo": "Issues or prepares documents" },
+          { "role": "AI Agent", "sees": "Only the data available to the person who connected it", "canDo": "Only permitted MCP operations, within its assigned permission tier" }
+        ],
+        "mainSentence": "An AI agent's permissions aren't a separate \"superaccess\" tier. The agent operates exactly within the bounds of the person and company that connected it — at one of several permission tiers, from read-only to full posting.",
+        "isolationNote": "Every organization is isolated by a company identifier and database-level access rules — over 700 such rules across the system, not a single exception."
+      },
+      "mcp": {
+        "title": "AI That Can Work on the Books — But Can't Bypass Permissions",
+        "intro": "KsięgaI has a dedicated MCP server that AI assistants can connect to (Claude, ChatGPT, Cursor, and other compatible clients). The agent doesn't get its own, broader access to the database — it operates exactly within the permissions of the person who connected it, at one of several defined access tiers.",
+        "exampleTitle": "A Real Example (Anonymized)",
+        "example": "An AI agent was asked to analyze a company's accounts for a given month. On its own, it compared issued invoices, payment statuses, bank transactions, imported expenses, the posting queue, and the journal entries. It then flagged unpaid invoices, unposted documents, and discrepancies needing action.",
+        "examplesTitle": "What You Can Ask It To Do",
+        "examples": [
+          "Find unpaid invoices from July.",
+          "Compare the bank against the books and explain the differences.",
+          "Add this expense invoice from a photo.",
+          "Show KSeF documents that were downloaded but never posted.",
+          "Prepare a monthly management summary.",
+          "Check who approved this operation."
+        ],
+        "safetyNote": "New journal entries and bank postings created by the agent land as drafts — never auto-approved. Approval stays with a human.",
+        "closingSentence": "The same interface can run in ChatGPT, Claude, Cursor, or any other compatible MCP client. The company decides who connects their agent and what access tier it gets."
+      },
+      "banking": {
+        "title": "The Bank Isn't a Separate Island",
+        "items": [
+          "ING statement import (XML format)",
+          "Revolut support",
+          "Bank infrastructure built to add further providers",
+          "Original imported data retained for audit purposes",
+          "Exact external transaction references preserved",
+          "Duplicate detection when the same file is imported again",
+          "Matching payments against invoices",
+          "A separate posting queue instead of silently altering the existing ledger"
+        ],
+        "mismatchTitle": "When a Statement Doesn't Match the Account",
+        "mismatchNote": "If an imported statement looks like it came from a different account or currency than expected, the system doesn't quietly try to \"make it fit.\" The import is flagged for manual review instead of being silently posted. In a financial system, a visible warning beats a convenient-looking but wrong match."
+      },
+      "accounting": {
+        "title": "Accounting as a Controlled State Machine",
+        "intro": "A document doesn't just \"appear\" in the books. First it arrives, then it's analyzed, reconciled, approved — and only then does it become a journal entry.",
+        "modulesTitle": "The Modules That Make This Up",
+        "modules": [
+          "Chart of accounts", "Journal entries", "Posting queue awaiting review",
+          "Income and expense documents", "Suppliers, customers and products", "Bank and cash operations",
+          "Payments and reconciliation", "Assets", "Loans", "Share capital",
+          "Company resolutions", "Article 210 KSH workflows", "Legal cases", "Company documents",
+          "Accounting-period locking", "VAT and tax context"
+        ],
+        "queueNote": "An imported document first lands in a posting queue awaiting review. Only an approved queue item becomes an actual journal entry — and old entries are never hard-deleted, only marked voided along with a reason.",
+        "branches": {
+          "title": "Next Direction: Safe Accounting Variants",
+          "description": "We're working on a model inspired by version-control systems: an accountant can prepare an alternative posting or chart-of-accounts variant on an isolated branch, compare its effects, and only then approve merging it into the real books.",
+          "usesTitle": "Possible Uses",
+          "uses": [
+            "Testing a different accounting treatment",
+            "Comparing alternative mappings",
+            "Safely redoing a period",
+            "Reviewing before posting to the main books",
+            "Keeping an exact history of proposed and accepted changes"
+          ],
+          "status": "In research and development — not yet a finished production feature."
+        }
+      },
+      "eventLog": {
+        "title": "Event and Decision Trail",
+        "description": "KsięgaI records not just the current result but the business meaning of an operation: who performed it, in what context, what it concerned, and what caused it. Every KSeF submission attempt lands in an immutable submission log — whether or not it succeeded.",
+        "examplesTitle": "Example Events",
+        "examples": [
+          "Invoice created", "Document imported", "Correction proposed",
+          "Payment matched", "Entry approved", "KSeF submission started",
+          "UPO received", "Permission granted", "Credential disabled"
+        ],
+        "supports": "This supports auditability, safer automation, and explaining why the system reached a given state — without letting AI directly edit the database tables.",
+        "aiNote": "AI issues a business command — it doesn't edit the database."
+      },
+      "migration": {
+        "title": "Rebuilding Working Infrastructure Without Guessing",
+        "description": "As the system grew, individual Supabase Edge Functions were replaced with a shared API gateway and shared pipelines. The migration preserved the existing request/response contracts, so the application could evolve its architecture without rewriting the whole product at once — the old and new paths worked identically during the transition.",
+        "findingsTitle": "What We Found Along the Way",
+        "findings": [
+          "A dead function that was still logging raw KSeF tokens — removed before anyone could use it.",
+          "A forgotten endpoint acting as an open, unauthenticated proxy — closed during the same review."
+        ],
+        "closing": "Old functions weren't just deleted — they were archived (\"_legacy\") along with a note explaining why they stopped being used. That's the same discipline that lets us safely rebuild a client's running system instead of only building demos from scratch."
+      },
+      "security": {
+        "title": "Security Isn't a Separate Module",
+        "philosophy": "Every operation is evaluated by who's performing it, for which company, on what basis, and whether it requires re-confirming identity.",
+        "points": [
+          "KSeF test and production environments kept separate",
+          "Multi-factor authentication for panel access",
+          "Rate limiting at the API gateway level, stricter for authentication operations",
+          "The admin panel is completely separated from the rest of the system and not publicly reachable",
+          "Narrow, individually-granted permissions instead of one universal access key",
+          "Regular internal audits that actually find and close defects — not just on paper"
+        ]
+      },
+      "builtByOperating": {
+        "title": "Built By Running Our Own Companies",
+        "description": "KsięgaI wasn't built from a feature list drawn up by a software house. We develop it while running our own companies — issuing real invoices, importing real bank statements, handling KSeF, and working with real accountants. Tovernet was, and is, its own first and most demanding user — every broken workflow immediately hit a real business process, not just a test environment."
+      },
+      "storyLine": "We started with an invoicing program and built a controlled operating layer for the whole company — connecting documents, accounting, banking, KSeF, and AI agents in one model of accountability.",
       "features": [
         "Invoicing with automatic submission to Poland's National e-Invoice System (KSeF)",
         "JPK-V7M generation and tax filing support",

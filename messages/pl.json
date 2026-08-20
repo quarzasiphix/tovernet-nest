@@ -881,11 +881,170 @@
     "ksiegai": {
       "badge": "Nasz Własny Produkt",
       "title": "KsięgaI",
-      "subtitle": "System fakturowania, KSeF i finansów, który sami projektujemy, budujemy i prowadzimy na co dzień — nie tylko sprzedajemy taką infrastrukturę klientom, sami na niej pracujemy.",
+      "subtitle": "Infrastruktura finansowa dla polskich firm — zaprojektowana wokół KSeF, odpowiedzialności i automatyzacji.",
+      "description": "KsięgaI łączy faktury, KSeF, płatności, dokumenty, bankowość i księgi firmy w jednym systemie. Każda firma zachowuje kontrolę nad swoimi danymi, dostępami i decyzjami — niezależnie od tego, czy działania wykonuje właściciel, księgowa, pracownik czy podłączony agent AI.",
+      "proofBadges": [
+        "Produkcyjne połączenie z KSeF",
+        "Wielofirmowy system uprawnień",
+        "Uzgadnianie banku i dokumentów",
+        "Bezpieczny dostęp dla agentów AI"
+      ],
+      "ctaSecondary": "Zobacz architekturę systemu",
       "role": {
-        "title": "To Nasz Produkt, Nie Tylko Realizacja",
-        "description": "W przeciwieństwie do projektów klienckich, KsięgaI to system, który TOVERNET projektuje, rozwija i utrzymuje jako własny produkt — codzienny dowód na to, że potrafimy zbudować i prowadzić infrastrukturę pod realną presją regulacyjną (KSeF), nie tylko zaprojektować ją na papierze."
+        "title": "Nasz Własny Produkt, Nie Tylko Realizacja Kliencka",
+        "description": "W odróżnieniu od projektów klienckich, KsięgaI to system, który TOVERNET projektuje, rozwija i utrzymuje jako własny produkt — codzienny dowód, że potrafimy zbudować i prowadzić infrastrukturę pod realną presją regulacyjną (KSeF), a nie tylko zaprojektować ją na papierze."
       },
+      "problem": {
+        "title": "Problem Nie Kończy Się na Wystawieniu Faktury",
+        "description": "Wystawienie faktury jest prostą częścią. Prawdziwy problem zaczyna się później: kto ją zatwierdził, czy została wysłana do właściwego środowiska KSeF, czy klient zapłacił, czy transakcja bankowa została uzgodniona, czy dokument trafił do księgi oraz kto miał prawo wykonać każdą z tych operacji.",
+        "workflow": [
+          "Faktura wystawiona",
+          "Zatwierdzona przez uprawnioną osobę",
+          "Wysłana do właściwego środowiska KSeF",
+          "Płatność uzgodniona z transakcją bankową",
+          "Dokument zaksięgowany",
+          "Każdy krok zapisany razem z tym, kto miał do niego prawo"
+        ]
+      },
+      "ksefArchitecture": {
+        "title": "Każda Operacja KSeF Ma Własny Poziom Odpowiedzialności",
+        "intro": "KSeF to nie „wyślij XML”. System musi obsłużyć uwierzytelnianie i tożsamość firmy, środowiska testowe i produkcyjne, tokeny i certyfikaty, uprawnienia, aktywne sesje, generowanie i parsowanie XML, wysyłki, pobieranie UPO i statusów, błędy i ponawianie prób, synchronizację faktur przychodzących oraz rozdzielenie ról właściciela, księgowej i pozostałych osób. Zamiast jednego szerokiego endpointu z jednym szerokim uprawnieniem, każda z tych operacji ma osobny poziom dostępu.",
+        "cards": [
+          {
+            "title": "Weryfikacja tokenu",
+            "description": "Sprawdzenie połączenia bez przyznawania dostępu do operacji finansowych — dostępne dla każdej zalogowanej osoby, zanim jeszcze konto zostanie powiązane z firmą."
+          },
+          {
+            "title": "Zarządzanie poświadczeniami",
+            "description": "Dostępne wyłącznie właścicielowi i administratorowi firmy — nie każdej osobie obsługującej księgowość."
+          },
+          {
+            "title": "Synchronizacja dokumentów",
+            "description": "Kontrolowana operacja działająca w kontekście konkretnej firmy, uruchamiana przez osobny proces roboczy."
+          },
+          {
+            "title": "Wysyłka faktury",
+            "description": "Oddzielona od synchronizacji i wykonywana przez osobny, dedykowany proces submission z własną kolejką."
+          }
+        ],
+        "auditQuote": "Implementacji nie uznaliśmy za poprawną tylko dlatego, że „działała”. Porównaliśmy ją pole po polu z oficjalnym schematem KSeF i testowaliśmy rzeczywiste przejścia względem środowiska Ministerstwa Finansów.",
+        "auditFindingsTitle": "Co ta weryfikacja realnie znalazła",
+        "auditFindings": [
+          "Faktury przychodzące od kontrahentów nie były uzgadniane z rejestrem otrzymanych dokumentów — błąd krytyczny, naprawiony przed szerszym użyciem produkcyjnym.",
+          "Błąd kolejności operatorów w wyliczeniu VAT oraz odrzucanie przez KSeF faktur z wieloma stawkami VAT.",
+          "Brakujące pole wymagane przez oficjalny schemat XSD."
+        ],
+        "leakFix": "Ten sam proces weryfikacji wykrył też przypadek, w którym jeden z endpointów nie ograniczał zapytania do właściwej firmy — teoretycznie mógł ujawnić metadane tokenu KSeF innej firmy. Błąd znaleziono przy własnym wewnętrznym audycie, potwierdzono na rzeczywistych danych i naprawiono, zanim mógł zostać wykorzystany."
+      },
+      "permissions": {
+        "title": "Dostęp do Firmy Nie Oznacza Dostępu do Wszystkiego",
+        "intro": "Każda firma jest odizolowana na poziomie bazy danych — nie tylko ukryta przez logikę frontendu. Role różnią się tym, co widzą i co mogą wykonać.",
+        "roles": [
+          { "role": "Właściciel", "sees": "Całą firmę", "canDo": "Zarządza KSeF, dostępami i poświadczeniami" },
+          { "role": "Księgowa", "sees": "Dokumenty i księgi objęte rolą", "canDo": "Księguje, uzgadnia i obsługuje dokumenty" },
+          { "role": "Pracownik", "sees": "Przydzielone moduły", "canDo": "Wystawia lub przygotowuje dokumenty" },
+          { "role": "Agent AI", "sees": "Tylko dane dostępne osobie, która go podłączyła", "canDo": "Wyłącznie dozwolone operacje MCP, w ramach przypisanego poziomu uprawnień" }
+        ],
+        "mainSentence": "Uprawnienia agenta AI nie są osobnym „superdostępem”. Agent działa dokładnie w granicach osoby i firmy, która go podłączyła — w ramach jednego z kilku poziomów dostępu, od odczytu po pełne księgowanie.",
+        "isolationNote": "Każda organizacja jest odizolowana przez identyfikator firmy i reguły dostępu na poziomie bazy danych — ponad 700 takich reguł w całym systemie, nie pojedynczy wyjątek."
+      },
+      "mcp": {
+        "title": "AI, Które Może Pracować na Księgowości — ale Nie Może Ominąć Uprawnień",
+        "intro": "KsięgaI ma dedykowany serwer MCP, przez który mogą łączyć się asystenci AI (Claude, ChatGPT, Cursor i inni zgodni klienci). Agent nie dostaje własnego, szerszego dostępu do bazy — działa dokładnie w granicach uprawnień osoby, która go podłączyła, w jednym z zdefiniowanych poziomów dostępu.",
+        "exampleTitle": "Przykład z życia (dane zanonimizowane)",
+        "example": "Agent AI otrzymał polecenie przeanalizowania rozliczeń spółki za wskazany miesiąc. Samodzielnie porównał wystawione faktury, statusy płatności, transakcje bankowe, zaimportowane koszty, kolejkę księgowania oraz zapisy dziennika. Następnie wskazał nieopłacone faktury, niezaksięgowane dokumenty i rozbieżności wymagające działania.",
+        "examplesTitle": "Czego można od niego zażądać",
+        "examples": [
+          "Znajdź nieopłacone faktury z lipca.",
+          "Porównaj bank z księgą i wyjaśnij różnice.",
+          "Dodaj tę fakturę kosztową ze zdjęcia.",
+          "Pokaż dokumenty pobrane z KSeF, które nie zostały zaksięgowane.",
+          "Przygotuj miesięczne podsumowanie zarządcze.",
+          "Sprawdź, kto zatwierdził tę operację."
+        ],
+        "safetyNote": "Nowe zapisy księgowe i księgowania z banku tworzone przez agenta trafiają jako szkic — nigdy nie są automatycznie zatwierdzane. Zatwierdzenie zostaje po stronie człowieka.",
+        "closingSentence": "Ten sam interfejs może działać w ChatGPT, Claude, Cursorze lub innym zgodnym kliencie MCP. Firma decyduje, kto łączy swojego agenta i jaki poziom dostępu on otrzymuje."
+      },
+      "banking": {
+        "title": "Bank Nie Jest Osobną Wyspą",
+        "items": [
+          "Import wyciągów ING w formacie XML",
+          "Wsparcie dla Revolut",
+          "Infrastruktura bankowa przygotowana pod kolejnych dostawców",
+          "Oryginalne, zaimportowane dane zachowane do celów audytu",
+          "Zachowane dokładne referencje transakcji zewnętrznych",
+          "Wykrywanie duplikatów przy ponownym imporcie tego samego pliku",
+          "Dopasowywanie płatności do faktur",
+          "Osobna kolejka księgowań zamiast cichej zmiany istniejącej księgi"
+        ],
+        "mismatchTitle": "Gdy Wyciąg Nie Pasuje do Konta",
+        "mismatchNote": "Jeśli zaimportowany wyciąg wygląda, jakby pochodził z innego rachunku lub waluty niż oczekiwana, system nie próbuje „jakoś go dopasować” po cichu. Import zostaje oznaczony do ręcznej weryfikacji zamiast zostać cicho zaksięgowany. W systemie finansowym widoczne ostrzeżenie jest lepsze niż pozornie wygodne, błędne dopasowanie."
+      },
+      "accounting": {
+        "title": "Księgowość Jako Kontrolowana Maszyna Stanów",
+        "intro": "Dokument nie „pojawia się” w księdze. Najpierw wpływa, jest analizowany, uzgadniany, zatwierdzany i dopiero wtedy staje się zapisem księgowym.",
+        "modulesTitle": "Moduły, które się na to składają",
+        "modules": [
+          "Plan kont", "Dziennik zapisów księgowych", "Kolejka księgowań do weryfikacji",
+          "Dokumenty przychodowe i kosztowe", "Kontrahenci i produkty", "Operacje bankowe i kasowe",
+          "Płatności i uzgadnianie", "Środki trwałe", "Pożyczki", "Kapitał zakładowy",
+          "Uchwały spółki", "Procesy zgodne z art. 210 KSH", "Sprawy prawne", "Dokumenty firmowe",
+          "Blokowanie okresów księgowych", "Kontekst VAT i podatkowy"
+        ],
+        "queueNote": "Zaimportowany dokument najpierw trafia do kolejki księgowań oczekujących na przegląd. Dopiero zatwierdzona pozycja z kolejki staje się właściwym zapisem księgowym — a stare zapisy nigdy nie są twardo usuwane, tylko oznaczane jako anulowane wraz z powodem.",
+        "branches": {
+          "title": "Kolejny Kierunek: Bezpieczne Warianty Księgowania",
+          "description": "Pracujemy nad modelem inspirowanym systemami kontroli wersji: księgowa może przygotować alternatywny wariant dekretacji lub planu kont w odizolowanej gałęzi, porównać jego skutki, a dopiero potem zatwierdzić połączenie z właściwą księgą.",
+          "usesTitle": "Możliwe zastosowania",
+          "uses": [
+            "Przetestowanie innego sposobu księgowania",
+            "Porównanie alternatywnych mapowań",
+            "Bezpieczne powtórzenie okresu",
+            "Weryfikacja przed zaksięgowaniem do głównej księgi",
+            "Dokładna historia proponowanych i zaakceptowanych zmian"
+          ],
+          "status": "W fazie badań i rozwoju — nie jest to jeszcze gotowa funkcja produkcyjna."
+        }
+      },
+      "eventLog": {
+        "title": "Ślad Zdarzeń i Decyzji",
+        "description": "KsięgaI rejestruje nie tylko aktualny wynik, lecz także znaczenie biznesowe operacji: kto wykonał działanie, w jakim kontekście, czego dotyczyło i co je spowodowało. Każda próba wysyłki do KSeF trafia do niezmienialnego dziennika submission — niezależnie od tego, czy się powiodła.",
+        "examplesTitle": "Przykładowe zdarzenia",
+        "examples": [
+          "Faktura wystawiona", "Dokument zaimportowany", "Korekta zaproponowana",
+          "Płatność dopasowana", "Zapis zatwierdzony", "Wysyłka do KSeF rozpoczęta",
+          "UPO odebrane", "Uprawnienie nadane", "Poświadczenie wyłączone"
+        ],
+        "supports": "To wspiera audytowalność, bezpieczniejszą automatyzację i wyjaśnianie, dlaczego system znalazł się w danym stanie — bez pozwalania AI na bezpośrednią zmianę tabel w bazie.",
+        "aiNote": "AI wydaje polecenie biznesowe — nie edytuje bazy danych."
+      },
+      "migration": {
+        "title": "Przebudowa Działającej Infrastruktury Bez Zgadywania",
+        "description": "Wraz z rozwojem systemu pojedyncze funkcje Supabase Edge Functions zostały zastąpione wspólną bramą API i współdzielonymi pipeline'ami. Migracja zachowywała istniejące kontrakty request/response, dzięki czemu aplikacja mogła rozwijać architekturę bez jednoczesnego przepisywania całego produktu — stare i nowe ścieżki działały identycznie w trakcie przejścia.",
+        "findingsTitle": "Co znaleźliśmy po drodze",
+        "findings": [
+          "Martwa funkcja, która wciąż logowała surowe tokeny KSeF — usunięta, zanim ktokolwiek z niej skorzystał.",
+          "Zapomniany endpoint działający jako otwarte proxy bez uwierzytelniania — zamknięty podczas tego samego przeglądu."
+        ],
+        "closing": "Stare funkcje nie zostały po prostu skasowane — trafiły do archiwum („_legacy”) razem z notatką, dlaczego przestały być używane. To ta sama dyscyplina, która pozwala nam bezpiecznie przebudowywać działający system klienta, a nie tylko budować demo od zera."
+      },
+      "security": {
+        "title": "Bezpieczeństwo Nie Jest Osobnym Modułem",
+        "philosophy": "Każda operacja jest oceniana według tego, kto ją wykonuje, dla której firmy, na jakiej podstawie i czy wymaga ponownego potwierdzenia tożsamości.",
+        "points": [
+          "Rozdzielenie środowiska testowego i produkcyjnego KSeF",
+          "Uwierzytelnianie wieloskładnikowe dla dostępu do panelu",
+          "Limitowanie liczby żądań na poziomie bramy API, silniejsze dla operacji logowania",
+          "Panel administracyjny całkowicie oddzielony od reszty systemu i niedostępny publicznie",
+          "Wąskie, jednorazowo nadawane uprawnienia zamiast jednego uniwersalnego klucza dostępu",
+          "Regularne wewnętrzne audyty, które realnie znajdują i zamykają błędy — nie tylko na papierze"
+        ]
+      },
+      "builtByOperating": {
+        "title": "Zbudowane Przy Prowadzeniu Własnych Spółek",
+        "description": "KsięgaI nie powstała z listy funkcji przygotowanej przez software house. Rozwijamy ją, prowadząc własne spółki, wystawiając rzeczywiste faktury, importując prawdziwe wyciągi, obsługując KSeF i współpracując z księgowymi. Tovernet był i jest pierwszym, najbardziej wymagającym użytkownikiem własnego produktu — każdy zepsuty proces natychmiast dotykał realnej działalności firmy, a nie tylko środowiska testowego."
+      },
+      "storyLine": "Zaczęliśmy od programu do faktur, a zbudowaliśmy kontrolowaną warstwę operacyjną dla całej firmy — łączącą dokumenty, księgowość, bankowość, KSeF i agentów AI w jednym modelu odpowiedzialności.",
       "features": [
         "Fakturowanie z automatyczną wysyłką do Krajowego Systemu e-Faktur (KSeF)",
         "Generowanie JPK-V7M i wsparcie rozliczeń podatkowych",
