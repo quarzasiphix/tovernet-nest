@@ -11,18 +11,18 @@
     "providerAudit": "Audyt wykonawców"
   },
   "hero": {
-    "badge": "Strony i Systemy Dla Branży Zwierzęcej",
+    "badge": "Dedykowane Oprogramowanie i Systemy — Każda Branża",
     "title": "Strony i Systemy Dla Branży Zwierzęcej",
     "titleHighlight": "Budujemy Systemy, Na Których Opierają Się Firmy",
-    "subtitle": "Strony, panele i dedykowane systemy dla hodowców, związków kynologicznych i firm pracujących ze zwierzętami. Znamy tę branżę — sami w niej działamy.",
+    "subtitle": "Strony, panele klientów i dedykowane systemy — budowane pod systemy zgodności z przepisami (KSeF), regulowaną logistykę i branże, których większość agencji nie dotknie. Przy okazji doskonale znamy branżę zwierzęcą, bo sami w niej działamy. Przynieś nam problem.",
     "description": "",
     "ctaPrimary": "Zobacz Nasze Rozwiązania",
     "ctaSecondary": "Porozmawiaj o Projekcie",
-    "tagline": "Hodowle • organizacje kynologiczne • transport zwierząt • rejestry i dokumentacja • automatyzacja biura"
+    "tagline": "Zgodność z przepisami (KSeF) • płatności i rozliczenia • systemy gotowe na audyt • hodowle i organizacje kynologiczne • licencjonowany transport zwierząt • zoo i organizacje egzotyczne • wszystko inne, co do nas przyniesiesz"
   },
   "paths": {
     "title": "Rozwiązania Dla Twojej Branży",
-    "subtitle": "Cztery konkretne ścieżki. Wybierz swoją — każda ma pełną ofertę na własnej stronie.",
+    "subtitle": "Wybierz najbliższą opcję — każda ma pełną ofertę na własnej stronie. Nie widzisz swojej? Od tego jest ostatnia karta.",
     "breeders": {
       "title": "Dla Hodowców",
       "description": "Strona i panel, które hodowca aktualizuje samodzielnie.",
@@ -35,34 +35,39 @@
     },
     "animalIndustry": {
       "title": "Dla Firm Z Branży Zwierzęcej",
-      "description": "Dedykowane systemy dla transportu zwierząt, hoteli, groomerów, trenerów, schronisk, marketplace'ów i innych firm. Rezerwacje, dokumenty, płatności, obsługa klientów i procesy wewnętrzne.",
+      "description": "Dedykowane systemy dla transportu zwierząt, hoteli, groomerów, trenerów, schronisk, marketplace'ów, zoo, organizacji zajmujących się zwierzętami egzotycznymi i innych firm. Rezerwacje, dokumenty, płatności, obsługa klientów i procesy wewnętrzne.",
       "cta": "Porozmawiajmy o Twoim Projekcie"
     },
     "finance": {
       "title": "Finanse i Administracja",
       "description": "Faktury, KSeF, dokumenty, płatności, rozliczenia i dedykowane systemy wewnętrzne. KsięgaI to nasz własny produkt w tym obszarze — realny dowód, że to potrafimy zbudować i utrzymać.",
       "cta": "Zobacz KsięgaI"
+    },
+    "somethingElse": {
+      "title": "Coś Innego?",
+      "description": "To, że czegoś nie ma na tej liście, nie znaczy, że tego nie zbudujemy. Regulowana branża, dziwny stary system, pomysł, którego nikt inny nie chce dotknąć — powiedz nam, o co chodzi, a wymyślimy, jak to zbudować.",
+      "cta": "Powiedz Nam Swój Pomysł"
     }
   },
-  "whyWeKnow": {
-    "title": "Nie Uczymy Się Branży Zwierzęcej Dopiero Po Podpisaniu Umowy",
-    "description": "Tworzymy oprogramowanie dla hodowców i organizacji kynologicznych, a jednocześnie sami działamy w międzynarodowym transporcie zwierząt (GlobalPet Transport). Znamy w praktyce dokumentację i pochodzenie zwierząt, współpracę z hodowcami i właścicielami, logistykę oraz procesy organizacyjne — nie tylko z opisu wymagań klienta.",
+  "proof": {
+    "title": "Dowody, Nie Obietnice",
+    "description": "Nie tylko projektujemy systemy dla cudzych firm — część z nich sami prowadzimy pod realną presją prawną i regulacyjną, a raz zaufano nam nawet w technicznej stronie sporu sądowego klienta. Cztery konkretne powody, by uwierzyć, że zbudujemy to, czego potrzebujesz.",
     "items": [
       {
-        "title": "Dokumentacja i Pochodzenie Zwierząt",
-        "description": "Rodowody, karty rejestracji, numeracja dokumentów — wiemy, jak muszą wyglądać i jak krążą między hodowcą, związkiem i właścicielem."
+        "title": "Systemy Zgodności z Przepisami Rządowymi",
+        "description": "KsięgaI integruje się bezpośrednio z KSeF 2.0 — produkcyjnym systemem e-faktur Ministerstwa Finansów. Autoryzacja, tokeny, certyfikaty i zdarzenia audytowe w systemie o realnych konsekwencjach regulacyjnych."
       },
       {
-        "title": "Współpraca z Hodowcami i Właścicielami",
-        "description": "Wiemy, gdzie w tej relacji pojawiają się tarcia — i jak system może je usunąć zamiast dokładać kolejny formularz."
+        "title": "Płatności i Infrastruktura Finansowa",
+        "description": "Integracje ze Stripe, uzgadnianie wyciągów bankowych, audytowalne dzienniki decyzji. Przez systemy, które budujemy, przepływają realne pieniądze — nie idziemy na skróty w poprawności."
       },
       {
-        "title": "Logistyka Transportu Zwierząt",
-        "description": "Prowadzimy GlobalPet Transport — licencjonowany transport zwierząt przez jurysdykcje UE. Znamy ograniczenia fizyczne i prawne tej pracy z pierwszej ręki."
+        "title": "Ścieżki Audytu i Wsparcie w Sporach z Dostawcami",
+        "description": "Gdy klient z branży pogrzebowej potrzebował dokumentacji technicznej do sporu sądowego z poprzednim dostawcą, dostarczyliśmy ją — audyty na poziomie umowy, weryfikację dostarczonych funkcji, odzyskanie danych. To nie typowa działka web-dev, ale sobie z nią poradziliśmy."
       },
       {
-        "title": "Procesy Organizacyjne Biura",
-        "description": "Od wniosku hodowcy po wystawiony dokument — wiemy, gdzie biuro traci czas na papier i Excel."
+        "title": "Branża Zwierzęca i Licencjonowana Logistyka",
+        "description": "Dokumentacja rodowodowa, rejestry związków kynologicznych i własna licencjonowana działalność transportu zwierząt w UE. Realne doświadczenie operacyjne, nie opis wymagań klienta."
       }
     ]
   },
@@ -79,22 +84,22 @@
           "url": "/projekty/pokiu"
         },
         {
-          "name": "Gryfin York",
-          "badge": "Strona Hodowli + Panel Zarządzania",
-          "description": "Hodowla Yorkshire Terrierów. Strona publiczna z aktualnymi miotami i galerią, połączona z panelem, w którym hodowczyni sama zarządza psami, miotami i treścią — bez naszej pomocy na co dzień.",
-          "cta": "Zobacz Case Study Gryfin York",
-          "url": "/projekty/gryfin-york"
+          "name": "Nekrolog Łódź",
+          "badge": "Wsparcie w Sporze z Dostawcą i Audyt Techniczny",
+          "description": "Pełna cyfrowa obecność zakładu pogrzebowego — plus coś rzadszego. Gdy klient potrzebował dokumentacji technicznej do sporu sądowego z poprzednim dostawcą, dostarczyliśmy ją: audyty na poziomie umowy i weryfikację dostarczonych funkcji. Nie tylko budujemy systemy — potrafimy udowodnić, co faktycznie zostało dostarczone.",
+          "cta": "Zobacz Case Study Nekrolog Łódź",
+          "url": "/projekty/nekrolog-lodz"
         }
       ],
       "secondaryLabel": "Więcej realizacji:",
       "secondary": [
         {
-          "name": "Kolorowa Pasja",
-          "url": "/projekty/kolorowa-pasja"
+          "name": "Gryfin York",
+          "url": "/projekty/gryfin-york"
         },
         {
-          "name": "Nekrolog Łódź",
-          "url": "/projekty/nekrolog-lodz"
+          "name": "Kolorowa Pasja",
+          "url": "/projekty/kolorowa-pasja"
         },
         {
           "name": "Klepsydra",
@@ -108,6 +113,7 @@
       "tags": [
         "Hodowcy psów rasowych",
         "Organizacje kynologiczne",
+        "Zoo i zwierzęta egzotyczne",
         "Transport zwierząt",
         "Zakłady pogrzebowe",
         "Finanse i KSeF"
@@ -164,7 +170,7 @@
     ]
   },
   "contact": {
-    "title": "Gotowy Na Stronę Lub System Dla Swojej Branży?",
+    "title": "Masz Pomysł? Powiedz Nam — Wymyślimy, Jak To Zbudować.",
     "subtitle": "Napisz do nas — porozmawiajmy o Twoim projekcie i o tym, co faktycznie ma sens zbudować.",
     "cta": "Porozmawiajmy o Projekcie"
   },

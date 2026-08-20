@@ -11,18 +11,18 @@
     "providerAudit": "Provider Audits"
   },
   "hero": {
-    "badge": "Websites and Systems for the Animal Industry",
+    "badge": "Custom Software & Systems — Any Industry",
     "title": "Websites and Systems for the Animal Industry",
     "titleHighlight": "We Build Systems Companies Depend On",
-    "subtitle": "Websites, panels, and dedicated systems for breeders, kennel clubs, and animal-industry companies. We know this industry — we operate in it ourselves.",
+    "subtitle": "Websites, client portals, and dedicated systems — built for government-grade compliance, regulated logistics, and industries most agencies won't touch. We also happen to know the animal industry cold, because we operate in it ourselves. Bring us the problem.",
     "description": "",
     "ctaPrimary": "See Our Solutions",
     "ctaSecondary": "Talk About Your Project",
-    "tagline": "Kennels • kennel clubs • animal transport • registries and documentation • office automation"
+    "tagline": "Government compliance (KSeF) • payments & billing • audit-ready systems • kennels & kennel clubs • licensed animal transport • zoos & exotic-animal orgs • anything else you bring us"
   },
   "paths": {
     "title": "Solutions For Your Industry",
-    "subtitle": "Four concrete paths. Pick yours — each has a full offer on its own page.",
+    "subtitle": "Pick the closest match — each has a full offer on its own page. Don't see yours? That's what the last card is for.",
     "breeders": {
       "title": "For Breeders",
       "description": "A site and panel your kennel updates itself.",
@@ -35,34 +35,39 @@
     },
     "animalIndustry": {
       "title": "For Animal-Industry Companies",
-      "description": "Dedicated systems for animal transport, pet hotels, groomers, trainers, shelters, marketplaces, and other companies. Bookings, documents, payments, customer handling, and internal processes.",
+      "description": "Dedicated systems for animal transport, pet hotels, groomers, trainers, shelters, marketplaces, zoos, exotic-animal organizations, and other companies. Bookings, documents, payments, customer handling, and internal processes.",
       "cta": "Let's Talk About Your Project"
     },
     "finance": {
       "title": "Finance & Administration",
       "description": "Invoices, KSeF compliance, documents, payments, settlements, and dedicated internal systems. KsięgaI is our own product in this space — real proof we can build and run it.",
       "cta": "Visit KsięgaI"
+    },
+    "somethingElse": {
+      "title": "Something Else?",
+      "description": "Not on this list doesn't mean we can't build it. Regulated industry, weird legacy system, an idea nobody else wants to touch — tell us what it is and we'll figure out how to build it.",
+      "cta": "Tell Us Your Idea"
     }
   },
-  "whyWeKnow": {
-    "title": "We Don't Learn This Industry After Signing the Contract",
-    "description": "We build software for breeders and kennel clubs, and at the same time we operate in international animal transport ourselves (GlobalPet Transport). We know animal documentation and provenance, working with breeders and owners, logistics, and organizational processes firsthand — not just from a requirements doc.",
+  "proof": {
+    "title": "Proof, Not Promises",
+    "description": "We don't just design systems for other people's businesses — we run some of them ourselves under real legal and regulatory pressure, and we've been trusted with the technical side of a client's legal dispute. Four concrete reasons to believe we can build what you need.",
     "items": [
       {
-        "title": "Animal Documentation & Provenance",
-        "description": "Pedigrees, registration cards, document numbering — we know what they need to look like and how they move between breeder, club, and owner."
+        "title": "Government Compliance Systems",
+        "description": "KsięgaI integrates directly with KSeF 2.0 — the Polish Ministry of Finance's production e-invoicing system. Auth, tokens, certificates, and audit events, for a system with real regulatory consequences."
       },
       {
-        "title": "Working With Breeders and Owners",
-        "description": "We know where friction shows up in that relationship — and how a system can remove it instead of adding another form."
+        "title": "Payments & Financial Infrastructure",
+        "description": "Stripe integrations, bank reconciliation, auditable decision logs. Real money moves through systems we build — we don't cut corners on correctness."
       },
       {
-        "title": "Animal Transport Logistics",
-        "description": "We run GlobalPet Transport — licensed animal transport across EU jurisdictions. We know the physical and legal constraints of that work firsthand."
+        "title": "Audit Trails & Vendor Dispute Support",
+        "description": "When a funeral-home client needed technical documentation for a legal dispute with a previous vendor, we provided it — contract-level audits, delivery verification, asset recovery. Not typical web-dev territory, but we handled it."
       },
       {
-        "title": "Office Organizational Processes",
-        "description": "From a breeder's request to an issued document — we know where offices lose time to paper and Excel."
+        "title": "Animal Industry & Licensed Logistics",
+        "description": "Pedigree documentation, kennel-club registries, and our own licensed EU animal transport operation. Real operational experience, not a requirements doc."
       }
     ]
   },
@@ -79,22 +84,22 @@
           "url": "/projekty/pokiu"
         },
         {
-          "name": "Gryfin York",
-          "badge": "Kennel Site + Management Panel",
-          "description": "A Yorkshire Terrier kennel. A public site with current litters and a gallery, paired with a panel where the owner manages dogs, litters, and content herself — without our day-to-day involvement.",
-          "cta": "See the Gryfin York Case Study",
-          "url": "/projekty/gryfin-york"
+          "name": "Nekrolog Łódź",
+          "badge": "Vendor Dispute & Technical Audit Support",
+          "description": "A funeral home's full digital presence — plus something rarer. When they needed technical documentation for a legal dispute with a previous vendor, we provided contract-level audits and delivery verification. We don't just build systems; we can prove what was actually delivered.",
+          "cta": "See the Nekrolog Łódź Case Study",
+          "url": "/projekty/nekrolog-lodz"
         }
       ],
       "secondaryLabel": "More client work:",
       "secondary": [
         {
-          "name": "Kolorowa Pasja",
-          "url": "/projekty/kolorowa-pasja"
+          "name": "Gryfin York",
+          "url": "/projekty/gryfin-york"
         },
         {
-          "name": "Nekrolog Łódź",
-          "url": "/projekty/nekrolog-lodz"
+          "name": "Kolorowa Pasja",
+          "url": "/projekty/kolorowa-pasja"
         },
         {
           "name": "Klepsydra",
@@ -108,6 +113,7 @@
       "tags": [
         "Purebred dog breeders",
         "Kennel clubs",
+        "Zoos & exotic-animal orgs",
         "Animal transport",
         "Funeral homes",
         "Finance & KSeF"
@@ -164,7 +170,7 @@
     ]
   },
   "contact": {
-    "title": "Ready For a Site or System For Your Industry?",
+    "title": "Have an Idea? Tell Us — We'll Figure Out How to Build It.",
     "subtitle": "Write to us — let's talk about your project and what's actually worth building.",
     "cta": "Let's Talk About Your Project"
   },

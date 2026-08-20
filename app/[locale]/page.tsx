@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import {
-  ArrowRight, PawPrint, Building2, Truck, Calculator, Receipt, Plane, FileCheck, Users, ClipboardList, Sparkles, Facebook,
+  ArrowRight, PawPrint, Building2, Truck, Calculator, Receipt, Plane, FileCheck, Sparkles, Facebook, ShieldCheck, Lightbulb,
 } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
@@ -15,18 +15,18 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     locale,
     path: '',
     title: isPolish
-      ? 'Strony i Systemy Dla Branży Zwierzęcej | TOVERNET'
-      : 'Websites and Systems for the Animal Industry | TOVERNET',
+      ? 'Dedykowane Systemy i Strony Internetowe Dla Każdej Branży | TOVERNET'
+      : 'Custom Websites & Systems For Any Industry | TOVERNET',
     description: isPolish
-      ? 'Strony internetowe, panele klientów i dedykowane systemy dla hodowców, organizacji kynologicznych i firm z branży zwierzęcej. Znamy tę branżę — sami w niej działamy.'
-      : 'Websites, client portals, and dedicated systems for breeders, kennel clubs, and animal-industry companies. We know this industry — we operate in it ourselves.',
+      ? 'Strony internetowe, panele klientów i dedykowane systemy — od zgodności z KSeF po licencjonowaną logistykę, hodowców i organizacje kynologiczne. Realne projekty, realna odpowiedzialność.'
+      : 'Websites, client portals, and dedicated systems — from KSeF compliance to licensed logistics, breeders, and kennel clubs. Real projects, real accountability.',
     keywords: isPolish
-      ? ['strony i systemy dla branży zwierzęcej', 'oprogramowanie dla hodowców psów', 'panel administracyjny hodowla', 'systemy dla związków kynologicznych']
-      : ['websites for the animal industry', 'dog breeder software', 'kennel admin panel', 'kennel club systems'],
+      ? ['dedykowane systemy dla firm', 'strony i systemy dla branży zwierzęcej', 'integracja KSeF', 'oprogramowanie dla hodowców psów', 'panel administracyjny hodowla', 'systemy dla związków kynologicznych']
+      : ['custom business software', 'websites for the animal industry', 'KSeF integration', 'dog breeder software', 'kennel admin panel', 'kennel club systems'],
   });
 }
 
-const WHY_WE_KNOW_ICONS = [FileCheck, Users, Plane, ClipboardList];
+const PROOF_ICONS = [ShieldCheck, Receipt, FileCheck, PawPrint];
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
@@ -75,7 +75,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
         </div>
       </section>
 
-      {/* Four paths */}
+      {/* Solutions by industry */}
       <section id="solutions" className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -130,21 +130,34 @@ export default function Home({ params: { locale } }: { params: { locale: string 
                   <ArrowRight className="h-5 w-5" />
                 </span>
               </a>
+
+              <a
+                href={`/${locale}#contact`}
+                className="group relative bg-white/5 border border-dashed border-white/20 rounded-2xl p-8 hover-lift hover:border-tovernet-400/50 hover:bg-white/[0.07] overflow-hidden block md:col-span-2"
+              >
+                <Lightbulb className="h-10 w-10 text-tovernet-400 mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">{t('paths.somethingElse.title')}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed max-w-2xl">{t('paths.somethingElse.description')}</p>
+                <span className="inline-flex items-center gap-2 text-tovernet-400 font-semibold group-hover:gap-3 transition-all">
+                  {t('paths.somethingElse.cta')}
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why we know this industry */}
+      {/* Proof, not promises */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('whyWeKnow.title')}</h2>
-            <p className="text-xl text-gray-300 leading-relaxed">{t('whyWeKnow.description')}</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('proof.title')}</h2>
+            <p className="text-xl text-gray-300 leading-relaxed">{t('proof.description')}</p>
           </div>
           <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.raw('whyWeKnow.items').map((item: { title: string; description: string }, i: number) => {
-              const Icon = WHY_WE_KNOW_ICONS[i] ?? FileCheck;
+            {t.raw('proof.items').map((item: { title: string; description: string }, i: number) => {
+              const Icon = PROOF_ICONS[i] ?? FileCheck;
               return (
                 <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
                   <Icon className="h-8 w-8 text-tovernet-400 mb-3" />
