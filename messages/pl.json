@@ -908,7 +908,7 @@
     "klepsydra": {
       "badge": "Klient · Narzędzie Online",
       "title": "Klepsydra",
-      "subtitle": "Darmowy generator e-klepsydry pogrzebowej, marketowany jako narzędzie zakładu Jolanta Kostowska Nekrolog Łódź — zbudowany przez nas jako osobna aplikacja.",
+      "subtitle": "Darmowy generator e-klepsydry pogrzebowej działający w przeglądarce, marketowany pod marką klienta — Jolanta Kostowska Nekrolog Łódź — i rozwinięty w osobny produkt z płatnym kontem dla innych zakładów pogrzebowych w całej Polsce.",
       "role": {
         "title": "Tworzymy I Prowadzimy Tę Usługę",
         "description": "Klepsydra od Nekrolog Kostowska to cyfrowa usługa pamięci stworzona i rozwijana przez Tovernet. Odpowiadamy za technologię, utrzymanie systemu, bezpieczeństwo, administrację usługi oraz jej dalszy rozwój."
@@ -923,7 +923,68 @@
         "label": "Wypróbuj Klepsydrę",
         "url": "https://klepsydra.nekrolog-lodz.com"
       },
-      "operatorLine": "Warstwę technologiczną i płatności (Stripe) usługi Klepsydra zapewnia i utrzymuje Tovernet sp. z o.o. — na zlecenie Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, zgodnie z regulaminem serwisu klepsydra.nekrolog-lodz.com."
+      "operatorLine": "Warstwę technologiczną i płatności (Stripe) usługi Klepsydra zapewnia i utrzymuje Tovernet sp. z o.o. — na zlecenie Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, zgodnie z regulaminem serwisu klepsydra.nekrolog-lodz.com.",
+      "walkthrough": {
+        "title": "Jak działa generator",
+        "subtitle": "Bez instalacji, bez rejestracji — rodzina wypełnia formularz i w kilka minut ma gotową klepsydrę.",
+        "steps": [
+          {
+            "title": "Wpisz dane",
+            "description": "Imię i nazwisko zmarłego, wiek, data i miejsce pogrzebu, cmentarz, podpis rodziny."
+          },
+          {
+            "title": "Sprawdź podgląd",
+            "description": "Wybierz styl imienia, ramkę i grafikę — podgląd A4 aktualizuje się na żywo."
+          },
+          {
+            "title": "Wydrukuj lub zapisz PDF",
+            "description": "Jeden klik otwiera okno druku przeglądarki — drukarka domowa albo zapis do PDF."
+          }
+        ]
+      },
+      "printResult": {
+        "title": "Gotowy wydruk w formacie A4",
+        "description": "Klepsydra drukuje się w poziomym formacie A4, gotowa do powieszenia w klatce schodowej lub przekazania rodzinie — z danymi zakładu pogrzebowego w stopce."
+      },
+      "businessModel": {
+        "title": "Model biznesowy: jeden generator, dwa rynki",
+        "intro": "Klepsydra to nie tylko bezpłatne narzędzie wizerunkowe — to działający produkt z płatną wersją dla innych zakładów pogrzebowych w całej Polsce, z płatnościami obsługiwanymi przez Stripe.",
+        "free": {
+          "title": "Plan bezpłatny — dla rodzin",
+          "items": [
+            "Klepsydra online do jednorazowego przygotowania i wydruku",
+            "Podgląd A4 oraz możliwość druku lub zapisu PDF",
+            "Wybór ramki, grafiki i układu zawiadomienia",
+            "Domyślny podpis i branding Nekrolog Łódź na klepsydrze"
+          ]
+        },
+        "paid": {
+          "title": "Konto zakładu pogrzebowego — 20 zł / miesiąc",
+          "items": [
+            "Własna nazwa zakładu pogrzebowego na każdej klepsydrze",
+            "Własny telefon, adres i strona internetowa",
+            "Logo zakładu zamiast brandingu Nekrolog Łódź",
+            "Dane zakładu zapisywane na koncie i używane automatycznie",
+            "Możliwość edycji danych przed kolejnym wydrukiem",
+            "Klepsydry gotowe do przekazania rodzinie w kilka minut"
+          ]
+        },
+        "note": "Warstwę płatności (Stripe) i subskrypcję konta zakładu obsługuje i utrzymuje Tovernet."
+      },
+      "seo": {
+        "title": "Naturalny potencjał SEO i pozyskiwanie klientów",
+        "paragraphs": [
+          "Klepsydra działa jako osobna aplikacja na własnej subdomenie, z SEO niezależnym od głównej strony zakładu — może więc zdobywać ruch z wyszukiwarki bez żadnego ryzyka dla domeny głównej.",
+          "Wokół generatora zbudowaliśmy 35 dedykowanych stron docelowych — od „generator klepsydr” i „wzór klepsydry”, przez „jak napisać klepsydrę”, po frazy lokalne jak „klepsydra do druku Łódź” — każda kieruje odwiedzającego z powrotem do darmowego generatora.",
+          "Każda darmowa klepsydra niesie w stopce dane zakładu — nazwę, telefon i stronę Nekrolog Łódź — więc narzędzie, które komuś pomogło raz, staje się naturalnym punktem kontaktu przy kolejnej potrzebie."
+        ],
+        "stat": {
+          "value": "35",
+          "label": "dedykowanych stron SEO wokół generatora"
+        }
+      },
+      "pricingLinkLabel": "Zobacz cennik konta dla zakładów pogrzebowych",
+      "pricingLinkUrl": "https://klepsydra.nekrolog-lodz.com/cennik"
     },
     "gryfinYork": {
       "badge": "Klient · Hodowla Yorkshire Terrierów",
@@ -1064,7 +1125,7 @@
         "title": "Trzy Domeny, Jeden System",
         "items": [
           {
-            "domain": "panel.pokiu.pl",
+            "domain": "admin.twojastrona.pl",
             "description": "Pełny panel biura — rejestr psów, mioty, rodowody, rozliczenia, audyt zmian."
           },
           {
@@ -1361,11 +1422,26 @@
         "title": "Liczby, Nie Tylko Słowa",
         "subtitle": "Stan systemu na 20 sierpnia 2026 — dane produkcyjne, nie przykładowe.",
         "stats": [
-          { "value": "90", "label": "zarejestrowanych firm w systemie" },
-          { "value": "338", "label": "wystawionych faktur" },
-          { "value": "173", "label": "faktur przychodzących odebranych przez KSeF" },
-          { "value": "1 863", "label": "zaimportowanych transakcji bankowych" },
-          { "value": "6", "label": "firm z aktywnym połączeniem KSeF" }
+          {
+            "value": "90",
+            "label": "zarejestrowanych firm w systemie"
+          },
+          {
+            "value": "338",
+            "label": "wystawionych faktur"
+          },
+          {
+            "value": "173",
+            "label": "faktur przychodzących odebranych przez KSeF"
+          },
+          {
+            "value": "1 863",
+            "label": "zaimportowanych transakcji bankowych"
+          },
+          {
+            "value": "6",
+            "label": "firm z aktywnym połączeniem KSeF"
+          }
         ],
         "caveat": "Liczba faktur wysłanych bezpośrednio przez KSeF jest na razie mała — firmy dopiero włączają pełne fakturowanie produkcyjne przez KSeF. To, co już jest sprawdzone w boju, to samo połączenie i cały potok uzgadniania za nim: 173 faktury przychodzące odebrane i przetworzone.",
         "note": "Te liczby będą rosły wraz z rozwojem systemu — to migawka stanu produkcyjnego, nie liczby marketingowe."

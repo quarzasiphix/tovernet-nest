@@ -908,7 +908,7 @@
     "klepsydra": {
       "badge": "Client · Online Tool",
       "title": "Klepsydra",
-      "subtitle": "A free online funeral e-obituary generator, marketed as a tool from Jolanta Kostowska Nekrolog Łódź — built by us as a standalone app.",
+      "subtitle": "A free, browser-based e-obituary generator marketed under the client's own brand — Jolanta Kostowska Nekrolog Łódź — and grown into a separate product with a paid account for other funeral homes across Poland.",
       "role": {
         "title": "We Build and Run This Service",
         "description": "Klepsydra, offered under Nekrolog Kostowska's brand, is a digital memorial service built and run by Tovernet. We're responsible for the technology, keeping the system running, security, day-to-day operation of the service, and its ongoing development."
@@ -923,7 +923,68 @@
         "label": "Try Klepsydra",
         "url": "https://klepsydra.nekrolog-lodz.com"
       },
-      "operatorLine": "The technology and payments layer (Stripe) behind Klepsydra is provided and maintained by Tovernet sp. z o.o., on behalf of Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, per the service's own terms at klepsydra.nekrolog-lodz.com."
+      "operatorLine": "The technology and payments layer (Stripe) behind Klepsydra is provided and maintained by Tovernet sp. z o.o., on behalf of Nekrolog Łódź – Usługi Pogrzebowe Jolanta Kostowska, per the service's own terms at klepsydra.nekrolog-lodz.com.",
+      "walkthrough": {
+        "title": "How the generator works",
+        "subtitle": "No install, no account — a family fills in a form and has a finished obituary in minutes.",
+        "steps": [
+          {
+            "title": "Enter the details",
+            "description": "The deceased’s name, age, funeral date and location, cemetery, family signature."
+          },
+          {
+            "title": "Check the live preview",
+            "description": "Pick a name style, frame and icon — the A4 preview updates live."
+          },
+          {
+            "title": "Print or save as PDF",
+            "description": "One click opens the browser print dialog — a home printer or a saved PDF."
+          }
+        ]
+      },
+      "printResult": {
+        "title": "A finished A4 printout",
+        "description": "The obituary prints in landscape A4, ready to post in a stairwell or hand to the family — with the funeral home’s details in the footer."
+      },
+      "businessModel": {
+        "title": "Business model: one generator, two markets",
+        "intro": "Klepsydra isn’t just a free brand-image tool — it’s a working product with a paid tier for other funeral homes across Poland, with payments handled through Stripe.",
+        "free": {
+          "title": "Free plan — for families",
+          "items": [
+            "An online obituary for one-off preparation and printing",
+            "An A4 preview with printing or PDF export",
+            "A choice of frame, icon and layout",
+            "Default signature and Nekrolog Łódź branding on the obituary"
+          ]
+        },
+        "paid": {
+          "title": "Funeral home account — 20 PLN / month",
+          "items": [
+            "The funeral home’s own name on every obituary",
+            "Its own phone number, address and website",
+            "Its own logo instead of Nekrolog Łódź branding",
+            "Funeral home details saved on the account and applied automatically",
+            "Details editable at any time before the next printout",
+            "Obituaries ready to hand to the family within minutes"
+          ]
+        },
+        "note": "Tovernet builds and maintains the payment layer (Stripe) and the funeral home account subscription."
+      },
+      "seo": {
+        "title": "Natural SEO potential and lead generation",
+        "paragraphs": [
+          "Klepsydra runs as a separate app on its own subdomain, with SEO independent of the main funeral home website — so it can pick up search traffic without any risk to the main domain.",
+          "Around the generator we built 35 dedicated landing pages — from “obituary generator” and “obituary template”, through “how to write an obituary”, to local terms like “obituary printing Łódź” — every one of them routes the visitor back to the free generator.",
+          "Every free obituary carries the funeral home’s details in its footer — name, phone number and website — so a tool that helped someone once becomes a natural point of contact the next time they need it."
+        ],
+        "stat": {
+          "value": "35",
+          "label": "dedicated SEO landing pages around the generator"
+        }
+      },
+      "pricingLinkLabel": "See the funeral home account pricing",
+      "pricingLinkUrl": "https://klepsydra.nekrolog-lodz.com/cennik"
     },
     "gryfinYork": {
       "badge": "Client · Yorkshire Terrier Kennel",
@@ -1064,7 +1125,7 @@
         "title": "Three Domains, One System",
         "items": [
           {
-            "domain": "panel.pokiu.pl",
+            "domain": "admin.twojastrona.pl",
             "description": "The full office panel — dog registry, litters, pedigrees, payments, change audit."
           },
           {
@@ -1361,11 +1422,26 @@
         "title": "Numbers, Not Just Words",
         "subtitle": "System state as of August 20, 2026 — production data, not sample data.",
         "stats": [
-          { "value": "90", "label": "companies registered in the system" },
-          { "value": "338", "label": "invoices issued" },
-          { "value": "173", "label": "incoming invoices received through KSeF" },
-          { "value": "1,863", "label": "bank transactions imported" },
-          { "value": "6", "label": "companies with an active KSeF connection" }
+          {
+            "value": "90",
+            "label": "companies registered in the system"
+          },
+          {
+            "value": "338",
+            "label": "invoices issued"
+          },
+          {
+            "value": "173",
+            "label": "incoming invoices received through KSeF"
+          },
+          {
+            "value": "1,863",
+            "label": "bank transactions imported"
+          },
+          {
+            "value": "6",
+            "label": "companies with an active KSeF connection"
+          }
         ],
         "caveat": "The number of invoices submitted directly through KSeF is still small — companies are only now switching on full production e-invoicing through it. What's already battle-tested is the connection itself and the whole reconciliation pipeline behind it: 173 incoming invoices received and processed.",
         "note": "These numbers will keep growing as the system grows — a production snapshot, not a marketing number."
