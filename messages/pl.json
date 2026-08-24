@@ -172,7 +172,16 @@
   "contact": {
     "title": "Masz Pomysł? Powiedz Nam — Wymyślimy, Jak To Zbudować.",
     "subtitle": "Napisz do nas — porozmawiajmy o Twoim projekcie i o tym, co faktycznie ma sens zbudować.",
-    "cta": "Porozmawiajmy o Projekcie"
+    "cta": "Porozmawiajmy o Projekcie",
+    "form": {
+      "name": "Imię",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "message": "Czego potrzebujesz?",
+      "submit": "Wyślij",
+      "thankYouTitle": "Mamy to — dziękujemy.",
+      "thankYouMessage": "Odezwiemy się wkrótce."
+    }
   },
   "footer": {
     "tagline": "Strony i systemy dla branży zwierzęcej — oraz oprogramowanie biznesowe, automatyzacje i systemy finansowe dla innych branż.",
@@ -181,6 +190,7 @@
     "ksiegai": "KsięgaI — Infrastruktura Finansowa",
     "globalPet": "GlobalPet Transport — Licencjonowany Transport Zwierząt",
     "contact": "Kontakt",
+    "callUs": "Zadzwoń — porozmawiajmy",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie.",
     "privacyPolicy": "Polityka Prywatności",
     "terms": "Regulamin",

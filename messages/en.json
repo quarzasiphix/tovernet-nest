@@ -172,7 +172,16 @@
   "contact": {
     "title": "Have an Idea? Tell Us — We'll Figure Out How to Build It.",
     "subtitle": "Write to us — let's talk about your project and what's actually worth building.",
-    "cta": "Let's Talk About Your Project"
+    "cta": "Let's Talk About Your Project",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "What do you need?",
+      "submit": "Send",
+      "thankYouTitle": "Got it — thank you.",
+      "thankYouMessage": "We'll get back to you shortly."
+    }
   },
   "footer": {
     "tagline": "Websites and systems for the animal industry — plus business software, automation, and financial systems for other industries.",
@@ -181,6 +190,7 @@
     "ksiegai": "KsięgaI — Financial Infrastructure",
     "globalPet": "GlobalPet Transport — Licensed Animal Logistics",
     "contact": "Contact",
+    "callUs": "Call us — let's talk",
     "copyright": "TOVERNET. Built systems scale. Tools don't.",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms of Use",

@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Sparkles } from 'lucide-react';
+import PhoneCTA from './PhoneCTA';
 
 export default function SiteFooter({ locale }: { locale: string }) {
   const t = useTranslations('footer');
@@ -75,6 +76,10 @@ export default function SiteFooter({ locale }: { locale: string }) {
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">{t('contact')}</h4>
+              <div className="mb-4">
+                <p className="text-gray-500 text-xs mb-1">{t('callUs')}</p>
+                <PhoneCTA />
+              </div>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li>
                   <a href="mailto:contact@tovernet.online" className="hover:text-tovernet-400 transition-colors">

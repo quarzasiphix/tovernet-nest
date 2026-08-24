@@ -7,6 +7,7 @@ import {
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import BreederHomeCard from '@/components/breeders/BreederHomeCard';
+import ContactForm from '@/components/ContactForm';
 import { buildMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: 'pl' | 'en' } }): Promise<Metadata> {
@@ -370,14 +371,8 @@ export default function Home({ params: { locale } }: { params: { locale: string 
             <p className="text-xl text-gray-300 mb-12">
               {t('contact.subtitle')}
             </p>
-            <a
-              href="mailto:contact@tovernet.online"
-              className="inline-flex items-center gap-2 bg-tovernet-gradient text-white text-lg px-12 py-4 rounded-xl font-semibold shadow-2xl hover-lift magical-glow transition-all"
-            >
-              {t('contact.cta')}
-              <ArrowRight className="h-5 w-5" />
-            </a>
           </div>
+          <ContactForm content={t.raw('contact.form')} source="tovernet-nest:homepage-contact" />
         </div>
       </section>
 
