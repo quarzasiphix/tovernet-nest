@@ -470,7 +470,11 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
               <ArrowUpRight className="h-5 w-5" />
             </a>
           </div>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+            <a href={`/${locale}/asysta-ksef`} className="inline-flex items-center gap-2 text-sm text-ksiegai-400 hover:text-ksiegai-300 transition-colors font-semibold">
+              {locale === 'pl' ? 'Potrzebujesz pomocy z aktywacją KSeF? Umów asystę — 199 zł' : 'Need help activating KSeF? Book assistance — 199 PLN'}
+              <ArrowRight className="h-4 w-4" />
+            </a>
             <a href={`/${locale}#solutions`} className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
               {locale === 'pl' ? 'Zobacz pozostałe rozwiązania TOVERNET' : 'See other TOVERNET solutions'}
               <ArrowRight className="h-4 w-4" />
