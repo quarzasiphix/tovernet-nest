@@ -1,11 +1,35 @@
 /*
  * Tovernet embeddable footer strip.
  * Usage: <script src="https://tovernet.online/embed/footer-strip.js" data-client="kolorowa-pasja" async></script>
- * Optional attrs: data-mobile-safe-bottom="80" (extra px to force-reserve on mobile, on top of
- *                 whatever is auto-detected — most sites won't need this, see below)
- *                 data-config-url="https://tovernet.online/embed/footer-strip.config.json"
+ * Optional attrs:
+ *   data-lang="en"                 explicit language for the strip's copy (see "Language" below);
+ *                                   omit to auto-detect.
+ *   data-mobile-safe-bottom="80"   extra px to force-reserve on mobile, on top of whatever is
+ *                                   auto-detected — most sites won't need this, see below.
+ *   data-config-url="https://tovernet.online/embed/footer-strip.config.json"
+ *
  * Content (headline/tagline/logo/url) is fetched live from data-config-url so editing that
  * file on tovernet.online updates every site embedding this script, no client redeploy needed.
+ *
+ * Language: every string in the config (default AND per-client overrides) may be either a plain
+ * string (shown regardless of language — this is how every pre-existing single-language client
+ * config still works, unchanged) or an object keyed by locale, e.g. { "pl": "...", "en": "..." }.
+ * The active locale is resolved once at render time, in order:
+ *   1. this script tag's data-lang attribute (an embedding SPA that already tracks a locale
+ *      should just pass it, e.g. data-lang="{{currentLocale}}");
+ *   2. the host page's <html lang="…"> attribute;
+ *   3. the browser's navigator.language;
+ *   4. "pl" (matches every existing client site, all Polish).
+ * Unrecognised/unsupported values fall back the same way. For a host whose language changes
+ * without a full page reload (a client-rendered SPA that flips <html lang> or calls
+ * data-lang), the strip updates in place — see "Live language updates" below.
+ *
+ * Live language updates: this script watches document.documentElement's lang attribute
+ * (MutationObserver) and re-renders the strip's text/link whenever it changes, so a host that
+ * updates <html lang> on a client-side language switch gets the strip updated for free — no
+ * remount needed. A host that instead tracks its own locale state can call
+ * window.TovernetStrip.setLang("en") directly, which does the same thing without touching
+ * <html lang> at all.
  *
  * Mobile sticky bars: many client sites have a fixed call/WhatsApp bar pinned to the bottom
  * of the viewport on mobile, which would otherwise sit on top of this strip. The script
@@ -22,13 +46,57 @@
   var configUrl = currentScript.getAttribute('data-config-url') ||
     'https://tovernet.online/embed/footer-strip.config.json';
 
+  var SUPPORTED_LOCALES = ['pl', 'en'];
+  var DEFAULT_LOCALE = 'pl';
+
   var FALLBACK = {
-    headline: 'Strona stworzona przez',
+    headline: { pl: 'Strona stworzona przez', en: 'Site built by' },
     brand: 'Tovernet',
-    tagline: 'Nowoczesne strony i systemy dla hodowli & biznesu',
+    tagline: {
+      pl: 'Nowoczesne strony i systemy dla hodowli & biznesu',
+      en: 'Modern websites and systems for kennels & business'
+    },
     url: 'https://tovernet.online',
     logo: 'https://tovernet.online/embed/tovernet-logo.png'
   };
+
+  function normalizeLocale(raw) {
+    if (!raw) return null;
+    var code = String(raw).slice(0, 2).toLowerCase();
+    return SUPPORTED_LOCALES.indexOf(code) !== -1 ? code : null;
+  }
+
+  function resolveLocale() {
+    var explicit = normalizeLocale(currentScript.getAttribute('data-lang'));
+    if (explicit) return explicit;
+    var htmlLang = normalizeLocale(document.documentElement.getAttribute('lang'));
+    if (htmlLang) return htmlLang;
+    var navLangs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (var i = 0; i < navLangs.length; i++) {
+      var navLocale = normalizeLocale(navLangs[i]);
+      if (navLocale) return navLocale;
+    }
+    return DEFAULT_LOCALE;
+  }
+
+  // A config value is either a plain string (locale-independent, the pre-existing shape every
+  // deployed client config still uses) or a { pl, en, ... } map — pick the active locale out of
+  // the latter, falling back to DEFAULT_LOCALE, then to whatever locale IS present.
+  function pick(value, locale) {
+    if (value && typeof value === 'object') {
+      if (value[locale] != null) return value[locale];
+      if (value[DEFAULT_LOCALE] != null) return value[DEFAULT_LOCALE];
+      for (var k in value) if (value[k] != null) return value[k];
+      return '';
+    }
+    return value;
+  }
+
+  function resolveCfg(base, locale) {
+    var out = {};
+    for (var k in base) out[k] = pick(base[k], locale);
+    return out;
+  }
 
   var STYLE_ID = 'tovernet-strip-styles';
   if (!document.getElementById(STYLE_ID)) {
@@ -91,7 +159,12 @@
     a.style.paddingBottom = extra > 0 ? (16 + extra) + 'px' : '';
   }
 
-  function render(cfg) {
+  // Module state shared between the initial render and later language updates.
+  var rawBase = null; // { headline, brand, tagline, url, logo } with unresolved (possibly per-locale) values
+  var currentLocale = resolveLocale();
+  var els = null; // { a, img, headline, brandSpan, tagline }
+
+  function mount(cfg) {
     var a = document.createElement('a');
     a.className = 'tvn-strip';
     a.href = cfg.url;
@@ -109,14 +182,18 @@
     text.className = 'tvn-text';
     var headline = document.createElement('span');
     headline.className = 'tvn-headline';
-    headline.innerHTML = cfg.headline + ' <span class="tvn-brand">' + cfg.brand + '</span>';
+    var brandSpan = document.createElement('span');
+    brandSpan.className = 'tvn-brand';
+    brandSpan.textContent = cfg.brand;
+    headline.appendChild(document.createTextNode(cfg.headline + ' '));
+    headline.appendChild(brandSpan);
     text.appendChild(headline);
-    if (cfg.tagline) {
-      var tagline = document.createElement('span');
-      tagline.className = 'tvn-tagline';
-      tagline.textContent = cfg.tagline;
-      text.appendChild(tagline);
-    }
+
+    var tagline = document.createElement('span');
+    tagline.className = 'tvn-tagline';
+    tagline.textContent = cfg.tagline || '';
+    tagline.style.display = cfg.tagline ? '' : 'none';
+    text.appendChild(tagline);
 
     var arrow = document.createElement('span');
     arrow.className = 'tvn-arrow';
@@ -129,6 +206,8 @@
 
     currentScript.parentNode.insertBefore(a, currentScript);
 
+    els = { a: a, img: img, headline: headline, brandSpan: brandSpan, tagline: tagline };
+
     applyMobileSafeBottom(a);
     setTimeout(function () { applyMobileSafeBottom(a); }, 500);
     var resizeTimer;
@@ -136,6 +215,40 @@
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () { applyMobileSafeBottom(a); }, 150);
     });
+  }
+
+  // Patches the already-mounted strip in place for a locale change — no remount/flicker.
+  function patch(cfg) {
+    if (!els) return;
+    els.a.href = cfg.url;
+    els.img.src = cfg.logo;
+    els.img.alt = cfg.brand + ' Logo';
+    els.headline.replaceChildren(document.createTextNode(cfg.headline + ' '), els.brandSpan);
+    els.brandSpan.textContent = cfg.brand;
+    els.tagline.textContent = cfg.tagline || '';
+    els.tagline.style.display = cfg.tagline ? '' : 'none';
+  }
+
+  function renderForLocale(locale) {
+    currentLocale = locale;
+    var cfg = resolveCfg(rawBase, locale);
+    if (els) patch(cfg); else mount(cfg);
+  }
+
+  // Public API for a host that manages its own locale state (an SPA that doesn't want to touch
+  // <html lang>) — e.g. window.TovernetStrip.setLang("en").
+  window.TovernetStrip = window.TovernetStrip || {};
+  window.TovernetStrip.setLang = function (lang) {
+    var normalized = normalizeLocale(lang) || DEFAULT_LOCALE;
+    if (rawBase) renderForLocale(normalized);
+    else currentLocale = normalized; // config hasn't loaded yet; resolveLocale() re-checked below
+  };
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(function () {
+      var next = normalizeLocale(document.documentElement.getAttribute('lang'));
+      if (next && next !== currentLocale && rawBase) renderForLocale(next);
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   }
 
   fetch(configUrl, { cache: 'no-store' })
@@ -146,9 +259,11 @@
       if (data.default) for (var k1 in data.default) base[k1] = data.default[k1];
       var override = (data.clients && data.clients[clientId]) || {};
       for (var k2 in override) base[k2] = override[k2];
-      render(base);
+      rawBase = base;
+      renderForLocale(resolveLocale());
     })
     .catch(function () {
-      render(FALLBACK);
+      rawBase = FALLBACK;
+      renderForLocale(resolveLocale());
     });
 })();

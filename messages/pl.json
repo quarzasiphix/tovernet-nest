@@ -189,6 +189,7 @@
     "verticals": "Marki i przedsięwzięcia",
     "ksiegai": "KsięgaI — Infrastruktura Finansowa",
     "globalPet": "GlobalPet Transport — Licencjonowany Transport Zwierząt",
+    "anemalo": "Anemalo — Europejski Ekosystem dla Zwierząt",
     "contact": "Kontakt",
     "callUs": "Zadzwoń — porozmawiajmy",
     "copyright": "TOVERNET. Zbudowane systemy skalują się. Narzędzia nie.",
@@ -763,6 +764,13 @@
           "description": "Licencjonowany transport zwierząt przez jurysdykcje UE ze śledzeniem zgodności w czasie rzeczywistym.",
           "cta": "Wkrótce",
           "url": "https://globalpet.online"
+        },
+        {
+          "name": "Anemalo",
+          "badge": "Europejski Ekosystem dla Zwierząt",
+          "description": "Dedykowana platforma łącząca hodowców, fundacje, adopcje, społeczność i transport zwierząt w jednym systemie — z gatewayem API, na którym już działają nasi klienci hodowlani.",
+          "cta": "Zobacz Case Study",
+          "url": "/projekty/anemalo"
         }
       ]
     },
@@ -823,6 +831,89 @@
     "back": "Wszystkie Projekty",
     "roleLabel": "Nasza Rola",
     "featuresLabel": "Co Zbudowaliśmy",
+    "anemalo": {
+      "badge": "Własny Produkt TOVERNET",
+      "title": "Anemalo — Europejski Ekosystem dla Zwierząt",
+      "subtitle": "Platforma, którą projektujemy, budujemy i prowadzimy jako własny produkt — łącząca hodowców, fundacje, adopcje, społeczność i profesjonalny transport zwierząt w jednym systemie.",
+      "role": {
+        "title": "Budujemy I Prowadzimy Tę Platformę Sami",
+        "description": "Anemalo to nasz własny produkt, nie zlecenie klienta — od architektury bazy danych, przez publiczne API, po interfejs. Odpowiadamy za nią pod własną odpowiedzialnością prawną i biznesową, tak samo jak za KsięgaI."
+      },
+      "pillars": {
+        "title": "Co Łączy Anemalo",
+        "subtitle": "Jeden system zamiast rozproszonych ogłoszeń, grup na Facebooku i telefonów do przypadkowych przewoźników.",
+        "items": [
+          {
+            "title": "Wyszukiwanie i profile hodowców",
+            "description": "Szczenięta, planowane mioty oraz zweryfikowane profile hodowców i fundacji — z jasnym oznaczeniem, co jest potwierdzone, a co dopiero czeka na weryfikację."
+          },
+          {
+            "title": "Adopcje i fundacje",
+            "description": "Zwierzęta do adopcji od zweryfikowanych fundacji i schronisk, prowadzone osobnym, moderowanym procesem — nie tym samym, co komercyjne ogłoszenia hodowlane."
+          },
+          {
+            "title": "Społeczność",
+            "description": "Profile, obserwowanie, posty, komentarze i wiadomości między kupującymi, hodowcami i fundacjami w jednym miejscu."
+          },
+          {
+            "title": "Profesjonalny transport zwierząt",
+            "description": "Po uzgodnieniu zakupu lub adopcji — transport indywidualny, wspólny, ekspresowy i VIP, z tą samą podstawą prawną i dobrostanem zwierząt w każdym wariancie."
+          }
+        ]
+      },
+      "platform": {
+        "eyebrow": "Architektura",
+        "title": "Jeden gateway, wiele stron klientów",
+        "intro": "Dane hodowli, miotów i szczeniąt żyją we wspólnej bazie Supabase za publicznym API — api.anemalo.com. Zamiast budować osobny, jednorazowy backend dla każdej hodowli, podłączamy jej stronę pod ten sam gateway.",
+        "cards": [
+          {
+            "title": "Współdzielona baza danych",
+            "description": "Psy, mioty i szczenięta jednej hodowli żyją w tej samej strukturze co dane całej platformy — gotowe do pokazania też w wyszukiwarce Anemalo, jeśli hodowca się na to zdecyduje."
+          },
+          {
+            "title": "Migracja bez przepisywania strony",
+            "description": "Stronę hodowli można przepiąć na gateway Anemalo bez przepisywania komponentów — zmienia się tylko warstwa odczytu danych, reszta interfejsu zostaje bez zmian."
+          },
+          {
+            "title": "Sprawdzone na żywym kliencie",
+            "description": "Migrację zweryfikowaliśmy end-to-end na hodowli GRYFIN YORK — psy, mioty, szczenięta i statusy rezerwacji renderują się poprawnie na danych z api.anemalo.com."
+          },
+          {
+            "title": "Uczciwe braki, nie ukryte",
+            "description": "Tam, gdzie platforma jeszcze czegoś nie obsługuje (np. osobna galeria zdjęć), dokumentujemy to wprost zamiast udawać, że funkcja już istnieje."
+          }
+        ]
+      },
+      "languages": {
+        "title": "Platforma dwujęzyczna od poziomu schematu",
+        "text": "Anemalo mówi po polsku i angielsku od samego początku — nie jako tłumaczenie dorzucone na końcu. Adres, waluta i preferowany język to zwykłe pola w bazie danych, gotowe na kolejne kraje (Niemcy, Holandia, Belgia) bez przepisywania schematu.",
+        "widgetNote": "Ta sama zasada dotyczy naszego paska „Platforma stworzona przez Tovernet”, który Anemalo osadza w swojej stopce: pasek sam wykrywa aktywny język strony i pokazuje treść po polsku albo angielsku — bez przeładowania strony, gdy ktoś przełączy język w trakcie przeglądania."
+      },
+      "roadmap": {
+        "title": "Uczciwy Stan Budowy",
+        "intro": "Anemalo powstaje etapami, na prawdziwych danych produkcyjnych — nie jako makieta.",
+        "items": [
+          { "label": "Wyszukiwanie zwierząt i marketplace", "status": "Gotowe" },
+          { "label": "Profile hodowców i fundacji", "status": "Gotowe" },
+          { "label": "Zgłoszenia, rezerwacje i adopcje", "status": "Gotowe" },
+          { "label": "Transport zwierząt i planowanie tras", "status": "Gotowe" },
+          { "label": "Społeczność i wiadomości", "status": "W trakcie" },
+          { "label": "Zbiórki fundacji i kolejne kraje/języki", "status": "Zaplanowane" }
+        ]
+      },
+      "features": [
+        "Gateway API współdzielony przez wiele stron hodowlanych klientów, w tym GRYFIN YORK",
+        "Zweryfikowane profile hodowców i fundacji z jasnym statusem weryfikacji",
+        "Zgłoszenia, rezerwacje i adopcje prowadzone osobnymi, moderowanymi procesami",
+        "Transport zwierząt jako integralna część platformy, nie dodatek",
+        "Dwujęzyczny interfejs (PL/EN) gotowy na kolejne kraje i waluty",
+        "Osadzalny pasek „Zbudowane przez Tovernet” z automatycznym dopasowaniem języka"
+      ],
+      "cta": {
+        "label": "Odwiedź Anemalo",
+        "url": "https://anemalo.com"
+      }
+    },
     "nekrologLodz": {
       "badge": "Klient · Zakład Pogrzebowy",
       "title": "Nekrolog Łódź",

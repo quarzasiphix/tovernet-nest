@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ArrowRight, Sparkles, Calculator, PawPrint, Flower2, Hourglass, PanelsTopLeft, Database } from 'lucide-react';
+import { ArrowRight, Sparkles, Calculator, PawPrint, Dog, Flower2, Hourglass, PanelsTopLeft, Database } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import { buildMetadata } from '@/lib/seo';
 
 type ProjectItem = { name: string; badge: string; description: string; cta?: string; url?: string; slug?: string };
 
-const OWN_BRAND_ICONS = [Calculator, PawPrint];
-const OWN_BRAND_GLOWS = ['magical-glow', 'magical-glow-green'];
-const OWN_BRAND_ACCENTS = ['text-ksiegai-400', 'text-globalpet-400'];
+const OWN_BRAND_ICONS = [Calculator, PawPrint, Dog];
+const OWN_BRAND_GLOWS = ['magical-glow', 'magical-glow-green', 'magical-glow-forest'];
+const OWN_BRAND_ACCENTS = ['text-ksiegai-400', 'text-globalpet-400', 'text-anemalo-400'];
 
 const CLIENT_ICONS = [Flower2, Hourglass, PanelsTopLeft, PawPrint, Database];
 

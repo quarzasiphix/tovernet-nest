@@ -69,6 +69,18 @@ const config: Config = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
+        anemalo: {
+          50: '#f2f7f3',
+          100: '#e0ebe2',
+          200: '#c2d8c8',
+          300: '#96bda1',
+          400: '#5f9270',
+          500: '#3d6b4c',
+          600: '#2f5540',
+          700: '#264535',
+          800: '#20372c',
+          900: '#1c2f26',
+        },
         kennel: {
           cream: {
             50: '#fefdfb',
@@ -121,6 +133,7 @@ const config: Config = {
         'globalpet-gradient': 'linear-gradient(135deg, #22c55e 0%, #4ade80 50%, #86efac 100%)',
         'breeder-gradient': 'linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%)',
         'kennelclub-gradient': 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%)',
+        'anemalo-gradient': 'linear-gradient(135deg, #2f5540 0%, #5f9270 50%, #96bda1 100%)',
       },
     },
   },

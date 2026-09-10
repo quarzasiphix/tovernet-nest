@@ -189,6 +189,7 @@
     "verticals": "Brands & Ventures",
     "ksiegai": "KsięgaI — Financial Infrastructure",
     "globalPet": "GlobalPet Transport — Licensed Animal Logistics",
+    "anemalo": "Anemalo — European Animal Ecosystem",
     "contact": "Contact",
     "callUs": "Call us — let's talk",
     "copyright": "TOVERNET. Built systems scale. Tools don't.",
@@ -763,6 +764,13 @@
           "description": "Licensed animal transport across EU jurisdictions with real-time compliance tracking.",
           "cta": "Coming Soon",
           "url": "https://globalpet.online"
+        },
+        {
+          "name": "Anemalo",
+          "badge": "European Animal Ecosystem",
+          "description": "A dedicated platform connecting breeders, foundations, adoptions, community, and animal transport in one system — with an API gateway our own kennel clients already run on.",
+          "cta": "See Case Study",
+          "url": "/projekty/anemalo"
         }
       ]
     },
@@ -823,6 +831,89 @@
     "back": "All Projects",
     "roleLabel": "Our Role",
     "featuresLabel": "What We Built",
+    "anemalo": {
+      "badge": "TOVERNET's Own Product",
+      "title": "Anemalo — A European Animal Ecosystem",
+      "subtitle": "A platform we design, build, and run as our own product — connecting breeders, foundations, adoptions, community, and professional animal transport in one system.",
+      "role": {
+        "title": "We Build And Run This Platform Ourselves",
+        "description": "Anemalo is our own product, not client work — from the database architecture, through the public API, to the interface. We're responsible for it under our own legal and business liability, the same way we are for KsięgaI."
+      },
+      "pillars": {
+        "title": "What Anemalo Connects",
+        "subtitle": "One system instead of scattered listings, Facebook groups, and phone calls to whichever transporter happens to answer.",
+        "items": [
+          {
+            "title": "Discovery and breeder profiles",
+            "description": "Puppies, planned litters, and verified breeder and foundation profiles — with a clear label for what's confirmed and what's still waiting on review."
+          },
+          {
+            "title": "Adoptions and foundations",
+            "description": "Animals up for adoption from verified foundations and shelters, run through a separate, moderated workflow — never the same one as commercial breeder listings."
+          },
+          {
+            "title": "Community",
+            "description": "Profiles, follows, posts, comments, and messaging between buyers, breeders, and foundations, all in one place."
+          },
+          {
+            "title": "Professional animal transport",
+            "description": "Once a purchase or adoption is agreed — individual, shared, express, and VIP transport, all held to the same legal and animal-welfare standard."
+          }
+        ]
+      },
+      "platform": {
+        "eyebrow": "Architecture",
+        "title": "One gateway, many client sites",
+        "intro": "Breeder, litter, and puppy data lives in one shared Supabase project behind a public API — api.anemalo.com. Instead of building a separate, one-off backend for every kennel, we point its site at the same gateway.",
+        "cards": [
+          {
+            "title": "A shared data layer",
+            "description": "A single kennel's dogs, litters, and puppies live in the same structure as the whole platform's data — ready to also surface in Anemalo's own search, if the breeder opts in."
+          },
+          {
+            "title": "Migration without a rebuild",
+            "description": "A kennel's site can be repointed at the Anemalo gateway without rewriting its components — only the data-read layer changes, the rest of the interface stays untouched."
+          },
+          {
+            "title": "Proven on a live client",
+            "description": "We verified the migration end-to-end on the GRYFIN YORK kennel — dogs, litters, puppies, and reservation statuses all render correctly off data from api.anemalo.com."
+          },
+          {
+            "title": "Honest gaps, never hidden",
+            "description": "Where the platform doesn't cover something yet (a standalone photo gallery, say), we document it plainly instead of pretending the feature exists."
+          }
+        ]
+      },
+      "languages": {
+        "title": "Bilingual From the Schema Up",
+        "text": "Anemalo speaks Polish and English from day one — not as a translation bolted on afterward. Address, currency, and preferred language are plain database fields, ready for additional countries (Germany, the Netherlands, Belgium) without a schema rewrite.",
+        "widgetNote": "The same principle applies to our own \"Built by Tovernet\" strip, which Anemalo embeds in its footer: the strip detects the page's active language on its own and shows its copy in Polish or English — no page reload needed when someone switches language mid-visit."
+      },
+      "roadmap": {
+        "title": "An Honest Build Status",
+        "intro": "Anemalo is being built in phases, on real production data — not as a mockup.",
+        "items": [
+          { "label": "Animal discovery and marketplace", "status": "Done" },
+          { "label": "Breeder and foundation profiles", "status": "Done" },
+          { "label": "Applications, reservations, and adoptions", "status": "Done" },
+          { "label": "Animal transport and route planning", "status": "Done" },
+          { "label": "Community and messaging", "status": "In progress" },
+          { "label": "Foundation fundraising and additional countries/languages", "status": "Planned" }
+        ]
+      },
+      "features": [
+        "An API gateway shared across multiple client kennel sites, including GRYFIN YORK",
+        "Verified breeder and foundation profiles with a clear verification status",
+        "Applications, reservations, and adoptions run through separate, moderated workflows",
+        "Animal transport as a core part of the platform, not a bolt-on",
+        "A bilingual (PL/EN) interface ready for more countries and currencies",
+        "An embeddable \"Built by Tovernet\" strip with automatic language matching"
+      ],
+      "cta": {
+        "label": "Visit Anemalo",
+        "url": "https://anemalo.com"
+      }
+    },
     "nekrologLodz": {
       "badge": "Client · Funeral Home",
       "title": "Nekrolog Łódź",

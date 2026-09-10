@@ -68,6 +68,11 @@ export default function SiteFooter({ locale }: { locale: string }) {
                   </a>
                 </li>
                 <li>
+                  <a href={`/${locale}/projekty/anemalo`} className="hover:text-anemalo-400 transition-colors">
+                    {t('anemalo')}
+                  </a>
+                </li>
+                <li>
                   <a href={`/${locale}/projekty/nekrolog-lodz`} className="hover:text-kennelclub-400 transition-colors">
                     {t('nekrolog')}
                   </a>
