@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import PostHogProvider from "@/components/PostHogProvider";
+import LoginLinkConfirm from "@/components/tovernet/LoginLinkConfirm";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-          <PostHogProvider>{children}</PostHogProvider>
+          <PostHogProvider>{children}<LoginLinkConfirm /></PostHogProvider>
         </body>
     </html>
   );

@@ -35,13 +35,17 @@ export async function registerWithInvite(
 }
 
 /**
- * Sends the 6-digit sign-in code in a Tovernet e-mail (public-api tovernetAuth.sendCode).
- * Supabase's own e-mail carries the KsięgaI template, so it is only the fallback when our
- * send fails. The code is verified as before: verifyOtp({ email, token, type: 'email' }).
+ * Sends the Tovernet sign-in e-mail (public-api tovernetAuth.sendCode): a link back to this
+ * page (?logowanie=…, see LoginLinkConfirm) and a 6-digit code. Supabase's own e-mail carries
+ * the KsięgaI template, so it is only the fallback when our send fails. The code is verified
+ * as before: verifyOtp({ email, token, type: 'email' }).
  */
 export async function sendLoginCode(supabase: SupabaseClient, email: string): Promise<'sent' | 'rate_limited' | 'failed'> {
   try {
-    await publicAction('tovernetAuth.sendCode', { email });
+    // The e-mail's link returns here: this page, plus the offer's demo id when there is one.
+    const id = window.location.hash.slice(1).split('.')[0];
+    const returnTo = window.location.pathname + (/^[0-9a-f-]{36}$/.test(id) ? `#${id}` : '');
+    await publicAction('tovernetAuth.sendCode', { email, returnTo });
     return 'sent';
   } catch (e) {
     const msg = e instanceof Error ? e.message : '';

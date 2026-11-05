@@ -421,7 +421,7 @@ function Account({ actions }: { actions: JourneyActions }) {
     </form>
   ) : (
     <form onSubmit={verify} className={s.ask}>
-      <p className={s.small}>Wysłaliśmy kod na <b>{email}</b>. Wiadomość przyjdzie od KsięgaI, systemu kont, z którego korzystamy.</p>
+      <p className={s.small}>Wysłaliśmy e-mail „Logowanie do Tovernet” na <b>{email}</b>. Wpisz tutaj kod z niego albo kliknij link.</p>
       <label><span className={s.label}>Kod z e-maila</span>
         <input className={`${s.field} ${s.code}`} value={code} onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))} inputMode="numeric" autoComplete="one-time-code" required pattern="\d{6}" /></label>
       <div className={s.row}>

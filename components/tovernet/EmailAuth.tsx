@@ -10,8 +10,8 @@ export type PersonalInvite = { email: string; tokenHash: string; hasAccount: boo
 
 /**
  * Sign-in without passwords. A personal link creates the account in one click, as the
- * KsięgaI invitation does. Anyone else gets a 6-digit code by e-mail, typed here, so the
- * visitor never leaves the page. New and existing KsięgaI accounts work the same way.
+ * KsięgaI invitation does. Anyone else gets a Tovernet e-mail with a sign-in link and a
+ * 6-digit code; the code is typed here, so the visitor can stay on the page. New and existing KsięgaI accounts work the same way.
  */
 export default function EmailAuth({ invite, onSignedIn }: { invite?: PersonalInvite | null; onSignedIn: (s: Session) => void }) {
   const supabase = authClient();
@@ -77,7 +77,7 @@ export default function EmailAuth({ invite, onSignedIn }: { invite?: PersonalInv
   if (stage === 'code') {
     return (
       <form onSubmit={verify}>
-        <p className="text-[#5A5C60]">Wysłaliśmy 6-cyfrowy kod na <strong>{email}</strong>. Wiadomość przyjdzie od KsięgaI, systemu kont, z którego korzystamy.</p>
+        <p className="text-[#5A5C60]">Wysłaliśmy e-mail „Logowanie do Tovernet” na <strong>{email}</strong>. Kliknij w nim link albo wpisz tutaj 6-cyfrowy kod.</p>
         <label className="mt-4 block text-sm font-medium text-[#5A5C60]">Kod z e-maila
           <input value={code} onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))} inputMode="numeric"
                  autoComplete="one-time-code" required pattern="\d{6}" className={`${field} text-center text-2xl tracking-[0.5em]`} />
@@ -92,13 +92,13 @@ export default function EmailAuth({ invite, onSignedIn }: { invite?: PersonalInv
   return (
     <form onSubmit={sendCode}>
       <p className="text-[#5A5C60]">
-        {hasAccount ? 'Masz już konto na ten adres. Wyślemy kod logowania.' : 'Podaj e-mail. Wyślemy kod, bez zakładania hasła. Jeśli masz konto KsięgaI, użyjemy go.'}
+        {hasAccount ? 'Masz już konto na ten adres. Wyślemy link i kod logowania.' : 'Podaj e-mail. Wyślemy link i kod logowania, bez zakładania hasła. Jeśli masz konto KsięgaI, użyjemy go.'}
       </p>
       <label className="mt-4 block text-sm font-medium text-[#5A5C60]">E-mail
         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" required autoComplete="email"
                readOnly={Boolean(invite)} className={field} />
       </label>
-      <button disabled={busy} className={`mt-4 ${primary}`}>{busy ? 'Wysyłamy…' : 'Wyślij kod'}</button>
+      <button disabled={busy} className={`mt-4 ${primary}`}>{busy ? 'Wysyłamy…' : 'Wyślij link i kod'}</button>
       {alert}
     </form>
   );
