@@ -71,7 +71,7 @@ export default function ScopeSheet({ demo, pkg, addons, journey, selected, onSel
                 </Scaled>
               </div>
             </div>
-            <p className={o.previewNote}>Twój koncept to przykład, nie sztywny szablon. Kolory, układ, teksty, zdjęcia i usługi zmienisz w granicach pakietu.</p>
+            <p className={o.previewNote}>Pokazany przykład to nie sztywny szablon. Kolory, układ, teksty, zdjęcia i usługi zmienisz w granicach pakietu.</p>
             {c && (
               <div className={o.pagesBox}>
                 <PageStack sheets={c.sheets} pin={pkg.key === PKG.pro} />

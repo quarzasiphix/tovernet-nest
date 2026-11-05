@@ -33,7 +33,7 @@ export default function Packages({ demo, packages, addons, selected, journey, on
           const on = selected === p.key;
           return (
             <article key={p.key} className={`${o.pkg} ${on ? o.pkgOn : ''} ${p.recommended ? o.pkgRec : ''}`} onPointerMove={glow}>
-              {p.recommended && <span className={o.badge}>Pasuje do konceptu</span>}
+              {p.recommended && <span className={o.badge}>Polecany</span>}
               <button type="button" role="radio" aria-checked={on} className={o.pkgSelect} onClick={() => onSelect(p.key)}>
                 <span className={o.pkgVisual}><PageStack sheets={c?.sheets ?? 1} pin={p.key === PKG.pro} /></span>
                 <span className={o.pkgHead}>

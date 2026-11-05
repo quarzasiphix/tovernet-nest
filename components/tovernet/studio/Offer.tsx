@@ -71,13 +71,14 @@ export default function Offer({ demo, cart, setCart, actions, onOrder, onConcept
       <section className={`${s.wrap} ${s.offerHero}`}>
         <div>
           <p className={`${s.chip} ${s.rise}`}><span className={s.pulse} aria-hidden="true" />Oferta dla {name}</p>
-          <h1 className={`${s.h1} ${s.rise}`} style={delay(80)}>Ten koncept może zacząć pracować <em>dla Twojej firmy.</em></h1>
-          <p className={`${s.lead} ${s.rise}`} style={delay(160)}>Koncept już widziałeś. Dopracujemy go z Twoim numerem, usługami i zdjęciami. Cenę znasz teraz, a gotową stronę zobaczysz i poprawisz, zanim trafi do sieci.</p>
+          <h1 className={`${s.h1} ${s.rise}`} style={delay(80)}>Strona, która zacznie pracować <em>dla Twojej firmy.</em></h1>
+          <p className={`${s.lead} ${s.rise}`} style={delay(160)}>Zakres i cenę znasz od razu. Wygląd ustalimy razem: kolory, układ, banery, zdjęcia. Wszystko jest możliwe. Nic nie opublikujemy, dopóki nie będziesz zadowolony i nie zaakceptujesz strony.</p>
           <ul className={`${o.heroFacts} ${s.rise}`} style={delay(220)}>
             <li><Check size={15} aria-hidden="true" />Stała cena za ustalony zakres</li>
             <li><Check size={15} aria-hidden="true" />Akceptacja przed publikacją</li>
             <li><Check size={15} aria-hidden="true" />Plan bez umowy na rok</li>
           </ul>
+          <button type="button" className={`${s.ghost} ${o.heroExample} ${s.rise}`} style={delay(250)} onClick={onConcept}><Eye size={16} aria-hidden="true" />Zobacz szybki przykład</button>
           {start && (
             <p className={`${o.startBanner} ${s.rise}`} style={delay(280)}>
               <b>Zacznij od {price(start.upfront)}.</b> Resztę płacisz w miesięcznych ratach, bez odsetek i dodatkowych opłat. Strona razem od {price(start.total)}.
@@ -87,7 +88,7 @@ export default function Offer({ demo, cart, setCart, actions, onOrder, onConcept
         <div className={`${s.pcard} ${s.rise}`} style={delay(220)}>
           <div className={s.pcardShot}>
             <div aria-hidden="true"><Scaled width={1280} className={s.pcardPan}><ConceptSite company={company} variant={demo.config.variant} embedded preview /></Scaled></div>
-            <button type="button" className={s.pcardHover} onClick={onConcept}><Eye size={16} aria-hidden="true" />Wróć do konceptu</button>
+            <button type="button" className={s.pcardHover} onClick={onConcept}><Eye size={16} aria-hidden="true" />Zobacz szybki przykład</button>
           </div>
           <div className={s.pcardBody}>
             <p className={s.pcardName}>{name}</p>
@@ -113,7 +114,7 @@ export default function Offer({ demo, cart, setCart, actions, onOrder, onConcept
           <section className={s.section} aria-labelledby="zakres" data-reveal="">
             <p className={s.kicker}>Krok 1 z 3 · wykonanie strony</p>
             <h2 id="zakres" className={`${s.h2} ${o.h2gap}`}>Wybierz zakres strony</h2>
-            <p className={s.sub}>{start ? 'Za wykonanie płacisz jednorazowo albo w ratach bez odsetek; wybierasz w zamówieniu.' : 'Jedna płatność za wykonanie.'} {exempt ? 'Kwoty są ostateczne, bez doliczania VAT.' : 'Ceny brutto.'} Koncept to punkt wyjścia: kolory, układ, teksty, zdjęcia i usługi zmienisz w granicach pakietu.</p>
+            <p className={s.sub}>{start ? 'Za wykonanie płacisz jednorazowo albo w ratach bez odsetek; wybierasz w zamówieniu.' : 'Jedna płatność za wykonanie.'} {exempt ? 'Kwoty są ostateczne, bez doliczania VAT.' : 'Ceny brutto.'} Przykład to tylko punkt wyjścia: kolory, układ, teksty, zdjęcia i usługi zmienisz w granicach pakietu.</p>
             <JourneySwitch value={journey} onChange={(j) => { setJourney(j); track('journey_selected', { journey: j }); }} />
             <Packages demo={demo} packages={packages} addons={addons} selected={cart.pkg} journey={journey} onSelect={choosePkg} track={track} />
             {journey === 'migration' && <Migration track={track} />}
@@ -121,7 +122,7 @@ export default function Offer({ demo, cart, setCart, actions, onOrder, onConcept
               <div className={s.fitNote} key={pkg.key}>
                 <Sparkles size={18} aria-hidden="true" />
                 <div>
-                  <b>{pkg.recommended ? `Dlaczego ${pkgName} do tego konceptu` : `${pkgName}: czym się różni`}</b>
+                  <b>{pkg.recommended ? `Dlaczego ${pkgName} dla Twojej firmy` : `${pkgName}: czym się różni`}</b>
                   <p>{copy.fit[pkg.key]}</p>
                 </div>
               </div>

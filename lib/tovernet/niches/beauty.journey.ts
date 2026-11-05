@@ -15,7 +15,7 @@ const ART: [string, string] = ['Grafika zamiast cudzych zdjęć', 'Obraz na pier
 const PHONE: [string, string] = ['Działa tam, gdzie klient sprawdza: na telefonie', 'Pasek z przyciskiem „Umów wizytę” zostaje na dole ekranu przez całą stronę.'];
 
 const journey = (o: { lead: string; card: string; intro: string; slots: string[]; ask: [string, string]; firma: string; compare: string }): { welcome: WelcomeCopy; funnel: FunnelCopy } => ({
-  welcome: { lead: `${o.lead} Zobacz, jak Twoja firma mogłaby wyglądać w sieci.`, features: [o.card, 'Umów wizytę pod kciukiem'] },
+  welcome: { lead: `${o.lead} Wygląd, kolory i zdjęcia dopasujemy do Ciebie.`, features: [o.card, 'Umów wizytę pod kciukiem'] },
   funnel: {
     intro: o.intro,
     slots: o.slots,

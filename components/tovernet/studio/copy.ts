@@ -13,15 +13,15 @@ export type WelcomeCopy = {
 
 const WELCOME: Partial<Record<VariantKey, WelcomeCopy>> & { general: WelcomeCopy } = {
   electrical: {
-    lead: 'To strona, na której klient od razu widzi, czym się zajmujesz, wybiera swój problem i zgłasza usterkę albo zlecenie prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+    lead: 'To strona, na której klient od razu widzi, czym się zajmujesz, wybiera swój problem i zgłasza usterkę albo zlecenie prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
     features: ['Tablica zgłoszeń', 'Kontakt pod kciukiem'],
   },
   finishing: {
-    lead: 'To strona, na której klient przed remontem sprawdza, czy robisz to, czego potrzebuje, zaznacza pomieszczenia i prosi o wycenę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+    lead: 'To strona, na której klient przed remontem sprawdza, czy robisz to, czego potrzebuje, zaznacza pomieszczenia i prosi o wycenę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
     features: ['Plan pomieszczeń', 'Formularz wyceny'],
   },
   general: {
-    lead: 'To strona, na której przyszły klient od razu widzi, czym się zajmujesz, i wysyła zapytanie prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+    lead: 'To strona, na której przyszły klient od razu widzi, czym się zajmujesz, i wysyła zapytanie prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
     features: ['Formularz zapytań', 'Wersja na telefon'],
   },
 };
@@ -31,7 +31,7 @@ export const welcomeCopy = (variant: VariantKey): WelcomeCopy =>
 
 /** What is inside the presentation (welcome screen). */
 export const INSIDE: [string, string][] = [
-  ['Koncept Twojej strony', 'Zaprojektowany pod Twoją branżę, na komputer i telefon.'],
+  ['Szybki przykład', 'Pokaz tego, co możemy zrobić. Twoja strona może wyglądać zupełnie inaczej.'],
   ['Stała cena', 'Zakres i kwotę znasz przed zamówieniem.'],
   ['Twoja akceptacja', 'Nic nie publikujemy, dopóki nie zatwierdzisz strony.'],
 ];

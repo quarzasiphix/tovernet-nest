@@ -8,8 +8,10 @@ export type Stage = 'przywitanie' | 'koncept' | 'oferta' | 'zamowienie';
 
 export const STAGES: { key: Stage; label: string; query: string | null }[] = [
   { key: 'przywitanie', label: 'Przywitanie', query: null },
-  { key: 'koncept', label: 'Koncept', query: 'koncept' },
+  // Offer before the example (owner 2026-11-05): visitors took the concept for the final design
+  // and left. Keys and ?krok= values unchanged, so old links and analytics keep working.
   { key: 'oferta', label: 'Oferta', query: 'oferta' },
+  { key: 'koncept', label: 'Przykład', query: 'koncept' },
   { key: 'zamowienie', label: 'Zamówienie', query: 'zamowienie' },
 ];
 

@@ -67,7 +67,7 @@ export default function Gate({ demo, actions, onUnlocked }: { demo: PublicDemo; 
           {company.krs && <li><Building2 size={15} aria-hidden="true" />KRS {company.krs}</li>}
         </ul>
         <p className={`${s.wLead} ${s.gateLead} ${s.rise}`} style={delay(260)}>
-          Przygotowaliśmy koncept strony internetowej{trade ? <> dla branży <b>{trade.toLowerCase()}</b></> : null}, razem z zakresem i stałą ceną.
+          Przygotowaliśmy ofertę strony internetowej{trade ? <> dla branży <b>{trade.toLowerCase()}</b></> : null}: zakres, stałą cenę i szybki przykład tego, co możemy zrobić.
           Wszystko czeka w środku.
         </p>
 

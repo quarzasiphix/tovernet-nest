@@ -17,7 +17,7 @@ const INSIDE_ICONS = [LayoutTemplate, BadgeCheck, ShieldCheck];
  * moved to the one-time Gate (studio/Gate.tsx) shown before the journey on the first
  * visit from a personal invite. Without it, the account is opened at checkout.
  */
-export default function Welcome({ demo, actions, onContinue, onOffer }: { demo: PublicDemo; actions: JourneyActions; onContinue: () => void; onOffer: () => void }) {
+export default function Welcome({ demo, actions, onContinue, onExample }: { demo: PublicDemo; actions: JourneyActions; onContinue: () => void; onExample: () => void }) {
   const company = demo.config.company;
   const name = presentName(company.display_name);
   const city = presentCity(company.city);
@@ -35,7 +35,7 @@ export default function Welcome({ demo, actions, onContinue, onOffer }: { demo: 
       <div className={s.wCopy}>
         <p className={`${s.chip} ${s.rise}`} style={delay(0)}>
           <span className={s.avatar} aria-hidden="true">W</span>
-          <span>Wiktor z Tovernet przygotował koncept strony dla</span>
+          <span>Wiktor z Tovernet przygotował ofertę strony dla</span>
         </p>
         <h1 className={`${s.wName} ${name.length > 30 ? s.wNameLong : ''} ${s.rise}`} style={delay(90)}>{name}</h1>
         <ul className={`${s.meta} ${s.rise}`} style={delay(180)} aria-label="Dane firmy">
@@ -47,9 +47,9 @@ export default function Welcome({ demo, actions, onContinue, onOffer }: { demo: 
 
         <div className={`${s.wCta} ${s.rise}`} style={delay(340)}>
           <button type="button" className={s.cta} onClick={go}>
-            Zobacz swój koncept<ArrowRight size={19} aria-hidden="true" />
+            Zobacz ofertę<ArrowRight size={19} aria-hidden="true" />
           </button>
-          <button type="button" className={s.ghost} onClick={onOffer}>Od razu do oferty</button>
+          <button type="button" className={s.ghost} onClick={onExample}>Szybki przykład strony</button>
         </div>
       </div>
 

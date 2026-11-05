@@ -16,7 +16,7 @@ const PHONE_JOB: [string, string] = ['Działa tam, gdzie klient szuka: na telefo
 export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy }> = {
   local_cleaning: {
     welcome: {
-      lead: 'To strona, na której klient dokańcza jedno zdanie: co trzeba posprzątać, jaki metraż i jak często, i prosi o wycenę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której klient dokańcza jedno zdanie: co trzeba posprzątać, jaki metraż i jak często, i prosi o wycenę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Zapytanie jednym zdaniem', 'Kontakt pod kciukiem'],
     },
     funnel: {
@@ -43,7 +43,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   local_garden: {
     welcome: {
-      lead: 'To strona, na której klient wskazuje na planie ogrodu, czego potrzebuje, podaje powierzchnię i porę roku i prosi o wycenę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której klient wskazuje na planie ogrodu, czego potrzebuje, podaje powierzchnię i porę roku i prosi o wycenę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Plan ogrodu', 'Zapytanie jednym zdaniem'],
     },
     funnel: {
@@ -70,7 +70,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   local_auto: {
     welcome: {
-      lead: 'To strona, na której kierowca wskazuje na rysunku auta, gdzie jest problem, podaje model i termin i pyta o wizytę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której kierowca wskazuje na rysunku auta, gdzie jest problem, podaje model i termin i pyta o wizytę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Rysunek auta', 'Karta zlecenia'],
     },
     funnel: {
@@ -97,7 +97,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   local_detailing: {
     welcome: {
-      lead: 'To strona, na której klient wskazuje na rysunku auta, czym masz się zająć, opisuje stan lakieru i prosi o wycenę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której klient wskazuje na rysunku auta, czym masz się zająć, opisuje stan lakieru i prosi o wycenę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Auto w studiu', 'Zapytanie jednym zdaniem'],
     },
     funnel: {

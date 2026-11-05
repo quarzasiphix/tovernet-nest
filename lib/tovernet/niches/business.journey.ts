@@ -12,7 +12,7 @@ const FIRST_IMPRESSION: [string, string] = ['Pierwsze wrażenie, kiedy klient Ci
 export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy }> = {
   business: {
     welcome: {
-      lead: 'To strona, na której klient od razu widzi, kim jesteś i czym się zajmujesz, a potem pisze do Ciebie jako firma albo osoba prywatna, prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której klient od razu widzi, kim jesteś i czym się zajmujesz, a potem pisze do Ciebie jako firma albo osoba prywatna, prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Spis treści firmy', 'Formularz dla firm i osób'],
     },
     funnel: {

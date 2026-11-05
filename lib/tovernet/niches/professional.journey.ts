@@ -12,7 +12,7 @@ const FIRST_IMPRESSION: [string, string] = ['Pierwsze wrażenie, kiedy klient Ci
 export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy }> = {
   pro_accounting: {
     welcome: {
-      lead: 'To strona, na której przedsiębiorca zaznacza, jaką ma firmę, widzi, czym zajmiesz się co miesiąc, i prosi o wycenę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której przedsiębiorca zaznacza, jaką ma firmę, widzi, czym zajmiesz się co miesiąc, i prosi o wycenę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Miesiąc z biurem', 'Zapytanie o wycenę'],
     },
     funnel: {
@@ -39,7 +39,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   pro_realestate: {
     welcome: {
-      lead: 'To strona, na której sprzedający, wynajmujący i szukający od razu widzą, jak pracujesz, a sprzedający ogląda szkic swojej oferty i umawia rozmowę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której sprzedający, wynajmujący i szukający od razu widzą, jak pracujesz, a sprzedający ogląda szkic swojej oferty i umawia rozmowę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Szkic oferty klienta', 'Trzy ścieżki klienta'],
     },
     funnel: {
@@ -66,7 +66,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   pro_property: {
     welcome: {
-      lead: 'To strona, na której wspólnota albo właściciel sprawdza, co obejmuje zarząd, opisuje nieruchomość i prosi o ofertę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której wspólnota albo właściciel sprawdza, co obejmuje zarząd, opisuje nieruchomość i prosi o ofertę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Szkic zlecenia zarządu', 'Zapytanie o ofertę'],
     },
     funnel: {

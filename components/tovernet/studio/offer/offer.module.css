@@ -225,6 +225,7 @@
 .pauseGrid p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--soft)}
 
 /* summary */
+.heroExample{margin-top:18px}
 .aside{padding:22px;display:flex;flex-direction:column;max-height:calc(100vh - 104px);max-height:calc(100dvh - 104px);overflow-y:auto;scrollbar-width:thin}
 /* Short screens: the sticky card is capped at the viewport and only the line items scroll,
    so the total and "Przejdź do zamówienia" stay visible without scrolling the page to the end. */

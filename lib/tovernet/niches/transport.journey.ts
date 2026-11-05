@@ -13,7 +13,7 @@ const PHONE: [string, string] = ['Działa tam, gdzie klient szuka: na telefonie'
 export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy }> = {
   transport_freight: {
     welcome: {
-      lead: 'To strona, na której spedytor albo firma z towarem wpisuje trasę, termin, ładunek i rodzaj auta, a potem wysyła zapytanie prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której spedytor albo firma z towarem wpisuje trasę, termin, ładunek i rodzaj auta, a potem wysyła zapytanie prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Trasa na pierwszym ekranie', 'Zapytanie jak zlecenie'],
     },
     funnel: {
@@ -40,7 +40,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   transport_moving: {
     welcome: {
-      lead: 'To strona, na której klient przed przeprowadzką podaje skąd, dokąd, piętra, windę i termin, a potem prosi o wycenę prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której klient przed przeprowadzką podaje skąd, dokąd, piętra, windę i termin, a potem prosi o wycenę prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Trasa przeprowadzki', 'Wycena z piętrami'],
     },
     funnel: {
@@ -68,7 +68,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   transport_courier: {
     welcome: {
-      lead: 'To strona, na której sklep albo biuro podaje adres odbioru i doręczenia, rodzaj przesyłki i to, jak często potrzebuje kuriera, prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której sklep albo biuro podaje adres odbioru i doręczenia, rodzaj przesyłki i to, jak często potrzebuje kuriera, prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Odbiór i doręczenie', 'Jednorazowo albo stale'],
     },
     funnel: {

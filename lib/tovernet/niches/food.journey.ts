@@ -19,7 +19,7 @@ const VENUE_FIT: Record<string, string> = {
 export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy }> = {
   food_restaurant: {
     welcome: {
-      lead: 'To strona, na której gość od razu widzi kartę, sprawdza, czy dziś jest otwarte, i prosi o stolik prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której gość od razu widzi kartę, sprawdza, czy dziś jest otwarte, i prosi o stolik prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Karta lokalu', 'Rezerwacja stolika'],
     },
     funnel: {
@@ -42,7 +42,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   food_cafe: {
     welcome: {
-      lead: 'To strona, na której gość od razu widzi menu, sprawdza, do której jest otwarte, i rezerwuje miejsce dla grupy prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której gość od razu widzi menu, sprawdza, do której jest otwarte, i rezerwuje miejsce dla grupy prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Menu kawiarni', 'Godziny na dziś'],
     },
     funnel: {
@@ -69,7 +69,7 @@ export const JOURNEY: Record<string, { welcome: WelcomeCopy; funnel: FunnelCopy 
   },
   food_catering: {
     welcome: {
-      lead: 'To strona, na której organizator przyjęcia podaje okazję, datę i liczbę gości, a zapytanie gotowe do wyceny wysyła prosto z telefonu. Zobacz, jak Twoja firma mogłaby wyglądać w sieci.',
+      lead: 'To strona, na której organizator przyjęcia podaje okazję, datę i liczbę gości, a zapytanie gotowe do wyceny wysyła prosto z telefonu. Wygląd, kolory i zdjęcia dopasujemy do Ciebie.',
       features: ['Bon z zapytaniem', 'Przykład propozycji menu'],
     },
     funnel: {

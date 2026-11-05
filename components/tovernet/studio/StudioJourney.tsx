@@ -80,7 +80,9 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
     if (query) q.set('krok', query); else q.delete('krok');
     const qs = q.toString();
     window.history.pushState(null, '', `${window.location.pathname}${qs ? `?${qs}` : ''}${window.location.hash}`);
-    if (via === 'bar' && STAGES.findIndex((x) => x.key === next) > STAGES.findIndex((x) => x.key === from) + 1) track('offer_skipped_to', { stage: next });
+    // Skipping only the optional example (Oferta -> Zamówienie) is the normal path, not a skip.
+    const skipped = STAGES.slice(STAGES.findIndex((x) => x.key === from) + 1, STAGES.findIndex((x) => x.key === next)).filter((x) => x.key !== 'koncept');
+    if (via === 'bar' && skipped.length > 0) track('offer_skipped_to', { stage: next });
     if (next === 'oferta') track('pricing_viewed');
     track('stage_viewed', { stage: next, from });
     stageRef.current = next;
@@ -92,7 +94,7 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
 
   const index = STAGES.findIndex((x) => x.key === stage);
   const action = stage === 'koncept'
-    ? { label: 'Przejdź do oferty', short: 'Oferta', to: 'oferta' as Stage, placement: 'bar_concept' }
+    ? { label: 'Przejdź do zamówienia', short: 'Zamów', to: 'zamowienie' as Stage, placement: 'bar_concept' }
     : stage === 'oferta'
       ? { label: 'Przejdź do zamówienia', short: 'Zamów', to: 'zamowienie' as Stage, placement: 'bar_offer' }
       : null;
@@ -125,8 +127,8 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
       </header>
 
       <main id="etap" key={stage} tabIndex={-1} className={s.stage} aria-label={`${STAGES[index].label}: ${name}`}>
-        {stage === 'przywitanie' && <Welcome demo={demo} actions={actions} onContinue={() => go('koncept')} onOffer={() => { track('cta_clicked', { placement: 'intro_skip' }); go('oferta'); }} />}
-        {stage === 'koncept' && <Concept demo={demo} track={track} onOffer={() => go('oferta')} />}
+        {stage === 'przywitanie' && <Welcome demo={demo} actions={actions} onContinue={() => go('oferta')} onExample={() => { track('cta_clicked', { placement: 'intro_example' }); go('koncept'); }} />}
+        {stage === 'koncept' && <Concept demo={demo} track={track} onOrder={() => go('zamowienie')} onOffer={() => go('oferta')} />}
         {stage === 'oferta' && <Offer demo={demo} cart={cart} setCart={setCart} actions={actions} onOrder={() => go('zamowienie')} onConcept={() => go('koncept')} />}
         {stage === 'zamowienie' && <Checkout demo={demo} cart={cart} actions={actions} onChange={() => go('oferta')} />}
       </main>
