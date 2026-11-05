@@ -1,0 +1,120 @@
+/* Tovernet payment surfaces: checkout modal, pay link page, panel payments.
+   Same tokens as the studio (graphite and navy, one blue to cyan accent). Stripe's Payment
+   Element renders inside with the matching appearance (PaymentForm.tsx). */
+
+.theme{
+  --bg:#060A13;--panel:#0D1525;--panel2:#111B2F;--line:rgba(148,170,210,.14);--line2:rgba(148,170,210,.26);
+  --ink:#EEF3FC;--body:#C4CFE3;--soft:#97A6BF;--dim:#6A7A95;
+  --blue:#3A7BFF;--cyan:#22D3EE;--ok:#3DDC97;--warn:#F5C451;--err:#FF8A8A;
+  --grad:linear-gradient(115deg,#2F6BFF 0%,#3D8BFF 45%,#19C6F0 100%);
+  --sans:var(--st-sans,'Inter'),'Segoe UI',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  color:var(--body);font-family:var(--sans);
+}
+
+/* Modal ------------------------------------------------------------------------------------- */
+.overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:rgba(3,6,12,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:fade .22s var(--ease) both}
+.dialog{position:relative;width:min(920px,100%);max-height:calc(100dvh - 48px);overflow:auto;border-radius:22px;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line2);
+  box-shadow:0 40px 120px -30px rgba(0,0,0,.8),0 0 0 1px rgba(130,180,255,.06) inset;
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);animation:rise .32s var(--ease) both}
+.close{position:absolute;top:14px;right:14px;z-index:2;width:38px;height:38px;border-radius:12px;border:1px solid var(--line);
+  background:rgba(255,255,255,.03);color:var(--soft);display:grid;place-items:center;cursor:pointer}
+.close:hover{color:var(--ink);border-color:var(--line2)}
+.close:focus-visible,.btn:focus-visible,.ghost:focus-visible,.option:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+
+.side{padding:32px 28px;border-right:1px solid var(--line);background:radial-gradient(120% 80% at 0% 0%,rgba(47,107,255,.12),transparent 60%)}
+.main{padding:32px 28px;min-width:0}
+.kicker{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.title{margin:0 0 18px;font-size:22px;line-height:1.25;color:var(--ink);font-weight:650}
+.today{margin:0;font-size:40px;line-height:1;font-weight:700;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.todayLabel{margin:0 0 6px;font-size:13px;color:var(--soft)}
+.lines{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.lines li{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.lines li span:last-child{color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.lines small{display:block;color:var(--dim);font-size:12px;margin-top:2px}
+.future{margin:22px 0 0;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02);display:grid;gap:10px}
+.future p{margin:0;font-size:13px;line-height:1.5}
+.future b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;margin-right:6px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.02em;
+  background:rgba(58,123,255,.14);color:#9CC0FF;border:1px solid rgba(58,123,255,.3)}
+.tagPlan{background:rgba(34,211,238,.1);color:#8BE8F7;border-color:rgba(34,211,238,.28)}
+.note{margin:16px 0 0;font-size:12px;line-height:1.5;color:var(--dim)}
+
+/* Form -------------------------------------------------------------------------------------- */
+.form{display:grid;gap:16px}
+.element{min-height:180px}
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;border:0;border-radius:14px;
+  background:var(--grad);color:#fff;font:600 16px/1 var(--sans);cursor:pointer;
+  box-shadow:0 0 0 1px rgba(130,180,255,.45) inset,0 14px 40px -14px rgba(47,107,255,.85);transition:transform .15s var(--ease),filter .15s}
+.btn:hover:not(:disabled){filter:brightness(1.07)}
+.btn:active:not(:disabled){transform:translateY(1px)}
+.btn:disabled{opacity:.55;cursor:not-allowed;box-shadow:none}
+.ghost{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid var(--line2);
+  background:transparent;color:var(--ink);font:500 14px/1 var(--sans);cursor:pointer}
+.ghost:hover{border-color:var(--blue)}
+.secure{display:flex;align-items:center;justify-content:center;gap:8px;margin:0;font-size:12px;color:var(--dim)}
+.error{display:flex;gap:10px;align-items:flex-start;margin:0;padding:12px 14px;border-radius:12px;font-size:14px;line-height:1.45;
+  color:#FFD1D1;background:rgba(255,138,138,.08);border:1px solid rgba(255,138,138,.3)}
+.spin{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .8s linear infinite}
+
+/* Status views ------------------------------------------------------------------------------ */
+.status{display:grid;justify-items:center;text-align:center;gap:14px;padding:28px 8px}
+.status h2{margin:0;color:var(--ink);font-size:22px;font-weight:650}
+.status p{margin:0;max-width:40ch;font-size:15px;line-height:1.55}
+.pulse{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;color:var(--cyan);
+  background:radial-gradient(circle,rgba(34,211,238,.18),rgba(34,211,238,0) 70%);animation:breathe 1.8s ease-in-out infinite}
+.ring{width:84px;height:84px}
+.ring circle{fill:none;stroke:var(--ok);stroke-width:3;stroke-dasharray:277;stroke-dashoffset:277;animation:draw .7s var(--ease) forwards}
+.ring path{fill:none;stroke:var(--ok);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:draw .45s .45s var(--ease) forwards}
+
+/* Payment choice in checkout -------------------------------------------------------------- */
+.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.option{position:relative;display:grid;gap:6px;text-align:left;padding:16px 16px 14px;border-radius:16px;cursor:pointer;
+  border:1px solid var(--line2);background:rgba(255,255,255,.02);color:var(--body);font:inherit;transition:border-color .15s,background .15s}
+.option:hover{border-color:rgba(58,123,255,.6)}
+.option[aria-checked="true"]{border-color:var(--blue);background:rgba(58,123,255,.09);box-shadow:0 0 0 1px var(--blue) inset}
+.optionName{font-size:13px;color:var(--soft)}
+.optionAmount{font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.optionMore{font-size:13px;line-height:1.45}
+.dot{position:absolute;top:14px;right:14px;width:18px;height:18px;border-radius:50%;border:2px solid var(--line2)}
+.option[aria-checked="true"] .dot{border-color:var(--blue);background:radial-gradient(circle,var(--blue) 0 4px,transparent 5px)}
+.schedule{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid var(--line);font-size:13px;line-height:1.55}
+.schedule summary{cursor:pointer;color:var(--ink)}
+.schedule ol{margin:10px 0 0;padding-left:20px;columns:2;column-gap:28px}
+.schedule li{break-inside:avoid;font-variant-numeric:tabular-nums}
+.autopay{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:13px;line-height:1.5;cursor:pointer}
+.autopay input{margin-top:3px;width:16px;height:16px;accent-color:var(--blue)}
+
+/* Pay link page ----------------------------------------------------------------------------- */
+.page{min-height:100dvh;background:radial-gradient(90% 60% at 50% -10%,rgba(47,107,255,.18),transparent 60%),var(--bg);
+  display:flex;align-items:flex-start;justify-content:center;padding:48px 16px}
+.card{width:min(920px,100%);border-radius:22px;border:1px solid var(--line2);background:linear-gradient(180deg,var(--panel2),var(--panel));
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);overflow:hidden}
+.brand{display:flex;align-items:center;gap:10px;margin:0 0 28px;color:var(--ink);font-weight:650;letter-spacing:-.01em}
+.brand i{width:10px;height:10px;border-radius:3px;background:var(--grad)}
+
+@keyframes fade{from{opacity:0}}
+@keyframes rise{from{opacity:0;transform:translateY(14px) scale(.985)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes breathe{50%{transform:scale(1.08)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+@media (max-width:760px){
+  .overlay{padding:0;align-items:flex-end}
+  .dialog{grid-template-columns:1fr;border-radius:22px 22px 0 0;max-height:94dvh}
+  .side{border-right:0;border-bottom:1px solid var(--line);padding:24px 16px 18px}
+  .main{padding:20px 16px 24px}
+  .today{font-size:34px}
+  .options{grid-template-columns:1fr}
+  .schedule ol{columns:1}
+  .page{padding:16px}
+  .card{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .overlay,.dialog{animation:none}
+  .pulse{animation:none}
+  .spin{animation-duration:2s}
+  .ring circle,.ring path{animation:none;stroke-dashoffset:0}
+}

@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^3.11.0",
+    "@stripe/stripe-js": "^7.10.0",
+    "@supabase/supabase-js": "^2.43.2",
     "@vercel/edge": "^1.1.2",
+    "firebase": "^10.14.1",
     "lucide-react": "^0.454.0",
     "next": "14.2.18",
     "next-intl": "^3.22.0",

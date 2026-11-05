@@ -1,5 +1,6 @@
 'use client';
 
+import { GATEWAY } from '@/lib/tovernet/api';
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Mail } from 'lucide-react';
 
@@ -105,7 +106,7 @@ export default function QuoteForm({ content }: { content: QuoteFormContent }) {
 
   const submit = async () => {
     try {
-      const res = await fetch('https://api.ksiegai.pl/v1/public', {
+      const res = await fetch(`${GATEWAY}/v1/public`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

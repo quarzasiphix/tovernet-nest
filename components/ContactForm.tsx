@@ -1,5 +1,6 @@
 'use client';
 
+import { GATEWAY } from '@/lib/tovernet/api';
 import { useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import posthog from 'posthog-js';
@@ -37,7 +38,7 @@ export default function ContactForm({ content, source }: { content: ContactFormC
     if (!canSubmit || submitting) return;
     setSubmitting(true);
     try {
-      const res = await fetch('https://api.ksiegai.pl/v1/public', {
+      const res = await fetch(`${GATEWAY}/v1/public`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

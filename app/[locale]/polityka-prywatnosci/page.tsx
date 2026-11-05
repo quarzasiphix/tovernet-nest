@@ -2,30 +2,32 @@ import type { Metadata } from 'next';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
-import LegalPageView from '@/components/legal/LegalPageView';
-import { legalContent } from '@/lib/legal';
+import LegalDocumentView from '@/components/legal/LegalDocumentView';
+import { loadLegalDocument } from '@/lib/legal/documents';
 import { buildMetadata } from '@/lib/seo';
 
+// Binding text is Polish only; the English route shows the same document with a note.
 export async function generateMetadata({ params: { locale } }: { params: { locale: 'pl' | 'en' } }): Promise<Metadata> {
-  const isPolish = locale === 'pl';
   return buildMetadata({
     locale,
     path: '/polityka-prywatnosci',
-    title: isPolish ? 'Polityka Prywatności | TOVERNET' : 'Privacy Policy | TOVERNET',
-    description: isPolish
-      ? 'Jakie dane zbieramy na tovernet.online, w jakim celu i jakie prawa Ci przysługują.'
-      : 'What data we collect on tovernet.online, for what purpose, and what rights you have.',
+    title: locale === 'pl' ? 'Polityka prywatności | Tovernet' : 'Privacy Policy | Tovernet',
+    description: locale === 'pl' ? 'Jak Tovernet Sp. z o.o. przetwarza dane osobowe: cele, podstawy, odbiorcy, okresy, pliki cookie i Twoje prawa.' : 'How Tovernet Sp. z o.o. processes personal data (Polish).',
   });
 }
 
-export default function PrivacyPolicyPage({ params: { locale } }: { params: { locale: 'pl' | 'en' } }) {
+export default function Page({ params: { locale } }: { params: { locale: 'pl' | 'en' } }) {
   unstable_setRequestLocale(locale);
-  const page = legalContent[locale].privacy;
-
+  const { meta, blocks, entry } = loadLegalDocument('polityka-prywatnosci');
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
       <SiteNav locale={locale} />
-      <LegalPageView page={page} />
+      {locale === 'en' && (
+        <p className="max-w-3xl mx-auto px-4 pt-10 text-sm text-gray-400">
+          This privacy policy is published in Polish. For an English summary, write to contact@tovernet.online.
+        </p>
+      )}
+      <LegalDocumentView title={meta.title} blocks={blocks} entry={entry} />
       <SiteFooter locale={locale} />
     </div>
   );

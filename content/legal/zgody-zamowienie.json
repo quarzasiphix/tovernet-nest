@@ -1,0 +1,34 @@
+{
+  "key": "zgody-zamowienie",
+  "version": "1.0",
+  "title": "Oświadczenia w formularzu zamówienia",
+  "effective": "2026-11-03",
+  "consents": {
+    "documents": {
+      "required": true,
+      "text": "Zapoznałem(-am) się i akceptuję Regulamin świadczenia usług Tovernet (wersja {regulamin}) wraz ze Specyfikacją zamówienia oraz Umowę powierzenia przetwarzania danych (wersja {umowa-powierzenia}). Dokumenty otrzymam też e-mailem."
+    },
+    "authority": {
+      "required": true,
+      "text": "Oświadczam, że jestem {capacity} firmy {company} i jestem uprawniony(-a) do zawarcia tej umowy w jej imieniu {scope}."
+    },
+    "early_start": {
+      "required": false,
+      "protected_only": true,
+      "text": "Żądam rozpoczęcia prac przed upływem 14 dni na odstąpienie od umowy. Przyjmuję do wiadomości, że: (a) jeśli odstąpię od umowy po rozpoczęciu prac, zapłacę za prace wykonane do chwili odstąpienia, według tabeli etapów w § 19 Regulaminu; (b) po pełnym wykonaniu usługi, czyli publikacji strony po mojej akceptacji, utracę prawo odstąpienia od umowy."
+    }
+  },
+  "professional_question": "Opcjonalnie: czy zamawiana strona ma dla Ciebie charakter zawodowy, to znaczy czy usługi stron internetowych, IT lub marketingu należą do przedmiotu Twojej działalności? Odpowiedź nie jest wymagana i nie wpływa na możliwość złożenia zamówienia.",
+  "capacities": {
+    "board_member": "członkiem zarządu",
+    "partner": "wspólnikiem uprawnionym do reprezentacji",
+    "proxy_holder": "prokurentem",
+    "attorney": "pełnomocnikiem",
+    "owner": "właścicielem (jednoosobowa działalność gospodarcza)"
+  },
+  "scopes": {
+    "alone": "samodzielnie",
+    "jointly": "łącznie z drugą osobą uprawnioną, którą wskażę do akceptacji zamówienia",
+    "power_of_attorney": "na podstawie pełnomocnictwa, które przekażę przed rozpoczęciem prac"
+  }
+}

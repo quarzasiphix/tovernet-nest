@@ -1,0 +1,42 @@
+[
+  {
+    "key": "polityka-prywatnosci",
+    "version": "1.0",
+    "title": "Polityka prywatności Tovernet",
+    "effective": "2026-11-03",
+    "sha256": "05c91a0045c8e943255730cd77c01143f7b0a958bf5b1be1f4a117118068163c",
+    "source": "content/legal/polityka-prywatnosci.md",
+    "pdf": "/legal/polityka-prywatnosci-1.0.pdf",
+    "pdf_sha256": "1131c9c1e1c9270ba828d318ea101320307bba0f9a095e989a72468b18722b4e"
+  },
+  {
+    "key": "regulamin",
+    "version": "1.0",
+    "title": "Regulamin świadczenia usług Tovernet",
+    "effective": "2026-11-03",
+    "sha256": "775cac9b5315feb5e5e01d67b861d50cc90242a8bf8fc30a3a88238aa0c970ac",
+    "source": "content/legal/regulamin.md",
+    "pdf": "/legal/regulamin-1.0.pdf",
+    "pdf_sha256": "6640a4f44607c1730433afa6428898a1ffd3d6dfafb535274a3331b2eb53e6de"
+  },
+  {
+    "key": "umowa-powierzenia",
+    "version": "1.0",
+    "title": "Umowa powierzenia przetwarzania danych osobowych",
+    "effective": "2026-11-03",
+    "sha256": "0e52fc08fd5717d0b9a8453d0b874180be2153708a8771b7261d713d11fe0ed1",
+    "source": "content/legal/umowa-powierzenia.md",
+    "pdf": "/legal/umowa-powierzenia-1.0.pdf",
+    "pdf_sha256": "1682191c3b1ff6768da7f3ac93a43b5acfe8229bb6475e00f7c12b42d349e955"
+  },
+  {
+    "key": "zgody-zamowienie",
+    "version": "1.0",
+    "title": "Oświadczenia w formularzu zamówienia",
+    "effective": "2026-11-03",
+    "sha256": "324f96862d10a28f0918fe64fea1dd066019319c8945a5fe06cf10e1e3730188",
+    "source": "content/legal/zgody-zamowienie.json",
+    "pdf": null,
+    "pdf_sha256": null
+  }
+]

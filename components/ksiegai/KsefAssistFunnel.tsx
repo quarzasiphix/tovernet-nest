@@ -1,5 +1,6 @@
 'use client';
 
+import { GATEWAY } from '@/lib/tovernet/api';
 import { useState, type FormEvent } from 'react';
 import { Search, Building2, Mail, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import posthog from 'posthog-js';
@@ -8,7 +9,7 @@ import posthog from 'posthog-js';
 // ksef.support versions of this funnel call, no auth needed (anonymous
 // visitor, no ksiegai account yet). See ksiegai-gateway/src/routes/public.ts
 // ksefAssistLead handler and ksef-ai/supabase/functions/ksef-assist-lead.
-const GATEWAY_URL = 'https://api.ksiegai.pl/v1/public/ksef-assist/lead';
+const GATEWAY_URL = `${GATEWAY}/v1/public/ksef-assist/lead`;
 
 type LookupResult = {
   found: boolean;

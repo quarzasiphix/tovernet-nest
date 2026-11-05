@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Check, Mail } from 'lucide-react';
+import { GATEWAY } from '@/lib/tovernet/api';
+import { track } from '@/lib/tovernet/analytics';
 
 type AuditIntakeFormContent = {
   title: string;
@@ -73,10 +75,33 @@ export default function AuditIntakeForm({ content }: { content: AuditIntakeFormC
 
   const canSubmit = form.companyName.trim().length > 0 && form.email.trim().length > 0;
 
-  const submit = () => {
+  const [submitting, setSubmitting] = useState(false);
+
+  // Into the Tovernet lead pipeline (admin Inquiries, push to staff). If the gateway is
+  // unreachable, fall back to the visitor's mail client so the request is never lost.
+  const submit = async () => {
+    if (!canSubmit || submitting) return;
+    setSubmitting(true);
     const body = buildMailBody(form, c);
-    const mailto = `mailto:contact@tovernet.online?subject=${encodeURIComponent(`${c.emailSubject} — ${form.companyName}`)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    try {
+      const res = await fetch(`${GATEWAY}/v1/public`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'tovernetLead.submit',
+          source: 'provider_audit',
+          contactName: form.contactName,
+          email: form.email,
+          notes: body,
+        }),
+      });
+      if (!res.ok) throw new Error(`gateway ${res.status}`);
+      track('provider_audit_requested', {});
+    } catch {
+      window.location.href = `mailto:contact@tovernet.online?subject=${encodeURIComponent(`${c.emailSubject} — ${form.companyName}`)}&body=${encodeURIComponent(body)}`;
+    } finally {
+      setSubmitting(false);
+    }
     setSent(true);
   };
 
@@ -190,7 +215,7 @@ export default function AuditIntakeForm({ content }: { content: AuditIntakeFormC
       </div>
 
       <button
-        onClick={submit}
+        onClick={() => void submit()}
         disabled={!canSubmit}
         className="mt-8 w-full inline-flex items-center justify-center gap-2 h-12 rounded-xl text-sm font-bold text-white transition disabled:opacity-40 bg-tovernet-gradient"
       >

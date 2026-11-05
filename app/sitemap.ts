@@ -3,6 +3,7 @@ import { locales } from '@/i18n';
 import { getArticlesForLocale, getOtherLocaleSlug } from '@/lib/poradnik';
 import { auditGuides, getOtherLocaleGuideSlug, PROVIDER_AUDIT_MAIN_PATH, PROVIDER_AUDIT_HUB_PATH } from '@/lib/provider-audit';
 import { SITE_URL } from '@/lib/seo';
+import { NICHES } from '@/lib/tovernet/niches';
 
 type StaticRoute = { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] };
 
@@ -21,6 +22,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: '/poradnik', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/polityka-prywatnosci', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/regulamin', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/umowa-powierzenia', priority: 0.2, changeFrequency: 'yearly' },
 ];
 
 function alternatesFor(pathByLocale: Record<'pl' | 'en', string>) {
@@ -34,6 +36,11 @@ function alternatesFor(pathByLocale: Record<'pl' | 'en', string>) {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
+
+  // Polish-only niche landing pages, outside the locale tree.
+  for (const niche of NICHES) {
+    entries.push({ url: `${SITE_URL}${niche.path}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 });
+  }
 
   for (const route of STATIC_ROUTES) {
     for (const locale of locales) {

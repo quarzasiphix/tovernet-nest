@@ -1,0 +1,1357 @@
+{
+  "/p/tovernet-nest/postcss.config.mjs": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "33fad9c02cb0ec6d6030369ef6347d57",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/i18n.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "0f6d6ea2bde174ee76c9c6386a4a4a1e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/vercel.json": {
+    "mtime": 1793486275.263999,
+    "ast_hash": "7f1a3b753c648f15ad825b18a51e5336",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/tailwind.config.ts": {
+    "mtime": 1793486275.263999,
+    "ast_hash": "28e5092cf0d7abf97eb997b5d49ec486",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/next.config.js": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "ad0dd34518444d56760f5a20ddad9f9f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/next-intl.config.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "80660b30726acf9d8a7ef4d0310d1834",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/package.json": {
+    "mtime": 1793784045.9902449,
+    "ast_hash": "3536b2710872754beab0f5aaeb2fc214",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/middleware.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "cd90aa6581a52499ddd2c71adb0ed040",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/tsconfig.json": {
+    "mtime": 1793486275.263999,
+    "ast_hash": "fd6e1020cc01bfea6b5fa6d1564bb630",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.eslintrc.json": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "934a81616adbd809dfc38314baaa3409",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/messages/en.json": {
+    "mtime": 1793704940.0832243,
+    "ast_hash": "cc82f1002dcf2266e50c6e4578ac5e20",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/messages/pl.json": {
+    "mtime": 1793704940.0832243,
+    "ast_hash": "828c48fc14214506cd0a44fc2daa0c58",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/PostHogProvider.tsx": {
+    "mtime": 1793704918.1943166,
+    "ast_hash": "2c9f8785fb78229caed05e73d619e663",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/ContactForm.tsx": {
+    "mtime": 1793532260.470016,
+    "ast_hash": "f748640ea225754658936815d88c14fd",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/PhoneCTA.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "6a66a73a4ed84ca779be2e3b57ad17a4",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/SiteNav.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "653a0d9a01b6ebdf6011138369e47c98",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/TrackedAnchor.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "d38380251f45285862218e6865e29164",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/SiteFooter.tsx": {
+    "mtime": 1793704937.6150944,
+    "ast_hash": "4361b7251bf5257ca2d5bc8e7fd3b80f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/LanguageSwitcher.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "3a81e30a5a2d8c04fe5508c6665efa98",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/PokPanelDemo.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "a4f008a19dd0f30ee43f58da1017b364",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/poradnik/PoradnikArticleView.tsx": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "965fd19cf4ca3b23ecbd951726d34749",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/audit/AuditIntakeForm.tsx": {
+    "mtime": 1793656058.558036,
+    "ast_hash": "03f49a91977243ebc1c0f152d3c766a5",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/audit/AuditGuideView.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "3345f0edb1479c34ab474fee2276cd7e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/ksiegai/KsefAssistFunnel.tsx": {
+    "mtime": 1793532260.470016,
+    "ast_hash": "3b0f98eeae41635b522a576094e73339",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/ksiegai/KsiegaiShowcase.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "4351ccb1c4be2706967a051a31779b9f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/kennelclub/PedigreeVerificationDemo.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "4671db68379d9f0a72faa524e60ceecc",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/pdf/GryfinPlanViewer.tsx": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "c1425eb31c2c5e1bbb2fdb2346d655cb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/pdf/PokPlanViewer.tsx": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "69c04e06bdb3f35d3ef9ef2c7e7446eb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/PanelClient.tsx": {
+    "mtime": 1793708401.8996463,
+    "ast_hash": "f064f03f4cd8316a95965a65a2efa22c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/PanelCompany.tsx": {
+    "mtime": 1793743245.4690523,
+    "ast_hash": "3ecab26c01a3da7bf13317b5787123f2",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/Karta.tsx": {
+    "mtime": 1793559839.6698275,
+    "ast_hash": "0599e1f6782907a2afa2ce1d1e0de391",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/ConceptSite.tsx": {
+    "mtime": 1793743137.4044547,
+    "ast_hash": "487f7c716cfe65789dc6cd8acc2d5570",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/usePersonalOffer.ts": {
+    "mtime": 1793726143.2334607,
+    "ast_hash": "8d7a60af3f7df73fa5ecb3637603901e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/OfferLoader.tsx": {
+    "mtime": 1793639304.0432506,
+    "ast_hash": "116c055ee54df343fcdc08e2bec63976",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/ProjectProgress.tsx": {
+    "mtime": 1793655796.2608225,
+    "ast_hash": "addfc87295eaf5bf496afa59a418326d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/ElectricianSite.tsx": {
+    "mtime": 1793638326.3484468,
+    "ast_hash": "988717ad662bad6168a10aa10ed435e2",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/EmailAuth.tsx": {
+    "mtime": 1793559947.8653214,
+    "ast_hash": "68c33012792e43a53982fac3fa15d559",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/InquiryForm.tsx": {
+    "mtime": 1793559947.8653214,
+    "ast_hash": "1f0d1b802e683096e269f413ef70efa4",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/OfferClient.tsx": {
+    "mtime": 1793639333.0758772,
+    "ast_hash": "fc01667bef98b4721e23f10cc9cbfdf7",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/OfferMessageForm.tsx": {
+    "mtime": 1793559947.8653214,
+    "ast_hash": "08729675ca8ac501f08a4636c95f2501",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/NichePage.tsx": {
+    "mtime": 1793639653.181598,
+    "ast_hash": "6f478f28321f00c3693fe79ed3192692",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/OfferGate.tsx": {
+    "mtime": 1793639322.4153793,
+    "ast_hash": "8418f453030beb0afd7e7956a9760812",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/FinishingSite.tsx": {
+    "mtime": 1793638326.3444467,
+    "ast_hash": "f33d25c7a4036066212a248b528885b2",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/ConstructionSite.tsx": {
+    "mtime": 1793743146.712932,
+    "ast_hash": "434c8ab1f2417ad2ed164a3fb8e101ca",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/fixture.ts": {
+    "mtime": 1793701099.6381614,
+    "ast_hash": "8983f5aa3de77b1e5045961f24ccb3e9",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/Journey.tsx": {
+    "mtime": 1793784253.2697475,
+    "ast_hash": "42f27b8650d54b7c1a5e89a947a557be",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/LiveJourney.tsx": {
+    "mtime": 1793784256.257871,
+    "ast_hash": "2e10939323dd2f34dd7f82b0b4486991",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/StageConcept.tsx": {
+    "mtime": 1793638341.941218,
+    "ast_hash": "38987a19758a0fedd78b1a94bdd9bfdd",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/StageCheckout.tsx": {
+    "mtime": 1793784378.2613015,
+    "ast_hash": "714b47e3ef1bdb6d60cb76aef382bb89",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/FunnelPreview.tsx": {
+    "mtime": 1793705687.944594,
+    "ast_hash": "7be8903f4c84e66a839fdbae4170b26a",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/StageOffer.tsx": {
+    "mtime": 1793784378.2573013,
+    "ast_hash": "67da1249d5503682424f55582144e019",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/funnel/StageIntro.tsx": {
+    "mtime": 1793743245.4530516,
+    "ast_hash": "285c3da606ff97be45ab2aa3f413a586",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/breeders/BreederHomeCard.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "63af50cc1662d0afe41e6a26043ada4b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/breeders/PanelShowcase.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "83e1ceb658362501687d8bba7f1f0c5e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/breeders/BreederHero.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "2b691e988f505be157ee51e2d9e9d76a",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/breeders/PuppyAvatar.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "6880df6d33dfeaa97e5571a858f9c3ab",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/breeders/CaseStudyPreview.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "e82184d0c721256ac9dd23827f8bbacc",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/breeders/QuoteForm.tsx": {
+    "mtime": 1793532260.470016,
+    "ast_hash": "9736d6f6237dac9e006dca1e1f7c241e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/scripts/generate-favicon.js": {
+    "mtime": 1793486275.263999,
+    "ast_hash": "dbfe6c66132c87f07b28c6ddebf56f10",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/sitemap.ts": {
+    "mtime": 1793704884.7779644,
+    "ast_hash": "d085e8020af777dd4b51de9f62ff8ae1",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/robots.ts": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "2fd6019ad150975496fd230f5f89a195",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "b0275277cd9302ac7247dd30030502b0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/layout.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "bca5529a1592513f44ffb3c4074b3292",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "17f54b81b3683eb8d45783fef34cfd57",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/layout.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "19250a4666f74fa2b1e60632de9ae1c9",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/wykonawca-nie-chce-wydac-strony/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "99a77ae1f9c17009c92b21597df9ccef",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/asysta-ksef/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "1e8f7c7b72dda6b8578e9959835a5403",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/poradnik/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "71a7eaf535d248edba0a6987be6a4906",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/poradnik/[slug]/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "2d9e65a1ae9ae9395eec2954abcc3df7",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/odzyskanie-domeny-i-strony/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "0006dca516da32fc45f6ef94c3a8722e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/what-should-seo-it-services-cost/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "9f1a0230cb52ced38bad48db6cb13c5e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/hodowcy/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "ed960a6e70322fbe92975d19d8f07f23",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/technical-report-for-vendor-disputes/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "1572cb10a3219aeec36960212610efc0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/agencja-seo-nie-wykonuje-umowy/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "7660eb0ec5e96b0cf26120c43bc67752",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/regain-digital-control/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "271ea8b54833bf0978a30d3fd4aeb75a",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/recovering-your-domain-and-website/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "5d5e0d0b6ef93a38fe53dac1891e3779",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/odzyskaj-kontrole-cyfrowa/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "f09b7950da47242e5b89a7ca4b83473b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/zwiazki-kynologiczne/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "ed422bb4ea8824657005b68a397a1387",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/raport-techniczny-do-sporu/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "34c8aa2532e31f9d70958563b31a6efb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "6ba52ed408b410a48bd945b523d3fa54",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/klepsydra/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "eb81e2fc6386ad0ec5fd38e1a53b8b7e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/gryfin-york/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "e95ce2ee40aac11e80b76b0fedd0f5dd",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/ksiegai/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "4fdd21bb15121809762e1b8baf2c1a81",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/kolorowa-pasja/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "c894041f1205cfac1a28f939de3f8792",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/pokiu/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "80153d4d2877b0cc9b205a461660930e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/anemalo/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "e83bcb455d08f17de34c8a437d2476ce",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/projekty/nekrolog-lodz/page.tsx": {
+    "mtime": 1793486275.2359977,
+    "ast_hash": "3a15752a3ca50c5dae7be1f6f3e2745e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/audyt-dostawcy-uslug-cyfrowych/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "085b286cbe09bc8a643f7743be21fb9a",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/vendor-wont-hand-over-your-website/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "64b54b182098421118ce229f849c9974",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/seo-agency-not-delivering/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "88d6d7b5deee68a4bea8a26c727a8477",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/wycena-uslug-seo-it/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "18b33ff012d06736e2b0089480ecb5e3",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/polityka-prywatnosci/page.tsx": {
+    "mtime": 1793704881.6577961,
+    "ast_hash": "96a719874ab98b88e1894e26e6b2a18c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/digital-provider-audit/page.tsx": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "7bdd7db437a3a58bb4e6d2bbd2d2794e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/regulamin/page.tsx": {
+    "mtime": 1793704881.6577961,
+    "ast_hash": "2aa259bc74b55e9e65ab3e67de69c90e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-budowlanych/page.tsx": {
+    "mtime": 1793500382.607872,
+    "ast_hash": "4af81235a67f4d94447e2cda10c9df8d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-drogowych/page.tsx": {
+    "mtime": 1793500382.6118722,
+    "ast_hash": "ec4338be3579146b8a89add5945440de",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/pdf/gryfin/page.tsx": {
+    "mtime": 1793486275.2399979,
+    "ast_hash": "4d476819b91d76b0415892883e175d2b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/pdf/pok/page.tsx": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "660b69aede7c316937bc2731cfa9edd4",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/oferta/page.tsx": {
+    "mtime": 1793487592.344666,
+    "ast_hash": "eb0652ab11a11ac33217a71e71f9cdcb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-sciezki/page.tsx": {
+    "mtime": 1793635864.5242567,
+    "ast_hash": "874468eb88fe08f57914395f13287e6a",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-elektrykow/page.tsx": {
+    "mtime": 1793500382.607872,
+    "ast_hash": "1f415f81c446fd901a8c3aa3f8e6ed25",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-hydraulikow/page.tsx": {
+    "mtime": 1793500382.607872,
+    "ast_hash": "ee056d8ec8c73ed3e72db1587ddce61d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-wykonczeniowych/page.tsx": {
+    "mtime": 1793500382.607872,
+    "ast_hash": "5e24c7451322f5f2b01518ee863afa69",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/panel/page.tsx": {
+    "mtime": 1793487592.3486662,
+    "ast_hash": "f812bae83869b20ed46d2a62daebe842",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/embed/footer-strip.config.json": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "5b31b3bd999690d7b31a36dba06af892",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/embed/footer-strip.js": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "8ecac7404604afb06b311ad599ada48d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/gryfin.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "8b188faefac3ba6dd08e9dffde4e9bcc",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/poradnik.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "7158be11057919ccfba98eab006d087f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/seo.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "772833f7aca80e311c41643a68c2880c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/provider-audit.ts": {
+    "mtime": 1793486275.2479982,
+    "ast_hash": "22dd0c9e14169a4dba673af595a0ffd9",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/electrician.ts": {
+    "mtime": 1793559706.493022,
+    "ast_hash": "88ecb971dfd5fc4535e449297f76e89e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/construction.ts": {
+    "mtime": 1793743691.026467,
+    "ast_hash": "2f308af08750bf608c281cc183aa30b4",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches.ts": {
+    "mtime": 1793743221.0364716,
+    "ast_hash": "a86d3a835a0064ea127332f6c4e93303",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/funnel.ts": {
+    "mtime": 1793784104.467304,
+    "ast_hash": "2699fcd1e1154b8ee9ec2fcecd13057b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/supabase.ts": {
+    "mtime": 1793490169.7412806,
+    "ast_hash": "965a96b1497b4b818a1cc4388b087955",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/analytics.ts": {
+    "mtime": 1793726143.2334607,
+    "ast_hash": "ad2d521ed33f52ee994773fc7de33163",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/invite.ts": {
+    "mtime": 1793641149.8803308,
+    "ast_hash": "418f89fc431d6594553282c7a85e4713",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/auth.ts": {
+    "mtime": 1793490130.601345,
+    "ast_hash": "70d9cfcd964f04b97b7496a30e928205",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/brand.ts": {
+    "mtime": 1793639653.181598,
+    "ast_hash": "4748dee3a58b9f23bb570ae48d5c33f4",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/seo.ts": {
+    "mtime": 1793500382.6158724,
+    "ast_hash": "87eb5f83eb6dca4c4bc30d09497c9491",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/finishing.ts": {
+    "mtime": 1793637334.6448946,
+    "ast_hash": "067953447cc3f0d4e07aa1f8feb0cd57",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/funnelCopy.ts": {
+    "mtime": 1793743146.7649348,
+    "ast_hash": "060704efc9c1a54e1383274c39ef1df9",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/money.ts": {
+    "mtime": 1793490130.6053452,
+    "ast_hash": "dfeaf33a156e4c19f3535aa871b521c0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/api.ts": {
+    "mtime": 1793784108.0114605,
+    "ast_hash": "7c42657a923a45bd96b36753b831a906",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/README.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "c14eee5987a4e90b2b01b8c0c5b96961",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/AGENT_GUIDE.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "1511de371dcc7d31b70d2d43c7279e0e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/I18N_SETUP.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "8414a047220a460960c4adefcaedf19d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/SETUP.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "7c22ccb5b5347532c08f3e6662076a4c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/posthog-setup-report.md": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "c27b04fa152c43fa006c32f7fcf16dcc",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/agents/tovernet-creative-director.md": {
+    "mtime": 1793557360.0317142,
+    "ast_hash": "dd0dbb28ff59b00449e18e726e5e31d3",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/SKILL.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "eb21e2400e41f638b60f735dc80de763",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/1-begin.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "aa8001a3cf94d0d560d536b75d2d8916",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/4-conclude.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "03ae9c46d2fe3dccfd2008fcefe14efb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/3-revise.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "5863fe1d0dcd2184253bbfd3072d090d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/EXAMPLE.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "e160cae21cc881aca65221cf2cd25a30",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/identify-users.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "90dffa768e59e8e9a7fa753247d42e4e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/next-js.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "7900f3d0ee7a39a113aed61bc1c39562",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/.claude/skills/integration-nextjs-app-router/references/2-edit.md": {
+    "mtime": 1793486275.2319975,
+    "ast_hash": "0c78b57c8bb8163d25480aac30df39a1",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/pdf/pok_plan (2).pdf": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/pdf/plan_rozbudowy_POK_Tovernet_final_offer (7).pdf": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "dcc9d87712492114801921f6afe6d864",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/pdf/pok_plan.pdf": {
+    "mtime": 1793486275.243998,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/pdf/pok-plan2.pdf": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "c5e4f999cebe45332822654d5d13700b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/pdf/gryfin-plan.pdf": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "e5860a2158c1c500cb5d1b3a566dccc7",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/embed/tovernet-logo.png": {
+    "mtime": 1793486275.2519984,
+    "ast_hash": "eabef8197c71e639ff6225f468a66ef8",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/pok/requests.png": {
+    "mtime": 1793486275.263999,
+    "ast_hash": "462799b3a15d51092858c1d9fd962d77",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/pok/dogs.png": {
+    "mtime": 1793486275.2599988,
+    "ast_hash": "530c67113306ef4188e7953c4aebd50b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/pok/people.png": {
+    "mtime": 1793486275.2599988,
+    "ast_hash": "010de0245737ec2343e80b25c4f5c5c5",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/pok/dashboard.png": {
+    "mtime": 1793486275.2599988,
+    "ast_hash": "fc9f48bf88565324468bd75f9db24c0b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/clients/klepsydra.png": {
+    "mtime": 1793486275.2559986,
+    "ast_hash": "b224c0f1a6cca08d365874634db11413",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/clients/gryfin-york.png": {
+    "mtime": 1793486275.2559986,
+    "ast_hash": "be246b720c106fe9af0216235197a565",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/clients/kolorowa-pasja.png": {
+    "mtime": 1793486275.2599988,
+    "ast_hash": "10a862b8c5a3ba828512a7f72ad226ce",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/clients/klepsydra-generator.png": {
+    "mtime": 1793486275.2559986,
+    "ast_hash": "de33c5aa103381c2faf084864a292034",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/clients/nekrolog-lodz.png": {
+    "mtime": 1793486275.2599988,
+    "ast_hash": "d5164c629d0a855fea26475703af1d20",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/screenshots/clients/klepsydra-print-a4.png": {
+    "mtime": 1793486275.2559986,
+    "ast_hash": "ad2e88169f69195ba0951c12a019b188",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/fonts.ts": {
+    "mtime": 1793644572.3398366,
+    "ast_hash": "2d4d0f4dc5c10657f0a94ba28a1bc929",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/motion.tsx": {
+    "mtime": 1793644580.000301,
+    "ast_hash": "1bda75c3aaf3b6720bb1ce6c589de539",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/StudioJourney.tsx": {
+    "mtime": 1793704950.42777,
+    "ast_hash": "80b20a8244f3769223608ff062d3c356",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/Offer.tsx": {
+    "mtime": 1793784364.556629,
+    "ast_hash": "e5f08daa98eba0c28babf6e8f051c2ac",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/copy.ts": {
+    "mtime": 1793743146.712932,
+    "ast_hash": "17280d644a463d64f3b1f12bf95cef63",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/Checkout.tsx": {
+    "mtime": 1793786349.415164,
+    "ast_hash": "144fc41984a84cd5eea410bc979aa6bb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/Welcome.tsx": {
+    "mtime": 1793743245.4650521,
+    "ast_hash": "741ffc37ba0594c92682b2a71332fe31",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/Concept.tsx": {
+    "mtime": 1793645142.9288478,
+    "ast_hash": "043ae80f64911a23ba6a3f721c818a75",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-sciezki/nowa/page.tsx": {
+    "mtime": 1793644916.8654783,
+    "ast_hash": "3f0efefdf9ab525bf9964d3df4bc653c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/Gate.tsx": {
+    "mtime": 1793743245.461052,
+    "ast_hash": "4b0bf938ca5c343f7ecea856ec0d7d0e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/ConsentBanner.tsx": {
+    "mtime": 1793704929.2506583,
+    "ast_hash": "a5ffc922253aac17ce763020cb82eb76",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/PanelDocuments.tsx": {
+    "mtime": 1793705783.3758345,
+    "ast_hash": "052e4102725967e4946e35b3363d196b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/ProjectWorkspace.tsx": {
+    "mtime": 1793743221.0524724,
+    "ast_hash": "6b8e838cdcec110a9da23cf9a87e7892",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/PageStack.tsx": {
+    "mtime": 1793700766.9038355,
+    "ast_hash": "983a36c7c500a5ba5f0c1ef0a343b136",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/Summary.tsx": {
+    "mtime": 1793784364.556629,
+    "ast_hash": "b1a1d7a8101cb1aa97671a483828953f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/ValueCalc.tsx": {
+    "mtime": 1793700972.61695,
+    "ast_hash": "6e805ea3c3bef87ba4bd2af8742a31e9",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/Migration.tsx": {
+    "mtime": 1793700881.7581882,
+    "ast_hash": "81643ccc1a21327f03c344945edac5df",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/Plans.tsx": {
+    "mtime": 1793700829.8693144,
+    "ast_hash": "45420fa9ae6993d94fadef81241b77b2",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/offerCopy.ts": {
+    "mtime": 1793705804.5882618,
+    "ast_hash": "e0961468b92c7fc4b511a817568610fe",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/Packages.tsx": {
+    "mtime": 1793784364.5446284,
+    "ast_hash": "8eed69e20c4c48fce2170a33c6775a9c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/Extras.tsx": {
+    "mtime": 1793701301.0648282,
+    "ast_hash": "57d677db045bad16b32607283d9c152d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/ScopeSheet.tsx": {
+    "mtime": 1793701244.4120347,
+    "ast_hash": "66d6c0e22decec34c1a1b5116a783442",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/studio/offer/Freedom.tsx": {
+    "mtime": 1793700881.846192,
+    "ast_hash": "9f21ea5277b11cc623d0f0487693fadf",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/types.ts": {
+    "mtime": 1793784442.893927,
+    "ast_hash": "25aeb94d51d4d94266ce2a4385c18efc",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/fixture.ts": {
+    "mtime": 1793708467.8004835,
+    "ast_hash": "5a6df79635c902e053b5c76b35776450",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Onboarding.tsx": {
+    "mtime": 1793743221.0524724,
+    "ast_hash": "986c5309e5b6068348d1fe43688ac716",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Domain.tsx": {
+    "mtime": 1793708302.7874615,
+    "ast_hash": "e3a39044ddcc2ad5d3c73ddd3871a8d0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Uploader.tsx": {
+    "mtime": 1793708116.0082457,
+    "ast_hash": "f17c8cbc3d1af556839f7b34f6c79a4b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Materials.tsx": {
+    "mtime": 1793708207.7175207,
+    "ast_hash": "aa67af945266b0b789db769a05e0a816",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Dashboard.tsx": {
+    "mtime": 1793713002.5280855,
+    "ast_hash": "a251ebc89994a9ebc9bb757f5e415fa0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Account.tsx": {
+    "mtime": 1793713002.5280855,
+    "ast_hash": "cb267e1c9d41258cfa3f8c3a4d154712",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Preview.tsx": {
+    "mtime": 1793743245.4690523,
+    "ast_hash": "c966bc716f0d0c6d254845cd3c34e5cb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Messages.tsx": {
+    "mtime": 1793708481.8416407,
+    "ast_hash": "8d93af8a314e0717c6ab19f998afe672",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/view.ts": {
+    "mtime": 1793708048.9873679,
+    "ast_hash": "fea5c50614ca315299f41311ddfc7da5",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/PanelWorkspace.tsx": {
+    "mtime": 1793786349.415164,
+    "ast_hash": "4cbddb0dcdf4ae27ea3db2de596bb8a1",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/api.ts": {
+    "mtime": 1793784445.8900735,
+    "ast_hash": "b972f0b6356e2751034b6b489382b42c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/model.ts": {
+    "mtime": 1793784514.4525437,
+    "ast_hash": "606ca139666107e956bcc590515f4b81",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/PanelPreview.tsx": {
+    "mtime": 1793708452.527673,
+    "ast_hash": "5d3d1fd22d8b37d3ed66d926f2826c58",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/memory.ts": {
+    "mtime": 1793708467.8004835,
+    "ast_hash": "da1562715c6e3ae5c15732f387e95cf7",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/legal/SellerFooter.tsx": {
+    "mtime": 1793704932.9668505,
+    "ast_hash": "91e1a0cfb2f640404f281be9d5b0c1de",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/legal/LegalDocumentView.tsx": {
+    "mtime": 1793704867.0419571,
+    "ast_hash": "bc9a71fde5087b358c11d7a1b0e97e37",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/scripts/legal-build.mjs": {
+    "mtime": 1793704825.9516394,
+    "ast_hash": "e6bdf2942a5819108040eccc71e97e14",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/[locale]/umowa-powierzenia/page.tsx": {
+    "mtime": 1793704881.6617963,
+    "ast_hash": "ea4f0bae3f631e1b33b8e53d1b12ab59",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-panelu/page.tsx": {
+    "mtime": 1793708452.6316783,
+    "ast_hash": "d73c694b01c7931e663a20e4cb8091e6",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/seller.ts": {
+    "mtime": 1793704855.4933426,
+    "ast_hash": "6b821f194485cd235f9714f441beb89b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/consent.ts": {
+    "mtime": 1793704907.7096941,
+    "ast_hash": "f91508bdc5fd261311642703f2636f11",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/ksiegai.ts": {
+    "mtime": 1793713002.5080845,
+    "ast_hash": "3c07704c5fdea3542dbcff6bb05de035",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/legal/versions.ts": {
+    "mtime": 1793705671.0128334,
+    "ast_hash": "b6ddd4609a18a503c0367adf04e069da",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/legal/documents.ts": {
+    "mtime": 1793704847.100894,
+    "ast_hash": "81e6de8a1d619be7b846c06368d0196f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/legal/registry.json": {
+    "mtime": 1793705006.3369133,
+    "ast_hash": "e5b027048e4c17444ae46d82e43755cb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/legal/markdown.mjs": {
+    "mtime": 1793704760.9847367,
+    "ast_hash": "5e58751d35db6cf29c972f06dfb6b087",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/content/legal/zgody-zamowienie.json": {
+    "mtime": 1793704781.0982137,
+    "ast_hash": "d60b19171b6049bbbb4f5551acafff48",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/content/legal/polityka-prywatnosci.md": {
+    "mtime": 1793704725.3517861,
+    "ast_hash": "63e81876a2cdbda6d5d9b5d04c2240b2",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/content/legal/umowa-powierzenia.md": {
+    "mtime": 1793704684.240104,
+    "ast_hash": "a74682494687d76e82c971272fa85d65",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/content/legal/regulamin.md": {
+    "mtime": 1793704658.0807154,
+    "ast_hash": "9aacf8679a58b1ec56c8ff4ad1d32d2e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/legal/regulamin-1.0.pdf": {
+    "mtime": 1793704828.0237517,
+    "ast_hash": "99af8dd948211d1c99069fa09792c075",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/legal/umowa-powierzenia-1.0.pdf": {
+    "mtime": 1793704828.1077561,
+    "ast_hash": "6b3c3a04f4f4914afc5c17252a9b9e56",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/public/legal/polityka-prywatnosci-1.0.pdf": {
+    "mtime": 1793704827.8797438,
+    "ast_hash": "a45b018785aea26bd54dc9690bfc4e9a",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/InvoiceLink.tsx": {
+    "mtime": 1793713002.5120847,
+    "ast_hash": "e3972d35bfe52c3371825cbd8648b698",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/niches/LocalSite.tsx": {
+    "mtime": 1793727029.5683908,
+    "ast_hash": "1d42a36992e1fe344daae7cd0ade5460",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/niches/BusinessSite.tsx": {
+    "mtime": 1793726831.491721,
+    "ast_hash": "2bbae4fce519f636616e47f7a13098e5",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/niches/ProfessionalSite.tsx": {
+    "mtime": 1793742908.4271822,
+    "ast_hash": "52b70f35278e9550ed1ec73dd799962b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/niches/FoodSite.tsx": {
+    "mtime": 1793726770.4944973,
+    "ast_hash": "01a97f0cafff53bfa66ff8934d38756b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/niches/TransportSite.tsx": {
+    "mtime": 1793727052.0390782,
+    "ast_hash": "65060109794cc0a85186f9e832dd7fa8",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/niches/BeautySite.tsx": {
+    "mtime": 1793726972.1582768,
+    "ast_hash": "bcadcdfbd90fe40974a280eb31675831",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-zarzadcow-nieruchomosci/page.tsx": {
+    "mtime": 1793743256.7776148,
+    "ast_hash": "19334173b6bd3dfc52dd65544008793f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-beauty/page.tsx": {
+    "mtime": 1793726613.0306206,
+    "ast_hash": "8f8c34f60235dfac75e186a83235938b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-beauty/Preview.tsx": {
+    "mtime": 1793726613.0346208,
+    "ast_hash": "cb5bddacacc679792549b674eb391cf0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-kawiarni/page.tsx": {
+    "mtime": 1793743256.7656143,
+    "ast_hash": "43e63aaa8418582cd834d849f2942af7",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-cateringowych/page.tsx": {
+    "mtime": 1793743256.7656143,
+    "ast_hash": "e67f4801fc01eb2711614916b15693df",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-business/page.tsx": {
+    "mtime": 1793726408.302812,
+    "ast_hash": "b521ad8f1b34faa3aaf3f784b062f2bb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-sprzatajacych/page.tsx": {
+    "mtime": 1793743256.7656143,
+    "ast_hash": "2ecef697299973ed3b27130471a2c5a7",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-studiow-detailingu/page.tsx": {
+    "mtime": 1793743256.7736146,
+    "ast_hash": "dd1f8888ce83cf437fb899084f395d26",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-ogrodniczych/page.tsx": {
+    "mtime": 1793743256.7736146,
+    "ast_hash": "0ff8d9468de8fceb023362e4a81ce367",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-warsztatow-samochodowych/page.tsx": {
+    "mtime": 1793743256.7736146,
+    "ast_hash": "c2db5e8b2bbb5c28d6472b753c5cabe1",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-kurierskich/page.tsx": {
+    "mtime": 1793743256.7776148,
+    "ast_hash": "0a1977c12cf85b6a2200595f323b0c0f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm/page.tsx": {
+    "mtime": 1793743256.761614,
+    "ast_hash": "c7b9744c9908e74de4662162f8421660",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-transportowych/page.tsx": {
+    "mtime": 1793743256.7776148,
+    "ast_hash": "cb99c90624816395500c54a712f5993f",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-transport/page.tsx": {
+    "mtime": 1793726599.458079,
+    "ast_hash": "40a31c69385f487fb6c34a33ceccc042",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-fryzjerow/page.tsx": {
+    "mtime": 1793743256.761614,
+    "ast_hash": "88af6313cea9fb26ee3f80108d4c506b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-firm-przeprowadzkowych/page.tsx": {
+    "mtime": 1793743256.7776148,
+    "ast_hash": "c2db9189423620b7dd274f8a5a2d2897",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-professional/page.tsx": {
+    "mtime": 1793726600.662127,
+    "ast_hash": "df3118ad793806db4aae95ca2ec5f16c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-restauracji/page.tsx": {
+    "mtime": 1793743256.761614,
+    "ast_hash": "076e24b3135933e70b23025234822f2e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-gabinetow-masazu-i-spa/page.tsx": {
+    "mtime": 1793743256.761614,
+    "ast_hash": "2b9f49a53908815b8389f6bf78b271d4",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-salonow-kosmetycznych/page.tsx": {
+    "mtime": 1793743256.761614,
+    "ast_hash": "22ffd876498ce4237d1b0e8f0899d2f9",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-biur-nieruchomosci/page.tsx": {
+    "mtime": 1793743256.7776148,
+    "ast_hash": "2b6628558f29742a956d4e68fff4746c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/strony-dla-biur-rachunkowych/page.tsx": {
+    "mtime": 1793743256.7736146,
+    "ast_hash": "7b5c6c2d5a2a2d0983dbd5dd7bf154a0",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-food/FoodPreview.tsx": {
+    "mtime": 1793726471.3241298,
+    "ast_hash": "cf12acc2c6aedf26a84a19e38abd2e46",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-food/page.tsx": {
+    "mtime": 1793726457.5792463,
+    "ast_hash": "6aa99e27f6167615183961ab770e8403",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/podglad-niszy-local/page.tsx": {
+    "mtime": 1793726757.4642894,
+    "ast_hash": "fce5685c57afa1268e984255266f803c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/journey.ts": {
+    "mtime": 1793726142.6174371,
+    "ast_hash": "fe84e19fecc6c935b23494d5e93e9d84",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/beauty.landing.ts": {
+    "mtime": 1793726998.4818852,
+    "ast_hash": "26a7e67f7a5f0bbbf2edeab3ab07f08e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/food.journey.ts": {
+    "mtime": 1793742906.655124,
+    "ast_hash": "cc905726ae6126e6db3c0cfc04fbeca8",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/transport.journey.ts": {
+    "mtime": 1793742883.805948,
+    "ast_hash": "e179aedd6dfd3b8b6e22392ed21e1635",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/professional.ts": {
+    "mtime": 1793742877.226291,
+    "ast_hash": "2f174fd8c3e29b7bf6495abe1f96d36e",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/professional.journey.ts": {
+    "mtime": 1793742919.425745,
+    "ast_hash": "d8e00e8bd66cde56100cac66b37c1518",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/transport.ts": {
+    "mtime": 1793726832.4037688,
+    "ast_hash": "aea1f63cb1e065944d63d54d42c5324c",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/index.ts": {
+    "mtime": 1793743126.3318975,
+    "ast_hash": "642dbe69f183ce2720de92a520d7738d",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/professional.landing.ts": {
+    "mtime": 1793742717.3484674,
+    "ast_hash": "ae4492b397e2eae4106afd0b3ab0aafc",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/local.ts": {
+    "mtime": 1793727151.9552019,
+    "ast_hash": "1246ee1093ae8a04e569fb585477fd89",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/business.landing.ts": {
+    "mtime": 1793726408.2468102,
+    "ast_hash": "780fff201a5b50c06db8c4f80df88077",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/transport.landing.ts": {
+    "mtime": 1793727123.0233986,
+    "ast_hash": "9db4b4e7b3b239a6d1fed1c78ff07654",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/beauty.ts": {
+    "mtime": 1793726798.9006948,
+    "ast_hash": "8af2b9db7156aec1a9d1855ab3486ab2",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/beauty.journey.ts": {
+    "mtime": 1793742875.8742192,
+    "ast_hash": "0ee8689ff74daeb9f49f38eed9dab358",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/local.journey.ts": {
+    "mtime": 1793742882.3298721,
+    "ast_hash": "40e3dedceac38813a731afcb850624ee",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/local.landing.ts": {
+    "mtime": 1793727191.179679,
+    "ast_hash": "0d17b221a17aca2192c1762873d41589",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/business.ts": {
+    "mtime": 1793743618.6981106,
+    "ast_hash": "23b6bfb39bfde5fb58bb8401df206393",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/food.landing.ts": {
+    "mtime": 1793726457.5232441,
+    "ast_hash": "dbc767f144692916cf2703b9ded56e13",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/business.journey.ts": {
+    "mtime": 1793742872.2500265,
+    "ast_hash": "6a386e52587a53be29c08b8a0b85e72b",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/niches/food.ts": {
+    "mtime": 1793726762.3697293,
+    "ast_hash": "b25282fd2b4281a3fbe0fc46038d0a59",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/pay/PayLink.tsx": {
+    "mtime": 1793786349.415164,
+    "ast_hash": "1088e6906fb4748dffea65987871a365",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/pay/PaymentForm.tsx": {
+    "mtime": 1793787679.0190196,
+    "ast_hash": "99fe9c10708d497c7941cb7a07a89e21",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/pay/PayModal.tsx": {
+    "mtime": 1793786349.415164,
+    "ast_hash": "65cefb7719745ca3f1c145ad0fdbb712",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/pay/PaymentChoice.tsx": {
+    "mtime": 1793784299.7736552,
+    "ast_hash": "34fbc5f8656538d8ed7e702fa9ef29d3",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/components/tovernet/panel/Payments.tsx": {
+    "mtime": 1793786349.415164,
+    "ast_hash": "f81afb2a68db34981de53a6d8770ac88",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/app/platnosc/page.tsx": {
+    "mtime": 1793784389.9569705,
+    "ast_hash": "6aa3086a58604caa7832b8cb6ebb76fb",
+    "semantic_hash": ""
+  },
+  "/p/tovernet-nest/lib/tovernet/payments.ts": {
+    "mtime": 1793784097.3989604,
+    "ast_hash": "a4b3b1b40733b4b213440635aea553cd",
+    "semantic_hash": ""
+  }
+}

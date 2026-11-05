@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Sparkles } from 'lucide-react';
 import PhoneCTA from './PhoneCTA';
+import SellerFooter from './legal/SellerFooter';
 
 export default function SiteFooter({ locale }: { locale: string }) {
   const t = useTranslations('footer');
@@ -105,6 +106,7 @@ export default function SiteFooter({ locale }: { locale: string }) {
               </a>
             </div>
           </div>
+          <SellerFooter locale={locale} />
         </div>
       </div>
     </footer>

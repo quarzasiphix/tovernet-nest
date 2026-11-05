@@ -1,3 +1,21 @@
 /embed/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=60
+
+/oferta/*
+  X-Robots-Tag: noindex, nofollow
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
+
+/panel/*
+  X-Robots-Tag: noindex, nofollow
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
+
+/firebase-messaging-sw.js
+  Cache-Control: no-cache
+  Service-Worker-Allowed: /
+
+/panel.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=3600

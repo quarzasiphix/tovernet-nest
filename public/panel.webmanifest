@@ -1,0 +1,14 @@
+{
+  "name": "Tovernet: Panel klienta",
+  "short_name": "Tovernet",
+  "description": "Postęp Twojej strony, materiały, podgląd i wiadomości.",
+  "lang": "pl",
+  "start_url": "/panel/",
+  "scope": "/panel/",
+  "display": "standalone",
+  "background_color": "#EEEFEA",
+  "theme_color": "#15161A",
+  "icons": [
+    { "src": "/embed/tovernet-logo.png", "sizes": "527x527", "type": "image/png", "purpose": "any" }
+  ]
+}
