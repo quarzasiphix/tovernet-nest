@@ -5,8 +5,9 @@ import { journeyEvent } from './journey';
 // Tovernet's own PostHog project (NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN of this site), not
 // KsięgaI's. Every funnel event is prefixed tovernet_ and carries the offer context as
 // super properties, so it joins the KRS Radar entry by tovernet_krs and the outreach
-// that brought the visitor (channel, campaign, A/B variant). No personal data besides
-// the account e-mail on identify, which mirrors how KsięgaI identifies invited users.
+// that brought the visitor (channel, campaign, A/B variant). Personal data: the account
+// e-mail on identify, which mirrors how KsięgaI identifies invited users, and the invite's
+// recipient e-mail and company when a personal offer link opens (markInvitee).
 
 export type OfferContext = {
   krs: string | null;
@@ -43,6 +44,26 @@ export function track(event: string, properties: Record<string, unknown> = {}, o
       opts.beforeNavigation ? { send_instantly: true, transport: 'sendBeacon' } : undefined);
   } catch {
     // Analytics must never break the purchase path.
+  }
+}
+
+/**
+ * Personal offer link opened: the invite names its recipient, so the visitor's PostHog person
+ * (and its session replays) shows the invitee's e-mail and company before any sign-in. A later
+ * sign-in (identify) merges this anonymous person into the account.
+ */
+export function markInvitee(email: string, company: { krs: string | null; name: string | null }) {
+  if (!loaded()) return;
+  try {
+    posthog.setPersonProperties({
+      email,
+      tovernet_invitee: true,
+      tovernet_company: company.name,
+      tovernet_krs: company.krs,
+    });
+    posthog.register({ tovernet_invitee_email: email });
+  } catch {
+    // ignore
   }
 }
 

@@ -6,7 +6,7 @@ import { publicAction, type PublicDemo } from '@/lib/tovernet/api';
 import { authClient } from '@/lib/tovernet/supabase';
 import { registerWithInvite, sendLoginCode, sha256hex } from '@/lib/tovernet/auth';
 import { clearInviteToken, readInviteToken } from '@/lib/tovernet/invite';
-import { identify, track as trackAnalytics } from '@/lib/tovernet/analytics';
+import { identify, markInvitee, track as trackAnalytics } from '@/lib/tovernet/analytics';
 import { cartAddons } from '@/lib/tovernet/funnel';
 import { type JourneyActions, type PayResult, type PaymentStart, type Result, type SignatoryCheck } from './Journey';
 import { paymentMessage } from '../pay/PaymentForm';
@@ -53,6 +53,7 @@ export default function LiveJourney({ demo, track: trackDemo }: { demo: PublicDe
       ).catch(() => null);
       if (r?.invite) {
         const inv = { email: r.invite.recipient_email, tokenHash, hasAccount: r.invite.recipient_has_account, valid: r.invite.is_valid };
+        markInvitee(inv.email, { krs: demo.config.company.krs ?? null, name: demo.config.company.legal_name });
         // Returning visitor without a session (new device, cleared browser) or an address that
         // already had an account (e.g. KsięgaI): the link signs them in until the first purchase.
         // If the server refuses, the code login below takes over, e-mail prefilled.
