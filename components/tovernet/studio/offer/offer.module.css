@@ -225,7 +225,12 @@
 .pauseGrid p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--soft)}
 
 /* summary */
-.aside{padding:22px}
+.aside{padding:22px;display:flex;flex-direction:column;max-height:calc(100vh - 104px);max-height:calc(100dvh - 104px);overflow-y:auto;scrollbar-width:thin}
+/* Short screens: the sticky card is capped at the viewport and only the line items scroll,
+   so the total and "Przejdź do zamówienia" stay visible without scrolling the page to the end. */
+.aside>.sum{display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+.aside .sumGroups{flex:0 1 auto;min-height:96px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;padding-right:4px;margin-right:-4px}
+.aside .sumTotal,.aside .sumNote,.aside>.sum>button{flex-shrink:0}
 .sum{display:block}
 .sumPkg{margin:12px 0 0;padding:14px;border-radius:14px;border:1px solid rgba(100,160,255,.35);background:rgba(47,107,255,.1);animation:fadeIn .4s var(--ease)}
 .sumPkg span{display:block;color:#9CC0FF;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
