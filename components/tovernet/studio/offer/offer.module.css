@@ -133,10 +133,6 @@
 .plan .planBody>div{padding:0 18px}
 .plan .planBody[data-open]>div{padding-bottom:16px}
 .boundary{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px dashed var(--line2);font-size:13px;line-height:1.5;color:var(--soft)}
-.overlap{display:flex;gap:12px;margin-top:14px;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,212,92,.35);background:rgba(255,212,92,.07);animation:fadeIn .4s var(--ease)}
-.overlap>svg{flex:none;margin-top:2px;color:#FFD45C}
-.overlap b{font:700 15px var(--display)}
-.overlap p{margin:4px 0 0;font-size:14px;line-height:1.5;color:var(--body)}
 .inlineBtn{margin-top:10px;padding:9px 13px;border:1px solid rgba(255,212,92,.45);border-radius:10px;background:rgba(255,212,92,.08);color:var(--ink);font:600 13.5px var(--sans);cursor:pointer}
 .inlineBtn:hover{background:rgba(255,212,92,.16)}
 .allPlans{display:inline-flex;align-items:center;gap:8px;margin:14px 14px 0 0;padding:10px 14px;border:1px solid var(--line2);border-radius:12px;background:none;color:var(--body);font:600 14px var(--sans);cursor:pointer}

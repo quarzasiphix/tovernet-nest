@@ -125,9 +125,6 @@ export const REASONS: Record<string, Record<string, string>> = {
   },
 };
 
-/** Pro already includes 3 months of visibility work: these plans overlap with it at first. */
-export const OVERLAPS_PRO: string[] = [PLAN.growth, PLAN.develop];
-
 export type AddonCopy = { get: string; you: string; outside?: string };
 
 export const ADDONS: Record<string, AddonCopy> = {
