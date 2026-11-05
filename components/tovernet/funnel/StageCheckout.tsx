@@ -174,7 +174,7 @@ function Account({ actions }: { actions: JourneyActions }) {
     e.preventDefault(); setBusy(true); setError('');
     const r = await actions.sendCode(email.trim());
     setBusy(false);
-    if (r.ok) setStage('code'); else setError('Nie udało się wysłać kodu.');
+    if (r.ok) setStage('code'); else setError(r.code === 'rate_limited' ? 'Kod został już wysłany. Spróbuj za chwilę.' : 'Nie udało się wysłać kodu.');
   };
   const verify = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault(); setBusy(true); setError('');

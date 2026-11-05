@@ -12,7 +12,7 @@
   -webkit-font-smoothing:antialiased;color-scheme:light}
 .root *{box-sizing:border-box}
 .root :focus-visible{outline:2px solid var(--stamp);outline-offset:2px}
-.root button{font:inherit;color:inherit}
+:where(.root) button{font:inherit;color:inherit}
 .root svg{display:inline-block;flex:none}
 .solo>section{grid-template-columns:1fr!important}
 .root a{color:inherit}

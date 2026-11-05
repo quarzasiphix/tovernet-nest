@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from 'react';
 import type { Session } from '@supabase/supabase-js';
 import { authClient } from '@/lib/tovernet/supabase';
-import { registerWithInvite } from '@/lib/tovernet/auth';
+import { registerWithInvite, sendLoginCode } from '@/lib/tovernet/auth';
 import { identify, track } from '@/lib/tovernet/analytics';
 
 export type PersonalInvite = { email: string; tokenHash: string; hasAccount: boolean };
@@ -41,10 +41,10 @@ export default function EmailAuth({ invite, onSignedIn }: { invite?: PersonalInv
   const sendCode = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setBusy(true); setError('');
-    const { error: err } = await supabase.auth.signInWithOtp({ email: email.trim(), options: { shouldCreateUser: true } });
+    const sent = await sendLoginCode(supabase, email.trim());
     setBusy(false);
-    if (err) {
-      setError(/rate|seconds/i.test(err.message) ? 'Kod został już wysłany. Spróbuj za chwilę.' : 'Nie udało się wysłać kodu.');
+    if (sent !== 'sent') {
+      setError(sent === 'rate_limited' ? 'Kod został już wysłany. Spróbuj za chwilę.' : 'Nie udało się wysłać kodu.');
       track('auth_failed', { method: 'email_code', stage: 'send' });
     } else {
       setStage('code');

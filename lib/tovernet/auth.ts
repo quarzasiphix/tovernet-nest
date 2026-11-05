@@ -1,4 +1,5 @@
 import type { Session, SupabaseClient } from '@supabase/supabase-js';
+import { publicAction } from './api';
 
 const GATEWAY = process.env.NEXT_PUBLIC_API_GATEWAY_URL ?? 'https://api.ksiegai.pl';
 
@@ -31,4 +32,23 @@ export async function registerWithInvite(
     refresh_token: envelope.data.refresh_token,
   });
   return error ? null : data.session;
+}
+
+/**
+ * Sends the 6-digit sign-in code in a Tovernet e-mail (public-api tovernetAuth.sendCode).
+ * Supabase's own e-mail carries the KsięgaI template, so it is only the fallback when our
+ * send fails. The code is verified as before: verifyOtp({ email, token, type: 'email' }).
+ */
+export async function sendLoginCode(supabase: SupabaseClient, email: string): Promise<'sent' | 'rate_limited' | 'failed'> {
+  try {
+    await publicAction('tovernetAuth.sendCode', { email });
+    return 'sent';
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : '';
+    if (/rate_limited/.test(msg)) return 'rate_limited';
+    if (/invalid_email/.test(msg)) return 'failed';
+  }
+  const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+  if (!error) return 'sent';
+  return /rate|seconds/i.test(error.message) ? 'rate_limited' : 'failed';
 }

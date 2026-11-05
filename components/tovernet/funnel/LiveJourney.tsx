@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Session } from '@supabase/supabase-js';
 import { publicAction, type PublicDemo } from '@/lib/tovernet/api';
 import { authClient } from '@/lib/tovernet/supabase';
-import { registerWithInvite, sha256hex } from '@/lib/tovernet/auth';
+import { registerWithInvite, sendLoginCode, sha256hex } from '@/lib/tovernet/auth';
 import { clearInviteToken, readInviteToken } from '@/lib/tovernet/invite';
 import { identify, track as trackAnalytics } from '@/lib/tovernet/analytics';
 import { cartAddons } from '@/lib/tovernet/funnel';
@@ -109,8 +109,8 @@ export default function LiveJourney({ demo, track: trackDemo }: { demo: PublicDe
     },
     sendCode: async (email) => {
       if (!supabase) return { ok: false, code: 'auth_unavailable' };
-      const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
-      if (error) { trackAnalytics('auth_failed', { method: 'email_code', stage: 'send' }); return { ok: false, code: error.message }; }
+      const sent = await sendLoginCode(supabase, email);
+      if (sent !== 'sent') { trackAnalytics('auth_failed', { method: 'email_code', stage: 'send' }); return { ok: false, code: sent }; }
       trackAnalytics('auth_code_sent', { personal_link: Boolean(invite) });
       return { ok: true };
     },
