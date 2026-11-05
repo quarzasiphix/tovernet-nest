@@ -28,7 +28,3 @@ export function saveConsent(analytics: boolean) {
 }
 
 export const openConsentSettings = () => window.dispatchEvent(new Event(CONSENT_OPEN_EVENT));
-
-/** Pages that show company or order data: never recorded, even with consent. */
-export const isPrivatePath = (path = window.location.pathname, hash = window.location.hash) =>
-  /^\/(oferta|panel|podglad-sciezki)(\/|$)/.test(path) || /^#[0-9a-f]{36}/.test(hash) || /[?&]krok=zamowienie/.test(window.location.search);

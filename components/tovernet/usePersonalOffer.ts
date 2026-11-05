@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import posthog from 'posthog-js';
 import { readInviteToken, saveInviteToken } from '@/lib/tovernet/invite';
 import { publicAction, type PublicDemo } from '@/lib/tovernet/api';
 import { setOfferContext, track as trackAnalytics } from '@/lib/tovernet/analytics';
@@ -32,8 +31,6 @@ export function usePersonalOffer() {
     setIds({ publicId, trackingCode });
     setPersonalLink(Boolean(inviteToken || readInviteToken(publicId)));
     setStatus('loading');
-    // Company data is on screen from here: no session replay for this visit.
-    try { posthog.stopSessionRecording(); } catch { /* not loaded */ }
 
     publicAction<{ demo: PublicDemo | null }>('tovernetDemo.get', { publicId, trackingCode })
       .then(({ demo: d }) => {
