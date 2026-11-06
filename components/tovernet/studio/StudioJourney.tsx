@@ -127,8 +127,8 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
       </header>
 
       <main id="etap" key={stage} tabIndex={-1} className={s.stage} aria-label={`${STAGES[index].label}: ${name}`}>
-        {stage === 'przywitanie' && <Welcome demo={demo} actions={actions} onContinue={() => go('oferta')} onExample={() => { track('cta_clicked', { placement: 'intro_example' }); go('koncept'); }} />}
-        {stage === 'koncept' && <Concept demo={demo} track={track} onOrder={() => go('zamowienie')} onOffer={() => go('oferta')} />}
+        {stage === 'przywitanie' && <Welcome demo={demo} actions={actions} onExample={() => go('koncept')} onPrice={() => go('oferta')} />}
+        {stage === 'koncept' && <Concept demo={demo} actions={actions} onOrder={() => go('zamowienie')} onOffer={() => go('oferta')} />}
         {stage === 'oferta' && <Offer demo={demo} cart={cart} setCart={setCart} actions={actions} onOrder={() => go('zamowienie')} onConcept={() => go('koncept')} />}
         {stage === 'zamowienie' && <Checkout demo={demo} cart={cart} actions={actions} onChange={() => go('oferta')} />}
       </main>

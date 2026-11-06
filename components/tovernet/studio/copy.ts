@@ -29,11 +29,24 @@ const WELCOME: Partial<Record<VariantKey, WelcomeCopy>> & { general: WelcomeCopy
 export const welcomeCopy = (variant: VariantKey): WelcomeCopy =>
   WELCOME[variant] ?? (NICHE_JOURNEY as Record<string, { welcome: WelcomeCopy }>)[variant]?.welcome ?? WELCOME.general;
 
-/** What is inside the presentation (welcome screen). */
-export const INSIDE: [string, string][] = [
-  ['Szybki przykład', 'Pokaz tego, co możemy zrobić. Twoja strona może wyglądać zupełnie inaczej.'],
-  ['Stała cena', 'Zakres i kwotę znasz przed zamówieniem.'],
-  ['Twoja akceptacja', 'Nic nie publikujemy, dopóki nie zatwierdzisz strony.'],
+/**
+ * Typical delivery shown on the welcome screen and the concept (owner decision 2026-11-06,
+ * docs/plans/tovernet/20-conversion-rethink.md). The binding maximum stays in the order
+ * terms (Start 15 / Firma 20 / Pro 30 working days). [lawyer] confirm "zwykle" wording.
+ */
+export const TYPICAL_DELIVERY = 'ok. 10 dni roboczych';
+
+/** What we tailor, shown as chips on the welcome screen (owner 2026-11-06: the sample is only a start). */
+export const CUSTOM = ['Twoje kolory', 'Twoje zdjęcia', 'Twój układ', 'Twoje teksty i usługi', 'Logo i baner'];
+
+/**
+ * Risk reversal on the first screen (owner 2026-11-06). Same promises as GUARANTEE and
+ * FREEDOM in offer/offerCopy.ts, shortened: never promise more than those say.
+ */
+export const PROMISES: [string, string][] = [
+  ['Zwrot całej wpłaty', 'Rozmyślisz się, zanim prześlesz materiały? Oddajemy wszystko. Później rozliczamy tylko wykonane etapy.'],
+  ['Płacisz za stronę, którą akceptujesz', 'Zobaczysz gotową stronę i zgłosisz poprawki. Nic nie trafi do sieci bez Twojej zgody.'],
+  ['Bez umowy na rok', 'Plan opłacasz co miesiąc i rezygnujesz w panelu, kiedy chcesz. Domena zostaje na Twoją firmę.'],
 ];
 
 /** After the order: what we do and what the customer does. */

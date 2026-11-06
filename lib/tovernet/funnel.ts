@@ -8,8 +8,9 @@ export type Stage = 'przywitanie' | 'koncept' | 'oferta' | 'zamowienie';
 
 export const STAGES: { key: Stage; label: string; query: string | null }[] = [
   { key: 'przywitanie', label: 'Przywitanie', query: null },
-  // Offer before the example (owner 2026-11-05): visitors took the concept for the final design
-  // and left. Keys and ?krok= values unchanged, so old links and analytics keep working.
+  // Offer before the example (owner 2026-11-05, confirmed 2026-11-06): visitors are not interested
+  // in the exact sample, so the offer sells a site made to their taste and the example is optional.
+  // Keys and ?krok= values unchanged, so old links and analytics keep working.
   { key: 'oferta', label: 'Oferta', query: 'oferta' },
   { key: 'koncept', label: 'Przykład', query: 'koncept' },
   { key: 'zamowienie', label: 'Zamówienie', query: 'zamowienie' },

@@ -14,7 +14,6 @@ import { DOCUMENT_VERSIONS } from '@/lib/legal/versions';
 // Redesigned presentation, approved by the owner 2026-11-02. funnel/Journey.tsx stays as the
 // previous presentation and as the source of the JourneyActions contract.
 import StudioJourney from '../studio/StudioJourney';
-import Gate from '../studio/Gate';
 import OfferLoader from '../OfferLoader';
 
 const code = (e: unknown) => (e instanceof Error ? e.message : '') || 'unknown';
@@ -37,8 +36,8 @@ export default function LiveJourney({ demo, track: trackDemo }: { demo: PublicDe
   // The first screen depends on both: render it once, not twice.
   const [sessionKnown, setSessionKnown] = useState(!supabase);
   const [inviteKnown, setInviteKnown] = useState(false);
-  // Set when the Gate is passed, also without an account (failed sign-up), for this page view.
-  const [gatePassed, setGatePassed] = useState(false);
+  // The personal invite opens the account once, in the background, on the first visit.
+  const autoOpened = useRef(false);
 
   useEffect(() => {
     if (!supabase) { setInviteKnown(true); return; }
@@ -182,18 +181,16 @@ export default function LiveJourney({ demo, track: trackDemo }: { demo: PublicDe
     },
   }), [invite, session, supabase, demo]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // First visit from a personal invite: open the account and claim the company at once, with no
+  // gate (owner 2026-11-06: 12 of 21 recipients left at "Odblokuj ofertę" before seeing anything,
+  // ksiegai docs/plans/tovernet/20-conversion-rethink.md). The offer shows meanwhile; a failure
+  // never blocks it, and the account is then opened at checkout as before.
+  useEffect(() => {
+    if (!sessionKnown || !inviteKnown || !actions.inviteEmail || session || autoOpened.current) return;
+    autoOpened.current = true;
+    void actions.openWithAccount().then((r) => trackAnalytics('account_auto_opened', { ok: r.ok, code: r.ok ? null : r.code }));
+  }, [sessionKnown, inviteKnown, actions, session]);
+
   if (!sessionKnown || !inviteKnown) return <OfferLoader />;
-  // First visit from a personal invite: the one-time Gate creates the account, then the
-  // journey opens at Przywitanie. A signed-in visitor never sees it again.
-  if (actions.inviteEmail && !session && !gatePassed) {
-    return <Gate demo={demo} actions={actions} onUnlocked={() => {
-      const q = new URLSearchParams(window.location.search);
-      q.delete('krok');
-      const qs = q.toString();
-      window.history.replaceState(null, '', `${window.location.pathname}${qs ? `?${qs}` : ''}${window.location.hash}`);
-      window.scrollTo({ top: 0 });
-      setGatePassed(true);
-    }} />;
-  }
   return <StudioJourney demo={demo} actions={actions} />;
 }

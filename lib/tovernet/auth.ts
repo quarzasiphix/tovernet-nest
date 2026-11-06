@@ -52,7 +52,7 @@ export async function sendLoginCode(supabase: SupabaseClient, email: string): Pr
     if (/rate_limited/.test(msg)) return 'rate_limited';
     if (/invalid_email/.test(msg)) return 'failed';
   }
-  const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+  const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true, data: { signup_source: 'tovernet' } } });
   if (!error) return 'sent';
   return /rate|seconds/i.test(error.message) ? 'rate_limited' : 'failed';
 }

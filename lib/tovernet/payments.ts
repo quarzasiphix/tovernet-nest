@@ -32,6 +32,16 @@ export function cheapestStart(demo: PublicDemo): { upfront: number; total: numbe
   return t ? { upfront: t.upfront_minor, total: t.upfront_minor + t.count * t.amount_minor } : null;
 }
 
+/**
+ * First payment for the package this concept recommends (else the cheapest), for the
+ * "od 299 zł" line on the welcome screen and the concept dock. Null without instalments.
+ */
+export function recommendedStart(demo: PublicDemo): { upfront: number; total: number } | null {
+  const pkg = (demo.packages.find((p) => p.recommended && p.kind === 'package') ?? null)?.key;
+  const t = termsFor(demo, pkg);
+  return t ? { upfront: t.upfront_minor, total: t.upfront_minor + t.count * t.amount_minor } : cheapestStart(demo);
+}
+
 /** Day of month, capped at 28 like the server's billing day. */
 export const billingDay = (d = new Date()) => Math.min(d.getDate(), 28);
 
