@@ -23,7 +23,7 @@ export const LANDING: Landing[] = [
       ['Działa w telefonie', 'Przycisk kontaktu jest pod ręką na każdym ekranie telefonu.'],
     ],
     faq: [
-      ['Moja firma działa w innej branży. Czy ta strona do niej pasuje?', 'Tak. Ten koncept nie zakłada konkretnej branży. Układ zostaje, a treści, zdjęcia i formularz dopasowujemy do tego, czym faktycznie się zajmujesz.'],
+      ['Moja firma działa w innej branży. Czy ta strona do niej pasuje?', 'Tak. To, co widzisz, to szybki przykład, nie szablon. Twoją stronę projektujemy od nowa pod Twoją firmę: układ, kolory marki, zdjęcia, usługi, produkty i formularz dopasujemy do tego, czym się zajmujesz i do kogo mówisz. Gotowa strona może wyglądać zupełnie inaczej niż ten przykład.'],
       ['Czy to może być sklep internetowy?', 'Nie. Sklep internetowy nie wchodzi w nasze pakiety. Strona może pokazać Twoją ofertę i zbierać zapytania przez formularz.'],
     ],
   },
