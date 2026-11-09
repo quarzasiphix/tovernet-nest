@@ -64,5 +64,12 @@ export type NicheVariantKey =
   | 'transport_freight' | 'transport_moving' | 'transport_courier'
   | 'local_cleaning' | 'local_garden' | 'local_auto' | 'local_detailing'
   | 'pro_accounting' | 'pro_realestate' | 'pro_property'
+  | 'tech_software' | 'tech_games'
+  | 'estate_developer' | 'estate_trade' | 'estate_rental'
+  | 'eng_architect' | 'eng_engineering'
+  | 'consult_business'
+  | 'rental_cars' | 'rental_trucks'
+  | 'energy_project' | 'energy_coop'
+  | 'law_firm'
   | 'business';
 export type VariantKey = ConstructionVariantKey | NicheVariantKey;

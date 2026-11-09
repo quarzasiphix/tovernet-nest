@@ -12,6 +12,13 @@ const FoodSite = dynamic<Props>(() => import('./niches/FoodSite'));
 const TransportSite = dynamic<Props>(() => import('./niches/TransportSite'));
 const LocalSite = dynamic<Props>(() => import('./niches/LocalSite'));
 const ProfessionalSite = dynamic<Props>(() => import('./niches/ProfessionalSite'));
+const TechSite = dynamic<Props>(() => import('./niches/TechSite'));
+const EstateSite = dynamic<Props>(() => import('./niches/EstateSite'));
+const EngineeringSite = dynamic<Props>(() => import('./niches/EngineeringSite'));
+const ConsultingSite = dynamic<Props>(() => import('./niches/ConsultingSite'));
+const RentalSite = dynamic<Props>(() => import('./niches/RentalSite'));
+const EnergySite = dynamic<Props>(() => import('./niches/EnergySite'));
+const LawSite = dynamic<Props>(() => import('./niches/LawSite'));
 const BusinessSite = dynamic<Props & { pkd?: { code: string; label: string } | null }>(() => import('./niches/BusinessSite'));
 
 /** Picks the concept for a demo. Trades share `niche_key`, so the variant decides. */
@@ -23,6 +30,13 @@ export default function ConceptSite({ company, variant, embedded = false, previe
     case 'transport': return <TransportSite {...props} />;
     case 'local': return <LocalSite {...props} />;
     case 'professional': return <ProfessionalSite {...props} />;
+    case 'tech': return <TechSite {...props} />;
+    case 'estate': return <EstateSite {...props} />;
+    case 'engineering': return <EngineeringSite {...props} />;
+    case 'consulting': return <ConsultingSite {...props} />;
+    case 'rental': return <RentalSite {...props} />;
+    case 'energy': return <EnergySite {...props} />;
+    case 'law': return <LawSite {...props} />;
     case 'business': return <BusinessSite {...props} pkd={company.pkd ?? null} />;
     default: break;
   }

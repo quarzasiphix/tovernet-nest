@@ -1,0 +1,189 @@
+/* Vehicle rental concept. Road-sign panel with a hire planner. Sized by its own container, so it
+   works full width, embedded and as the scaled miniature. Motion: transform and opacity only. */
+.site{--sign:#0C55A3;--sign2:#0A478A;--white:#fff;--paper:#F4F3EC;--card:#FFFEFA;--ink:#101820;--soft:#55606B;--line:#CFCEC4;--amber:#FFC220;--rule:rgba(255,255,255,.24);container-type:inline-size;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.45;position:relative}
+.site *{box-sizing:border-box}
+:where(.site) :where(h1,h2,h3,p,ol,ul,dl,dd,fieldset,legend){margin:0;padding:0;border:0}
+:where(.site) :where(ol,ul){list-style:none}
+.site button{font:inherit;cursor:pointer}
+.site :focus-visible{outline:3px solid var(--amber);outline-offset:1px}
+
+.mast{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:16px;height:64px;padding:0 40px;background:var(--paper)}
+.mastName{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mastGo{height:42px;padding:0 18px;border:2px solid var(--sign);border-radius:7px;background:transparent;color:var(--sign);font-weight:800}
+.mastGo:hover{background:var(--sign);color:#fff}
+
+.slot{border:1px dashed var(--soft);color:var(--soft);padding:6px 10px;font-size:13.5px;border-radius:4px}
+.slotBlock{padding:18px;min-height:128px}
+
+/* The sign: blue plate, white keyline, rounded like a road information sign. */
+.sign{padding:0 16px 16px}
+.panel{background:var(--sign);color:#fff;border-radius:24px;box-shadow:inset 0 0 0 7px var(--sign),inset 0 0 0 10px #fff;padding:48px 44px 44px}
+.head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:48px;align-items:end}
+.kicker{font-size:14px;color:var(--amber);margin-bottom:16px}
+.name{font-weight:800;line-height:.98;letter-spacing:-.02em;overflow-wrap:anywhere}
+.name[data-scale=xl]{font-size:128px}
+.name[data-scale=l]{font-size:84px}
+.name[data-scale=m]{font-size:62px}
+.name[data-scale=s]{font-size:44px}
+.name[data-scale=xs]{font-size:33px;line-height:1.08}
+.lead{font-size:20px;line-height:1.4;padding-bottom:8px}
+
+.boardWrap{margin-top:40px;scroll-margin-top:12px}
+.boardHead{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:14px}
+.boardTitle{font-size:26px;font-weight:800;line-height:1.1}
+.how{font-size:13.5px}
+.scroller{overflow-x:auto;overscroll-behavior-x:contain;border-top:2px solid #fff;-webkit-overflow-scrolling:touch}
+.grid{width:100%}
+.dayRow,.row{display:grid;grid-template-columns:232px minmax(0,1fr);border-bottom:1px solid var(--rule)}
+.corner{display:block}
+.track{position:relative;display:grid;grid-template-columns:repeat(28,minmax(0,1fr))}
+.day{position:relative;display:grid;justify-items:center;padding:26px 0 7px;border-left:1px solid var(--rule);font-size:12px;line-height:1.3}
+.day i{font-style:normal;opacity:.75}
+.day b{font-weight:600;font-size:14px}
+.day em{position:absolute;left:4px;top:6px;font-style:normal;color:var(--amber);white-space:nowrap}
+.weekend{background:rgba(255,255,255,.1)}
+.rowHead{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:50px;padding:6px 12px 6px 0;border:0;background:none;color:#fff;font-weight:600;font-size:16px;text-align:left}
+.rowHead:hover{color:var(--amber)}
+.rowOn .rowHead{color:var(--amber)}
+.rowName{min-width:0}
+.rowCar{height:auto;flex:none;margin-top:-8px;animation:roll .7s cubic-bezier(.2,.7,.2,1) both}
+.cell{display:block;min-height:50px;border:0;border-left:1px solid var(--rule);background:transparent;padding:0}
+.cell.weekend{background:rgba(255,255,255,.1)}
+@media (hover:hover){.cell:not(:disabled):hover{background:rgba(255,194,32,.38)}}
+.cell.ghost{background:rgba(255,194,32,.38)}
+.rowOn .track{background:rgba(255,255,255,.07)}
+
+/* The bar drives from the pick-up day to the return day; its front is the vehicle. */
+.bar{position:absolute;top:8px;bottom:8px;overflow:hidden;pointer-events:none;border-radius:5px;z-index:1}
+.drive{position:absolute;inset:0;display:flex;justify-content:flex-end;align-items:center;padding-right:5px;background:var(--amber);color:var(--ink);border-radius:5px;animation:drive .75s cubic-bezier(.3,.6,.2,1) both}
+.parked{animation:none}
+.barCar{height:26px;width:auto;flex:none}
+@keyframes drive{from{transform:translateX(-100%)}to{transform:none}}
+@keyframes roll{from{opacity:0;transform:translateX(-22px)}to{opacity:1;transform:none}}
+
+.swipe{display:none;margin-top:10px;font-size:12.5px;color:var(--amber)}
+.boardNote{margin-top:12px;font-size:13px;line-height:1.45;max-width:90ch}
+
+.form{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr) minmax(0,3fr);margin-top:28px;background:var(--card);color:var(--ink);border-radius:12px;overflow:hidden}
+.summary{padding:22px 24px;background:#E9E7DC}
+.summary div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.summary div:last-child{border-bottom:0}
+.summary dt{font-size:12.5px;color:var(--soft)}
+.summary dd{font-weight:800;font-size:17px;line-height:1.25}
+.fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 20px;padding:22px 24px}
+.wide{grid-column:1/-1}
+.field{display:grid;gap:5px;font-weight:600;font-size:15px;align-content:start}
+.field input,.field textarea{width:100%;padding:10px 11px;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-weight:400;font-size:16px;border-radius:5px;resize:vertical}
+.field input:focus-visible,.field textarea:focus-visible{outline:3px solid var(--sign);outline-offset:0}
+.bad input{border-color:#B3261E}
+.radios legend{font-weight:600;font-size:15px;margin-bottom:5px}
+.radios div{display:flex;flex-wrap:wrap;gap:6px}
+.radios label{cursor:pointer}
+.radios input{position:absolute;opacity:0;pointer-events:none}
+.radios span{display:block;padding:9px 12px;border:1px solid var(--line);border-radius:5px;background:#fff;font-size:15px;line-height:1.2}
+.radios label:hover span{border-color:var(--ink)}
+.radios input:checked+span{background:var(--sign);border-color:var(--sign);color:#fff}
+.radios input:focus-visible+span{outline:3px solid var(--sign);outline-offset:2px}
+.action{display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:22px 24px 22px 0}
+.err{color:#B3261E;font-style:normal;font-size:14.5px;font-weight:600}
+.send{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:58px;padding:12px 18px;border:0;border-radius:7px;background:var(--amber);color:var(--ink);font-weight:800;font-size:18px;line-height:1.15;text-align:left}
+.send:hover{background:var(--ink);color:#fff}
+.sent{padding:14px;background:var(--ink);color:#fff;font-size:14px;line-height:1.45;border-radius:7px}
+
+.band{padding:76px 56px}
+.h2{font-size:46px;font-weight:800;letter-spacing:-.018em;line-height:1.04}
+.h3{font-size:22px;font-weight:800;margin-bottom:12px}
+.note{margin-top:14px;font-size:13px;color:var(--soft)}
+
+/* Same scale: each item's share of the row is the vehicle's length. */
+.fleet{display:grid;grid-template-rows:auto auto;margin-top:44px}
+.fleet li{display:grid;grid-row:span 2;grid-template-rows:subgrid;min-width:0;transition:opacity .5s,transform .7s cubic-bezier(.2,.7,.2,1)}
+.stand{align-self:end;border-bottom:4px solid var(--ink);padding-right:9%}
+.fleetCar{display:block;width:100%;height:auto;color:var(--sign)}
+.plate{display:flex;flex-direction:column;padding:16px 16px 0 0;min-width:0}
+.fleet h3{font-size:21px;font-weight:800;line-height:1.15}
+.fleet p{font-size:15px;color:var(--soft);line-height:1.3;margin-top:3px}
+.fleet .price{margin-top:12px;align-self:flex-start;font-size:13.5px}
+.fleet button{align-self:flex-start;margin-top:10px;padding:8px 0;border:0;background:none;color:var(--sign);font-weight:800;font-size:15px;text-decoration:underline;text-underline-offset:3px}
+.armed li{opacity:0;transform:translateX(-36px)}
+
+.termsBand{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:64px;background:var(--ink);color:#fff}
+.termsIntro p:not(.note){margin-top:18px;font-size:19px}
+.termsBand .note{color:#BFC6CC}
+.terms div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding:16px 0;border-bottom:1px solid #3B444D}
+.terms div:first-child{border-top:1px solid #3B444D}
+.terms dt strong{display:block;font-size:21px;font-weight:800;line-height:1.2}
+.terms dt span{color:#BFC6CC;font-size:15.5px}
+.terms .slot{color:#D5DADF;border-color:#8B959E}
+
+.road{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px;margin:48px 0 24px;position:relative}
+.road::before{content:'';position:absolute;left:0;right:0;top:20px;height:0;border-top:3px dashed var(--ink)}
+.road li{position:relative}
+.km{position:relative;display:grid;place-items:center;width:44px;height:44px;margin-bottom:16px;border-radius:7px;background:var(--sign);color:#fff;font-weight:600;font-size:18px;box-shadow:0 0 0 6px var(--paper)}
+.road h3{font-size:24px;font-weight:800;line-height:1.15}
+.road p{color:var(--soft);margin-top:4px}
+
+.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding-top:0}
+.foot{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:26px 56px;font-size:13px;color:var(--soft);border-top:1px solid var(--line);overflow-wrap:anywhere}
+.thumb{display:none}
+
+@container (max-width:1180px){
+  .name[data-scale=xl]{font-size:104px}
+  .form{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .action{grid-column:1/-1;padding:0 24px 22px}
+  .send{min-height:56px}
+  .dayRow,.row{grid-template-columns:minmax(0,1fr);width:1288px}
+  .grid{width:1288px}
+  .corner{display:none}
+  .track{grid-template-columns:repeat(28,46px)}
+  .rowHead{position:sticky;left:0;width:300px;min-height:34px;padding:8px 8px 0 0;justify-content:flex-start}
+  .rowCar{width:42px!important}
+  .swipe{display:block}
+}
+@container (max-width:900px){
+  .fleet{display:block;margin-top:28px}
+  .fleet li{display:block;padding-top:22px}
+  .stand{padding-right:0}
+  .fleetCar{width:calc(var(--w)*70%)}
+  .plate{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:10px 0 4px}
+  .plate h3,.plate>p:not(.price){grid-column:1}
+  .fleet .price{grid-column:2;grid-row:1/span 2;margin:0;align-self:start}
+  .fleet button{grid-column:1/-1;justify-self:start;margin-top:2px}
+}
+@container (max-width:720px){
+  .mast{height:56px;padding:0 16px;grid-template-columns:minmax(0,1fr) auto}
+  .mastSlot{display:none}
+  .mastGo{height:40px;padding:0 12px;font-size:15px}
+  .sign{padding:0 8px 8px}
+  .panel{padding:30px 22px 26px;border-radius:18px;box-shadow:inset 0 0 0 5px var(--sign),inset 0 0 0 7px #fff}
+  .head{grid-template-columns:minmax(0,1fr);gap:18px}
+  .name[data-scale=xl]{font-size:68px}
+  .name[data-scale=l]{font-size:46px}
+  .name[data-scale=m]{font-size:35px}
+  .name[data-scale=s]{font-size:27px}
+  .name[data-scale=xs]{font-size:22px}
+  .lead{font-size:18px}
+  .boardWrap{margin-top:28px}
+  .boardTitle{font-size:22px}
+  .form{grid-template-columns:minmax(0,1fr);margin-top:22px}
+  .summary{padding:16px 18px}
+  .fields{grid-template-columns:minmax(0,1fr);padding:18px}
+  .action{padding:0 18px 18px}
+  .band{padding:52px 16px}
+  .h2{font-size:34px}
+  .termsBand{grid-template-columns:minmax(0,1fr);gap:28px}
+  .terms div{grid-template-columns:minmax(0,1fr);gap:8px}
+  .road{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:32px}
+  .road::before{top:0;bottom:0;left:21px;right:auto;height:auto;border-top:0;border-left:3px dashed var(--ink)}
+  .road li{padding-left:64px}
+  .km{position:absolute;left:0;top:0;margin:0}
+  .slots{grid-template-columns:minmax(0,1fr);gap:24px;padding-top:0}
+  .foot{flex-direction:column;align-items:flex-start;padding:24px 16px 88px}
+  .thumb{position:sticky;bottom:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;background:var(--ink);color:var(--paper);font-size:14px}
+  .thumb button{padding:11px 16px;border:0;border-radius:6px;background:var(--amber);color:var(--ink);font-weight:800}
+  [data-preview] .foot{padding-bottom:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rowCar,.drive{animation:none}
+  .fleet li{transition:none}
+}
