@@ -4,7 +4,27 @@ import { useState, type FormEvent } from 'react';
 import { publicAction } from '@/lib/tovernet/api';
 import { track } from '@/lib/tovernet/analytics';
 
-export default function InquiryForm({ source, intro, onSent }: { source: string; intro: string; onSent?: () => void }) {
+const COPY = {
+  pl: {
+    failed: 'Nie udało się wysłać.',
+    sent: 'Dziękujemy. Odezwiemy się w sprawie tego zapytania i niczego więcej nie wyślemy bez Twojej zgody.',
+    name: 'Imię i nazwisko', email: 'E-mail', phone: 'Telefon (opcjonalnie)', message: 'Wiadomość (opcjonalnie)',
+    sending: 'Wysyłanie…', submit: 'Wyślij zapytanie',
+    privacy: 'Dane wykorzystamy do odpowiedzi na to zapytanie. Administrator: Tovernet sp. z o.o.',
+    privacyLink: 'Polityka prywatności', privacyHref: '/pl/polityka-prywatnosci/',
+  },
+  en: {
+    failed: 'Could not send. Please try again.',
+    sent: "Thank you. We'll reply about this request and won't send you anything else without your consent.",
+    name: 'Full name', email: 'Email', phone: 'Phone (optional)', message: 'Message (optional)',
+    sending: 'Sending…', submit: 'Send request',
+    privacy: 'We use your details only to answer this request. Data controller: Tovernet sp. z o.o.',
+    privacyLink: 'Privacy policy', privacyHref: '/en/polityka-prywatnosci/',
+  },
+} as const;
+
+export default function InquiryForm({ source, intro, onSent, locale = 'pl' }: { source: string; intro: string; onSent?: () => void; locale?: 'pl' | 'en' }) {
+  const c = COPY[locale];
   const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [error, setError] = useState('');
 
@@ -24,7 +44,7 @@ export default function InquiryForm({ source, intro, onSent }: { source: string;
       track('inquiry_sent', { source: source.startsWith('demo:') ? 'offer' : source });
       onSent?.();
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Nie udało się wysłać.');
+      setError(err instanceof Error ? err.message : c.failed);
       setState('error');
     }
   };
@@ -32,7 +52,7 @@ export default function InquiryForm({ source, intro, onSent }: { source: string;
   if (state === 'sent') {
     return (
       <p role="status" className="rounded-lg bg-emerald-50 p-5 text-emerald-900">
-        Dziękujemy. Odezwiemy się w sprawie tego zapytania i niczego więcej nie wyślemy bez Twojej zgody.
+        {c.sent}
       </p>
     );
   }
@@ -40,27 +60,27 @@ export default function InquiryForm({ source, intro, onSent }: { source: string;
   const field = 'w-full rounded-none border border-[#15161A] bg-white px-4 py-3 text-[#15161A] focus:border-slate-900 focus:outline-none';
   return (
     <form onSubmit={submit} className="space-y-3">
-      <label className="block text-sm font-medium text-[#5A5C60]">Imię i nazwisko
+      <label className="block text-sm font-medium text-[#5A5C60]">{c.name}
         <input name="name" required autoComplete="name" className={`mt-1 ${field}`} />
       </label>
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="block text-sm font-medium text-[#5A5C60]">E-mail
+        <label className="block text-sm font-medium text-[#5A5C60]">{c.email}
           <input name="email" type="email" required autoComplete="email" className={`mt-1 ${field}`} />
         </label>
-        <label className="block text-sm font-medium text-[#5A5C60]">Telefon (opcjonalnie)
+        <label className="block text-sm font-medium text-[#5A5C60]">{c.phone}
           <input name="phone" type="tel" autoComplete="tel" className={`mt-1 ${field}`} />
         </label>
       </div>
-      <label className="block text-sm font-medium text-[#5A5C60]">Wiadomość (opcjonalnie)
+      <label className="block text-sm font-medium text-[#5A5C60]">{c.message}
         <textarea name="message" rows={3} className={`mt-1 ${field}`} />
       </label>
       {state === 'error' && <p role="alert" className="text-sm text-red-700">{error}</p>}
       <button disabled={state === 'sending'} className="w-full rounded-none bg-[#15161A] px-6 py-4 font-semibold text-white hover:bg-[#2536C4] disabled:opacity-50">
-        {state === 'sending' ? 'Wysyłanie…' : 'Wyślij zapytanie'}
+        {state === 'sending' ? c.sending : c.submit}
       </button>
       <p className="text-xs text-[#5A5C60]">
-        Dane wykorzystamy do odpowiedzi na to zapytanie. Administrator: Tovernet sp. z o.o.{' '}
-        <a href="/pl/polityka-prywatnosci/" className="underline">Polityka prywatności</a>.
+        {c.privacy}{' '}
+        <a href={c.privacyHref} className="underline">{c.privacyLink}</a>.
       </p>
     </form>
   );

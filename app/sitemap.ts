@@ -42,6 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${SITE_URL}${niche.path}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 });
   }
 
+  // English offer for companies outside Poland (no Polish counterpart in the locale tree).
+  entries.push({ url: `${SITE_URL}/en/websites-for-companies/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 });
+
   for (const route of STATIC_ROUTES) {
     for (const locale of locales) {
       entries.push({
