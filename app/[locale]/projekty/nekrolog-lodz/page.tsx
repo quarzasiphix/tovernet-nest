@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CaseStudyNext from '@/components/site/CaseStudyNext';
 import { buildMetadata } from '@/lib/seo';
 
 const GOLD = 'hsl(43, 85%, 55%)';
@@ -209,6 +210,7 @@ export default function NekrologLodzCaseStudy({ params: { locale } }: { params: 
         </div>
       </section>
 
+      <CaseStudyNext locale={locale} slug="nekrolog-lodz" />
       <SiteFooter locale={locale} />
     </div>
   );

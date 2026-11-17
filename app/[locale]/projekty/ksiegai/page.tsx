@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CaseStudyNext from '@/components/site/CaseStudyNext';
 import KsiegaiShowcase from '@/components/ksiegai/KsiegaiShowcase';
 import { buildMetadata } from '@/lib/seo';
 
@@ -36,7 +37,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
   const c = useTranslations('caseStudies.ksiegai');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-neutral-950 to-slate-950">
       <SiteNav locale={locale} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -55,7 +56,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
               <span className="text-ksiegai-300 text-xs font-bold tracking-widest uppercase">{c('badge')}</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-ksiegai-400 via-purple-400 to-ksiegai-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-ksiegai-400 via-neutral-400 to-ksiegai-500 bg-clip-text text-transparent">
                 {c('title')}
               </span>
             </h1>
@@ -146,7 +147,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
             {c.raw('ksefArchitecture.cards').map((card: { title: string; description: string }, i: number) => {
               const Icon = KSEF_ICONS[i] ?? ShieldCheck;
               return (
-                <div key={i} className="bg-gradient-to-br from-ksiegai-900/30 to-purple-900/20 border border-ksiegai-500/20 rounded-2xl p-6">
+                <div key={i} className="bg-gradient-to-br from-ksiegai-900/30 to-neutral-900/20 border border-ksiegai-500/20 rounded-2xl p-6">
                   <Icon className="h-8 w-8 text-ksiegai-400 mb-3" />
                   <h3 className="text-white font-bold mb-2">{card.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{card.description}</p>
@@ -224,7 +225,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
 
           <div className="max-w-3xl mx-auto mb-10">
             <p className="text-xs font-bold tracking-widest uppercase mb-4 text-center text-ksiegai-400">{c('mcp.exampleTitle')}</p>
-            <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-ksiegai-900/40 to-purple-900/30 border border-ksiegai-500/30">
+            <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-ksiegai-900/40 to-neutral-900/30 border border-ksiegai-500/30">
               <p className="text-gray-200 leading-relaxed">{c('mcp.example')}</p>
             </div>
           </div>
@@ -295,7 +296,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
             <p className="text-sm text-gray-400 leading-relaxed text-center max-w-2xl mx-auto">{c('accounting.queueNote')}</p>
           </div>
 
-          <div className="max-w-3xl mx-auto rounded-2xl p-6 md:p-8 bg-gradient-to-br from-ksiegai-900/40 to-purple-900/30 border border-ksiegai-500/30">
+          <div className="max-w-3xl mx-auto rounded-2xl p-6 md:p-8 bg-gradient-to-br from-ksiegai-900/40 to-neutral-900/30 border border-ksiegai-500/30">
             <div className="flex items-center gap-2 mb-3">
               <GitBranch className="h-6 w-6 text-ksiegai-400" />
               <h3 className="text-lg font-bold text-white">{c('accounting.branches.title')}</h3>
@@ -417,7 +418,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
           <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
             {c.raw('proofWall.stats').map((stat: { value: string; label: string }, i: number) => (
               <div key={i} className="text-center bg-white/5 border border-white/10 rounded-2xl p-5">
-                <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-ksiegai-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-ksiegai-400 to-neutral-400 bg-clip-text text-transparent mb-1">
                   {stat.value}
                 </p>
                 <p className="text-xs text-gray-400 leading-snug">{stat.label}</p>
@@ -483,6 +484,7 @@ export default function KsiegaiCaseStudy({ params: { locale } }: { params: { loc
         </div>
       </section>
 
+      <CaseStudyNext locale={locale} slug="ksiegai" />
       <SiteFooter locale={locale} />
     </div>
   );

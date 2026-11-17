@@ -4,6 +4,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Link2, FileCheck2, ScrollText, QrCode, AlertTriangle, Lock } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CaseStudyNext from '@/components/site/CaseStudyNext';
 import { buildMetadata } from '@/lib/seo';
 
 const GOLD = '#C9A34E';
@@ -25,15 +26,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       ? ['system dla związku kynologicznego przykład', 'weryfikacja rodowodu kodem QR', 'panel hodowcy online przykład']
       : ['kennel club software example', 'QR pedigree verification example', 'breeder portal example'],
     type: 'article',
-    ogImage: '/screenshots/pok/dashboard.png',
+    ogImage: '/portfolio/pok-dashboard.webp',
   });
 }
 
 const SCREENSHOTS = [
-  { src: '/screenshots/pok/dashboard.png', pl: 'Pulpit biura', en: 'Office dashboard' },
-  { src: '/screenshots/pok/dogs.png', pl: 'Księga rodowodowa', en: 'Pedigree registry' },
-  { src: '/screenshots/pok/people.png', pl: 'Kartoteka hodowcy', en: 'Breeder record' },
-  { src: '/screenshots/pok/requests.png', pl: 'Wnioski hodowców', en: 'Breeder requests' },
+  { src: '/portfolio/pok-dashboard.webp', pl: 'Pulpit biura', en: 'Office dashboard' },
+  { src: '/portfolio/pok-dogs.webp', pl: 'Księga psów', en: 'Dog registry' },
+  { src: '/portfolio/pok-pedigrees.webp', pl: 'Rodowody do wystawienia', en: 'Pedigrees to issue' },
+  { src: '/portfolio/pok-people.webp', pl: 'Hodowcy i członkowie', en: 'Breeders and members' },
+  { src: '/portfolio/pok-registry.webp', pl: 'Krajowa Księga Rodowodowa', en: 'National stud book' },
+  { src: '/portfolio/pok-breeder.webp', pl: 'Panel hodowcy', en: 'Breeder panel' },
 ];
 
 export default function PokiuCaseStudy({ params: { locale } }: { params: { locale: string } }) {
@@ -237,14 +240,12 @@ export default function PokiuCaseStudy({ params: { locale } }: { params: { local
       <section className="py-16 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href={c('cta.url')}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`/${locale}/zwiazki-kynologiczne/#demo`}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-white hover:opacity-90 transition-opacity"
             style={{ background: HERO_GRADIENT }}
           >
-            {c('cta.label')}
-            <ArrowUpRight className="h-5 w-5" />
+            {isPolish ? 'Wypróbuj panel na danych testowych' : 'Try the panel on test data'}
+            <ArrowRight className="h-5 w-5" />
           </a>
           <div className="mt-6">
             <a href={`/${locale}/zwiazki-kynologiczne`} className="inline-flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity">
@@ -255,6 +256,7 @@ export default function PokiuCaseStudy({ params: { locale } }: { params: { local
         </div>
       </section>
 
+      <CaseStudyNext locale={locale} slug="pokiu" />
       <SiteFooter locale={locale} />
     </div>
   );

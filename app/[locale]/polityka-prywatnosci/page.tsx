@@ -20,7 +20,7 @@ export default function Page({ params: { locale } }: { params: { locale: 'pl' | 
   unstable_setRequestLocale(locale);
   const { meta, blocks, entry } = loadLegalDocument('polityka-prywatnosci');
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-neutral-950 to-slate-950">
       <SiteNav locale={locale} />
       {locale === 'en' && (
         <p className="max-w-3xl mx-auto px-4 pt-10 text-sm text-gray-400">

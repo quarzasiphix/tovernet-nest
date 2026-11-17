@@ -4,6 +4,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CaseStudyNext from '@/components/site/CaseStudyNext';
 import { buildMetadata } from '@/lib/seo';
 
 const GOLD = 'hsl(40, 60%, 52%)';
@@ -115,6 +116,7 @@ export default function KolorowaPasjaCaseStudy({ params: { locale } }: { params:
         </div>
       </section>
 
+      <CaseStudyNext locale={locale} slug="kolorowa-pasja" />
       <SiteFooter locale={locale} />
     </div>
   );

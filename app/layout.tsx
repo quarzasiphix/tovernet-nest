@@ -9,28 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tovernet.online"),
-  title: "TOVERNET - Digital Infrastructure for Businesses That Cannot Afford Chaos",
-  description: "TOVERNET designs and operates custom digital systems for businesses that want structure, not tools. We build bespoke infrastructure, workflows, and platforms that scale.",
-  keywords: ["digital infrastructure", "business systems", "custom software", "automation", "compliance systems", "operational infrastructure"],
-  authors: [{ name: "TOVERNET" }],
-  openGraph: {
-    title: "TOVERNET - Digital Infrastructure for Businesses",
-    description: "We design, deploy, and govern business infrastructure for ventures that must scale, comply, and coordinate across systems, people, and jurisdictions.",
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "TOVERNET - Digital Infrastructure",
-    description: "Custom digital systems for businesses that want structure, not tools.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  verification: {
-    google: "",
-  },
+  title: "Tovernet: strony internetowe, sklepy i systemy dla firm",
+  description: "Projektujemy strony firmowe, sklepy internetowe i oprogramowanie na zamówienie. Stała cena, akceptacja przed publikacją, działające realizacje.",
+  authors: [{ name: "Tovernet sp. z o.o." }],
+  openGraph: { title: "Tovernet: strony, sklepy i systemy dla firm", type: "website", locale: "pl_PL", siteName: "Tovernet" },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -39,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body className={inter.className}>
           <PostHogProvider>{children}<LoginLinkConfirm /><KsiegaiReturnLink /></PostHogProvider>
         </body>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const SITE_URL = 'https://tovernet.online';
 export const SITE_NAME = 'TOVERNET';
-export const DEFAULT_OG_IMAGE = '/screenshots/clients/gryfin-york.png';
+export const DEFAULT_OG_IMAGE = '/portfolio/nekrolog-lodz.webp';
 
 export type Locale = 'pl' | 'en';
 
@@ -17,10 +17,12 @@ type PageSeoInput = {
   keywords?: string[];
   ogImage?: string;
   type?: 'website' | 'article';
+  /** Prepared but unpublished pages: noindex, nofollow, and no alternates to advertise them. */
+  noindex?: boolean;
 };
 
 export function buildMetadata(input: PageSeoInput): Metadata {
-  const { locale, path, otherLocalePath, title, description, keywords, ogImage, type = 'website' } = input;
+  const { locale, path, otherLocalePath, title, description, keywords, ogImage, type = 'website', noindex = false } = input;
   const otherLocale: Locale = locale === 'pl' ? 'en' : 'pl';
   const otherPath = otherLocalePath ?? path;
   const currentUrl = `${SITE_URL}/${locale}${path}`;
@@ -58,9 +60,6 @@ export function buildMetadata(input: PageSeoInput): Metadata {
       description,
       images: [absoluteImage],
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: noindex ? { index: false, follow: false, googleBot: { index: false, follow: false } } : { index: true, follow: true },
   };
 }

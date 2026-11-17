@@ -17,6 +17,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return buildMetadata({
     locale,
     path: '/projekty/anemalo',
+    // Prepared, not launched: kept for later, never indexed or linked (portfolio.ts `unlisted`).
+    noindex: true,
     title: isPolish
       ? 'Anemalo — Europejski Ekosystem dla Zwierząt | TOVERNET'
       : 'Anemalo — A European Animal Ecosystem | TOVERNET',

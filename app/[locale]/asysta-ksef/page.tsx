@@ -54,7 +54,7 @@ export default function KsefAsystaPage({ params: { locale } }: { params: { local
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-neutral-950 to-slate-950">
       <SiteNav locale={locale} />
       {/* eslint-disable-next-line react/no-danger */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -70,7 +70,7 @@ export default function KsefAsystaPage({ params: { locale } }: { params: { local
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-ksiegai-400 via-purple-400 to-ksiegai-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-ksiegai-400 via-neutral-400 to-ksiegai-500 bg-clip-text text-transparent">
                 Nie musisz ogarniać KSeF sam
               </span>
             </h1>

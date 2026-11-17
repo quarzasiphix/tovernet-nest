@@ -727,7 +727,7 @@ export const poradnikArticles: PoradnikArticle[] = [
       {
         heading: 'Jak to wygląda w działającym systemie',
         paragraphs: [
-          'Dokładnie taki panel — z filtrowaniem wniosków po statusie i notatkami biura — działa dziś w systemie zbudowanym dla POKIU, jako osobna domena `hodowca.pokiu.pl`, oddzielona od panelu biura.',
+          'Dokładnie taki panel — z filtrowaniem wniosków po statusie i notatkami biura — działa dziś w programie, który zbudowaliśmy dla POKIU, jako osobny panel hodowcy, oddzielony od panelu biura.',
         ],
       },
     ],
@@ -763,7 +763,7 @@ export const poradnikArticles: PoradnikArticle[] = [
       {
         heading: 'What this looks like in a running system',
         paragraphs: [
-          'Exactly this panel — with status-filtered requests and office notes — runs today in the system we built for POKIU, as a separate domain, `hodowca.pokiu.pl`, kept apart from the office panel.',
+          'Exactly this panel — with status-filtered requests and office notes — runs today in the software we built for POKIU, as a separate breeder panel, kept apart from the office panel.',
         ],
       },
     ],
@@ -1067,7 +1067,7 @@ export const poradnikArticles: PoradnikArticle[] = [
       {
         heading: 'Dowód, że to nie tylko teoria',
         paragraphs: [
-          'Sami stosujemy tę zasadę: KsięgaI (finanse) i GlobalPet Transport (transport zwierząt) to nasze własne, prowadzone na co dzień systemy — a nie tylko przykłady, które sprzedajemy klientom. Ten sam standard budujemy dla hodowli (Gryfin York), związków kynologicznych (POKIU) i firm z branży zwierzęcej.',
+          'Sami stosujemy tę zasadę: Księgai, nasz program do faktur i KSeF, to system, który sami prowadzimy na co dzień, a nie tylko przykład, który sprzedajemy klientom. Ten sam standard budujemy dla hodowli (Gryfin York) i związków kynologicznych (POKIU).',
         ],
       },
     ],
@@ -1115,7 +1115,7 @@ export const poradnikArticles: PoradnikArticle[] = [
       {
         heading: 'Proof this isn\'t just theory',
         paragraphs: [
-          'We apply this ourselves: KsięgaI (finance) and GlobalPet Transport (animal transport) are our own systems, run day to day — not just examples we sell to clients. We build the same standard for kennels (Gryfin York), kennel clubs (POKIU), and animal-industry companies.',
+          'We apply this ourselves: Księgai, our invoicing and KSeF software, is a system we run day to day, not just an example we sell to clients. We build to the same standard for breeders (Gryfin York) and kennel clubs (POKIU).',
         ],
       },
     ],

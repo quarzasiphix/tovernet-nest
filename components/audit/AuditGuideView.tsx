@@ -34,7 +34,7 @@ export default function AuditGuideView({ locale, guide, otherSlug }: Props) {
   const mainPath = PROVIDER_AUDIT_MAIN_PATH[locale];
 
   return (
-    <div className="bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white min-h-screen">
+    <div className="bg-gradient-to-br from-slate-950 via-neutral-950 to-slate-950 text-white min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {faqJsonLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />

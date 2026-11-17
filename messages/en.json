@@ -1,203 +1,4 @@
 {
-  "nav": {
-    "whatWeBuild": "What We Build",
-    "verticals": "Operating Domains",
-    "engagement": "Engagement",
-    "contact": "Discuss Your System",
-    "breeders": "Breeders",
-    "kennelClubs": "Kennel Clubs",
-    "projects": "Our Projects",
-    "poradnik": "Guides",
-    "providerAudit": "Provider Audits"
-  },
-  "hero": {
-    "badge": "Custom Software & Systems — Any Industry",
-    "title": "Websites and Systems for the Animal Industry",
-    "titleHighlight": "We Build Systems Companies Depend On",
-    "subtitle": "Websites, client portals, and dedicated systems — built for government-grade compliance, regulated logistics, and industries most agencies won't touch. We also happen to know the animal industry cold, because we operate in it ourselves. Bring us the problem.",
-    "description": "",
-    "ctaPrimary": "See Our Solutions",
-    "ctaSecondary": "Talk About Your Project",
-    "tagline": "Government compliance (KSeF) • payments & billing • audit-ready systems • kennels & kennel clubs • licensed animal transport • zoos & exotic-animal orgs • anything else you bring us"
-  },
-  "paths": {
-    "title": "Solutions For Your Industry",
-    "subtitle": "Pick the closest match — each has a full offer on its own page. Don't see yours? That's what the last card is for.",
-    "breeders": {
-      "title": "For Breeders",
-      "description": "A site and panel your kennel updates itself.",
-      "cta": "See the Breeder Offer"
-    },
-    "kennelClubs": {
-      "title": "For Kennel Clubs",
-      "description": "Registries of people, dogs, and litters, pedigrees, registration cards, document numbering, public QR verification, a change history, and an office-to-breeder collaboration portal.",
-      "cta": "See the Kennel Club Offer"
-    },
-    "animalIndustry": {
-      "title": "For Animal-Industry Companies",
-      "description": "Dedicated systems for animal transport, pet hotels, groomers, trainers, shelters, marketplaces, zoos, exotic-animal organizations, and other companies. Bookings, documents, payments, customer handling, and internal processes.",
-      "cta": "Let's Talk About Your Project"
-    },
-    "finance": {
-      "title": "Finance & Administration",
-      "description": "Invoices, KSeF compliance, documents, payments, settlements, and dedicated internal systems. KsięgaI is our own product in this space — real proof we can build and run it.",
-      "cta": "Visit KsięgaI"
-    },
-    "somethingElse": {
-      "title": "Something Else?",
-      "description": "Not on this list doesn't mean we can't build it. Regulated industry, weird legacy system, an idea nobody else wants to touch — tell us what it is and we'll figure out how to build it.",
-      "cta": "Tell Us Your Idea"
-    }
-  },
-  "proof": {
-    "title": "Proof, Not Promises",
-    "description": "We don't just design systems for other people's businesses — we run some of them ourselves under real legal and regulatory pressure, and we've been trusted with the technical side of a client's legal dispute. Four concrete reasons to believe we can build what you need.",
-    "items": [
-      {
-        "title": "Government Compliance Systems",
-        "description": "KsięgaI integrates directly with KSeF 2.0 — the Polish Ministry of Finance's production e-invoicing system. Auth, tokens, certificates, and audit events, for a system with real regulatory consequences."
-      },
-      {
-        "title": "Payments & Financial Infrastructure",
-        "description": "Stripe integrations, bank reconciliation, auditable decision logs. Real money moves through systems we build — we don't cut corners on correctness."
-      },
-      {
-        "title": "Audit Trails & Vendor Dispute Support",
-        "description": "When a funeral-home client needed technical documentation for a legal dispute with a previous vendor, we provided it — contract-level audits, delivery verification, asset recovery. Not typical web-dev territory, but we handled it."
-      },
-      {
-        "title": "Animal Industry & Licensed Logistics",
-        "description": "Pedigree documentation, kennel-club registries, and our own licensed EU animal transport operation. Real operational experience, not a requirements doc."
-      }
-    ]
-  },
-  "projectsShowcase": {
-    "clientWork": {
-      "title": "Client Projects",
-      "subtitle": "These aren't mockups — they're systems we run for real clients today.",
-      "featured": [
-        {
-          "name": "POKIU",
-          "badge": "A Full Digital System For a Kennel Club",
-          "description": "Polska Organizacja Kynologiczna International Union. Dog and pedigree registry, a breeder collaboration portal, public QR document verification — one system, three audiences.",
-          "cta": "See the POKIU Case Study",
-          "url": "/projekty/pokiu"
-        },
-        {
-          "name": "Nekrolog Łódź",
-          "badge": "Vendor Dispute & Technical Audit Support",
-          "description": "A funeral home's full digital presence — plus something rarer. When they needed technical documentation for a legal dispute with a previous vendor, we provided contract-level audits and delivery verification. We don't just build systems; we can prove what was actually delivered.",
-          "cta": "See the Nekrolog Łódź Case Study",
-          "url": "/projekty/nekrolog-lodz"
-        }
-      ],
-      "secondaryLabel": "More client work:",
-      "secondary": [
-        {
-          "name": "Gryfin York",
-          "url": "/projekty/gryfin-york"
-        },
-        {
-          "name": "Kolorowa Pasja",
-          "url": "/projekty/kolorowa-pasja"
-        },
-        {
-          "name": "Klepsydra",
-          "url": "/projekty/klepsydra"
-        }
-      ],
-      "allCta": "See All Projects"
-    },
-    "industriesKnown": {
-      "title": "Industries We Know",
-      "tags": [
-        "Purebred dog breeders",
-        "Kennel clubs",
-        "Zoos & exotic-animal orgs",
-        "Animal transport",
-        "Funeral homes",
-        "Finance & KSeF"
-      ]
-    }
-  },
-  "verticals": {
-    "title": "TOVERNET Products",
-    "subtitle": "We don't just design infrastructure for others — we run these systems ourselves, day to day, under real legal and operational pressure.",
-    "ksiegai": {
-      "title": "Financial Infrastructure",
-      "badge": "KSeF-Ready Systems",
-      "description": "Example of infrastructure under regulatory pressure. Central business registry: documents, decisions, roles, and finances in one auditable structure.",
-      "features": [
-        "Document reconciliation layer before KSeF",
-        "Verified business network",
-        "Full audit trail & compliance"
-      ],
-      "cta": "Visit KsięgaI"
-    },
-    "globalPet": {
-      "title": "Licensed Logistics Operations",
-      "badge": "EU Pet Transport",
-      "description": "Example of infrastructure under physical and legal constraints. Licensed animal transportation across EU jurisdictions.",
-      "features": [
-        "Multi-jurisdiction compliance tracking",
-        "Real-time coordination systems",
-        "Licensed operational infrastructure"
-      ],
-      "cta": "Coming Soon",
-      "facebookCta": "Follow on Facebook"
-    }
-  },
-  "engagement": {
-    "title": "How Engagement Works",
-    "subtitle": "This is not one-off web dev. It's a partnership that stays with you after launch.",
-    "steps": [
-      {
-        "title": "Map",
-        "description": "We map your business logic and requirements"
-      },
-      {
-        "title": "Design",
-        "description": "We design the system architecture"
-      },
-      {
-        "title": "Build",
-        "description": "We build and integrate the infrastructure"
-      },
-      {
-        "title": "Evolve",
-        "description": "We maintain and evolve it with you"
-      }
-    ]
-  },
-  "contact": {
-    "title": "Have an Idea? Tell Us — We'll Figure Out How to Build It.",
-    "subtitle": "Write to us — let's talk about your project and what's actually worth building.",
-    "cta": "Let's Talk About Your Project",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "message": "What do you need?",
-      "submit": "Send",
-      "thankYouTitle": "Got it — thank you.",
-      "thankYouMessage": "We'll get back to you shortly."
-    }
-  },
-  "footer": {
-    "tagline": "Websites and systems for the animal industry — plus business software, automation, and financial systems for other industries.",
-    "solutions": "Industry Solutions",
-    "verticals": "Brands & Ventures",
-    "ksiegai": "KsięgaI — Financial Infrastructure",
-    "globalPet": "GlobalPet Transport — Licensed Animal Logistics",
-    "anemalo": "Anemalo — European Animal Ecosystem",
-    "contact": "Contact",
-    "callUs": "Call us — let's talk",
-    "copyright": "Tovernet Sp. z o.o. Built systems scale. Tools don't.",
-    "privacyPolicy": "Privacy Policy",
-    "terms": "Terms of Use",
-    "nekrolog": "Nekrolog Kostowska — Funeral Services & Digital Development",
-    "digitalAdmin": "Tovernet is the deciding party for implementing new technology and for contracts with contractors and service providers across the brands we operate."
-  },
   "breeders": {
     "hero": {
       "badge": "For Purebred Dog Breeders",
@@ -650,10 +451,10 @@
       ]
     },
     "screenshots": {
-      "title": "Try the Real Office Panel",
-      "subtitle": "This isn't a screenshot — it's an interactive rebuild of the same requests panel that runs POKIU's office today. Click a request, approve it, or reject it.",
-      "caption": "The same panel (with real data instead of this demo) runs the office at:",
-      "linkLabel": "See the POKIU Case Study"
+      "title": "Try the club office panel",
+      "subtitle": "An interactive demo of the software we built and run for a kennel club office. Submit a request as a breeder, approve it in the office, issue the pedigree and check its QR code. Test data only.",
+      "caption": "How this software came about and what it does every day:",
+      "linkLabel": "See the case study"
     },
     "collaboration": {
       "title": "Collaborate With Breeders Without Email and Scans",
@@ -698,7 +499,7 @@
           "description": "The verification domain is gated at the edge server — there's no path from it to a login screen or office data."
         }
       ],
-      "proof": "This exact system runs today for POKIU (psy.pokiu.pl).",
+      "proof": "This exact system runs today for POKIU.",
       "proofCta": "See the POKIU Case Study",
       "demo": {
         "intro": "Try it — this isn't a mockup, it's the same mechanism running in the real POKIU system.",
@@ -738,92 +539,6 @@
     "cta": {
       "title": "Want To Deploy This For Your Club?",
       "subtitle": "Let's talk about what your records look like today and what can be automated. An initial quote is free.",
-      "button": "Request a Free Quote"
-    }
-  },
-  "projectsPage": {
-    "hero": {
-      "badge": "Our Projects",
-      "title": "What We Build, And For Whom",
-      "subtitle": "Some of these are our own brands that we run ourselves. Others are client work — we build and maintain the system, but it's their business and their data."
-    },
-    "ownBrands": {
-      "title": "Our Brands",
-      "subtitle": "Systems we design, build, and run ourselves, under our own legal and business responsibility.",
-      "items": [
-        {
-          "name": "KsięgaI",
-          "badge": "Financial Infrastructure",
-          "description": "A central business registry ready for KSeF — documents, decisions, roles, and finances in one auditable structure.",
-          "cta": "See Case Study",
-          "url": "/projekty/ksiegai"
-        },
-        {
-          "name": "GlobalPet Transport",
-          "badge": "Licensed Logistics",
-          "description": "Licensed animal transport across EU jurisdictions with real-time compliance tracking.",
-          "cta": "Coming Soon",
-          "url": "https://globalpet.online"
-        },
-        {
-          "name": "Anemalo",
-          "badge": "European Animal Ecosystem",
-          "description": "A dedicated platform connecting breeders, foundations, adoptions, community, and animal transport in one system — with an API gateway our own kennel clients already run on.",
-          "cta": "See Case Study",
-          "url": "/projekty/anemalo"
-        }
-      ]
-    },
-    "clientProjects": {
-      "title": "Client Projects",
-      "subtitle": "We build and maintain these systems as a contractor — the brand, the data, and the customers belong to our clients, not to us. Click through for the full case study.",
-      "caseStudyLabel": "Case study",
-      "items": [
-        {
-          "slug": "nekrolog-lodz",
-          "name": "Nekrolog Łódź",
-          "badge": "Funeral Home · Client",
-          "description": "Jolanta Kostowska's funeral home's digital presence — full service offering, product catalog, and round-the-clock contact for families in a difficult moment. As part of this engagement we also built Klepsydra — a free online e-obituary generator (see separate entry below).",
-          "cta": "Visit the Site",
-          "url": "https://nekrolog-lodz.com"
-        },
-        {
-          "slug": "klepsydra",
-          "name": "Klepsydra",
-          "badge": "Client Tool",
-          "description": "A free online e-obituary generator, marketed as a tool from Jolanta Kostowska Nekrolog Łódź — built and maintained by us.",
-          "cta": "Try Klepsydra",
-          "url": "https://klepsydra.nekrolog-lodz.com"
-        },
-        {
-          "slug": "gryfin-york",
-          "name": "Gryfin York",
-          "badge": "Yorkshire Terrier Kennel · Client",
-          "description": "A public site and admin panel for a kennel — the model our breeder offer is based on.",
-          "cta": "Visit the Kennel Site",
-          "url": "https://hodowlagryfinyork.pl"
-        },
-        {
-          "slug": "kolorowa-pasja",
-          "name": "Kolorowa Pasja",
-          "badge": "Yorkshire Terrier & Spitz Kennel · Client",
-          "description": "A kennel website showcasing litters and puppies, built and maintained by us for the kennel's owner.",
-          "cta": "Visit the Kennel Site",
-          "url": "https://kolorowapasja.pl"
-        },
-        {
-          "slug": "pokiu",
-          "name": "POKIU",
-          "badge": "Kennel Club · Client",
-          "description": "Polska Organizacja Kynologiczna International Union. A dog registry, pedigree, breeder-portal, and public QR document verification system.",
-          "cta": "Visit POKIU",
-          "url": "https://pokiu.pl"
-        }
-      ]
-    },
-    "cta": {
-      "title": "Want a System Like This For Yourself?",
-      "subtitle": "Let's talk about your business and what infrastructure would actually serve it. An initial quote is free.",
       "button": "Request a Free Quote"
     }
   },
@@ -893,12 +608,30 @@
         "title": "An Honest Build Status",
         "intro": "Anemalo is being built in phases, on real production data — not as a mockup.",
         "items": [
-          { "label": "Animal discovery and marketplace", "status": "Done" },
-          { "label": "Breeder and foundation profiles", "status": "Done" },
-          { "label": "Applications, reservations, and adoptions", "status": "Done" },
-          { "label": "Animal transport and route planning", "status": "Done" },
-          { "label": "Community and messaging", "status": "In progress" },
-          { "label": "Foundation fundraising and additional countries/languages", "status": "Planned" }
+          {
+            "label": "Animal discovery and marketplace",
+            "status": "Done"
+          },
+          {
+            "label": "Breeder and foundation profiles",
+            "status": "Done"
+          },
+          {
+            "label": "Applications, reservations, and adoptions",
+            "status": "Done"
+          },
+          {
+            "label": "Animal transport and route planning",
+            "status": "Done"
+          },
+          {
+            "label": "Community and messaging",
+            "status": "In progress"
+          },
+          {
+            "label": "Foundation fundraising and additional countries/languages",
+            "status": "Planned"
+          }
         ]
       },
       "features": [
@@ -1223,25 +956,25 @@
         "description": "For POKIU we built an internal system serving three distinct audiences on one platform, split by domain: the association's office, breeders, and public document verification."
       },
       "architecture": {
-        "title": "Three Domains, One System",
+        "title": "Three parts, one system",
         "items": [
           {
-            "domain": "admin.twojastrona.pl",
+            "domain": "Office panel",
             "description": "The full office panel — dog registry, litters, pedigrees, payments, change audit."
           },
           {
-            "domain": "hodowca.pokiu.pl",
+            "domain": "Breeder panel",
             "description": "The breeder portal — their own dogs, litters, and pedigree requests with status tracking."
           },
           {
-            "domain": "psy.pokiu.pl",
+            "domain": "Public verification",
             "description": "Public QR document verification — and nothing else. No login, no panel access, enforced at the edge."
           }
         ]
       },
       "security": {
         "title": "QR-Code Pedigree Verification",
-        "description": "Every issued pedigree and litter card carries a QR code pointing to psy.pokiu.pl. A buyer scans it, sees basic dog info, and can unlock a preview of the original document with a security code — making forged or unbacked pedigrees much harder to pass off as genuine."
+        "description": "Every issued pedigree and litter card carries a QR code pointing to the club’s verification page. A buyer scans it, sees basic dog info, and can unlock a preview of the original document with a security code — making forged or unbacked pedigrees much harder to pass off as genuine."
       },
       "features": [
         "Pedigree registry and breeder directory in one system",
@@ -1249,10 +982,6 @@
         "Public QR document verification on its own, locked-down domain",
         "A full change log — who changed what, and when"
       ],
-      "cta": {
-        "label": "Visit POKIU",
-        "url": "https://pokiu.pl"
-      },
       "provenance": {
         "title": "Not just a digital pedigree. A full chain of provenance.",
         "intro": "When a dog entering the POKIU registry already has a pedigree issued by another organization (e.g. ZKwP, FCI), the system doesn't turn that document into a dead scan in a folder. It builds a documented chain of provenance: original pedigree → verified by POKIU → registered with POKIU → digitally verifiable POKIU pedigree — and shows every link in that chain publicly, on the same page where the pedigree itself gets verified.",

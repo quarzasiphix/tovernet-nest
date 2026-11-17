@@ -4,6 +4,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Printer, Search } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CaseStudyNext from '@/components/site/CaseStudyNext';
 import { buildMetadata } from '@/lib/seo';
 
 const GOLD = 'hsl(42, 86%, 54%)';
@@ -255,6 +256,7 @@ export default async function KlepsydraCaseStudy({ params: { locale } }: { param
         </div>
       </section>
 
+      <CaseStudyNext locale={locale} slug="klepsydra" />
       <SiteFooter locale={locale} />
     </div>
   );

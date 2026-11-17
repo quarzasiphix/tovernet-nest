@@ -1,49 +1,26 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
+import { SELLER } from '@/lib/seller';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const isPolish = params.locale === 'pl';
-  
+  const pl = params.locale === 'pl';
+  // Pages set their own title, description and alternates (lib/seo.ts); these are fallbacks.
   return {
-    title: isPolish 
-      ? "TOVERNET - Infrastruktura Cyfrowa dla Firm, Które Nie Mogą Sobie Pozwolić na Chaos"
-      : "TOVERNET - Digital Infrastructure for Businesses That Cannot Afford Chaos",
-    description: isPolish
-      ? "TOVERNET projektuje i obsługuje niestandardowe systemy cyfrowe dla firm, które chcą struktury, a nie narzędzi. Budujemy dedykowaną infrastrukturę, przepływy pracy i platformy, które skalują się."
-      : "TOVERNET designs and operates custom digital systems for businesses that want structure, not tools. We build bespoke infrastructure, workflows, and platforms that scale.",
-    keywords: isPolish
-      ? ["infrastruktura cyfrowa", "systemy biznesowe", "oprogramowanie niestandardowe", "automatyzacja", "systemy zgodności", "infrastruktura operacyjna"]
-      : ["digital infrastructure", "business systems", "custom software", "automation", "compliance systems", "operational infrastructure"],
-    authors: [{ name: "TOVERNET" }],
-    openGraph: {
-      title: isPolish ? "TOVERNET - Infrastruktura Cyfrowa dla Firm" : "TOVERNET - Digital Infrastructure for Businesses",
-      description: isPolish
-        ? "Projektujemy, wdrażamy i zarządzamy infrastrukturą biznesową dla przedsięwzięć, które muszą skalować się, zachować zgodność i koordynować działania."
-        : "We design, deploy, and govern business infrastructure for ventures that must scale, comply, and coordinate across systems, people, and jurisdictions.",
-      type: "website",
-      locale: isPolish ? "pl_PL" : "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: isPolish ? "TOVERNET - Infrastruktura Cyfrowa" : "TOVERNET - Digital Infrastructure",
-      description: isPolish
-        ? "Niestandardowe systemy cyfrowe dla firm, które chcą struktury, a nie narzędzi."
-        : "Custom digital systems for businesses that want structure, not tools.",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-    verification: {
-      google: "",
-    },
+    title: pl ? 'Tovernet: strony internetowe, sklepy i systemy dla firm' : 'Tovernet: websites, online stores and software for businesses',
+    description: pl
+      ? 'Projektujemy strony firmowe, sklepy internetowe i oprogramowanie na zamówienie. Stała cena, akceptacja przed publikacją, działające realizacje.'
+      : 'We design business websites, online stores and custom software. Fixed price, approval before launch, live projects you can check.',
+    authors: [{ name: 'Tovernet sp. z o.o.' }],
+    openGraph: { type: 'website', locale: pl ? 'pl_PL' : 'en_US', siteName: 'Tovernet' },
+    twitter: { card: 'summary_large_image' },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -60,25 +37,35 @@ export default async function LocaleLayout({
 
   unstable_setRequestLocale(locale);
 
-  const messages = await getMessages();
 
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'TOVERNET',
+    '@id': 'https://tovernet.online/#organization',
+    name: 'Tovernet',
+    legalName: SELLER.name,
     url: 'https://tovernet.online',
+    email: SELLER.email,
+    telephone: SELLER.phone,
+    taxID: SELLER.nip,
+    address: { '@type': 'PostalAddress', streetAddress: SELLER.street, postalCode: SELLER.postal, addressLocality: SELLER.city, addressCountry: 'PL' },
     description: locale === 'pl'
-      ? 'TOVERNET projektuje i utrzymuje strony internetowe oraz systemy dla hodowców psów, organizacji kynologicznych i firm z branży zwierzęcej.'
-      : 'TOVERNET designs and maintains websites and systems for dog breeders, kennel clubs, and animal-industry companies.',
+      ? 'Tovernet projektuje, buduje i utrzymuje strony internetowe, sklepy i systemy dla firm.'
+      : 'Tovernet designs, builds and runs websites, online stores and software for businesses.',
   };
 
   return (
     <>
+      {/* The root layout is shared by both languages (static export): correct <html lang> here. */}
+      <script dangerouslySetInnerHTML={{ __html: `document.documentElement.lang=${JSON.stringify(locale)}` }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
-      <NextIntlClientProvider messages={messages}>
+      {/* No messages on the client: every translated string renders on the server. Sending the
+          whole catalogue used to put every page's copy (including unpublished case studies)
+          into each page's HTML. */}
+      <NextIntlClientProvider locale={locale} messages={{}}>
         {children}
       </NextIntlClientProvider>
     </>

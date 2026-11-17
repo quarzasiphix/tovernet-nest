@@ -4,6 +4,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CaseStudyNext from '@/components/site/CaseStudyNext';
 import PanelShowcase from '@/components/breeders/PanelShowcase';
 import { buildMetadata } from '@/lib/seo';
 import { getGryfinSiteContent } from '@/lib/gryfin';
@@ -262,6 +263,7 @@ export default async function GryfinYorkCaseStudy({ params: { locale } }: { para
         </section>
       </div>
 
+      <CaseStudyNext locale={locale} slug="gryfin-york" />
       <SiteFooter locale={locale} />
     </div>
   );

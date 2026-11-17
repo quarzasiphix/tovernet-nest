@@ -15,6 +15,8 @@ import { INSTALMENTS_MARKETING, MARKETING_START } from '@/lib/tovernet/payments'
 import { price as zl } from './studio/motion';
 import AccountLink from './AccountLink';
 import l from './loader.module.css';
+import { StartButton, StartProvider } from '@/components/site/start/StartFlow';
+import { MARKETING_START as START_PRICE } from '@/lib/tovernet/payments';
 
 /**
  * Niche landing page. The static HTML is the generic, indexable page with a sample
@@ -38,6 +40,7 @@ export default function NichePage({ nicheKey }: { nicheKey: NicheKey }) {
     <>
     <script dangerouslySetInnerHTML={{ __html: OFFER_PRELOAD_SCRIPT }} />
     <OfferLoader className={l.pre} />
+    <StartProvider locale="pl" page={`niche:${niche.key}`}>
     <main lang="pl" className={`${brandFonts} ${s.tv} ${l.generic}`}>
       {(offer.status === 'missing' || offer.status === 'error') && (
         <div role="alert" className="bg-amber-100 px-5 py-3 text-center text-sm text-amber-900">
@@ -58,6 +61,14 @@ export default function NichePage({ nicheKey }: { nicheKey: NicheKey }) {
         <p className={`${s.l} mb-4`}>Strony internetowe · {niche.label}</p>
         <h1 className={`${s.h2} max-w-4xl`}>{niche.h1}</h1>
         <p style={{ color: t.muted }} className="mt-6 max-w-2xl text-lg leading-relaxed">{niche.intro}</p>
+        {/* Self-start: package -> NIP/KRS -> e-mail -> personal offer link (28-self-start-onboarding.md). */}
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <StartButton placement="niche_hero" style={{ background: t.accent, color: t.onAccent }}
+                       className="inline-flex items-center gap-2 rounded-full px-6 py-4 text-base font-bold">
+            Zamów stronę dla swojej firmy →
+          </StartButton>
+          <span style={{ color: t.muted }} className="text-sm">Wpisz NIP, a ofertę z ceną od {zl(START_PRICE.total)} wyślemy na Twój e-mail.</span>
+        </div>
         {INSTALMENTS_MARKETING && (
           <p style={{ borderColor: t.ink }} className="mt-6 inline-block max-w-2xl border-l-4 pl-4 text-lg leading-relaxed">
             <b>Zacznij od {zl(MARKETING_START.upfront)}.</b> Resztę płacisz w miesięcznych ratach, bez odsetek. Strona razem od {zl(MARKETING_START.total)}.
@@ -122,6 +133,7 @@ export default function NichePage({ nicheKey }: { nicheKey: NicheKey }) {
         </div>
       </footer>
     </main>
+    </StartProvider>
     </>
   );
 }

@@ -8,6 +8,7 @@ import { price, useTween } from '../motion';
 import s from '../studio.module.css';
 import o from './offer.module.css';
 import { PKG, THIRD_PARTY, type Journey } from './offerCopy';
+import { CredibilityLink } from '../../credibility/Credibility';
 
 /** Third-party costs the selection brings with it. Never amounts: they are the provider's. */
 export function thirdParty(demo: PublicDemo, cart: Cart) {
@@ -77,6 +78,7 @@ export default function Summary({ demo, cart, journey, exempt, onOrder, compact 
       </div>
       <button type="button" className={`${s.cta} ${s.full}`} onClick={onOrder}>Przejdź do zamówienia<ArrowRight size={19} aria-hidden="true" /></button>
       <p className={o.sumNote}><Check size={14} aria-hidden="true" />Stronę zobaczysz i zaakceptujesz przed publikacją</p>
+      <p className={o.sumNote}><CredibilityLink placement={compact ? 'offer_dock_sheet' : 'offer_summary'} /></p>
     </div>
   );
 }

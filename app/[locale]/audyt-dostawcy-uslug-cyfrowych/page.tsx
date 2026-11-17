@@ -70,7 +70,7 @@ export default function ProviderAuditPage({ params: { locale } }: { params: { lo
   const matrix = t.raw('deliverables.matrixExample') as { headers: string[]; rows: string[][] };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-neutral-950 to-slate-950 text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />

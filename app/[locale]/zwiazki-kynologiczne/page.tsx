@@ -27,7 +27,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     keywords: isPolish
       ? ['system dla związku kynologicznego', 'elektroniczna księga rodowodowa', 'panel hodowcy online', 'weryfikacja rodowodu kodem QR', 'rejestr psów program']
       : ['kennel club software', 'electronic pedigree registry', 'breeder panel for kennel clubs', 'QR pedigree verification'],
-    ogImage: '/screenshots/pok/dashboard.png',
+    ogImage: '/portfolio/pok-dashboard.webp',
   });
 }
 
@@ -111,7 +111,7 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
       </section>
 
       {/* Interactive office panel demo */}
-      <section className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
+      <section id="demo" className="scroll-mt-20 py-20 bg-black/20 backdrop-blur-sm border-y border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('screenshots.title')}</h2>
@@ -129,7 +129,7 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
               className="inline-flex items-center gap-2 bg-white/10 border border-white/10 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
               {t('screenshots.linkLabel')}
-              <ExternalLink className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function KennelClubsPage({ params: { locale } }: { params: { loca
       {/* KsięgaI cross-sell banner */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto bg-gradient-to-br from-ksiegai-900/30 to-purple-900/20 border border-ksiegai-500/30 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 justify-between">
+          <div className="max-w-5xl mx-auto bg-gradient-to-br from-ksiegai-900/30 to-neutral-900/20 border border-ksiegai-500/30 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 justify-between">
             <div className="flex items-center gap-4">
               <Calculator className="h-10 w-10 text-ksiegai-400 flex-shrink-0" />
               <div>

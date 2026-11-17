@@ -414,6 +414,7 @@
 .vat{display:flex;align-items:center;gap:7px;color:var(--body)!important}
 .vat svg{color:var(--ok)}
 .rcNext{padding:20px 24px 24px}
+.rcProof{margin:0;padding:0 24px 22px}
 .rcNext ol{margin:12px 0 0;padding:0;list-style:none}
 .rcNext li{position:relative;display:flex;gap:12px;padding-bottom:14px}
 .rcNext li:not(:last-child):before{content:"";position:absolute;left:12px;top:28px;bottom:2px;width:1px;background:var(--line2)}

@@ -12,6 +12,7 @@ import type { CheckoutOrder, JourneyActions, PaymentStart, SignatoryCheck } from
 import { CAPACITY_OPTIONS, LEGAL, consentText, type Capacity } from '@/lib/legal/versions';
 import { SELLER, SELLER_SHORT, VAT_LINE } from '@/lib/seller';
 import { delay, price, useTween } from './motion';
+import { CredibilityLink } from '../credibility/Credibility';
 import s from './studio.module.css';
 import p from '../pay/pay.module.css';
 
@@ -351,6 +352,7 @@ export default function Checkout({ demo, cart, actions, onChange }: { demo: Publ
           <p className={s.kicker}>Po płatności</p>
           <ol>{NEXT.map(([t, d], i) => <li key={t}><span>{i + 1}</span><div><b>{t}</b><p>{d}</p></div></li>)}</ol>
         </div>
+        <p className={s.rcProof}><CredibilityLink placement="checkout">Kim jesteśmy i co już zrobiliśmy</CredibilityLink></p>
       </aside>
     </div>
   );

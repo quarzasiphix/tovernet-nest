@@ -35,7 +35,7 @@ export default function DigitalControlHubPage({ params: { locale } }: { params: 
   const mainPath = PROVIDER_AUDIT_MAIN_PATH[locale];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-neutral-950 to-slate-950 text-white">
       <SiteNav locale={locale} />
 
       <section className="py-16 md:py-24">

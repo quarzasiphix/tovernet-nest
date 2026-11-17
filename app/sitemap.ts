@@ -4,6 +4,7 @@ import { getArticlesForLocale, getOtherLocaleSlug } from '@/lib/poradnik';
 import { auditGuides, getOtherLocaleGuideSlug, PROVIDER_AUDIT_MAIN_PATH, PROVIDER_AUDIT_HUB_PATH } from '@/lib/provider-audit';
 import { SITE_URL } from '@/lib/seo';
 import { NICHES } from '@/lib/tovernet/niches';
+import { UNLISTED_SLUGS } from '@/lib/tovernet/portfolio';
 
 type StaticRoute = { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] };
 
@@ -14,7 +15,6 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: '/projekty', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/projekty/gryfin-york', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/projekty/ksiegai', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/projekty/anemalo', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/projekty/kolorowa-pasja', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/projekty/pokiu', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/projekty/klepsydra', priority: 0.6, changeFrequency: 'monthly' },
@@ -42,7 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${SITE_URL}${niche.path}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 });
   }
 
-  for (const route of STATIC_ROUTES) {
+  // Prepared but unpublished projects (Anemalo, GlobalPet) never enter the sitemap.
+  const listed = STATIC_ROUTES.filter((r) => !UNLISTED_SLUGS.some((slug) => r.path === `/projekty/${slug}`));
+  for (const route of listed) {
     for (const locale of locales) {
       entries.push({
         url: `${SITE_URL}/${locale}${route.path}`,

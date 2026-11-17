@@ -13,7 +13,10 @@ import Welcome from './Welcome';
 import Concept from './Concept';
 import Offer from './Offer';
 import Checkout from './Checkout';
+import { CredibilityLink, CredibilityProvider, type CredibilityCta } from '../credibility/Credibility';
+import { PreviewProvider } from '@/components/site/preview/ProjectPreview';
 import s from './studio.module.css';
+import cr from '../credibility/credibility.module.css';
 
 /**
  * Redesigned four-stage journey (owner review). Same contract as funnel/Journey.tsx:
@@ -22,7 +25,14 @@ import s from './studio.module.css';
  */
 export default function StudioJourney({ demo, actions }: { demo: PublicDemo; actions: JourneyActions }) {
   const [stage, setStage] = useState<Stage>('przywitanie');
-  const [cart, setCart] = useState<Cart>(() => defaultCart(demo));
+  const [cart, setCart] = useState<Cart>(() => {
+    const cart = defaultCart(demo);
+    // ?pakiet=start|firma|pro: the package picked on tovernet.online before the e-mail link
+    // (self-start, ksiegai docs/plans/tovernet/28-self-start-onboarding.md).
+    const picked = typeof window === 'undefined' ? null : new URLSearchParams(window.location.search).get('pakiet');
+    const key = picked ? `tovernet.web.${picked}` : null;
+    return key && demo.packages.some((p) => p.kind === 'package' && p.key === key) ? { ...cart, pkg: key } : cart;
+  });
   const stageRef = useRef<Stage>('przywitanie');
   const rootRef = useRef<HTMLDivElement>(null);
   const name = presentName(demo.config.company.display_name);
@@ -31,8 +41,11 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
   // Stage lives in ?krok= so back, forward and refresh keep the place. The fragment
   // (demo id) is never touched.
   useEffect(() => {
-    const read = () => {
+    const read = (e?: PopStateEvent) => {
       const next = stageFromQuery(new URLSearchParams(window.location.search).get('krok'));
+      // A history entry within the same stage (the credibility drawer pushes one, so Back
+      // closes it) is not a stage view.
+      if (e && next === stageRef.current) return;
       track('stage_viewed', { stage: next, from: stageRef.current === next ? null : stageRef.current });
       stageRef.current = next;
       setStage(next);
@@ -99,12 +112,26 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
       ? { label: 'Przejdź do zamówienia', short: 'Zamów', to: 'zamowienie' as Stage, placement: 'bar_offer' }
       : null;
 
+  // The credibility drawer's main action follows the stage: on to the price, on to the
+  // order, or (in the order) only back to it.
+  const credibilityCta: CredibilityCta = stage === 'przywitanie'
+    ? { label: 'Zobacz cenę i zakres', run: () => go('oferta') }
+    : stage === 'zamowienie' ? null : { label: 'Przejdź do zamówienia', run: () => go('zamowienie') };
+  const credibilityBack = stage === 'zamowienie' ? 'Wróć do zamówienia' : stage === 'koncept' ? 'Wróć do przykładu' : stage === 'oferta' ? 'Wróć do oferty' : 'Wróć do przywitania';
+
   return (
     <div ref={rootRef} lang="pl" data-stage={stage} className={`${studioFonts} ${s.root}`}>
+      {/* Inside .root: the drawer it renders uses the journey's tokens and fonts. */}
+      {/* Project previews open over the drawer without touching the URL (#demo id, ?krok=). */}
+      <PreviewProvider locale="pl" url="none" track={track} onWant={() => undefined} wantLabel="Wróć do listy realizacji">
+      <CredibilityProvider track={track} stage={stage} cta={credibilityCta} backLabel={credibilityBack}>
       <div className={s.ambient} aria-hidden="true"><i className={s.o1} /><i className={s.o2} /><i className={s.grid} /></div>
 
       <header className={s.bar}>
-        <a href="/pl/" className={s.logo}><i aria-hidden="true" />tovernet</a>
+        <div className={cr.barStart}>
+          <a href="/pl/" className={s.logo}><i aria-hidden="true" />tovernet</a>
+          <CredibilityLink placement="bar" tone="bar">Realizacje</CredibilityLink>
+        </div>
         <nav aria-label="Etapy" className={s.stepsNav}>
           <ol className={s.steps}>
             {STAGES.map((x, i) => (
@@ -141,8 +168,11 @@ export default function StudioJourney({ demo, actions }: { demo: PublicDemo; act
         <p>Dane Twojej firmy pochodzą z publicznego rejestru KRS. Nie chcesz, żebyśmy przetwarzali je w celach marketingowych?
           {' '}Napisz na <a href="mailto:contact@tovernet.online">contact@tovernet.online</a>.</p>
         <p>{SELLER_BLOCK}</p>
+        <p className={cr.slot}><CredibilityLink placement="footer">Kim jesteśmy i co już zrobiliśmy</CredibilityLink></p>
         <p><a href="/pl/regulamin/">Regulamin</a> · <a href="/pl/polityka-prywatnosci/">Polityka prywatności</a> · <a href="/pl/umowa-powierzenia/">Umowa powierzenia</a></p>
       </footer>
+      </CredibilityProvider>
+      </PreviewProvider>
     </div>
   );
 }

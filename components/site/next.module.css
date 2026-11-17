@@ -1,0 +1,15 @@
+.next{padding:clamp(48px,7vw,96px) 0;background:#0E0F11;color:var(--on-ink);border-top:1px solid var(--ink-hair)}
+.card{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:clamp(20px,4vw,56px);align-items:center;padding:clamp(20px,3vw,40px);border-radius:20px;background:var(--pbg);color:var(--pfg);text-decoration:none;overflow:hidden;isolation:isolate}
+.card:before{content:"";position:absolute;inset:auto -20% -60% -20%;height:90%;z-index:-1;background:radial-gradient(closest-side,color-mix(in srgb,var(--pac) 30%,transparent),transparent)}
+.text{display:grid;gap:14px}
+.kicker{color:inherit!important;opacity:.72}
+.name{display:inline-flex;align-items:center;gap:16px;font:800 clamp(40px,6vw,96px)/.9 var(--sans);letter-spacing:-.055em}
+.name svg{width:.5em;height:.5em;flex:none;transition:transform .5s var(--ease-out)}
+.card:hover .name svg{transform:translateX(10px)}
+.head{max-width:26em;font:400 clamp(18px,1.6vw,23px)/1.3 var(--serif);font-style:italic;opacity:.9}
+.shot{display:block;border-radius:12px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);transform:rotate(-1.5deg);transition:transform .8s var(--ease-out)}
+.card:hover .shot{transform:rotate(0) translateY(-6px)}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.all{margin-top:24px;color:var(--on-ink)}
+@media (max-width:760px){.card{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.name svg,.shot{transition:none}}

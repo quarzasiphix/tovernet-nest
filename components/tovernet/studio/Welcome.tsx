@@ -9,6 +9,8 @@ import ConceptSite from '../ConceptSite';
 import type { JourneyActions } from '../funnel/Journey';
 import { CUSTOM, PROMISES, TYPICAL_DELIVERY, welcomeCopy } from './copy';
 import Inspiration from './Inspiration';
+import { CredibilityLink } from '../credibility/Credibility';
+import cr from '../credibility/credibility.module.css';
 import { Scaled, delay, price } from './motion';
 import s from './studio.module.css';
 
@@ -72,6 +74,7 @@ export default function Welcome({ demo, actions, onExample, onPrice }: { demo: P
           </button>
           <button type="button" className={s.ghost} onClick={example}>Szybki przykład</button>
         </div>
+        <p className={`${cr.slot} ${s.rise}`} style={delay(370)}><CredibilityLink placement="welcome">Kim jesteśmy? Zobacz strony, które już zrobiliśmy</CredibilityLink></p>
         {actions.account && (
           <p className={`${s.fine} ${s.rise}`} style={delay(400)}>
             {actions.inviteEmail

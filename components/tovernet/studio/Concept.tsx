@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUp, Lightbulb, Monitor, Palette, Smartphone, X } from 
 import type { PublicDemo } from '@/lib/tovernet/api';
 import type { JourneyActions } from '../funnel/Journey';
 import Inspiration from './Inspiration';
+import { CredibilityLink } from '../credibility/Credibility';
 import { presentName } from '@/lib/tovernet/construction';
 import { funnelCopy } from '@/lib/tovernet/funnelCopy';
 import { recommendedStart } from '@/lib/tovernet/payments';
@@ -87,6 +88,7 @@ export default function Concept({ demo, actions, onOrder, onOffer }: { demo: Pub
         <div className={s.handoffActions}>
           <button type="button" className={s.cta} onClick={() => want('concept_end')}>Przejdź do zamówienia<ArrowRight size={19} aria-hidden="true" /></button>
           <button type="button" className={s.ghost} onClick={onOffer}>Wróć do oferty</button>
+          <CredibilityLink placement="concept_end">Zobacz strony, które już zrobiliśmy</CredibilityLink>
           <button type="button" className={s.link} onClick={() => topRef.current?.scrollIntoView({ behavior: 'smooth' })}><ArrowUp size={14} aria-hidden="true" />Na początek przykładu</button>
         </div>
         <p className={s.handoffNote}>To przykład, nie opublikowana strona ani ostateczny wygląd. Kolory, układ, banery i zdjęcia zmienimy według Twoich potrzeb. Nazwa, miejscowość i numer KRS pochodzą z Krajowego Rejestru Sądowego. Usługi i teksty są przykładowe, a grafiki poglądowe.</p>

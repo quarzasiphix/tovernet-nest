@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { CheckCircle2, Lock, ShieldCheck, Unlock } from 'lucide-react';
 
-// Mirrors the real, live flow in the POK/POKIU system (psy.pokiu.pl):
+// Mirrors the verification flow of the POK office software we built:
 // src/features/check/pages/CheckPage.tsx + src/shared/lib/commands.ts's
 // PublicDogCheck. Step 1 is a free, no-code registry lookup; step 2 unlocks
 // an inline document preview with a per-dog security code (never a
@@ -57,7 +57,7 @@ export default function PedigreeVerificationDemo({ content }: { content: DemoCon
           <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
-          <span className="ml-3 text-xs text-gray-400 font-mono">psy.pokiu.pl/check/••••••••</span>
+          <span className="ml-3 text-xs text-gray-400 font-mono">weryfikacja.twojzwiazek.pl/check/••••••••</span>
         </div>
 
         <div className="p-5 sm:p-8 space-y-5" style={{ background: 'oklch(0.16 0.02 260)' }}>

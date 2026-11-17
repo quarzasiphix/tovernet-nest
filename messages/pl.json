@@ -1,203 +1,4 @@
 {
-  "nav": {
-    "whatWeBuild": "Co Budujemy",
-    "verticals": "Obszar Operacyjny",
-    "engagement": "Współpraca",
-    "contact": "Omów Swój System",
-    "breeders": "Hodowcy",
-    "kennelClubs": "Związki Kynologiczne",
-    "projects": "Nasze Projekty",
-    "poradnik": "Poradnik",
-    "providerAudit": "Audyt wykonawców"
-  },
-  "hero": {
-    "badge": "Dedykowane Oprogramowanie i Systemy — Każda Branża",
-    "title": "Strony i Systemy Dla Branży Zwierzęcej",
-    "titleHighlight": "Budujemy Systemy, Na Których Opierają Się Firmy",
-    "subtitle": "Strony, panele klientów i dedykowane systemy — budowane pod systemy zgodności z przepisami (KSeF), regulowaną logistykę i branże, których większość agencji nie dotknie. Przy okazji doskonale znamy branżę zwierzęcą, bo sami w niej działamy. Przynieś nam problem.",
-    "description": "",
-    "ctaPrimary": "Zobacz Nasze Rozwiązania",
-    "ctaSecondary": "Porozmawiaj o Projekcie",
-    "tagline": "Zgodność z przepisami (KSeF) • płatności i rozliczenia • systemy gotowe na audyt • hodowle i organizacje kynologiczne • licencjonowany transport zwierząt • zoo i organizacje egzotyczne • wszystko inne, co do nas przyniesiesz"
-  },
-  "paths": {
-    "title": "Rozwiązania Dla Twojej Branży",
-    "subtitle": "Wybierz najbliższą opcję — każda ma pełną ofertę na własnej stronie. Nie widzisz swojej? Od tego jest ostatnia karta.",
-    "breeders": {
-      "title": "Dla Hodowców",
-      "description": "Strona i panel, które hodowca aktualizuje samodzielnie.",
-      "cta": "Zobacz Ofertę Dla Hodowców"
-    },
-    "kennelClubs": {
-      "title": "Dla Organizacji Kynologicznych",
-      "description": "Rejestry osób, psów i miotów, rodowody, karty rejestracji, numeracja dokumentów, publiczna weryfikacja QR, historia zmian oraz panel współpracy biura z hodowcami.",
-      "cta": "Zobacz Ofertę Dla Związków"
-    },
-    "animalIndustry": {
-      "title": "Dla Firm Z Branży Zwierzęcej",
-      "description": "Dedykowane systemy dla transportu zwierząt, hoteli, groomerów, trenerów, schronisk, marketplace'ów, zoo, organizacji zajmujących się zwierzętami egzotycznymi i innych firm. Rezerwacje, dokumenty, płatności, obsługa klientów i procesy wewnętrzne.",
-      "cta": "Porozmawiajmy o Twoim Projekcie"
-    },
-    "finance": {
-      "title": "Finanse i Administracja",
-      "description": "Faktury, KSeF, dokumenty, płatności, rozliczenia i dedykowane systemy wewnętrzne. KsięgaI to nasz własny produkt w tym obszarze — realny dowód, że to potrafimy zbudować i utrzymać.",
-      "cta": "Zobacz KsięgaI"
-    },
-    "somethingElse": {
-      "title": "Coś Innego?",
-      "description": "To, że czegoś nie ma na tej liście, nie znaczy, że tego nie zbudujemy. Regulowana branża, dziwny stary system, pomysł, którego nikt inny nie chce dotknąć — powiedz nam, o co chodzi, a wymyślimy, jak to zbudować.",
-      "cta": "Powiedz Nam Swój Pomysł"
-    }
-  },
-  "proof": {
-    "title": "Dowody, Nie Obietnice",
-    "description": "Nie tylko projektujemy systemy dla cudzych firm — część z nich sami prowadzimy pod realną presją prawną i regulacyjną, a raz zaufano nam nawet w technicznej stronie sporu sądowego klienta. Cztery konkretne powody, by uwierzyć, że zbudujemy to, czego potrzebujesz.",
-    "items": [
-      {
-        "title": "Systemy Zgodności z Przepisami Rządowymi",
-        "description": "KsięgaI integruje się bezpośrednio z KSeF 2.0 — produkcyjnym systemem e-faktur Ministerstwa Finansów. Autoryzacja, tokeny, certyfikaty i zdarzenia audytowe w systemie o realnych konsekwencjach regulacyjnych."
-      },
-      {
-        "title": "Płatności i Infrastruktura Finansowa",
-        "description": "Integracje ze Stripe, uzgadnianie wyciągów bankowych, audytowalne dzienniki decyzji. Przez systemy, które budujemy, przepływają realne pieniądze — nie idziemy na skróty w poprawności."
-      },
-      {
-        "title": "Ścieżki Audytu i Wsparcie w Sporach z Dostawcami",
-        "description": "Gdy klient z branży pogrzebowej potrzebował dokumentacji technicznej do sporu sądowego z poprzednim dostawcą, dostarczyliśmy ją — audyty na poziomie umowy, weryfikację dostarczonych funkcji, odzyskanie danych. To nie typowa działka web-dev, ale sobie z nią poradziliśmy."
-      },
-      {
-        "title": "Branża Zwierzęca i Licencjonowana Logistyka",
-        "description": "Dokumentacja rodowodowa, rejestry związków kynologicznych i własna licencjonowana działalność transportu zwierząt w UE. Realne doświadczenie operacyjne, nie opis wymagań klienta."
-      }
-    ]
-  },
-  "projectsShowcase": {
-    "clientWork": {
-      "title": "Realizacje Dla Klientów",
-      "subtitle": "To nie makiety — to systemy, które dziś prowadzimy dla realnych klientów.",
-      "featured": [
-        {
-          "name": "POKIU",
-          "badge": "Pełny System Dla Organizacji Kynologicznej",
-          "description": "Polska Organizacja Kynologiczna International Union. Rejestr psów i rodowodów, panel współpracy z hodowcami, publiczna weryfikacja dokumentów kodem QR — jeden system, trzy grupy odbiorców.",
-          "cta": "Zobacz Case Study POKIU",
-          "url": "/projekty/pokiu"
-        },
-        {
-          "name": "Nekrolog Łódź",
-          "badge": "Wsparcie w Sporze z Dostawcą i Audyt Techniczny",
-          "description": "Pełna cyfrowa obecność zakładu pogrzebowego — plus coś rzadszego. Gdy klient potrzebował dokumentacji technicznej do sporu sądowego z poprzednim dostawcą, dostarczyliśmy ją: audyty na poziomie umowy i weryfikację dostarczonych funkcji. Nie tylko budujemy systemy — potrafimy udowodnić, co faktycznie zostało dostarczone.",
-          "cta": "Zobacz Case Study Nekrolog Łódź",
-          "url": "/projekty/nekrolog-lodz"
-        }
-      ],
-      "secondaryLabel": "Więcej realizacji:",
-      "secondary": [
-        {
-          "name": "Gryfin York",
-          "url": "/projekty/gryfin-york"
-        },
-        {
-          "name": "Kolorowa Pasja",
-          "url": "/projekty/kolorowa-pasja"
-        },
-        {
-          "name": "Klepsydra",
-          "url": "/projekty/klepsydra"
-        }
-      ],
-      "allCta": "Zobacz Wszystkie Projekty"
-    },
-    "industriesKnown": {
-      "title": "Branże, Które Znamy",
-      "tags": [
-        "Hodowcy psów rasowych",
-        "Organizacje kynologiczne",
-        "Zoo i zwierzęta egzotyczne",
-        "Transport zwierząt",
-        "Zakłady pogrzebowe",
-        "Finanse i KSeF"
-      ]
-    }
-  },
-  "verticals": {
-    "title": "Produkty TOVERNET",
-    "subtitle": "Nie tylko projektujemy infrastrukturę dla innych — te systemy sami prowadzimy na co dzień, pod realną presją prawną i operacyjną.",
-    "ksiegai": {
-      "title": "Infrastruktura Finansowa",
-      "badge": "Systemy Gotowe na KSeF",
-      "description": "Przykład infrastruktury pod presją regulacyjną. Centralny rejestr biznesowy: dokumenty, decyzje, role i finanse w jednej audytowalnej strukturze.",
-      "features": [
-        "Warstwa uzgadniania dokumentów przed KSeF",
-        "Zweryfikowana sieć firm",
-        "Pełna ścieżka audytu i zgodność"
-      ],
-      "cta": "Odwiedź KsięgaI"
-    },
-    "globalPet": {
-      "title": "Licencjonowane Operacje Logistyczne",
-      "badge": "Transport Zwierząt w UE",
-      "description": "Przykład infrastruktury pod ograniczeniami fizycznymi i prawnymi. Licencjonowany transport zwierząt przez jurysdykcje UE.",
-      "features": [
-        "Śledzenie zgodności w wielu jurysdykcjach",
-        "Systemy koordynacji w czasie rzeczywistym",
-        "Licencjonowana infrastruktura operacyjna"
-      ],
-      "cta": "Wkrótce",
-      "facebookCta": "Obserwuj na Facebooku"
-    }
-  },
-  "engagement": {
-    "title": "Jak Wygląda Współpraca",
-    "subtitle": "To nie jest jednorazowy web dev. To partnerstwo, które zostaje z Tobą po starcie.",
-    "steps": [
-      {
-        "title": "Mapowanie",
-        "description": "Mapujemy logikę i wymagania Twojego biznesu"
-      },
-      {
-        "title": "Projektowanie",
-        "description": "Projektujemy architekturę systemu"
-      },
-      {
-        "title": "Budowanie",
-        "description": "Budujemy i integrujemy infrastrukturę"
-      },
-      {
-        "title": "Ewolucja",
-        "description": "Utrzymujemy i rozwijamy ją razem z Tobą"
-      }
-    ]
-  },
-  "contact": {
-    "title": "Masz Pomysł? Powiedz Nam — Wymyślimy, Jak To Zbudować.",
-    "subtitle": "Napisz do nas — porozmawiajmy o Twoim projekcie i o tym, co faktycznie ma sens zbudować.",
-    "cta": "Porozmawiajmy o Projekcie",
-    "form": {
-      "name": "Imię",
-      "email": "E-mail",
-      "phone": "Telefon",
-      "message": "Czego potrzebujesz?",
-      "submit": "Wyślij",
-      "thankYouTitle": "Mamy to — dziękujemy.",
-      "thankYouMessage": "Odezwiemy się wkrótce."
-    }
-  },
-  "footer": {
-    "tagline": "Strony i systemy dla branży zwierzęcej — oraz oprogramowanie biznesowe, automatyzacje i systemy finansowe dla innych branż.",
-    "solutions": "Rozwiązania Branżowe",
-    "verticals": "Marki i przedsięwzięcia",
-    "ksiegai": "KsięgaI — Infrastruktura Finansowa",
-    "globalPet": "GlobalPet Transport — Licencjonowany Transport Zwierząt",
-    "anemalo": "Anemalo — Europejski Ekosystem dla Zwierząt",
-    "contact": "Kontakt",
-    "callUs": "Zadzwoń — porozmawiajmy",
-    "copyright": "Tovernet Sp. z o.o. Zbudowane systemy skalują się. Narzędzia nie.",
-    "privacyPolicy": "Polityka Prywatności",
-    "terms": "Regulamin",
-    "nekrolog": "Nekrolog Kostowska — Usługi Pogrzebowe i Rozwój Cyfrowy",
-    "digitalAdmin": "Tovernet jest podmiotem decyzyjnym przy wdrażaniu nowych rozwiązań technologicznych oraz w umowach z wykonawcami i dostawcami usług dla obsługiwanych przez nas marek."
-  },
   "breeders": {
     "hero": {
       "badge": "Dla Hodowców Psów Rasowych",
@@ -650,10 +451,10 @@
       ]
     },
     "screenshots": {
-      "title": "Wypróbuj Prawdziwy Panel Biura",
-      "subtitle": "To nie zrzuty ekranu — to interaktywna rekonstrukcja tego samego panelu wniosków, który dziś prowadzi biuro POKIU. Kliknij wniosek, zatwierdź go albo odrzuć.",
-      "caption": "Ten sam panel (z prawdziwymi danymi zamiast demo) prowadzi dziś biuro:",
-      "linkLabel": "Zobacz Case Study POKIU"
+      "title": "Wypróbuj panel biura związku",
+      "subtitle": "Interaktywne demo programu, który zbudowaliśmy i prowadzimy dla biura związku. Złóż wniosek jako hodowca, zatwierdź go w biurze, wystaw rodowód i sprawdź jego kod QR. Dane są testowe.",
+      "caption": "Jak powstał ten program i co robi na co dzień:",
+      "linkLabel": "Zobacz studium przypadku"
     },
     "collaboration": {
       "title": "Współpraca Z Hodowcami Bez Maili i Skanów",
@@ -698,7 +499,7 @@
           "description": "Domena weryfikacyjna jest zablokowana na poziomie serwera brzegowego — nie sposób przez nią trafić na panel logowania czy dane biura."
         }
       ],
-      "proof": "Dokładnie taki system działa dziś dla POKIU (psy.pokiu.pl).",
+      "proof": "Dokładnie taki system działa dziś dla POKIU.",
       "proofCta": "Zobacz Case Study POKIU",
       "demo": {
         "intro": "Wypróbuj — to nie makieta, to ten sam mechanizm co w prawdziwym systemie POKIU.",
@@ -738,92 +539,6 @@
     "cta": {
       "title": "Chcesz Wdrożyć System W Swoim Związku?",
       "subtitle": "Porozmawiajmy o tym, jak wygląda dziś Wasza ewidencja i co można zautomatyzować. Wycena wstępna jest bezpłatna.",
-      "button": "Poproś o Bezpłatną Wycenę"
-    }
-  },
-  "projectsPage": {
-    "hero": {
-      "badge": "Nasze Projekty",
-      "title": "Co Projektujemy I Dla Kogo",
-      "subtitle": "Część systemów to nasze własne marki, które sami prowadzimy. Część to wdrożenia dla klientów, dla których jesteśmy wykonawcą — budujemy i utrzymujemy ich systemy, ale to ich firmy i ich dane."
-    },
-    "ownBrands": {
-      "title": "Nasze Marki",
-      "subtitle": "Systemy, które projektujemy, budujemy i prowadzimy sami, pod własną odpowiedzialnością prawną i biznesową.",
-      "items": [
-        {
-          "name": "KsięgaI",
-          "badge": "Infrastruktura Finansowa",
-          "description": "Centralny rejestr biznesowy gotowy na KSeF — dokumenty, decyzje, role i finanse w jednej audytowalnej strukturze.",
-          "cta": "Zobacz Case Study",
-          "url": "/projekty/ksiegai"
-        },
-        {
-          "name": "GlobalPet Transport",
-          "badge": "Licencjonowana Logistyka",
-          "description": "Licencjonowany transport zwierząt przez jurysdykcje UE ze śledzeniem zgodności w czasie rzeczywistym.",
-          "cta": "Wkrótce",
-          "url": "https://globalpet.online"
-        },
-        {
-          "name": "Anemalo",
-          "badge": "Europejski Ekosystem dla Zwierząt",
-          "description": "Dedykowana platforma łącząca hodowców, fundacje, adopcje, społeczność i transport zwierząt w jednym systemie — z gatewayem API, na którym już działają nasi klienci hodowlani.",
-          "cta": "Zobacz Case Study",
-          "url": "/projekty/anemalo"
-        }
-      ]
-    },
-    "clientProjects": {
-      "title": "Realizacje Dla Klientów",
-      "subtitle": "Budujemy i utrzymujemy te systemy jako wykonawca — to marki, dane i klienci naszych zleceniodawców, nie nasze. Kliknij, żeby zobaczyć pełne case study.",
-      "caseStudyLabel": "Case study",
-      "items": [
-        {
-          "slug": "nekrolog-lodz",
-          "name": "Nekrolog Łódź",
-          "badge": "Zakład Pogrzebowy · Klient",
-          "description": "Cyfrowa obecność zakładu pogrzebowego Jolanty Kostowskiej — pełna oferta usług, asortyment i całodobowy kontakt dla rodzin w trudnym momencie. W ramach tej realizacji zbudowaliśmy też Klepsydrę — darmowy generator e-klepsydry online (patrz osobna pozycja niżej).",
-          "cta": "Zobacz Stronę",
-          "url": "https://nekrolog-lodz.com"
-        },
-        {
-          "slug": "klepsydra",
-          "name": "Klepsydra",
-          "badge": "Narzędzie Dla Klienta",
-          "description": "Darmowy generator e-klepsydry online, marketowany jako narzędzie zakładu Jolanta Kostowska Nekrolog Łódź — zbudowany i utrzymywany przez nas.",
-          "cta": "Wypróbuj Klepsydrę",
-          "url": "https://klepsydra.nekrolog-lodz.com"
-        },
-        {
-          "slug": "gryfin-york",
-          "name": "Gryfin York",
-          "badge": "Hodowla Yorkshire Terrierów · Klient",
-          "description": "Strona publiczna i panel administracyjny dla hodowli — model, na którym opieramy ofertę dla hodowców.",
-          "cta": "Zobacz Stronę Hodowli",
-          "url": "https://hodowlagryfinyork.pl"
-        },
-        {
-          "slug": "kolorowa-pasja",
-          "name": "Kolorowa Pasja",
-          "badge": "Hodowla Yorkshire Terrierów i Szpiców · Klient",
-          "description": "Strona hodowli z prezentacją miotów i szczeniąt, zbudowana i utrzymywana przez nas dla właścicielki hodowli.",
-          "cta": "Zobacz Stronę Hodowli",
-          "url": "https://kolorowapasja.pl"
-        },
-        {
-          "slug": "pokiu",
-          "name": "POKIU",
-          "badge": "Związek Kynologiczny · Klient",
-          "description": "Polska Organizacja Kynologiczna International Union. System rejestru psów, rodowodów, panelu hodowców i publicznej weryfikacji dokumentów kodem QR.",
-          "cta": "Odwiedź POKIU",
-          "url": "https://pokiu.pl"
-        }
-      ]
-    },
-    "cta": {
-      "title": "Chcesz Takiego Systemu Dla Siebie?",
-      "subtitle": "Porozmawiajmy o Twoim biznesie i o tym, jaka infrastruktura mu służy. Wycena wstępna jest bezpłatna.",
       "button": "Poproś o Bezpłatną Wycenę"
     }
   },
@@ -893,12 +608,30 @@
         "title": "Uczciwy Stan Budowy",
         "intro": "Anemalo powstaje etapami, na prawdziwych danych produkcyjnych — nie jako makieta.",
         "items": [
-          { "label": "Wyszukiwanie zwierząt i marketplace", "status": "Gotowe" },
-          { "label": "Profile hodowców i fundacji", "status": "Gotowe" },
-          { "label": "Zgłoszenia, rezerwacje i adopcje", "status": "Gotowe" },
-          { "label": "Transport zwierząt i planowanie tras", "status": "Gotowe" },
-          { "label": "Społeczność i wiadomości", "status": "W trakcie" },
-          { "label": "Zbiórki fundacji i kolejne kraje/języki", "status": "Zaplanowane" }
+          {
+            "label": "Wyszukiwanie zwierząt i marketplace",
+            "status": "Gotowe"
+          },
+          {
+            "label": "Profile hodowców i fundacji",
+            "status": "Gotowe"
+          },
+          {
+            "label": "Zgłoszenia, rezerwacje i adopcje",
+            "status": "Gotowe"
+          },
+          {
+            "label": "Transport zwierząt i planowanie tras",
+            "status": "Gotowe"
+          },
+          {
+            "label": "Społeczność i wiadomości",
+            "status": "W trakcie"
+          },
+          {
+            "label": "Zbiórki fundacji i kolejne kraje/języki",
+            "status": "Zaplanowane"
+          }
         ]
       },
       "features": [
@@ -1223,25 +956,25 @@
         "description": "Dla POKIU zbudowaliśmy wewnętrzny system obsługujący trzy różne grupy odbiorców na jednej platformie, rozdzielone domenowo: biuro związku, hodowców i publiczną weryfikację dokumentów."
       },
       "architecture": {
-        "title": "Trzy Domeny, Jeden System",
+        "title": "Trzy części, jeden system",
         "items": [
           {
-            "domain": "admin.twojastrona.pl",
+            "domain": "Panel biura",
             "description": "Pełny panel biura — rejestr psów, mioty, rodowody, rozliczenia, audyt zmian."
           },
           {
-            "domain": "hodowca.pokiu.pl",
+            "domain": "Panel hodowcy",
             "description": "Panel hodowcy — własne psy, mioty i wnioski o rodowód ze śledzeniem statusu."
           },
           {
-            "domain": "psy.pokiu.pl",
+            "domain": "Publiczna weryfikacja",
             "description": "Publiczna weryfikacja dokumentów kodem QR — i nic więcej. Brak logowania, brak dostępu do panelu, wymuszone na poziomie edge."
           }
         ]
       },
       "security": {
         "title": "Weryfikacja Rodowodu Kodem QR",
-        "description": "Każdy wydany rodowód i karta miotu ma kod QR prowadzący na psy.pokiu.pl. Kupujący skanuje kod, widzi podstawowe dane psa i może odblokować podgląd oryginalnego dokumentu kodem bezpieczeństwa — utrudnia to podrabianie i sprzedaż rodowodów bez pokrycia."
+        "description": "Każdy wydany rodowód i karta miotu ma kod QR prowadzący na stronę weryfikacji związku. Kupujący skanuje kod, widzi podstawowe dane psa i może odblokować podgląd oryginalnego dokumentu kodem bezpieczeństwa — utrudnia to podrabianie i sprzedaż rodowodów bez pokrycia."
       },
       "features": [
         "Księga rodowodowa i kartoteka hodowców w jednym systemie",
@@ -1249,10 +982,6 @@
         "Publiczna weryfikacja dokumentów kodem QR na osobnej, zabezpieczonej domenie",
         "Pełny dziennik zmian — kto, co i kiedy zmienił w systemie"
       ],
-      "cta": {
-        "label": "Odwiedź POKIU",
-        "url": "https://pokiu.pl"
-      },
       "provenance": {
         "title": "Nie tylko cyfrowy rodowód. Pełny łańcuch pochodzenia.",
         "intro": "Gdy pies wchodzący do rejestru POKIU ma już rodowód wystawiony przez inną organizację (np. ZKwP, FCI), system nie zamienia tego dokumentu w martwy skan w folderze. Tworzy udokumentowany łańcuch pochodzenia: oryginalny rodowód → weryfikacja przez biuro POKIU → rejestracja w POKIU → cyfrowo weryfikowalny rodowód POKIU — i pokazuje każde z tych ogniw publicznie, na tej samej stronie, na której weryfikuje się rodowód.",

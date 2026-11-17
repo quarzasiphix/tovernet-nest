@@ -20,6 +20,7 @@ import Freedom from './offer/Freedom';
 import Migration, { JourneySwitch } from './offer/Migration';
 import Summary from './offer/Summary';
 import { GUARANTEE, GUARANTEE_FINE, SEASONAL, type Journey } from './offer/offerCopy';
+import { ProofStrip } from '../credibility/Credibility';
 import s from './studio.module.css';
 import o from './offer/offer.module.css';
 
@@ -139,6 +140,7 @@ export default function Offer({ demo, cart, setCart, actions, onOrder, onConcept
               })}
             </div>
             <p className={o.guarFine}>{GUARANTEE_FINE}</p>
+            <ProofStrip placement="offer_guarantee" />
           </section>
 
           <section className={s.section} aria-labelledby="plan" data-reveal="">

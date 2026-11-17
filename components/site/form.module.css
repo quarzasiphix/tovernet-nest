@@ -1,0 +1,32 @@
+/* Enquiry form, in the site tokens (rendered inside .site). */
+.form{display:grid;gap:18px;color:var(--ink);padding:clamp(20px,2.6vw,36px);border:1px solid var(--ink);background:var(--sheet)}
+.kinds{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;border:0;min-width:0}
+.kinds legend{width:100%;margin-bottom:10px;padding:0;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.kind{position:relative;cursor:pointer}
+.kind input{position:absolute;opacity:0;pointer-events:none}
+.kind span{display:inline-block;padding:9px 15px;border:1px solid var(--hair2);border-radius:999px;font-size:15px;transition:background .25s,color .25s,border-color .25s}
+.kind:hover span{border-color:var(--ink)}
+.kind input:checked+span{background:var(--ink);color:var(--sheet);border-color:var(--ink)}
+.kind input:focus-visible+span{outline:2px solid var(--stamp);outline-offset:2px}
+.field{display:grid;gap:7px}
+.field span{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.field input,.field textarea{width:100%;padding:13px 0;border:0;border-bottom:1px solid var(--hair2);border-radius:0;background:transparent;color:var(--ink);font:400 18px/1.4 var(--sans);outline:none;transition:border-color .25s}
+.field textarea{resize:vertical;min-height:110px}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--stamp);box-shadow:0 1px 0 var(--stamp)}
+.field textarea[aria-invalid]{border-bottom-color:#B3261E}
+.field ::placeholder{color:var(--mute)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.hint{margin:0;color:var(--soft);font-size:14px}
+.hint[data-warn]{color:#B3261E}
+.submit{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px;padding:0 26px;border:0;background:var(--ink);color:var(--sheet);font:700 18px var(--sans);letter-spacing:-.01em;cursor:pointer;transition:background .3s}
+.submit:hover{background:var(--stamp)}
+.submit:disabled{opacity:.6;cursor:progress}
+.submit svg{transition:transform .3s var(--ease)}
+.submit:hover svg{transform:translateX(5px)}
+.privacy{margin:0;color:var(--mute);font-size:13px}
+.sent{display:grid;color:var(--ink);justify-items:start;gap:8px;padding:clamp(24px,3vw,40px);border:1px solid var(--ink);background:var(--sheet)}
+.sent p{margin:0;color:var(--soft)}
+.sentTitle{color:var(--ink)!important;font-weight:800;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.035em;line-height:1.05}
+.tick{display:grid;place-items:center;width:56px;height:56px;margin-bottom:8px;border-radius:50%;background:var(--stamp);color:#fff;animation:pop .5s var(--ease-out) both}
+@keyframes pop{from{transform:scale(.4);opacity:0}}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
